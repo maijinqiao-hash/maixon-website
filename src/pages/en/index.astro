@@ -1,0 +1,18 @@
+---
+import HomePage from "@/components/HomePage.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import { copy } from "@/data/site";
+
+const locale = "en" as const;
+const content = copy[locale];
+---
+
+<SiteLayout
+  locale={locale}
+  title={content.meta.title}
+  description={content.meta.description}
+  downloadLabel={content.header.download}
+  menuLabel={content.header.menu}
+>
+  <HomePage locale={locale} />
+</SiteLayout>

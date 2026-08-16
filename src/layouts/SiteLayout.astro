@@ -1,0 +1,74 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import type { Locale } from "@/data/media";
+import "@/styles/global.css";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  downloadLabel: string;
+  menuLabel: string;
+  image?: string;
+}
+
+const { locale, title, description, downloadLabel, menuLabel, image = "/media/brand/app-icon.png" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const alternateLocale: Locale = locale === "zh-CN" ? "en" : "zh-CN";
+const alternatePath = Astro.url.pathname.startsWith(`/${locale}/`)
+  ? Astro.url.pathname.replace(`/${locale}/`, `/${alternateLocale}/`)
+  : `/${alternateLocale}/`;
+const zhPath = locale === "zh-CN" ? Astro.url.pathname : alternatePath;
+const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="zh-CN" href={new URL(zhPath, Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site)} />
+    <link rel="icon" type="image/png" href="/media/brand/app-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MAIXON" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:locale" content={locale === "zh-CN" ? "zh_CN" : "en_US"} />
+    <meta property="og:locale:alternate" content={locale === "zh-CN" ? "en_US" : "zh_CN"} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{locale === "zh-CN" ? "跳到主要内容" : "Skip to content"}</a>
+    <Header
+      locale={locale}
+      alternatePath={alternatePath}
+      downloadLabel={downloadLabel}
+      menuLabel={menuLabel}
+    />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+    <script>
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const updateMotion = () => {
+        document.querySelectorAll("[data-autoplay-media]").forEach((node) => {
+          if (!(node instanceof HTMLVideoElement)) return;
+          if (reduceMotion.matches) node.pause();
+          else node.play().catch(() => {});
+        });
+      };
+      updateMotion();
+      reduceMotion.addEventListener("change", updateMotion);
+    </script>
+  </body>
+</html>

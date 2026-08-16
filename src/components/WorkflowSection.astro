@@ -1,0 +1,55 @@
+---
+import MediaFrame from "@/components/MediaFrame.astro";
+import type { Locale } from "@/data/media";
+import type { WorkflowContent } from "@/data/site";
+
+interface Props {
+  locale: Locale;
+  workflow: WorkflowContent;
+}
+
+const { locale, workflow } = Astro.props;
+const primaryId = workflow.videoId ?? workflow.mediaId;
+const proofIsPrimary = workflow.proofId === primaryId || workflow.proofId === workflow.mediaId;
+---
+
+<section
+  id={workflow.id === "ai" ? "ai" : undefined}
+  class:list={["workflow", `workflow--${workflow.tone}`, `workflow--${workflow.id}`]}
+>
+  <div class="workflow__inner">
+    <div class="workflow__copy">
+      <p class="section-index">{workflow.number}</p>
+      <p class="workflow__eyebrow">{workflow.eyebrow}</p>
+      <h3>{workflow.title}</h3>
+      <p class="workflow__description">{workflow.description}</p>
+      <ol class="workflow__steps">
+        {workflow.steps.map((step, index) => (
+          <li><span>{String(index + 1).padStart(2, "0")}</span>{step}</li>
+        ))}
+      </ol>
+    </div>
+
+    <div class="workflow__media">
+      <MediaFrame
+        id={primaryId}
+        posterId={workflow.posterId}
+        locale={locale}
+        autoplay={Boolean(workflow.videoId)}
+        controls={false}
+        alt={`${workflow.title} — ${workflow.eyebrow}`}
+      />
+      {workflow.proofId && !proofIsPrimary && (
+        <div class="workflow__proof">
+          <MediaFrame
+            id={workflow.proofId}
+            locale={locale}
+            alt={locale === "zh-CN" ? `${workflow.title} 真实生产输出` : `${workflow.title} verified production output`}
+          />
+          <p>{locale === "zh-CN" ? "真实生产输出" : "Verified production output"}</p>
+        </div>
+      )}
+      {workflow.mediaNote && <p class="media-note">{workflow.mediaNote}</p>}
+    </div>
+  </div>
+</section>

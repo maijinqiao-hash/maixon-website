@@ -1,0 +1,44 @@
+---
+import { installer, nav } from "@/data/site";
+import type { Locale } from "@/data/media";
+
+interface Props {
+  locale: Locale;
+  alternatePath: string;
+  downloadLabel: string;
+  menuLabel: string;
+}
+
+const { locale, alternatePath, downloadLabel, menuLabel } = Astro.props;
+const home = `/${locale}/`;
+---
+
+<header class="site-header">
+  <a class="wordmark" href={home} aria-label="MAIXON home">MAIXON</a>
+
+  <nav class="desktop-nav" aria-label={locale === "zh-CN" ? "主要导航" : "Primary navigation"}>
+    {nav[locale].map((item) => (
+      <a href={`${home}${item.href}`}>{item.label}</a>
+    ))}
+  </nav>
+
+  <div class="header-actions">
+    <a class="language-link" href={alternatePath} lang={locale === "zh-CN" ? "en" : "zh-CN"}>
+      {locale === "zh-CN" ? "EN" : "中文"}
+    </a>
+    <a class="button button--small button--dark" href={installer.url}>{downloadLabel}</a>
+  </div>
+
+  <details class="mobile-nav">
+    <summary aria-label={menuLabel}>
+      <span></span><span></span>
+    </summary>
+    <div class="mobile-nav__panel">
+      {nav[locale].map((item) => (
+        <a href={`${home}${item.href}`}>{item.label}</a>
+      ))}
+      <a href={alternatePath}>{locale === "zh-CN" ? "English" : "中文"}</a>
+      <a class="button button--dark" href={installer.url}>{downloadLabel}</a>
+    </div>
+  </details>
+</header>

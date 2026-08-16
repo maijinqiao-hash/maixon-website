@@ -1,0 +1,24 @@
+---
+import type { Locale } from "@/data/media";
+import { copy } from "@/data/site";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const content = copy[locale].footer;
+---
+
+<footer class="site-footer">
+  <div>
+    <a class="wordmark wordmark--footer" href={`/${locale}/`}>MAIXON</a>
+    <p>{content.statement}</p>
+  </div>
+  <div class="footer-meta">
+    <a href="tel:+8615954870827">+86 159 5487 0827</a>
+    <a href="https://wa.me/8615954870827">WhatsApp</a>
+    <p>© {new Date().getFullYear()} MAIXON</p>
+  </div>
+  <p class="footer-legal">{content.legal}</p>
+</footer>

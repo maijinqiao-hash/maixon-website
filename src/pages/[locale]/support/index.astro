@@ -1,0 +1,46 @@
+---
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import { copy } from "@/data/site";
+import type { Locale } from "@/data/media";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "zh-CN" } }, { params: { locale: "en" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const content = copy[locale];
+const items = locale === "zh-CN"
+  ? [
+      { title: "软件使用说明", body: "DTF、DTG、热升华与 MAIXON AI 的操作入口。", href: "/guide" },
+      { title: "设备使用说明", body: "打印机、烘干系统与日常维护信息。", href: "/equipment-manual" },
+      { title: "联系与授权", body: "获取软件授权、AI 点数与人工支持。", href: "https://wa.me/8615954870827" }
+    ]
+  : [
+      { title: "Software guides", body: "Operational entry points for DTF, DTG, Sublimation and MAIXON AI.", href: "/guide" },
+      { title: "Equipment guides", body: "Printer, curing system and maintenance information.", href: "/equipment-manual" },
+      { title: "Contact and licensing", body: "Software licensing, AI points and direct support.", href: "https://wa.me/8615954870827" }
+    ];
+---
+
+<SiteLayout
+  locale={locale}
+  title={`${content.support.title} | MAIXON`}
+  description={content.support.body}
+  downloadLabel={content.header.download}
+  menuLabel={content.header.menu}
+>
+  <section class="page-hero page-hero--compact" id="license">
+    <p class="section-label">{content.support.label}</p>
+    <h1>{content.support.title}</h1>
+    <p>{content.support.body}</p>
+  </section>
+  <section class="support-index">
+    {items.map((item, index) => (
+      <a href={item.href}>
+        <span>{String(index + 1).padStart(2, "0")}</span>
+        <h2>{item.title}</h2>
+        <p>{item.body}</p>
+      </a>
+    ))}
+  </section>
+</SiteLayout>

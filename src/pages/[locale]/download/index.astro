@@ -1,0 +1,32 @@
+---
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import { copy, installer } from "@/data/site";
+import type { Locale } from "@/data/media";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "zh-CN" } }, { params: { locale: "en" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const content = copy[locale];
+---
+
+<SiteLayout
+  locale={locale}
+  title={`${content.download.title} | MAIXON`}
+  description={content.download.body}
+  downloadLabel={content.header.download}
+  menuLabel={content.header.menu}
+>
+  <section class="page-hero download-page">
+    <p class="section-label">{content.download.label}</p>
+    <h1>{content.download.title}</h1>
+    <p>{content.download.body}</p>
+    <a class="button button--dark" href={installer.url}>{content.download.button}</a>
+    <dl>
+      <div><dt>{locale === "zh-CN" ? "版本" : "Version"}</dt><dd>{installer.version}</dd></div>
+      <div><dt>{locale === "zh-CN" ? "系统" : "System"}</dt><dd>{installer.os}</dd></div>
+      <div><dt>SHA256</dt><dd><code>{installer.sha256}</code></dd></div>
+    </dl>
+  </section>
+</SiteLayout>
