@@ -1,7 +1,7 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import type { Locale } from "@/data/media";
+import { getMedia, type Locale } from "@/data/media";
 import "@/styles/global.css";
 
 interface Props {
@@ -10,10 +10,12 @@ interface Props {
   description: string;
   downloadLabel: string;
   menuLabel: string;
-  image?: string;
+  imageId?: string;
 }
 
-const { locale, title, description, downloadLabel, menuLabel, image = "/media/brand/app-icon.png" } = Astro.props;
+const { locale, title, description, downloadLabel, menuLabel, imageId = "brand-app-icon" } = Astro.props;
+const socialImage = getMedia(imageId, locale);
+const socialImageSrc = socialImage.original_src ?? socialImage.src;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const alternateLocale: Locale = locale === "zh-CN" ? "en" : "zh-CN";
 const alternatePath = Astro.url.pathname.startsWith(`/${locale}/`)
@@ -34,13 +36,13 @@ const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
     <link rel="alternate" hreflang="zh-CN" href={new URL(zhPath, Astro.site)} />
     <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
     <link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site)} />
-    <link rel="icon" type="image/png" href="/media/brand/app-icon.png" />
+    <link rel="icon" type="image/png" href={socialImageSrc} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MAIXON" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={new URL(socialImageSrc, Astro.site)} />
     <meta property="og:locale" content={locale === "zh-CN" ? "zh_CN" : "en_US"} />
     <meta property="og:locale:alternate" content={locale === "zh-CN" ? "en_US" : "zh_CN"} />
     <meta name="twitter:card" content="summary_large_image" />
