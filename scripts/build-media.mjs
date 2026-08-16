@@ -227,7 +227,6 @@ for (const absolutePath of inputFiles) {
 
 const manifest = {
   schema_version: 1,
-  generated_at: new Date().toISOString(),
   policy: {
     generated_media: {
       required_source_type: "generated",

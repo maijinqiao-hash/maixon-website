@@ -33,7 +33,6 @@ export type MediaAsset = {
 
 type MediaManifest = {
   schema_version: number;
-  generated_at: string;
   policy: Record<string, unknown>;
   assets: MediaAsset[];
 };
