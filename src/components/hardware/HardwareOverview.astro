@@ -1,0 +1,103 @@
+---
+import MediaFrame from "@/components/MediaFrame.astro";
+import type { Locale } from "@/data/media";
+import {
+  hardwareOverviewCopy,
+  hardwareProducts,
+  printerComparison,
+  printerOrder,
+  hardwareLabels
+} from "@/data/hardware";
+import "@/styles/hardware.css";
+
+interface Props {
+  locale: Locale;
+  surface?: "home" | "index";
+}
+
+const { locale, surface = "index" } = Astro.props;
+const content = hardwareOverviewCopy[locale];
+const labels = hardwareLabels[locale];
+const oven = hardwareProducts.oven604;
+const Heading = surface === "home" ? "h2" : "h1";
+---
+
+<section id={surface === "home" ? "hardware" : undefined} class:list={["hw-overview", `hw-overview--${surface}`]}>
+  <header class="hw-section-head hw-overview__head">
+    <p class="hw-kicker">{content.label}</p>
+    <Heading class:list={[surface === "home" && "hw-heading--home"]}>{content.title}</Heading>
+    <p class="hw-lead">{content.body}</p>
+  </header>
+
+  <div class="hw-product-grid">
+    {printerOrder.map((key, index) => {
+      const product = hardwareProducts[key];
+      return (
+        <article class:list={["hw-product-card", `hw-product-card--${key}`]}>
+          <a href={product.href[locale]} aria-label={`${content.viewProduct}: ${product.name}`}>
+            <div class="hw-product-card__media">
+              <MediaFrame id={product.mediaId} locale={locale} alt={product.name} priority={surface === "index" && index === 0} />
+            </div>
+            <div class="hw-product-card__topline">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span>{product.metrics[0].value}</span>
+            </div>
+            <h2>{product.name}</h2>
+            <p class="hw-product-card__type">{product.type[locale]}</p>
+            <p>{product.positioning[locale]}</p>
+            <span class="hw-text-link">{content.viewProduct}<span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+      );
+    })}
+  </div>
+
+  {surface === "index" && (
+    <section class="hw-comparison" aria-labelledby="hardware-comparison-title">
+      <header class="hw-comparison__header">
+        <h2 id="hardware-comparison-title">{content.compareTitle}</h2>
+        <p>{content.compareBody}</p>
+      </header>
+      <div class="hw-table-scroll" tabindex="0" role="region" aria-label={content.compareTitle}>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">{labels.model}</th>
+              <th scope="col">{labels.positioning}</th>
+              <th scope="col">{labels.heads}</th>
+              <th scope="col">{labels.speed}</th>
+              <th scope="col">{labels.glue}</th>
+              <th scope="col">{labels.interface}</th>
+              <th scope="col">{labels.power}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {printerComparison.map(({ key, values }) => (
+              <tr>
+                <th scope="row"><a href={hardwareProducts[key].href[locale]}>{hardwareProducts[key].name}</a></th>
+                <td>{values.positioning[locale]}</td>
+                <td>{values.heads[locale]}</td>
+                <td><strong>{values.speed}</strong></td>
+                <td>{values.glue[locale]}</td>
+                <td>{values.interface}</td>
+                <td>{values.power}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  <a class="hw-oven-spotlight" href={oven.href[locale]} aria-label={`${content.viewProduct}: ${oven.name}`}>
+    <div class="hw-oven-spotlight__copy">
+      <span class="hw-kicker">OVEN604</span>
+      <h2>{content.ovenTitle}</h2>
+      <p>{content.ovenBody}</p>
+      <span class="hw-text-link">{content.viewProduct}<span aria-hidden="true">↗</span></span>
+    </div>
+    <div class="hw-oven-spotlight__media">
+      <MediaFrame id={oven.mediaId} locale={locale} alt={oven.name} />
+    </div>
+  </a>
+</section>

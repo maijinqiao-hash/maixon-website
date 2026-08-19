@@ -9,6 +9,9 @@
     "layout": {
       "media_frame_required": true,
       "layout_depends_on_image_default": false
+    },
+    "rights_clearance": {
+      "pending_blocks_production_release": true
     }
   },
   "assets": [
@@ -30,6 +33,7 @@
           "width": 1254
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "brand",
@@ -69,6 +73,7 @@
           "width": 1714
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "brand",
@@ -76,6 +81,42 @@
       "height": 1162,
       "bytes": 75781,
       "sha256": "974b8299a4f1e06fb87c3f1f2721edd6319424eaf71717d3db2c2c44d54842d1",
+      "source_type": "official",
+      "status": "approved",
+      "source_package": "MAIXON_V5.9_WEBSITE_REAL_ASSETS_COMPLETE",
+      "replaceable": false,
+      "aspect_ratio": "1 / 1",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "brand-logo-wordmark-white",
+      "src": "/media-responsive/brand/logo-wordmark-white-full.webp",
+      "original_src": "/media/brand/logo-wordmark-white.png",
+      "srcset": [
+        {
+          "src": "/media-responsive/brand/logo-wordmark-white-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/brand/logo-wordmark-white-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/brand/logo-wordmark-white-full.webp",
+          "width": 1100
+        }
+      ],
+      "srcset_avif": [],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "brand",
+      "width": 1100,
+      "height": 130,
+      "bytes": 70001,
+      "sha256": "7a598316b090328faefa467e968aceb3f09b85b457f638a46d16d52f7f6b4780",
       "source_type": "official",
       "status": "approved",
       "source_package": "MAIXON_V5.9_WEBSITE_REAL_ASSETS_COMPLETE",
@@ -104,6 +145,7 @@
           "width": 1279
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "hardware",
@@ -120,8 +162,8 @@
       "object_position": "50% 52%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON DTF604 设备占位图",
-        "en": "Provisional MAIXON DTF604 equipment image"
+        "zh-CN": "MAIXON DTF604 打印系统",
+        "en": "MAIXON DTF604 printing system"
       }
     },
     {
@@ -142,6 +184,7 @@
           "width": 1500
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "hardware",
@@ -158,8 +201,8 @@
       "object_position": "50% 52%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON DTF608 设备占位图",
-        "en": "Provisional MAIXON DTF608 equipment image"
+        "zh-CN": "MAIXON DTF608 打印系统",
+        "en": "MAIXON DTF608 printing system"
       }
     },
     {
@@ -180,6 +223,7 @@
           "width": 1488
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "hardware",
@@ -196,8 +240,8 @@
       "object_position": "50% 52%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON DTG604 设备占位图",
-        "en": "Provisional MAIXON DTG604 equipment image"
+        "zh-CN": "MAIXON DFG604 白墨烫画烫金系统",
+        "en": "MAIXON DFG604 transfer and foil finishing system"
       }
     },
     {
@@ -214,6 +258,7 @@
           "width": 900
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "hardware",
@@ -230,8 +275,742 @@
       "object_position": "50% 52%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON OVEN604 设备占位图",
-        "en": "Provisional MAIXON OVEN604 equipment image"
+        "zh-CN": "MAIXON OVEN604 撒粉烘干系统",
+        "en": "MAIXON OVEN604 powder and curing system"
+      }
+    },
+    {
+      "id": "hw-real-dtf604-machine-overview",
+      "src": "/media-responsive/hardware/real/images/dtf604-machine-full.webp",
+      "original_src": "/media/hardware/real/images/dtf604-machine.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/images/dtf604-machine-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf604-machine-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf604-machine-full.webp",
+          "width": 1080
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/images/dtf604-machine-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf604-machine-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf604-machine-full.avif",
+          "width": 1080
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-dtf604",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 93604,
+      "sha256": "60a0db6d9c9b6b40939f17a2336fd677349216116596901025ab52172761ab96",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF604",
+      "media_role": "machine-overview",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "3 / 4",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF604 白墨烫画生产系统",
+        "en": "DTF604 DTF production system"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-machine-overview",
+      "src": "/media-responsive/hardware/real/images/dtf608-machine-full.webp",
+      "original_src": "/media/hardware/real/images/dtf608-machine.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/images/dtf608-machine-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf608-machine-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf608-machine-full.webp",
+          "width": 1184
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/images/dtf608-machine-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf608-machine-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/dtf608-machine-full.avif",
+          "width": 1184
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 1184,
+      "height": 864,
+      "bytes": 36746,
+      "sha256": "af01462a2b653127758f9d5d685e89b33aa93931fcd7ae9717caa739f2699e95",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "machine-overview",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "37 / 27",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 八头高速生产系统",
+        "en": "DTF608 eight-head high-speed production system"
+      }
+    },
+    {
+      "id": "hw-real-garment-hoodie",
+      "src": "/media-responsive/hardware/real/images/garment-hoodie-full.webp",
+      "original_src": "/media/hardware/real/images/garment-hoodie.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/images/garment-hoodie-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-hoodie-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-hoodie-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/images/garment-hoodie-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-hoodie-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-hoodie-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-shared-garment",
+      "width": 1600,
+      "height": 2134,
+      "bytes": 356044,
+      "sha256": "28302adfa1f517b4d27502f4e14ebecdffa249e4550e65ed6efea86dee5bd5b7",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "machine_model": "shared-dtf",
+      "media_role": "finished-garment",
+      "shared": true,
+      "public_safe": false,
+      "aspect_ratio": "3 / 4",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "灰色连帽衫上的印花成品应用",
+        "en": "Finished print application on a grey hoodie"
+      }
+    },
+    {
+      "id": "hw-real-garment-sweatshirt",
+      "src": "/media-responsive/hardware/real/images/garment-sweatshirt-full.webp",
+      "original_src": "/media/hardware/real/images/garment-sweatshirt.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/images/garment-sweatshirt-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-sweatshirt-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-sweatshirt-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/images/garment-sweatshirt-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-sweatshirt-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/images/garment-sweatshirt-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-shared-garment",
+      "width": 1600,
+      "height": 1738,
+      "bytes": 169630,
+      "sha256": "3795a6dac57afe094cd4923f53514bba6482480d3d3b62a99a11a832946e8fcc",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "machine_model": "shared-dtf",
+      "media_role": "finished-garment",
+      "shared": true,
+      "public_safe": false,
+      "aspect_ratio": "800 / 869",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "黑色卫衣上的大幅印花成品应用",
+        "en": "Large finished print application on a black sweatshirt"
+      }
+    },
+    {
+      "id": "hw-real-dtf604-machine-operation-poster",
+      "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-full.webp",
+      "original_src": "/media/hardware/real/posters/dtf604-machine-operation.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-full.webp",
+          "width": 1080
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf604-machine-operation-full.avif",
+          "width": 1080
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-dtf604",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 103938,
+      "sha256": "51be6675cf143fb216d72822a55c04ebb808745a2dfd6758110f504485b4155e",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF604",
+      "media_role": "video-poster",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "3 / 4",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF604 标准生产视频封面",
+        "en": "DTF604 standard production video poster"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-print-closeup-poster",
+      "src": "/media-responsive/hardware/real/posters/dtf608-print-closeup-full.webp",
+      "original_src": "/media/hardware/real/posters/dtf608-print-closeup.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-print-closeup-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-print-closeup-full.webp",
+          "width": 675
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-print-closeup-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-print-closeup-full.avif",
+          "width": 675
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 675,
+      "height": 1200,
+      "bytes": 51754,
+      "sha256": "b7e0b743bfa4c8e321595cc7f3ad040a7b4b1296356d706e8df43a96154a0c78",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "video-poster",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 打印近景视频封面",
+        "en": "DTF608 printing close-up video poster"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-production-close-poster",
+      "src": "/media-responsive/hardware/real/posters/dtf608-production-close-full.webp",
+      "original_src": "/media/hardware/real/posters/dtf608-production-close.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-close-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-close-full.webp",
+          "width": 675
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-close-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-close-full.avif",
+          "width": 675
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 675,
+      "height": 1200,
+      "bytes": 76834,
+      "sha256": "0cf49ff0f8ed5eaad1afcf817cd803c2376be5d6d25925dae89f3c090b7560d5",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "video-poster",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 走料与打印视频封面",
+        "en": "DTF608 media travel and printing video poster"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-production-wide-poster",
+      "src": "/media-responsive/hardware/real/posters/dtf608-production-wide-full.webp",
+      "original_src": "/media/hardware/real/posters/dtf608-production-wide.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-wide-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-wide-full.webp",
+          "width": 675
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-wide-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/dtf608-production-wide-full.avif",
+          "width": 675
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 675,
+      "height": 1200,
+      "bytes": 41942,
+      "sha256": "e8a94735ec354cc02e0c2f3495478bc60e4bb7eb1531fab81112d99cd630f3dd",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "video-poster",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 连续生产视频封面",
+        "en": "DTF608 continuous production video poster"
+      }
+    },
+    {
+      "id": "hw-real-shared-output-demo-poster",
+      "src": "/media-responsive/hardware/real/posters/shared-output-demo-full.webp",
+      "original_src": "/media/hardware/real/posters/shared-output-demo.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-output-demo-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-output-demo-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-output-demo-full.webp",
+          "width": 1080
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-output-demo-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-output-demo-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-output-demo-full.avif",
+          "width": 1080
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-shared-quality",
+      "width": 1080,
+      "height": 1080,
+      "bytes": 182208,
+      "sha256": "675228c0a6ced4343647ac184914ec5d86cd7e5b2e554b6d524ca01e37970cc5",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "machine_model": "shared",
+      "media_role": "video-poster",
+      "shared": true,
+      "public_safe": false,
+      "aspect_ratio": "1 / 1",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "印花成品细节视频封面",
+        "en": "Finished print detail video poster"
+      }
+    },
+    {
+      "id": "hw-real-shared-quality-demo-poster",
+      "src": "/media-responsive/hardware/real/posters/shared-quality-demo-full.webp",
+      "original_src": "/media/hardware/real/posters/shared-quality-demo.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-quality-demo-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-quality-demo-full.webp",
+          "width": 675
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-quality-demo-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/hardware/real/posters/shared-quality-demo-full.avif",
+          "width": 675
+        }
+      ],
+      "kind": "image",
+      "locale": "shared",
+      "product_area": "hardware-shared-quality",
+      "width": 675,
+      "height": 1200,
+      "bytes": 125334,
+      "sha256": "c2d54145f909d9507b92febecf2a54c05040aca0c239aab89a5b347ee598b208",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "machine_model": "shared",
+      "media_role": "video-poster",
+      "shared": true,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "色彩与图案细节视频封面",
+        "en": "Color and graphic detail video poster"
+      }
+    },
+    {
+      "id": "hw-real-dtf604-machine-operation",
+      "src": "/media/hardware/real/videos/dtf604-machine-operation.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "shared",
+      "product_area": "hardware-dtf604",
+      "width": 1080,
+      "height": 1440,
+      "duration": 11.216,
+      "bytes": 13963445,
+      "sha256": "2264b11ad96e39c8a89691e49c52e998876f6ec615897f5dcdfe06cadd753718",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF604",
+      "media_role": "machine-operation",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "3 / 4",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF604 标准生产系统运行与走料近景",
+        "en": "DTF604 standard production system operation and media travel"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-print-closeup",
+      "src": "/media/hardware/real/videos/dtf608-print-closeup.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 720,
+      "height": 1280,
+      "duration": 25.65,
+      "bytes": 21195828,
+      "sha256": "332becd44bf5c2fe1db82de23b46b79051b67c9cba6d0e04659b75ca67e74720",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "printing-closeup",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 打印头连续工作的近景",
+        "en": "Close view of the DTF608 print carriage in continuous operation"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-production-close",
+      "src": "/media/hardware/real/videos/dtf608-production-close.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 720,
+      "height": 1280,
+      "duration": 17.002,
+      "bytes": 12589873,
+      "sha256": "b16e2449e23bd2d6200827ca39737518c61292fc31ebd8d5406e08585822198f",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "production-detail",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 打印与输出路径近景",
+        "en": "Close view of DTF608 printing and the output path"
+      }
+    },
+    {
+      "id": "hw-real-dtf608-production-wide",
+      "src": "/media/hardware/real/videos/dtf608-production-wide.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "shared",
+      "product_area": "hardware-dtf608",
+      "width": 720,
+      "height": 1280,
+      "duration": 21.175,
+      "bytes": 15010729,
+      "sha256": "77392c1a171724e4717c91c26c7e96a3e25e0763a68b558f69a09e379e41709a",
+      "source_type": "official",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "machine_model": "DTF608",
+      "media_role": "continuous-production",
+      "shared": false,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF608 连续打印与走料过程",
+        "en": "DTF608 continuous printing and media travel"
+      }
+    },
+    {
+      "id": "hw-real-shared-output-demo",
+      "src": "/media/hardware/real/videos/shared-output-demo.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "shared",
+      "product_area": "hardware-shared-quality",
+      "width": 1080,
+      "height": 1080,
+      "duration": 10.5,
+      "bytes": 12390689,
+      "sha256": "90996081eeb55318c3199212043cec95dcc48308609c8ace9a77f037ba2db89c",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "machine_model": "shared",
+      "media_role": "finished-output-detail",
+      "shared": true,
+      "public_safe": false,
+      "aspect_ratio": "1 / 1",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "印花成品表面的色彩与细节",
+        "en": "Color and detail across a finished print surface"
+      }
+    },
+    {
+      "id": "hw-real-shared-quality-demo",
+      "src": "/media/hardware/real/videos/shared-quality-demo.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "shared",
+      "product_area": "hardware-shared-quality",
+      "width": 720,
+      "height": 1280,
+      "duration": 15.002,
+      "bytes": 12255059,
+      "sha256": "2e7c2ab7bcd51d2e5d10eae98b7e897cb07331a288a1af76510d62be892cbeaf",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网机器视频素材",
+      "replaceable": false,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "machine_model": "shared",
+      "media_role": "color-and-detail",
+      "shared": true,
+      "public_safe": false,
+      "aspect_ratio": "9 / 16",
+      "object_fit": "cover",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "印花图案的颜色层次、边缘与表面细节",
+        "en": "Color layers, edges and surface detail in finished print graphics"
       }
     },
     {
@@ -248,6 +1027,7 @@
           "width": 1000
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "hardware",
@@ -264,8 +1044,8 @@
       "object_position": "50% 52%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "Epson WF7610 喷头占位图",
-        "en": "Provisional Epson WF7610 printhead image"
+        "zh-CN": "Epson WF7610 喷头",
+        "en": "Epson WF7610 printhead"
       }
     },
     {
@@ -286,6 +1066,7 @@
           "width": 1200
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "production-proof",
@@ -317,6 +1098,7 @@
           "width": 1005
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "production-proof",
@@ -356,6 +1138,7 @@
           "width": 1700
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "production-proof",
@@ -395,6 +1178,7 @@
           "width": 1700
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "production-proof",
@@ -434,6 +1218,7 @@
           "width": 1700
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "shared",
       "product_area": "production-proof",
@@ -473,6 +1258,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "en",
       "product_area": "ai",
@@ -515,6 +1301,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "en",
       "product_area": "dtf",
@@ -557,6 +1344,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "en",
       "product_area": "home",
@@ -599,6 +1387,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "en",
       "product_area": "purchase",
@@ -634,6 +1423,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "en",
       "product_area": "purchase",
@@ -673,6 +1463,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "en",
       "product_area": "sublimation",
@@ -715,6 +1506,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "ai",
@@ -750,6 +1542,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "ai",
@@ -785,6 +1578,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "ai",
@@ -824,6 +1618,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "ai",
@@ -859,6 +1654,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtf",
@@ -894,6 +1690,7 @@
           "width": 1455
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtf",
@@ -933,6 +1730,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtf",
@@ -968,6 +1766,7 @@
           "width": 1455
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtf",
@@ -1003,6 +1802,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtf",
@@ -1038,6 +1838,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtg",
@@ -1077,6 +1878,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtg",
@@ -1116,6 +1918,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtg",
@@ -1155,6 +1958,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtg",
@@ -1190,6 +1994,7 @@
           "width": 1200
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtg",
@@ -1229,6 +2034,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "home",
@@ -1268,6 +2074,7 @@
           "width": 1920
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "ai",
@@ -1307,6 +2114,7 @@
           "width": 1920
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "dtf",
@@ -1346,6 +2154,7 @@
           "width": 1920
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "home",
@@ -1385,6 +2194,7 @@
           "width": 1920
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1424,6 +2234,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "purchase",
@@ -1463,6 +2274,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "purchase",
@@ -1479,6 +2291,1391 @@
       "object_position": "50% 50%",
       "layout_depends_on_image": false,
       "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-ai-artwork-extraction-compare",
+      "src": "/media/software/zh/runtime-update/ai/artwork-extraction-compare.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 778,
+      "height": 990,
+      "duration": 10.3,
+      "bytes": 574235,
+      "sha256": "2e9f1f2d1082e1b9ebdacdc5ad094d1e8ee73dbaa1a89bfb478b666e2e8d83f1",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 印花提取前后对比"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-background-removal-compare",
+      "src": "/media/software/zh/runtime-update/ai/background-removal-compare.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 1000,
+      "height": 1048,
+      "duration": 9.4,
+      "bytes": 769948,
+      "sha256": "3fd4ca4e5034f438a5151ec71e770c482c8f54bf2dced374dc4e716b0b3ae0e5",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 一键抠图前后对比"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-background-removal-progress",
+      "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-full.webp",
+      "original_src": "/media/software/zh/runtime-update/ai/background-removal-progress.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-full.webp",
+          "width": 2160
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/background-removal-progress-full.avif",
+          "width": 2160
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 2160,
+      "height": 1368,
+      "bytes": 186008,
+      "sha256": "0700ec4c14e1f712c9dbc5f92109c13e2e1654aa94c0dfb854fdafdb261b9214",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 一键抠图处理中"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-continue-to-dtg",
+      "src": "/media/software/zh/runtime-update/ai/continue-to-dtg.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 1600,
+      "height": 1008,
+      "duration": 54.367,
+      "bytes": 3161562,
+      "sha256": "c6fb1ef76baff2b52d9eda5f2e732af3f40665b46ef920a70c86db8ce5a1290d",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 结果继续进入 DTG 的操作演示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-extraction-complete",
+      "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-full.webp",
+      "original_src": "/media/software/zh/runtime-update/ai/extraction-complete.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-full.webp",
+          "width": 2160
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-complete-full.avif",
+          "width": 2160
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 2160,
+      "height": 1368,
+      "bytes": 204884,
+      "sha256": "c40c9f032d5aad5a22494fd40df175300af38b6cdb0e6ff5cf807a7c5c3d3bf3",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 印花提取完成提示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-extraction-progress",
+      "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-full.webp",
+      "original_src": "/media/software/zh/runtime-update/ai/extraction-progress.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-full.webp",
+          "width": 2160
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/extraction-progress-full.avif",
+          "width": 2160
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 2160,
+      "height": 1368,
+      "bytes": 179460,
+      "sha256": "910a202f8f4aa1762a65a9201c8810fa89af8cc0e0138889cf1eb2e9e8029329",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 印花提取处理中"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-workflow-routing",
+      "src": "/media-responsive/software/zh/runtime-update/ai/workflow-routing-full.webp",
+      "original_src": "/media/software/zh/runtime-update/ai/workflow-routing.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workflow-routing-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workflow-routing-full.webp",
+          "width": 994
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workflow-routing-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workflow-routing-full.avif",
+          "width": 994
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 994,
+      "height": 1198,
+      "bytes": 97032,
+      "sha256": "26374397243fdd89c7db87167c3e46b6014b4aeb87bf711d66e56128f6cfe97d",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 结果进入 DTF、DTG 或自动排版的操作入口"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-ai-workspace-source",
+      "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-full.webp",
+      "original_src": "/media/software/zh/runtime-update/ai/workspace-source.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-full.webp",
+          "width": 2160
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/ai/workspace-source-full.avif",
+          "width": 2160
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 2160,
+      "height": 1368,
+      "bytes": 180886,
+      "sha256": "af84986a3659802fe1b0ba8d792361c9d3f27d98451df9c5a7199a5f7eace2ea",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "MAIXON AI 图案处理工作区"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-artwork-source",
+      "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-full.webp",
+      "original_src": "/media/software/zh/runtime-update/dtf/artwork-source.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-full.webp",
+          "width": 2159
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/artwork-source-full.avif",
+          "width": 2159
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 2159,
+      "height": 1366,
+      "bytes": 445052,
+      "sha256": "b217df00d4f3ee69381d890e3a5c12a6cbfad5b5dca3361a11c4e8e25ecfb022",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "Photoshop 中的 DTF 彩色图稿与通道面板"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-multi-layout",
+      "src": "/media/software/zh/runtime-update/dtf/multi-layout.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1008,
+      "duration": 59.334,
+      "bytes": 14508870,
+      "sha256": "56ff7ad36288313f53648cf2a6df8b42ec29a339ca87189ea5723b5522c34d3e",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF 多图自动排版演示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-one-meter-layout",
+      "src": "/media/software/zh/runtime-update/dtf/one-meter-layout.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1008,
+      "duration": 49.434,
+      "bytes": 3601023,
+      "sha256": "f9611de9aeb4ed01a42fb65c944613a1bf6a3ae0da50c121fced43dbaa90caeb",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF 一米长度自动排版演示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-parameter-tour",
+      "src": "/media/software/zh/runtime-update/dtf/parameter-tour.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1008,
+      "duration": 12.667,
+      "bytes": 931632,
+      "sha256": "a11f4efee276bb2540e457dfba4bc321bbf0943b00fbd0b48e5901790529991c",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF 参数设置界面"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-single-artwork",
+      "src": "/media/software/zh/runtime-update/dtf/single-artwork.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1010,
+      "duration": 25.467,
+      "bytes": 2043268,
+      "sha256": "83c17162ebdb90170e0040f6ed73f9f4a9f283840a97cf621331b9503e572062",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF 单图制图演示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-single-row-layout",
+      "src": "/media/software/zh/runtime-update/dtf/single-row-layout.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1002,
+      "duration": 57.1,
+      "bytes": 2822013,
+      "sha256": "9fb4d4806ec0068fcccf3a32070aeb32caae5febdf9b0a1d0bb8b3ed3b76103f",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTF 单图按行排版演示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtf-white-channel-output",
+      "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-full.webp",
+      "original_src": "/media/software/zh/runtime-update/dtf/white-channel-output.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-full.webp",
+          "width": 2159
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtf/white-channel-output-full.avif",
+          "width": 2159
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 2159,
+      "height": 1369,
+      "bytes": 316864,
+      "sha256": "04f42fdcea1229fd0b2e99e6dee60316368f6bdeae801b9ae5b9e518c381660f",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "Photoshop 中的 DTF W1 白墨通道结果"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtg-parameter-controls",
+      "src": "/media/software/zh/runtime-update/dtg/parameter-controls.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "dtg",
+      "width": 1600,
+      "height": 1008,
+      "duration": 20.1,
+      "bytes": 455109,
+      "sha256": "a4b8b54ca2a2191ab77dcad7df6b86cf1357803c6750b6340c0bae6aee3debc3",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTG 白墨参数控制演示"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtg-photoshop-color-state",
+      "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-full.webp",
+      "original_src": "/media/software/zh/runtime-update/dtg/photoshop-color-state.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-full.webp",
+          "width": 2160
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-color-state-full.avif",
+          "width": 2160
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtg",
+      "width": 2160,
+      "height": 1379,
+      "bytes": 206860,
+      "sha256": "6778ff8a17346da65d32322350719582ef3c409fcbde83fd5d76e2fbbaa624e8",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTG 图稿的 CMYK 通道状态"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-dtg-photoshop-white-channel",
+      "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-full.webp",
+      "original_src": "/media/software/zh/runtime-update/dtg/photoshop-white-channel.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-full.webp",
+          "width": 2160
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-1600.avif",
+          "width": 1600
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/dtg/photoshop-white-channel-full.avif",
+          "width": 2160
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtg",
+      "width": 2160,
+      "height": 1379,
+      "bytes": 173938,
+      "sha256": "2f8e4f39c1640ee5791792daba07752cd284a02ebeb2baa68a3b04ffec9f3ae9",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "DTG 图稿的 W1 白墨通道状态"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-posters-ai-artwork-extraction-compare",
+      "src": "/media-responsive/software/zh/runtime-update/posters/ai-artwork-extraction-compare-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/ai-artwork-extraction-compare.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-artwork-extraction-compare-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-artwork-extraction-compare-full.webp",
+          "width": 778
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-artwork-extraction-compare-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-artwork-extraction-compare-full.avif",
+          "width": 778
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 778,
+      "height": 990,
+      "bytes": 56726,
+      "sha256": "881335be310d6198b3fcf457e37200c3f28f30fdfa1e9ace4ce4319632759b8e",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-ai-background-removal-compare",
+      "src": "/media-responsive/software/zh/runtime-update/posters/ai-background-removal-compare-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/ai-background-removal-compare.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-background-removal-compare-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-background-removal-compare-full.webp",
+          "width": 1000
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-background-removal-compare-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-background-removal-compare-full.avif",
+          "width": 1000
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 1000,
+      "height": 1048,
+      "bytes": 85146,
+      "sha256": "eb3a36739845a7e0d394d872ad00c961cac2030e5a7c2a9403064b6dafc1b0f1",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-ai-continue-to-dtg",
+      "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/ai-continue-to-dtg.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/ai-continue-to-dtg-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "ai",
+      "width": 1600,
+      "height": 1008,
+      "bytes": 112560,
+      "sha256": "cbbf6b49e4e7e27d3a3280afe359b82483b99bc570265f653296e7032596587c",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-dtf-multi-layout",
+      "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/dtf-multi-layout.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-multi-layout-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1008,
+      "bytes": 160846,
+      "sha256": "59ea2f2da84c7f774bbd576e04057134d480d4c8c881e406600cb7c1c29f6d02",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-dtf-one-meter-layout",
+      "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/dtf-one-meter-layout.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-one-meter-layout-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1008,
+      "bytes": 72730,
+      "sha256": "509a6d5314588a03fa6844cc6762301994b8c2adc8e51f2899fcedb68be30a6f",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-dtf-parameter-tour",
+      "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/dtf-parameter-tour.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-parameter-tour-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1008,
+      "bytes": 65892,
+      "sha256": "b78e0dbf8119ca653aebcb67ddf850e647bc756b3493070c3e3c9a3fca80a43a",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-dtf-single-artwork",
+      "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/dtf-single-artwork.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-artwork-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1010,
+      "bytes": 286278,
+      "sha256": "7c371d58941d483519f62dd686b90ab97f35d619873f77ab133d587520642d2a",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-dtf-single-row-layout",
+      "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/dtf-single-row-layout.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtf-single-row-layout-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtf",
+      "width": 1600,
+      "height": 1002,
+      "bytes": 75440,
+      "sha256": "5c41eeff8fd77c30c9b0e9704b77b1a021d720e94c32bdde618155d03e610cfb",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-dtg-parameter-controls",
+      "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/dtg-parameter-controls.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/dtg-parameter-controls-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "dtg",
+      "width": 1600,
+      "height": 1008,
+      "bytes": 67418,
+      "sha256": "413a897f7abdfe2e67e41ffa0cb3f7574c33beb9ca15fdef71a35f8dfb81d12f",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-posters-sublimation-layout-workflow",
+      "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-full.webp",
+      "original_src": "/media/software/zh/runtime-update/posters/sublimation-layout-workflow.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-full.webp",
+          "width": 1600
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/posters/sublimation-layout-workflow-full.avif",
+          "width": 1600
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "sublimation",
+      "width": 1600,
+      "height": 1010,
+      "bytes": 91802,
+      "sha256": "c54b86f97ec8fcd037c1732ed5216e787db415811e331617a008f04c54744e6c",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": null
+    },
+    {
+      "id": "software-zh-runtime-update-sublimation-garment-pieces-source",
+      "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-full.webp",
+      "original_src": "/media/software/zh/runtime-update/sublimation/garment-pieces-source.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-1024.webp",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-full.webp",
+          "width": 1260
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-1024.avif",
+          "width": 1024
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/garment-pieces-source-full.avif",
+          "width": 1260
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "sublimation",
+      "width": 1260,
+      "height": 1267,
+      "bytes": 103924,
+      "sha256": "bae84f4d7259a23b2a01480ff51f649bac3b44a45a61a79aa5d1bb2a6db58213",
+      "source_type": "artwork_source",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "热升华球衣裁片输入图稿"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-sublimation-layout-output",
+      "src": "/media-responsive/software/zh/runtime-update/sublimation/layout-output-full.webp",
+      "original_src": "/media/software/zh/runtime-update/sublimation/layout-output.webp",
+      "srcset": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/layout-output-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/layout-output-full.webp",
+          "width": 965
+        }
+      ],
+      "srcset_avif": [
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/layout-output-640.avif",
+          "width": 640
+        },
+        {
+          "src": "/media-responsive/software/zh/runtime-update/sublimation/layout-output-full.avif",
+          "width": 965
+        }
+      ],
+      "kind": "image",
+      "locale": "zh-CN",
+      "product_area": "sublimation",
+      "width": 965,
+      "height": 1181,
+      "bytes": 71868,
+      "sha256": "5202ad115ad54d12e6f25e2a17ad08fa01e95bd51257cda18faeec74d9d51157",
+      "source_type": "production_output",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "not_applicable",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "热升华裁片排版输出"
+      }
+    },
+    {
+      "id": "software-zh-runtime-update-sublimation-layout-workflow",
+      "src": "/media/software/zh/runtime-update/sublimation/layout-workflow.mp4",
+      "srcset": [],
+      "kind": "video",
+      "locale": "zh-CN",
+      "product_area": "sublimation",
+      "width": 1600,
+      "height": 1010,
+      "duration": 54.7,
+      "bytes": 1773884,
+      "sha256": "8ba85422c199eda63c34795237708b80e90d78187ccc5cd840e14b293832479a",
+      "source_type": "runtime_capture",
+      "status": "review_pending",
+      "source_package": "官网素材更新包 / 官网素材更新包_视频加速版",
+      "replaceable": true,
+      "rights_clearance": "pending",
+      "ui_brand_consistency": "pending_review",
+      "aspect_ratio": "16 / 10",
+      "object_fit": "contain",
+      "object_position": "50% 50%",
+      "layout_depends_on_image": false,
+      "alt": {
+        "zh-CN": "热升华 Quick、Balanced 与 Best 排版方案演示"
+      }
     },
     {
       "id": "software-zh-sublimation-zh-sub-01-import",
@@ -1502,6 +3699,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1541,6 +3739,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1580,6 +3779,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1619,6 +3819,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1658,6 +3859,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1697,6 +3899,7 @@
           "width": 2160
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",
@@ -1732,6 +3935,7 @@
           "width": 1440
         }
       ],
+      "srcset_avif": [],
       "kind": "image",
       "locale": "zh-CN",
       "product_area": "sublimation",

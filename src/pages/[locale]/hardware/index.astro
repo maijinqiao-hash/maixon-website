@@ -1,7 +1,8 @@
 ---
-import MediaFrame from "@/components/MediaFrame.astro";
+import HardwareOverview from "@/components/hardware/HardwareOverview.astro";
 import SiteLayout from "@/layouts/SiteLayout.astro";
 import { copy } from "@/data/site";
+import { hardwareOverviewCopy, hardwareProducts, printerOrder } from "@/data/hardware";
 import type { Locale } from "@/data/media";
 
 export function getStaticPaths() {
@@ -9,37 +10,26 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const content = copy[locale];
+const siteCopy = copy[locale];
+const overview = hardwareOverviewCopy[locale];
+const title = locale === "zh-CN" ? "MAIXON 硬件｜DFG604、DTF604、DTF608 与 OVEN604" : "MAIXON Hardware | DFG604, DTF604, DTF608 & OVEN604";
+const description = overview.body;
+const productList = [...printerOrder, "oven604" as const].map((key, position) => ({
+  "@type": "ListItem",
+  position: position + 1,
+  url: new URL(hardwareProducts[key].href[locale], Astro.site).toString(),
+  name: hardwareProducts[key].name
+}));
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: title,
+  description,
+  itemListElement: productList
+});
 ---
 
-<SiteLayout
-  locale={locale}
-  title={locale === "zh-CN" ? "MAIXON 硬件｜V5.9 生产生态" : "MAIXON Hardware | V5.9 Production Ecosystem"}
-  description={content.hardware.body}
-  downloadLabel={content.header.download}
-  menuLabel={content.header.menu}
->
-  <section class="page-hero page-hero--compact">
-    <p class="section-label">{content.hardware.label}</p>
-    <h1>{content.hardware.title}</h1>
-    <p>{content.hardware.body}</p>
-  </section>
-  <section class="product-index">
-    {content.hardware.products.map((product, index) => (
-      <article>
-        <a href={product.href}>
-          <span class="product-index__number">{String(index + 1).padStart(2, "0")}</span>
-          <div class="product-index__media">
-            <MediaFrame id={product.mediaId} locale={locale} alt={product.name} />
-          </div>
-          <div>
-            <h2>{product.name}</h2>
-            <p class="hardware-product__type">{product.type}</p>
-            <p>{product.description}</p>
-            <small>{content.hardware.provisional}</small>
-          </div>
-        </a>
-      </article>
-    ))}
-  </section>
+<SiteLayout locale={locale} title={title} description={description} downloadLabel={siteCopy.header.download} menuLabel={siteCopy.header.menu}>
+  <script is:inline type="application/ld+json" set:html={structuredData}></script>
+  <HardwareOverview locale={locale} surface="index" />
 </SiteLayout>

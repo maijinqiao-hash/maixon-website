@@ -1,0 +1,59 @@
+---
+import MediaFrame from "@/components/MediaFrame.astro";
+import SupportPageShell from "@/components/support/SupportPageShell.astro";
+import { guideCopy, type GuideTopic } from "@/data/support-content";
+import type { Locale } from "@/data/media";
+
+export function getStaticPaths() {
+  return (["zh-CN", "en"] as Locale[]).flatMap((locale) =>
+    guideCopy[locale].topics.map((topic) => ({
+      params: { locale, topic: topic.slug },
+      props: { topic }
+    }))
+  );
+}
+
+const locale = Astro.params.locale as Locale;
+const topic = Astro.props.topic as GuideTopic;
+const content = guideCopy[locale];
+---
+
+<SupportPageShell
+  locale={locale}
+  label={`${content.label} · ${topic.number}`}
+  title={topic.title}
+  description={topic.description}
+  backHref={`/${locale}/guide/`}
+  backLabel={content.back}
+>
+  <article class="guide-document">
+    {topic.sections.map((section, index) => (
+      <section class="guide-section">
+        <span class="guide-section__index">{String(index + 1).padStart(2, "0")}</span>
+        <div class="guide-section__body">
+          <h2>{section.title}</h2>
+          <p class="guide-section__intro">{section.body}</p>
+          {section.steps ? (
+            <ol class="guide-steps">
+              {section.steps.map((step) => <li>{step}</li>)}
+            </ol>
+          ) : null}
+          {section.notes ? (
+            <ul class="guide-notes">
+              {section.notes.map((note) => <li>{note}</li>)}
+            </ul>
+          ) : null}
+          {section.media ? (
+            <MediaFrame
+              id={section.media.id}
+              locale={locale}
+              posterId={section.media.posterId}
+              alt={section.media.alt}
+              caption={section.media.caption}
+            />
+          ) : null}
+        </div>
+      </section>
+    ))}
+  </article>
+</SupportPageShell>

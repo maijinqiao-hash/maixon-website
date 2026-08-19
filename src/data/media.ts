@@ -1,4 +1,5 @@
 import manifestJson from "./media-manifest.json";
+import fallbackJson from "./media-locale-fallbacks.json";
 
 export type Locale = "zh-CN" | "en";
 
@@ -12,6 +13,7 @@ export type MediaAsset = {
   src: string;
   original_src?: string;
   srcset: MediaSource[];
+  srcset_avif?: MediaSource[];
   kind: "image" | "video";
   locale: Locale | "shared";
   product_area: string;
@@ -20,10 +22,12 @@ export type MediaAsset = {
   duration?: number;
   bytes: number;
   sha256: string;
-  source_type: "official" | "runtime_capture" | "production_output" | "generated";
-  status: "approved" | "provisional";
+  source_type: "official" | "runtime_capture" | "artwork_source" | "production_output" | "generated";
+  status: "approved" | "provisional" | "review_pending";
   source_package: string;
   replaceable: boolean;
+  rights_clearance?: "approved" | "pending" | "not_required";
+  ui_brand_consistency?: "approved" | "pending_review" | "not_applicable";
   aspect_ratio: string;
   object_fit: "cover" | "contain";
   object_position: string;
@@ -43,10 +47,32 @@ export const mediaById = new Map(
   mediaManifest.assets.map((asset) => [asset.id, asset])
 );
 
+type LocaleFallbackPolicy = {
+  requested_locale: Locale;
+  source_locale: Locale;
+  media_ids: string[];
+};
+
+const localeFallbacks = fallbackJson.fallbacks as LocaleFallbackPolicy[];
+
+export function isApprovedLocaleFallback(id: string, requestedLocale: Locale, sourceLocale: Locale) {
+  return localeFallbacks.some(
+    (fallback) =>
+      fallback.requested_locale === requestedLocale &&
+      fallback.source_locale === sourceLocale &&
+      fallback.media_ids.includes(id)
+  );
+}
+
 export function getMedia(id: string, locale?: Locale) {
   const media = mediaById.get(id);
   if (!media) throw new Error(`Unknown media id: ${id}`);
-  if (locale && media.locale !== "shared" && media.locale !== locale) {
+  if (
+    locale &&
+    media.locale !== "shared" &&
+    media.locale !== locale &&
+    !isApprovedLocaleFallback(id, locale, media.locale)
+  ) {
     throw new Error(
       `Locale mismatch: ${id} is ${media.locale}, requested by ${locale}`
     );

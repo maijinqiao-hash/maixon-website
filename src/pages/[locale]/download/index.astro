@@ -22,7 +22,7 @@ const content = copy[locale];
     <p class="section-label">{content.download.label}</p>
     <h1>{content.download.title}</h1>
     <p>{content.download.body}</p>
-    <a class="button button--dark" href={installer.url}>{content.download.button}</a>
+    <a class="button button--dark" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{content.download.button}</a>
     <dl>
       <div><dt>{locale === "zh-CN" ? "版本" : "Version"}</dt><dd>{installer.version}</dd></div>
       <div><dt>{locale === "zh-CN" ? "系统" : "System"}</dt><dd>{installer.os}</dd></div>

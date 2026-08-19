@@ -1,0 +1,246 @@
+---
+import MediaFrame from "@/components/MediaFrame.astro";
+import HardwareRealMedia from "@/components/hardware/HardwareRealMedia.astro";
+import type { Locale } from "@/data/media";
+import {
+  dfg604ApplicationMedia,
+  hardwareLabels,
+  hardwareNarratives,
+  hardwareProducts,
+  getHardwareSpecValue,
+  type HardwareProductKey
+} from "@/data/hardware";
+import "@/styles/hardware.css";
+
+interface Props {
+  locale: Locale;
+  productKey: HardwareProductKey;
+}
+
+const { locale, productKey } = Astro.props;
+const product = hardwareProducts[productKey];
+const labels = hardwareLabels[locale];
+const photoSizes = "(max-width: 720px) 100vw, (max-width: 1180px) 50vw, 48vw";
+---
+
+<article class:list={["hw-product-page", `hw-product-page--${productKey}`]}>
+  <section class="hw-product-hero">
+    <div class="hw-product-hero__copy">
+      <p class="hw-kicker">{product.type[locale]}</p>
+      <h1>{product.name}</h1>
+      <h2>{product.heroTitle[locale]}</h2>
+      <p>{product.summary[locale]}</p>
+    </div>
+    <div class="hw-product-hero__media">
+      <MediaFrame id={product.mediaId} locale={locale} priority alt={product.name} />
+    </div>
+  </section>
+
+  <section class="hw-metric-strip" aria-label={locale === "zh-CN" ? `${product.name} 核心参数` : `${product.name} key specifications`}>
+    {product.metrics.map((metric, index) => (
+      <div>
+        <span>{String(index + 1).padStart(2, "0")}</span>
+        <strong>{metric.value}</strong>
+        <p>{metric.label[locale]}</p>
+      </div>
+    ))}
+  </section>
+
+  {productKey === "dtf604" && (
+    <>
+      <section class="hw-editorial hw-editorial--split">
+        <div>
+          <p class="hw-kicker">DTF604</p>
+          <h2>{hardwareNarratives.dtf604.productionTitle[locale]}</h2>
+          <p>{hardwareNarratives.dtf604.productionBody[locale]}</p>
+        </div>
+        <div class="hw-number-list">
+          {hardwareNarratives.dtf604.productionPoints.map((point) => (
+            <div><strong>{point.value}</strong><span>{point.label[locale]}</span></div>
+          ))}
+        </div>
+      </section>
+      <section class="hw-ink-system">
+        <div class="hw-ink-system__number">1200 <span>ml</span></div>
+        <div>
+          <h2>{hardwareNarratives.dtf604.inkTitle[locale]}</h2>
+          <p>{hardwareNarratives.dtf604.inkBody[locale]}</p>
+          <ul>
+            <li>{locale === "zh-CN" ? "白墨循环" : "White-ink circulation"}</li>
+            <li>{locale === "zh-CN" ? "磁力搅拌" : "Magnetic agitation"}</li>
+            <li>{locale === "zh-CN" ? "持续生产支持" : "Continuous production support"}</li>
+          </ul>
+        </div>
+      </section>
+      <section class="hw-applications">
+        <header>
+          <h2>{hardwareNarratives.dtf604.applications.title[locale]}</h2>
+          <p>{hardwareNarratives.dtf604.applications.body[locale]}</p>
+        </header>
+        <ol>
+          {hardwareNarratives.dtf604.applications.items[locale].map((item, index) => (
+            <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></li>
+          ))}
+        </ol>
+      </section>
+    </>
+  )}
+
+  {productKey === "dfg604" && (
+    <>
+      <section class="hw-editorial hw-editorial--split">
+        <div>
+          <p class="hw-kicker">DFG604</p>
+          <h2>{hardwareNarratives.dfg604.processTitle[locale]}</h2>
+          <p>{hardwareNarratives.dfg604.processBody[locale]}</p>
+        </div>
+        <ol class="hw-process-list">
+          {hardwareNarratives.dfg604.processPoints.map((point) => (
+            <li><span>{point.number}</span><div><h3>{point.title[locale]}</h3><p>{point.body[locale]}</p></div></li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="hw-application-proof hw-application-proof--detail">
+        <div class="hw-application-proof__copy">
+          <p class="hw-kicker">{locale === "zh-CN" ? "烫金细节" : "Foil detail"}</p>
+          <h2>{hardwareNarratives.dfg604.foilTitle[locale]}</h2>
+          <p>{hardwareNarratives.dfg604.foilBody[locale]}</p>
+        </div>
+        <figure class="hw-photo-frame hw-photo-frame--detail">
+          <picture>
+            <source type="image/avif" srcset={dfg604ApplicationMedia.foilDetail.avifSrcset} sizes={photoSizes} />
+            <source type="image/webp" srcset={dfg604ApplicationMedia.foilDetail.srcset} sizes={photoSizes} />
+            <img src={dfg604ApplicationMedia.foilDetail.src} width={dfg604ApplicationMedia.foilDetail.width} height={dfg604ApplicationMedia.foilDetail.height} alt={dfg604ApplicationMedia.foilDetail.alt[locale]} loading="lazy" decoding="async" />
+          </picture>
+        </figure>
+      </section>
+
+      <section class="hw-application-proof hw-application-proof--banner">
+        <figure class="hw-photo-frame hw-photo-frame--banner">
+          <picture>
+            <source type="image/avif" srcset={dfg604ApplicationMedia.finishedBanner.avifSrcset} sizes={photoSizes} />
+            <source type="image/webp" srcset={dfg604ApplicationMedia.finishedBanner.srcset} sizes={photoSizes} />
+            <img src={dfg604ApplicationMedia.finishedBanner.src} width={dfg604ApplicationMedia.finishedBanner.width} height={dfg604ApplicationMedia.finishedBanner.height} alt={dfg604ApplicationMedia.finishedBanner.alt[locale]} loading="lazy" decoding="async" />
+          </picture>
+        </figure>
+        <div class="hw-application-proof__copy">
+          <p class="hw-kicker">{locale === "zh-CN" ? "完整成品" : "Finished application"}</p>
+          <h2>{hardwareNarratives.dfg604.bannerTitle[locale]}</h2>
+          <p>{hardwareNarratives.dfg604.bannerBody[locale]}</p>
+        </div>
+      </section>
+
+      <section class="hw-shirt-gallery">
+        <header>
+          <p class="hw-kicker">{locale === "zh-CN" ? "服装应用" : "Apparel direction"}</p>
+          <h2>{hardwareNarratives.dfg604.apparelTitle[locale]}</h2>
+          <p>{hardwareNarratives.dfg604.apparelBody[locale]}</p>
+        </header>
+        <div>
+          {[dfg604ApplicationMedia.shirtEye, dfg604ApplicationMedia.shirtFlower].map((media) => (
+            <figure>
+              <picture>
+                <source type="image/avif" srcset={media.avifSrcset} sizes="(max-width: 720px) 100vw, 50vw" />
+                <source type="image/webp" srcset={media.srcset} sizes="(max-width: 720px) 100vw, 50vw" />
+                <img src={media.src} width={media.width} height={media.height} alt={media.alt[locale]} loading="lazy" decoding="async" />
+              </picture>
+            </figure>
+          ))}
+        </div>
+      </section>
+    </>
+  )}
+
+  {productKey === "dtf608" && (
+    <>
+      <section class="hw-speed-stage">
+        <div class="hw-speed-stage__number">18 <span>m²/h</span></div>
+        <div>
+          <p class="hw-kicker">DTF608</p>
+          <h2>{hardwareNarratives.dtf608.speedTitle[locale]}</h2>
+          <p>{hardwareNarratives.dtf608.speedBody[locale]}</p>
+        </div>
+      </section>
+      <section class="hw-editorial hw-editorial--split">
+        <div>
+          <p class="hw-kicker">Ethernet / LAN</p>
+          <h2>{hardwareNarratives.dtf608.transportTitle[locale]}</h2>
+          <p>{hardwareNarratives.dtf608.transportBody[locale]}</p>
+        </div>
+        <div class="hw-power-readout"><strong>4200</strong><span>W</span></div>
+      </section>
+      <section class="hw-scale-note">
+        <span>≈ +200 mm</span>
+        <div><h2>{hardwareNarratives.dtf608.scaleTitle[locale]}</h2><p>{hardwareNarratives.dtf608.scaleBody[locale]}</p></div>
+      </section>
+    </>
+  )}
+
+  {productKey === "oven604" && (
+    <>
+      <section class="hw-takeup">
+        <header>
+          <p class="hw-kicker">{locale === "zh-CN" ? "随用随剪收纸系统" : "Cut-and-use take-up"}</p>
+          <h2>{hardwareNarratives.oven604.takeupTitle[locale]}</h2>
+          <p>{hardwareNarratives.oven604.takeupBody[locale]}</p>
+        </header>
+        <ol>
+          {hardwareNarratives.oven604.takeupBenefits[locale].map((item, index) => (
+            <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></li>
+          ))}
+        </ol>
+        <div class="hw-mode-switch">
+          <span>{hardwareNarratives.oven604.modes[locale][0]}</span>
+          <i aria-hidden="true">↔</i>
+          <span>{hardwareNarratives.oven604.modes[locale][1]}</span>
+        </div>
+      </section>
+      <section class="hw-thermal">
+        <header>
+          <h2>{hardwareNarratives.oven604.stagesTitle[locale]}</h2>
+          <p>{hardwareNarratives.oven604.stagesBody[locale]}</p>
+        </header>
+        <ol>
+          {hardwareNarratives.oven604.stages.map((stage) => (
+            <li><span>{stage.number}</span><strong>{stage.temperature}</strong><h3>{stage.title[locale]}</h3></li>
+          ))}
+        </ol>
+      </section>
+      <section class="hw-engineering">
+        <header><h2>{hardwareNarratives.oven604.engineeringTitle[locale]}</h2></header>
+        <div>
+          {hardwareNarratives.oven604.engineering.map((item, index) => (
+            <article><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.title[locale]}</h3><p>{item.body[locale]}</p></article>
+          ))}
+        </div>
+      </section>
+      <section class="hw-compact">
+        <header><h2>{hardwareNarratives.oven604.compactTitle[locale]}</h2></header>
+        <div>
+          {hardwareNarratives.oven604.compactPoints.map((item) => (
+            <article><h3>{item.title[locale]}</h3><p>{item.body[locale]}</p></article>
+          ))}
+        </div>
+      </section>
+    </>
+  )}
+
+  {productKey !== "oven604" && <HardwareRealMedia locale={locale} productKey={productKey} />}
+
+  <section class="hw-specifications" aria-labelledby={`${productKey}-specifications-title`}>
+    <header>
+      <p class="hw-kicker">{product.name}</p>
+      <h2 id={`${productKey}-specifications-title`}>{labels.specifications}</h2>
+      <p>{labels.specificationIntro}</p>
+    </header>
+    <dl>
+      {product.specifications.map((spec) => (
+        <div>
+          <dt>{spec.label[locale]}</dt>
+          <dd><strong>{getHardwareSpecValue(spec, locale)}</strong>{spec.note && <small>{spec.note[locale]}</small>}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+</article>

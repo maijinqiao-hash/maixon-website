@@ -1,12 +1,13 @@
 import type { Locale } from "./media";
+import { windows1011Installer } from "./downloads";
 
 export const installer = {
-  version: "5.9.0",
+  version: windows1011Installer.version,
   displayVersion: "V5.9",
   os: "Windows 10/11",
   size: "68.3 MB",
-  sha256: "2528235A8E95CAAB8FAD0BCABFD4D1523B189EEEB61759464B53E6427E7550D7",
-  url: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V5.9_Windows10_11_Setup.exe"
+  sha256: windows1011Installer.sha256,
+  url: windows1011Installer.downloadUrl
 };
 
 export const localePath = (locale: Locale) => `/${locale}/`;
@@ -29,9 +30,10 @@ export const nav = {
 } satisfies Record<Locale, Array<{ label: string; href: string }>>;
 
 export type WorkflowContent = {
-  id: "dtf" | "dtg" | "sublimation" | "ai";
+  id: "dtf" | "dtg" | "sublimation" | "ai-workbench" | "ai-results" | "ai-production";
   number: string;
   title: string;
+  titleSegments?: string[];
   eyebrow: string;
   description: string;
   steps: string[];
@@ -39,8 +41,15 @@ export type WorkflowContent = {
   videoId?: string;
   posterId?: string;
   proofId?: string;
+  mediaChoices?: MediaChoiceContent[];
   tone: "light" | "graphite";
-  mediaNote?: string;
+};
+
+export type MediaChoiceContent = {
+  label: string;
+  caption: string;
+  mediaId: string;
+  posterId?: string;
 };
 
 export type SiteCopy = {
@@ -65,14 +74,15 @@ export type SiteCopy = {
   softwareIntro: {
     label: string;
     title: string;
+    titleSegments?: string[];
     body: string;
   };
   workflows: WorkflowContent[];
   hardware: {
     label: string;
     title: string;
+    titleSegments?: string[];
     body: string;
-    provisional: string;
     products: Array<{
       name: string;
       type: string;
@@ -91,6 +101,7 @@ export type SiteCopy = {
   support: {
     label: string;
     title: string;
+    titleSegments?: string[];
     body: string;
     guide: string;
     contact: string;
@@ -106,7 +117,7 @@ export const copy: Record<Locale, SiteCopy> = {
   "zh-CN": {
     meta: {
       title: "MAIXON TOOL V5.9｜印花生产套件",
-      description: "面向 DTF、DTG 与热升华生产的 MAIXON TOOL V5.9，包含真实工作流程、MAIXON AI、软件下载与硬件生态。"
+      description: "面向 DTF、DTG 与热升华生产的 MAIXON TOOL V5.9，覆盖核心生产工作流程、MAIXON AI、软件下载与硬件设备。"
     },
     header: {
       download: "下载 V5.9",
@@ -117,7 +128,7 @@ export const copy: Record<Locale, SiteCopy> = {
       lead: "从图稿到可生产文件。",
       descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
       primary: "下载 V5.9",
-      secondary: "观看实际工作流程",
+      secondary: "查看产品演示",
       mediaId: "software-zh-home-overview",
       videoId: "software-zh-videos-demo-overall-zh-v59",
       posterId: "software-zh-posters-poster-overall-zh-v59"
@@ -125,67 +136,204 @@ export const copy: Record<Locale, SiteCopy> = {
     softwareIntro: {
       label: "软件",
       title: "一套工具，连接完整印花生产流程。",
-      body: "真实导入、真实参数、真实处理、真实输出。每个核心模块都来自最终 V5.9 运行界面。"
+      titleSegments: ["一套工具，", "连接完整", "印花生产流程。"],
+      body: "覆盖图稿导入、生产参数设置、智能处理与文件输出，让 DTF、DTG、热升华和 AI 工作流程顺畅衔接。"
     },
     workflows: [
       {
         id: "dtf",
         number: "01",
         title: "DTF 白墨烫画",
+        titleSegments: ["DTF ", "白墨烫画"],
         eyebrow: "从单图到 CMYK + W1",
-        description: "完成图稿准备、白墨专色、排版与生产 TIFF 输出，并连接常用 RIP 工作流程。",
-        steps: ["导入图稿", "设置参数", "生成 W1", "导出 TIFF"],
-        mediaId: "software-zh-dtf-zh-dtf-03-parameters",
-        videoId: "software-zh-videos-demo-dtf-zh-v59",
-        posterId: "software-zh-posters-poster-dtf-zh-v59",
-        proofId: "proofs-proof-dtf-output-v59-preview",
+        description: "设置尺寸、300 PPI、W1 收缩和排版间距，完成单图或多图排版并检查 Photoshop 通道输出。",
+        steps: ["选择图稿", "设置 300 PPI 与 W1", "单图或多图排版", "检查 CMYK / W1"],
+        mediaId: "software-zh-runtime-update-dtf-multi-layout",
+        mediaChoices: [
+          {
+            label: "多图排版",
+            caption: "在一个任务中设置排版宽度、间距与 W1 参数，并查看 Photoshop 排版结果。",
+            mediaId: "software-zh-runtime-update-dtf-multi-layout",
+            posterId: "software-zh-runtime-update-posters-dtf-multi-layout"
+          },
+          {
+            label: "参数设置",
+            caption: "查看尺寸、300 PPI、W1 收缩与扩边等可调参数。",
+            mediaId: "software-zh-runtime-update-dtf-parameter-tour",
+            posterId: "software-zh-runtime-update-posters-dtf-parameter-tour"
+          },
+          {
+            label: "单图制图",
+            caption: "从单张图稿设置尺寸并生成对应的 Photoshop 文件。",
+            mediaId: "software-zh-runtime-update-dtf-single-artwork",
+            posterId: "software-zh-runtime-update-posters-dtf-single-artwork"
+          },
+          {
+            label: "按行排版",
+            caption: "将单张图稿按行重复排列，检查版面后继续输出。",
+            mediaId: "software-zh-runtime-update-dtf-single-row-layout",
+            posterId: "software-zh-runtime-update-posters-dtf-single-row-layout"
+          },
+          {
+            label: "一米排版",
+            caption: "按一米长度约束自动计算重复数量和版面。",
+            mediaId: "software-zh-runtime-update-dtf-one-meter-layout",
+            posterId: "software-zh-runtime-update-posters-dtf-one-meter-layout"
+          },
+          {
+            label: "彩色图稿",
+            caption: "在 Photoshop 中检查彩色图稿与通道结构。",
+            mediaId: "software-zh-runtime-update-dtf-artwork-source"
+          },
+          {
+            label: "W1 通道",
+            caption: "查看白墨专色通道的输出状态。",
+            mediaId: "software-zh-runtime-update-dtf-white-channel-output"
+          }
+        ],
         tone: "light"
       },
       {
         id: "dtg",
         number: "02",
         title: "DTG 白墨直喷",
+        titleSegments: ["DTG ", "白墨直喷"],
         eyebrow: "控制深色与浅色面料",
-        description: "按面料设置普通区域白墨、K 黑区域白墨、收缩与扩边，生成带 W1 通道的真实生产 TIFF。",
+        description: "按面料设置普通区域白墨、K 黑区域白墨、收缩与扩边，生成带 W1 通道的生产 TIFF。",
         steps: ["选择面料", "调整白墨量", "处理去黑/抠白", "导出 TIFF"],
-        mediaId: "software-zh-dtg-zh-dtg-02-parameters",
-        proofId: "proofs-dtg-output",
+        mediaId: "software-zh-runtime-update-dtg-parameter-controls",
+        mediaChoices: [
+          {
+            label: "白墨参数",
+            caption: "按面料调整普通区域与 K 黑区域的白墨密度。",
+            mediaId: "software-zh-runtime-update-dtg-parameter-controls",
+            posterId: "software-zh-runtime-update-posters-dtg-parameter-controls"
+          },
+          {
+            label: "CMYK 状态",
+            caption: "在 Photoshop 中检查彩色通道与 W1 通道结构。",
+            mediaId: "software-zh-runtime-update-dtg-photoshop-color-state"
+          },
+          {
+            label: "W1 通道",
+            caption: "切换到 W1 通道，检查白墨层的覆盖范围。",
+            mediaId: "software-zh-runtime-update-dtg-photoshop-white-channel"
+          }
+        ],
         tone: "light"
       },
       {
         id: "sublimation",
         number: "03",
         title: "热升华智能排版",
+        titleSegments: ["热升华", "智能排版"],
         eyebrow: "把材料利用率变成可比较的方案",
-        description: "识别裁片，生成 Quick、Balanced 与 Best 三种真实方案，再选择、分卷并导出 PDF 或 TIFF。",
+        description: "识别裁片，生成 Quick、Balanced 与 Best 三种排版方案，再选择、分卷并导出 PDF 或 TIFF。",
         steps: ["导入 PDF", "识别裁片", "比较三种方案", "选择并导出"],
-        mediaId: "software-zh-sublimation-zh-sub-06-compare",
-        videoId: "software-zh-videos-demo-sublimation-zh-v59",
-        posterId: "software-zh-posters-poster-sublimation-zh-v59",
-        proofId: "proofs-proof-sublimation-balanced-v59",
+        mediaId: "software-zh-runtime-update-sublimation-layout-workflow",
+        mediaChoices: [
+          {
+            label: "方案对比",
+            caption: "依次生成 Quick、Balanced 与 Best，并查看最终排版结果。",
+            mediaId: "software-zh-runtime-update-sublimation-layout-workflow",
+            posterId: "software-zh-runtime-update-posters-sublimation-layout-workflow"
+          },
+          {
+            label: "输入裁片",
+            caption: "查看进入排版流程的球衣裁片图稿。",
+            mediaId: "software-zh-runtime-update-sublimation-garment-pieces-source"
+          },
+          {
+            label: "排版输出",
+            caption: "查看软件生成的裁片版面并检查各部位的排列结果。",
+            mediaId: "software-zh-runtime-update-sublimation-layout-output"
+          }
+        ],
         tone: "graphite"
       },
       {
-        id: "ai",
-        number: "04",
+        id: "ai-workbench",
+        number: "AI 01",
         title: "MAIXON AI",
-        eyebrow: "从输入到可继续生产的结果",
-        description: "完成图案提取、增强、抠图、无缝花型、矢量化、提示词编辑与扩图，并把结果送入 DTF 或 DTG。",
-        steps: ["选择任务", "真实云端处理", "检查结果", "进入 DTF / DTG"],
-        mediaId: "software-zh-ai-zh-ai-03-result",
-        videoId: "software-zh-videos-demo-ai-zh-v59",
-        posterId: "software-zh-posters-poster-ai-zh-v59",
+        eyebrow: "从导入到获得结果",
+        description: "在工作台中导入图像、选择处理能力并执行任务，在同一界面查看进度与完成结果。",
+        steps: ["导入图像", "选择处理能力", "开始执行", "查看结果"],
+        mediaId: "software-zh-runtime-update-ai-workspace-source",
+        mediaChoices: [
+          {
+            label: "工作台",
+            caption: "导入图像，选择处理能力并设置输出要求。",
+            mediaId: "software-zh-runtime-update-ai-workspace-source"
+          },
+          {
+            label: "执行中",
+            caption: "在工作台中查看任务执行状态与处理进度。",
+            mediaId: "software-zh-runtime-update-ai-extraction-progress"
+          },
+          {
+            label: "完成结果",
+            caption: "任务完成后检查结果，并继续保存或生产操作。",
+            mediaId: "software-zh-runtime-update-ai-extraction-complete"
+          }
+        ],
+        tone: "light"
+      },
+      {
+        id: "ai-results",
+        number: "AI 02",
+        title: "BEFORE / AFTER",
+        eyebrow: "查看处理前后的差异",
+        description: "用对比画面检查印花提取与抠图前后的变化，直接判断图案、背景和边缘处理结果。",
+        steps: ["查看原图", "提取印花", "比较结果", "检查边缘"],
+        mediaId: "software-zh-runtime-update-ai-artwork-extraction-compare",
+        mediaChoices: [
+          {
+            label: "印花提取",
+            caption: "比较服装图像与提取后的图案结果。",
+            mediaId: "software-zh-runtime-update-ai-artwork-extraction-compare",
+            posterId: "software-zh-runtime-update-posters-ai-artwork-extraction-compare"
+          },
+          {
+            label: "抠图对比",
+            caption: "通过对比画面检查抠图前后的背景与边缘变化。",
+            mediaId: "software-zh-runtime-update-ai-background-removal-compare",
+            posterId: "software-zh-runtime-update-posters-ai-background-removal-compare"
+          }
+        ],
+        tone: "graphite"
+      },
+      {
+        id: "ai-production",
+        number: "AI 03",
+        title: "AI → PRODUCTION",
+        eyebrow: "让处理结果继续进入生产",
+        description: "确认结果后，可从同一工作流继续制作 DTF、DTG 或进入自动排版，减少图稿在工具之间的重复准备。",
+        steps: ["确认结果", "选择生产路径", "进入 DTF / DTG", "检查生产输出"],
+        mediaId: "software-zh-runtime-update-ai-continue-to-dtg",
+        mediaChoices: [
+          {
+            label: "进入 DTG",
+            caption: "将当前图稿送入 DTG，并在 Photoshop 中检查通道结果。",
+            mediaId: "software-zh-runtime-update-ai-continue-to-dtg",
+            posterId: "software-zh-runtime-update-posters-ai-continue-to-dtg"
+          },
+          {
+            label: "生产入口",
+            caption: "从结果页继续进入 DTF、DTG 或自动排版。",
+            mediaId: "software-zh-runtime-update-ai-workflow-routing"
+          }
+        ],
         tone: "light"
       }
     ],
     hardware: {
       label: "硬件",
       title: "为生产流程而设计的设备生态。",
-      body: "当前设备图作为可替换视觉占位。后续真实摄影只需更新 Media Manifest，不改变页面结构。",
-      provisional: "临时设备图",
+      titleSegments: ["为生产流程而", "设计的设备生态。"],
+      body: "覆盖 DTF、白墨烫画烫金、撒粉、烘干与收卷环节，为不同产能需求提供完整设备选择。",
       products: [
         { name: "DTF604", type: "四头 DTF 打印系统", description: "面向稳定日常生产的四头配置。", mediaId: "hardware-dtf604", href: "/zh-CN/hardware/dtf604/" },
-        { name: "DTG604", type: "四头 DTG 打印系统", description: "为深色与浅色面料工作流准备。", mediaId: "hardware-dtg604", href: "/zh-CN/hardware/dtg604/" },
+        { name: "DFG604", type: "白墨烫画 · 一体化烫金", description: "彩色与胶水同步打印，一台设备完成白墨烫画与烫金。", mediaId: "hardware-dtg604", href: "/zh-CN/hardware/dfg604/" },
         { name: "DTF608", type: "八头高速 DTF", description: "为更高吞吐量与连续生产扩展。", mediaId: "hardware-dtf608", href: "/zh-CN/hardware/dtf608/" },
         { name: "OVEN604", type: "撒粉与烘干系统", description: "连接撒粉、加热、冷却与收卷。", mediaId: "hardware-oven604", href: "/zh-CN/hardware/oven604/" }
       ]
@@ -193,27 +341,28 @@ export const copy: Record<Locale, SiteCopy> = {
     download: {
       label: "下载",
       title: "MAIXON TOOL V5.9",
-      body: "Windows 10/11 · 真实正式安装包 · 由阿里云 OSS 独立提供。",
-      button: "下载 Windows 安装包",
+      body: "支持多种操作系统，请选择适合你的软件版本。",
+      button: "下载软件",
       integrity: "查看文件校验"
     },
     support: {
       label: "支持",
-      title: "从安装到生产，保持清楚。",
-      body: "软件说明、设备指南、授权与人工联系入口集中在同一处。",
+      title: "从安装配置到稳定生产。",
+      titleSegments: ["从安装配置到", "稳定生产。"],
+      body: "获取软件操作指南、设备使用说明、授权服务与技术支持。",
       guide: "使用说明",
       contact: "联系支持",
       authorization: "获取授权"
     },
     footer: {
       statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
-      legal: "所有产品信息以最终软件、正式设备与商业确认版本为准。"
+      legal: "产品规格与功能可能随版本更新而调整，详情请联系我们。"
     }
   },
   en: {
     meta: {
       title: "MAIXON TOOL V5.9 | Print Production Suite",
-      description: "MAIXON TOOL V5.9 for DTF, DTG and sublimation production, with verified workflows, MAIXON AI, software download and hardware."
+      description: "MAIXON TOOL V5.9 for DTF, DTG and sublimation production, with integrated workflows, MAIXON AI, software download and equipment."
     },
     header: {
       download: "Download V5.9",
@@ -224,13 +373,15 @@ export const copy: Record<Locale, SiteCopy> = {
       lead: "From artwork to production-ready output.",
       descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
       primary: "Download V5.9",
-      secondary: "Watch the real workflow",
-      mediaId: "software-en-home"
+      secondary: "Watch the product demo",
+      mediaId: "software-en-home",
+      videoId: "software-zh-videos-demo-overall-zh-v59",
+      posterId: "software-zh-posters-poster-overall-zh-v59"
     },
     softwareIntro: {
       label: "Software",
       title: "One suite for the complete print workflow.",
-      body: "Real input, real parameters, real processing and real output. Every core module is shown with final V5.9 media."
+      body: "Import artwork, tune production parameters, process jobs and export production-ready files across DTF, DTG, sublimation and AI workflows."
     },
     workflows: [
       {
@@ -238,9 +389,41 @@ export const copy: Record<Locale, SiteCopy> = {
         number: "01",
         title: "White-Ink DTF",
         eyebrow: "From one artwork to CMYK + W1",
-        description: "Prepare artwork, build the white-ink spot channel, lay out production and export TIFF files for common RIP workflows.",
-        steps: ["Import artwork", "Set parameters", "Build W1", "Export TIFF"],
+        description: "Set artwork size, output resolution, W1 shrink and layout spacing, then prepare single or multi-artwork TIFF output for common RIP workflows.",
+        steps: ["Choose artwork", "Set resolution and W1", "Build the layout", "Inspect CMYK / W1"],
         mediaId: "software-en-dtf",
+        mediaChoices: [
+          {
+            label: "Multi-image layout",
+            caption: "Set layout width, spacing and W1 parameters, then review the Photoshop layout output.",
+            mediaId: "software-zh-runtime-update-dtf-multi-layout",
+            posterId: "software-zh-runtime-update-posters-dtf-multi-layout"
+          },
+          {
+            label: "Parameter setup",
+            caption: "Review editable size, 300 PPI, W1 contraction and bleed controls.",
+            mediaId: "software-zh-runtime-update-dtf-parameter-tour",
+            posterId: "software-zh-runtime-update-posters-dtf-parameter-tour"
+          },
+          {
+            label: "Single artwork",
+            caption: "Set dimensions for one artwork and generate the matching Photoshop file.",
+            mediaId: "software-zh-runtime-update-dtf-single-artwork",
+            posterId: "software-zh-runtime-update-posters-dtf-single-artwork"
+          },
+          {
+            label: "Row layout",
+            caption: "Repeat one artwork across a row, review the layout and continue to output.",
+            mediaId: "software-zh-runtime-update-dtf-single-row-layout",
+            posterId: "software-zh-runtime-update-posters-dtf-single-row-layout"
+          },
+          {
+            label: "One-meter layout",
+            caption: "Automatically calculate artwork repeats within a one-meter layout.",
+            mediaId: "software-zh-runtime-update-dtf-one-meter-layout",
+            posterId: "software-zh-runtime-update-posters-dtf-one-meter-layout"
+          }
+        ],
         proofId: "proofs-proof-dtf-output-v59-preview",
         tone: "light"
       },
@@ -249,12 +432,19 @@ export const copy: Record<Locale, SiteCopy> = {
         number: "02",
         title: "White-Ink DTG",
         eyebrow: "Control light and dark fabric output",
-        description: "The production path includes fabric mode, white-ink density, K-region white and a real CMYK + W1 TIFF.",
+        description: "The production path includes fabric mode, white-ink density, K-region white and CMYK + W1 TIFF output.",
         steps: ["Choose fabric", "Tune white ink", "Process artwork", "Export TIFF"],
         mediaId: "proofs-dtg-output",
+        mediaChoices: [
+          {
+            label: "White-ink controls",
+            caption: "Adjust white-ink density for normal areas and K-black regions according to the fabric.",
+            mediaId: "software-zh-runtime-update-dtg-parameter-controls",
+            posterId: "software-zh-runtime-update-posters-dtg-parameter-controls"
+          }
+        ],
         proofId: "proofs-dtg-output",
-        tone: "light",
-        mediaNote: "The current English page uses a verified, language-neutral production output while the final English DTG interface capture is pending."
+        tone: "light"
       },
       {
         id: "sublimation",
@@ -264,28 +454,77 @@ export const copy: Record<Locale, SiteCopy> = {
         description: "Recognize pieces, generate Quick, Balanced and Best plans, then select, split rolls and export PDF or TIFF.",
         steps: ["Import PDF", "Recognize pieces", "Compare three plans", "Select and export"],
         mediaId: "software-en-sublimation",
+        mediaChoices: [
+          {
+            label: "Compare layouts",
+            caption: "Generate Quick, Balanced and Best in sequence, then review the final nesting result.",
+            mediaId: "software-zh-runtime-update-sublimation-layout-workflow",
+            posterId: "software-zh-runtime-update-posters-sublimation-layout-workflow"
+          }
+        ],
         proofId: "proofs-proof-sublimation-balanced-v59",
         tone: "graphite"
       },
       {
-        id: "ai",
-        number: "04",
+        id: "ai-workbench",
+        number: "AI 01",
         title: "MAIXON AI",
-        eyebrow: "From input to a production-ready result",
-        description: "Extract, enhance, remove backgrounds, build seamless patterns, vectorize, edit and outpaint, then continue in DTF or DTG.",
-        steps: ["Choose a task", "Process in the cloud", "Inspect the result", "Continue to DTF / DTG"],
+        eyebrow: "From import to a finished result",
+        description: "Import an image, choose a processing tool and review the result in the MAIXON AI workspace.",
+        steps: ["Import an image", "Choose a tool", "Run the task", "Review the result"],
         mediaId: "software-en-ai",
+        tone: "light"
+      },
+      {
+        id: "ai-results",
+        number: "AI 02",
+        title: "BEFORE / AFTER",
+        eyebrow: "Inspect the processing result",
+        description: "Compare the source and processed artwork at a useful working scale before continuing to production.",
+        steps: ["View the source", "Process artwork", "Compare the result", "Inspect detail"],
+        mediaId: "software-en-ai",
+        mediaChoices: [
+          {
+            label: "Artwork extraction",
+            caption: "Compare the garment image with the extracted artwork result.",
+            mediaId: "software-zh-runtime-update-ai-artwork-extraction-compare",
+            posterId: "software-zh-runtime-update-posters-ai-artwork-extraction-compare"
+          },
+          {
+            label: "Background removal",
+            caption: "Inspect background and edge changes before and after removal.",
+            mediaId: "software-zh-runtime-update-ai-background-removal-compare",
+            posterId: "software-zh-runtime-update-posters-ai-background-removal-compare"
+          }
+        ],
+        tone: "graphite"
+      },
+      {
+        id: "ai-production",
+        number: "AI 03",
+        title: "AI → PRODUCTION",
+        eyebrow: "Continue in the print workflow",
+        description: "Review the result alongside the DTF and DTG production modes available in the same suite.",
+        steps: ["Confirm the result", "Choose a workflow", "Continue to DTF / DTG", "Prepare output"],
+        mediaId: "software-en-ai",
+        mediaChoices: [
+          {
+            label: "Continue to DTG",
+            caption: "Send the current artwork into DTG and review the channel output in Photoshop.",
+            mediaId: "software-zh-runtime-update-ai-continue-to-dtg",
+            posterId: "software-zh-runtime-update-posters-ai-continue-to-dtg"
+          }
+        ],
         tone: "light"
       }
     ],
     hardware: {
       label: "Hardware",
       title: "Equipment designed around production.",
-      body: "Current equipment renders are replaceable visual media. Future photography will update the manifest without rebuilding the layout.",
-      provisional: "Provisional equipment media",
+      body: "Explore DTF, integrated foil finishing, powdering, curing and take-up equipment for different production capacities.",
       products: [
         { name: "DTF604", type: "Four-head DTF system", description: "A production platform for dependable daily output.", mediaId: "hardware-dtf604", href: "/en/hardware/dtf604/" },
-        { name: "DTG604", type: "Four-head DTG system", description: "Prepared for light and dark fabric workflows.", mediaId: "hardware-dtg604", href: "/en/hardware/dtg604/" },
+        { name: "DFG604", type: "DTF transfer · Integrated foil finishing", description: "Print color and adhesive together, then complete DTF transfer and foil finishing in one system.", mediaId: "hardware-dtg604", href: "/en/hardware/dfg604/" },
         { name: "DTF608", type: "Eight-head high-speed DTF", description: "Expanded throughput for continuous production.", mediaId: "hardware-dtf608", href: "/en/hardware/dtf608/" },
         { name: "OVEN604", type: "Powder and curing system", description: "Powdering, heating, cooling and take-up in one line.", mediaId: "hardware-oven604", href: "/en/hardware/oven604/" }
       ]
@@ -293,21 +532,21 @@ export const copy: Record<Locale, SiteCopy> = {
     download: {
       label: "Download",
       title: "MAIXON TOOL V5.9",
-      body: "Windows 10/11 · Verified release installer · Delivered independently through Alibaba Cloud OSS.",
-      button: "Download for Windows",
+      body: "Available for multiple operating systems. Choose the software version that fits your computer.",
+      button: "Download software",
       integrity: "View file integrity"
     },
     support: {
       label: "Support",
-      title: "Clear guidance from setup to production.",
-      body: "Software guides, equipment instructions, licensing and direct support are brought together in one place.",
+      title: "Support from setup to production.",
+      body: "Access software guides, equipment instructions, licensing services and technical support.",
       guide: "Usage guides",
       contact: "Contact support",
       authorization: "Get a license"
     },
     footer: {
       statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
-      legal: "Product information is subject to the final software, verified equipment and confirmed commercial terms."
+      legal: "Product specifications and features may change with version updates. Contact us for current details."
     }
   }
 };

@@ -1,74 +1,46 @@
 ---
-import MediaFrame from "@/components/MediaFrame.astro";
+import HardwareProductPage from "@/components/hardware/HardwareProductPage.astro";
 import SiteLayout from "@/layouts/SiteLayout.astro";
 import { copy } from "@/data/site";
+import { getHardwareSpecValue, hardwareProducts, type HardwareProductKey } from "@/data/hardware";
 import type { Locale } from "@/data/media";
 
-const products = {
-  dtf604: {
-    mediaId: "hardware-dtf604",
-    zh: { name: "DTF604", type: "四头 DTF 打印系统", body: "面向稳定日常生产的四头 DTF 平台。", features: ["四头打印结构", "白墨生产工作流", "走料与收卷系统"] },
-    en: { name: "DTF604", type: "Four-head DTF printing system", body: "A four-head DTF platform for dependable daily production.", features: ["Four-head print architecture", "White-ink production workflow", "Media feed and take-up"] }
-  },
-  dtg604: {
-    mediaId: "hardware-dtg604",
-    zh: { name: "DTG604", type: "四头 DTG 打印系统", body: "为深色与浅色面料工作流准备的 DTG 设备。", features: ["四头打印结构", "深浅面料工作流", "白墨控制"] },
-    en: { name: "DTG604", type: "Four-head DTG printing system", body: "A DTG platform prepared for light and dark fabric workflows.", features: ["Four-head print architecture", "Light and dark fabric workflow", "White-ink control"] }
-  },
-  dtf608: {
-    mediaId: "hardware-dtf608",
-    zh: { name: "DTF608", type: "八头高速 DTF", body: "为连续生产和更高吞吐量扩展的八头平台。", features: ["八头打印结构", "高速连续生产", "扩展走料系统"] },
-    en: { name: "DTF608", type: "Eight-head high-speed DTF", body: "An eight-head platform for continuous, higher-throughput production.", features: ["Eight-head print architecture", "High-speed continuous production", "Expanded media handling"] }
-  },
-  oven604: {
-    mediaId: "hardware-oven604",
-    zh: { name: "OVEN604", type: "撒粉与烘干系统", body: "连接撒粉、加热、冷却与收卷的生产线设备。", features: ["自动撒粉", "加热与冷却", "粉末回收与收卷"] },
-    en: { name: "OVEN604", type: "Powder and curing system", body: "A production-line system connecting powdering, heating, cooling and take-up.", features: ["Automatic powdering", "Heating and cooling", "Powder recovery and take-up"] }
-  }
-} as const;
-
 export function getStaticPaths() {
+  const keys: HardwareProductKey[] = ["dtf604", "dfg604", "dtf608", "oven604"];
   return (["zh-CN", "en"] as const).flatMap((locale) =>
-    (["dtf604", "dtg604", "dtf608", "oven604"] as const).map((product) => ({
-      params: { locale, product }
-    }))
+    keys.map((product) => ({ params: { locale, product } }))
   );
 }
 
 const locale = Astro.params.locale as Locale;
-const productKey = Astro.params.product as keyof typeof products;
-const item = products[productKey];
-const details = locale === "zh-CN" ? item.zh : item.en;
-const content = copy[locale];
+const productKey = Astro.params.product as HardwareProductKey;
+const product = hardwareProducts[productKey];
+const siteCopy = copy[locale];
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: product.name,
+  description: product.seoDescription[locale],
+  category: product.type[locale],
+  brand: { "@type": "Brand", name: "MAIXON" },
+  url: new URL(product.href[locale], Astro.site).toString(),
+  image: new URL(`/media-responsive/hardware/${product.mediaId.replace("hardware-", "")}-full.webp`, Astro.site).toString(),
+  additionalProperty: product.specifications.map((spec) => ({
+    "@type": "PropertyValue",
+    name: spec.label[locale],
+    value: getHardwareSpecValue(spec, locale)
+  }))
+});
 ---
 
 <SiteLayout
   locale={locale}
-  title={`${details.name} | MAIXON Hardware`}
-  description={details.body}
-  downloadLabel={content.header.download}
-  menuLabel={content.header.menu}
+  title={product.seoTitle[locale]}
+  description={product.seoDescription[locale]}
+  downloadLabel={siteCopy.header.download}
+  menuLabel={siteCopy.header.menu}
+  imageId={product.mediaId}
 >
-  <section class="machine-hero">
-    <div class="machine-hero__copy">
-      <p class="section-label">{content.hardware.label}</p>
-      <h1>{details.name}</h1>
-      <p class="machine-hero__type">{details.type}</p>
-      <p>{details.body}</p>
-      <p class="provisional-note">
-        {locale === "zh-CN"
-          ? "当前为 provisional / replaceable media。真实设备摄影到达后只更新 Manifest。"
-          : "Current media is provisional and replaceable. Final photography will update the manifest only."}
-      </p>
-    </div>
-    <MediaFrame id={item.mediaId} locale={locale} priority alt={details.name} />
-  </section>
-  <section class="machine-features">
-    {details.features.map((feature, index) => (
-      <article>
-        <span>{String(index + 1).padStart(2, "0")}</span>
-        <h2>{feature}</h2>
-      </article>
-    ))}
-  </section>
+  <script is:inline type="application/ld+json" set:html={structuredData}></script>
+  <HardwareProductPage locale={locale} productKey={productKey} />
 </SiteLayout>

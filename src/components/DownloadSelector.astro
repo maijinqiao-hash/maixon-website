@@ -1,0 +1,116 @@
+---
+import type { Locale } from "@/data/media";
+import { downloadPlatforms, downloadSelectorCopy } from "@/data/downloads";
+import "@/styles/download-selector.css";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const content = downloadSelectorCopy[locale];
+---
+
+<dialog
+  class="download-selector"
+  id="download-selector"
+  aria-labelledby="download-selector-title"
+  aria-describedby="download-selector-description"
+>
+  <div class="download-selector__surface">
+    <header class="download-selector__header">
+      <div>
+        <h2 id="download-selector-title">{content.title}</h2>
+        <p id="download-selector-description">{content.description}</p>
+      </div>
+      <button class="download-selector__close" type="button" data-download-selector-close aria-label={content.close}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25"></path>
+        </svg>
+      </button>
+    </header>
+
+    <ol class="download-selector__platforms">
+      {downloadPlatforms.map((platform, index) => {
+        const platformCopy = content.platforms[platform.id];
+        const isAvailable = platform.enabled && platform.installer?.downloadUrl;
+        return (
+          <li class:list={["download-selector__platform", { "is-disabled": !isAvailable }]}>
+            <span class="download-selector__number">{String(index + 1).padStart(2, "0")}</span>
+            <div class="download-selector__identity">
+              <h3>{platform.label}</h3>
+              <p>{platformCopy.status}</p>
+            </div>
+            {isAvailable ? (
+              <a
+                class="download-selector__action"
+                href={platform.installer!.downloadUrl}
+                aria-label={`${content.download} ${platform.label}`}
+                data-download-action={platform.id}
+              >
+                {platformCopy.action}
+              </a>
+            ) : (
+              <button
+                class="download-selector__action"
+                type="button"
+                disabled
+                aria-label={`${platform.label} · ${platformCopy.action}`}
+                data-download-action={platform.id}
+              >
+                {platformCopy.action}
+              </button>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector("#download-selector");
+
+  if (dialog instanceof HTMLDialogElement) {
+    const openers = Array.from(document.querySelectorAll("[data-download-selector-open]"));
+    const closeButton = dialog.querySelector("[data-download-selector-close]");
+    let returnFocus: HTMLElement | null = null;
+
+    const openSelector = (event: Event) => {
+      event.preventDefault();
+      if (dialog.open) return;
+
+      returnFocus = event.currentTarget instanceof HTMLElement ? event.currentTarget : null;
+      const mobileNavigation = returnFocus?.closest("details.mobile-nav");
+      if (mobileNavigation instanceof HTMLDetailsElement) mobileNavigation.open = false;
+
+      document.documentElement.classList.add("download-selector-open");
+      dialog.showModal();
+    };
+
+    const closeSelector = () => {
+      if (dialog.open) dialog.close();
+    };
+
+    openers.forEach((opener) => opener.addEventListener("click", openSelector));
+    closeButton?.addEventListener("click", closeSelector);
+
+    dialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      closeSelector();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && dialog.open) closeSelector();
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) closeSelector();
+    });
+
+    dialog.addEventListener("close", () => {
+      document.documentElement.classList.remove("download-selector-open");
+      requestAnimationFrame(() => returnFocus?.focus());
+    });
+  }
+</script>

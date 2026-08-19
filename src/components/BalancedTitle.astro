@@ -1,0 +1,20 @@
+---
+interface Props {
+  as: "h1" | "h2" | "h3";
+  text: string;
+  segments?: string[];
+}
+
+const { as: Tag, text, segments } = Astro.props as Props;
+---
+
+<Tag>
+  {segments?.length
+    ? segments.map((segment, index) => (
+        <>
+          <span class="cjk-title-segment">{segment}</span>
+          {index < segments.length - 1 && <wbr />}
+        </>
+      ))
+    : text}
+</Tag>

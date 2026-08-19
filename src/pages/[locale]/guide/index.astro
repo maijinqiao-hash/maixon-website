@@ -1,0 +1,35 @@
+---
+import SupportPageShell from "@/components/support/SupportPageShell.astro";
+import { guideCopy } from "@/data/support-content";
+import type { Locale } from "@/data/media";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "zh-CN" } }, { params: { locale: "en" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const content = guideCopy[locale];
+---
+
+<SupportPageShell
+  locale={locale}
+  label={content.label}
+  title={content.title}
+  description={content.description}
+>
+  <nav class="guide-grid" aria-label={content.label}>
+    {content.topics.map((topic) => (
+      <a class="guide-grid__item" href={`/${locale}/guide/${topic.slug}/`}>
+        <span class="guide-grid__number">{topic.number}</span>
+        <div>
+          <h2>{topic.title}</h2>
+          <p>{topic.summary}</p>
+        </div>
+        <span class="guide-grid__open">
+          <span>{content.open}</span>
+          <span aria-hidden="true">↗</span>
+        </span>
+      </a>
+    ))}
+  </nav>
+</SupportPageShell>

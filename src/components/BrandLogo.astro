@@ -1,0 +1,19 @@
+---
+import { getMedia } from "@/data/media";
+
+const media = getMedia("brand-logo-wordmark-white");
+const srcset = media.srcset.map((source) => `${source.src} ${source.width}w`).join(", ");
+---
+
+<picture class="brand-logo" aria-hidden="true">
+  {srcset && <source type="image/webp" srcset={srcset} sizes="144px" />}
+  <img
+    class="brand-logo__image"
+    src={media.src}
+    width={media.width}
+    height={media.height}
+    alt=""
+    loading="eager"
+    decoding="async"
+  />
+</picture>

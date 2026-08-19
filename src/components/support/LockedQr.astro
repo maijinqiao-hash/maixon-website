@@ -1,0 +1,84 @@
+---
+interface Props {
+  src: string;
+  width: number;
+  height: number;
+  label: string;
+  note?: string;
+}
+
+const { src, width, height, label, note } = Astro.props;
+---
+
+<figure class="locked-qr">
+  <div class="locked-qr__safe-area">
+    <img
+      src={src}
+      width={width}
+      height={height}
+      alt={label}
+      loading="lazy"
+      decoding="async"
+      draggable="false"
+    />
+  </div>
+  <figcaption>
+    <strong>{label}</strong>
+    {note ? <span>{note}</span> : null}
+  </figcaption>
+</figure>
+
+<style>
+  .locked-qr {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .locked-qr__safe-area {
+    display: grid;
+    width: 100%;
+    padding: clamp(1rem, 2.2vw, 1.75rem);
+    background: #fff;
+    place-items: center;
+  }
+
+  .locked-qr img {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+    height: auto;
+    aspect-ratio: auto;
+    border: 0;
+    border-radius: 0;
+    object-fit: contain;
+    object-position: center;
+    filter: none;
+    transform: none;
+  }
+
+  .locked-qr figcaption {
+    display: grid;
+    gap: 0.25rem;
+    padding-top: 1rem;
+  }
+
+  .locked-qr strong {
+    font-size: 1rem;
+    font-weight: 680;
+  }
+
+  .locked-qr span {
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  @media (max-width: 31rem) {
+    .locked-qr__safe-area {
+      padding: 0.85rem;
+    }
+
+    .locked-qr img {
+      max-width: 22rem;
+    }
+  }
+</style>

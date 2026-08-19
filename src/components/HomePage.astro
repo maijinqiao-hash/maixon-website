@@ -1,6 +1,9 @@
 ---
+import BalancedTitle from "@/components/BalancedTitle.astro";
+import AutomationStory from "@/components/AutomationStory.astro";
 import MediaFrame from "@/components/MediaFrame.astro";
 import WorkflowSection from "@/components/WorkflowSection.astro";
+import HardwareOverview from "@/components/hardware/HardwareOverview.astro";
 import type { Locale } from "@/data/media";
 import { copy, installer } from "@/data/site";
 
@@ -10,6 +13,10 @@ interface Props {
 
 const { locale } = Astro.props;
 const content = copy[locale];
+const orderedWorkflows = [
+  ...content.workflows.filter((workflow) => workflow.id.startsWith("ai-")),
+  ...content.workflows.filter((workflow) => !workflow.id.startsWith("ai-"))
+];
 ---
 
 <section class="hero">
@@ -18,7 +25,7 @@ const content = copy[locale];
     <h1>{content.hero.title}</h1>
     <p class="hero__lead">{content.hero.lead}</p>
     <div class="hero__actions">
-      <a class="button button--dark" href={installer.url}>{content.hero.primary}</a>
+      <a class="button button--dark" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{content.hero.primary}</a>
       <a class="button button--ghost" href="#software">{content.hero.secondary}</a>
     </div>
   </div>
@@ -36,41 +43,26 @@ const content = copy[locale];
 
 <section id="software" class="section-intro">
   <p class="section-label">{content.softwareIntro.label}</p>
-  <h2>{content.softwareIntro.title}</h2>
+  <BalancedTitle
+    as="h2"
+    text={content.softwareIntro.title}
+    segments={content.softwareIntro.titleSegments}
+  />
   <p>{content.softwareIntro.body}</p>
 </section>
 
 <div class="workflow-stack">
-  {content.workflows.map((workflow) => (
-    <WorkflowSection locale={locale} workflow={workflow} />
+  {orderedWorkflows.map((workflow) => (
+    <>
+      <WorkflowSection locale={locale} workflow={workflow} />
+      {workflow.id === "dtf" && <AutomationStory locale={locale} story="dtf" />}
+      {workflow.id === "dtg" && <AutomationStory locale={locale} story="dtg" />}
+      {workflow.id === "sublimation" && <AutomationStory locale={locale} story="sublimation" />}
+    </>
   ))}
 </div>
 
-<section id="hardware" class="hardware-section">
-  <div class="hardware-section__intro">
-    <p class="section-label">{content.hardware.label}</p>
-    <h2>{content.hardware.title}</h2>
-    <p>{content.hardware.body}</p>
-  </div>
-  <div class="hardware-rail">
-    {content.hardware.products.map((product, index) => (
-      <article class="hardware-product">
-        <a href={product.href} aria-label={product.name}>
-          <div class="hardware-product__media">
-            <MediaFrame id={product.mediaId} locale={locale} alt={product.name} />
-          </div>
-          <div class="hardware-product__meta">
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <span>{content.hardware.provisional}</span>
-          </div>
-          <h3>{product.name}</h3>
-          <p class="hardware-product__type">{product.type}</p>
-          <p>{product.description}</p>
-        </a>
-      </article>
-    ))}
-  </div>
-</section>
+<HardwareOverview locale={locale} surface="home" />
 
 <section id="download" class="download-section">
   <div class="download-section__copy">
@@ -93,7 +85,7 @@ const content = copy[locale];
         <dd>{installer.size}</dd>
       </div>
     </dl>
-    <a class="button button--light button--wide" href={installer.url}>{content.download.button}</a>
+    <a class="button button--light button--wide" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{content.download.button}</a>
     <details class="integrity">
       <summary>{content.download.integrity}</summary>
       <code>{installer.sha256}</code>
@@ -104,19 +96,19 @@ const content = copy[locale];
 <section id="support" class="support-section">
   <div>
     <p class="section-label">{content.support.label}</p>
-    <h2>{content.support.title}</h2>
+    <BalancedTitle as="h2" text={content.support.title} segments={content.support.titleSegments} />
     <p>{content.support.body}</p>
   </div>
   <nav class="support-links" aria-label={content.support.label}>
-    <a href={`/${locale}/support/`}>
+    <a href={`/${locale}/guide/`}>
       <span>01</span>
       <strong>{content.support.guide}</strong>
     </a>
-    <a href="https://wa.me/8615954870827">
+    <a href={`/${locale}/contact/`}>
       <span>02</span>
       <strong>{content.support.contact}</strong>
     </a>
-    <a href={`/${locale}/support/#license`}>
+    <a href={`/${locale}/authorization/`}>
       <span>03</span>
       <strong>{content.support.authorization}</strong>
     </a>

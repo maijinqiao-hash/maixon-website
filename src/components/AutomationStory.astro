@@ -1,0 +1,91 @@
+---
+import type { Locale } from "@/data/media";
+import { automationStories, type AutomationStoryId } from "@/data/automation-stories";
+
+interface Props {
+  locale: Locale;
+  story: AutomationStoryId;
+}
+
+const { locale, story } = Astro.props;
+const content = automationStories[locale][story];
+---
+
+<section class:list={["automation-story", `automation-story--${story}`]}>
+  <div class="automation-story__inner">
+    <header class="automation-story__header">
+      <div>
+        <p class="automation-story__label">{content.label}</p>
+        <h2>
+          {content.titleSegments.map((segment) => <span>{segment}</span>)}
+        </h2>
+        <p class="automation-story__description">{content.description}</p>
+      </div>
+      <p class="automation-story__claim">
+        {content.claimSegments.map((segment) => <span>{segment}</span>)}
+      </p>
+    </header>
+
+    <ol class="automation-flow">
+      {content.steps.map((step, index) => (
+        <li>
+          <span class="automation-flow__number">{String(index + 1).padStart(2, "0")}</span>
+          <strong>{step}</strong>
+          {index < content.steps.length - 1 && (
+            <span class="automation-flow__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M5 12h13M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path>
+              </svg>
+            </span>
+          )}
+        </li>
+      ))}
+    </ol>
+
+    {content.parameters && (
+      <div class="automation-parameters">
+        {content.parameters.map((parameter) => <span>{parameter}</span>)}
+      </div>
+    )}
+
+    {content.details && (
+      <div class="automation-details">
+        {content.details.map((detail) => (
+          <article>
+            <span class="automation-detail__label">{detail.label}</span>
+            <h3>{detail.title}</h3>
+            <ul>
+              {detail.items.map((item) => <li>{item}</li>)}
+            </ul>
+            <p class="automation-detail__claim">
+              {detail.claimSegments.map((segment) => <span>{segment}</span>)}
+            </p>
+          </article>
+        ))}
+      </div>
+    )}
+
+    {content.metrics && (
+      <div class="automation-metrics">
+        {content.metrics.map((metric) => (
+          <article>
+            <strong>{metric.value}</strong>
+            <p>{metric.label}</p>
+          </article>
+        ))}
+      </div>
+    )}
+
+    {content.comparison && (
+      <div class="automation-comparison">
+        {content.comparison.map((item) => (
+          <article class:list={[item.emphasis && "automation-comparison__item--emphasis"]}>
+            <span>{item.label}</span>
+            <h3>{item.titleSegments.map((segment) => <span>{segment}</span>)}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

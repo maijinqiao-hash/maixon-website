@@ -1,0 +1,106 @@
+---
+import LockedQr from "@/components/support/LockedQr.astro";
+import SupportPageShell from "@/components/support/SupportPageShell.astro";
+import { authorizationCopy, qrAssets } from "@/data/support-content";
+import type { Locale } from "@/data/media";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "zh-CN" } }, { params: { locale: "en" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const content = authorizationCopy[locale];
+const paymentOnlyNote = locale === "zh-CN" ? "仅用于付款" : "Payment only";
+---
+
+<SupportPageShell
+  locale={locale}
+  label={content.label}
+  title={content.title}
+  description={content.description}
+>
+  <div class="authorization-body">
+    <section class="authorization-section">
+      <header class="authorization-section__head">
+        <div>
+          <p class="support-section__label">01</p>
+        </div>
+        <div>
+          <span class="currency-note">{content.currencyNote}</span>
+          <h2>{content.fullTitle}</h2>
+          <p class="authorization-section__intro">{content.fullDescription}</p>
+        </div>
+      </header>
+      <dl class="price-rows">
+        {content.fullPlans.map(([name, price]) => (
+          <div class="price-row"><dt>{name}</dt><dd>{price}</dd></div>
+        ))}
+      </dl>
+    </section>
+
+    <section class="authorization-section">
+      <header class="authorization-section__head">
+        <p class="support-section__label">02</p>
+        <div><h2>{content.modulesTitle}</h2></div>
+      </header>
+      <dl class="price-rows">
+        {content.modulePlans.map(([name, price]) => (
+          <div class="price-row"><dt>{name}</dt><dd>{price}</dd></div>
+        ))}
+      </dl>
+    </section>
+
+    <section class="authorization-section">
+      <header class="authorization-section__head">
+        <p class="support-section__label">03</p>
+        <div>
+          <h2>{content.aiTitle}</h2>
+          <p class="authorization-section__intro">{content.aiDescription}</p>
+        </div>
+      </header>
+      <dl class="price-rows">
+        {content.aiPlans.map(([name, price]) => (
+          <div class="price-row"><dt>{name}</dt><dd>{price}</dd></div>
+        ))}
+      </dl>
+    </section>
+
+    <section class="authorization-section">
+      <header class="authorization-section__head">
+        <p class="support-section__label">{content.processLabel}</p>
+        <div><h2>{content.processTitle}</h2></div>
+      </header>
+      <ol class="purchase-steps">
+        {content.steps.map(([title, body]) => (
+          <li><strong>{title}</strong><span>{body}</span></li>
+        ))}
+      </ol>
+      <p class="registered-email-note">{content.registeredEmail}</p>
+      <a class="support-cta" href={`/${locale}/contact/`}>
+        {content.contactLink}<span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="authorization-section">
+      <header class="authorization-section__head">
+        <p class="support-section__label">PAYMENT</p>
+        <div>
+          <h2>{content.paymentTitle}</h2>
+          <p class="authorization-section__intro">{content.paymentDescription}</p>
+        </div>
+      </header>
+      <div class="qr-grid">
+        <LockedQr
+          {...qrAssets.alipayPayment}
+          label={content.alipay}
+          note={paymentOnlyNote}
+        />
+        <LockedQr
+          {...qrAssets.wechatPayment}
+          label={content.wechatPay}
+          note={paymentOnlyNote}
+        />
+      </div>
+    </section>
+  </div>
+</SupportPageShell>

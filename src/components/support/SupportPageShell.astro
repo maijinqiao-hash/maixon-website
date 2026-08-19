@@ -1,0 +1,41 @@
+---
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import { copy } from "@/data/site";
+import type { Locale } from "@/data/media";
+import "@/styles/support-pages.css";
+
+interface Props {
+  locale: Locale;
+  label: string;
+  title: string;
+  description: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const { locale, label, title, description, backHref, backLabel } = Astro.props;
+const siteCopy = copy[locale];
+---
+
+<SiteLayout
+  locale={locale}
+  title={`${title} | MAIXON`}
+  description={description}
+  downloadLabel={siteCopy.header.download}
+  menuLabel={siteCopy.header.menu}
+>
+  <div class="support-page">
+    <header class="support-page__hero">
+      {backHref && backLabel ? (
+        <a class="support-page__back" href={backHref} aria-label={backLabel}>
+          <span aria-hidden="true">←</span>
+          {backLabel}
+        </a>
+      ) : null}
+      <p class="support-page__label">{label}</p>
+      <h1>{title}</h1>
+      <p class="support-page__lede">{description}</p>
+    </header>
+    <slot />
+  </div>
+</SiteLayout>

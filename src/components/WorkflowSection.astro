@@ -1,5 +1,7 @@
 ---
+import BalancedTitle from "@/components/BalancedTitle.astro";
 import MediaFrame from "@/components/MediaFrame.astro";
+import WorkflowMediaSwitcher from "@/components/WorkflowMediaSwitcher.astro";
 import type { Locale } from "@/data/media";
 import type { WorkflowContent } from "@/data/site";
 
@@ -11,17 +13,19 @@ interface Props {
 const { locale, workflow } = Astro.props;
 const primaryId = workflow.videoId ?? workflow.mediaId;
 const proofIsPrimary = workflow.proofId === primaryId || workflow.proofId === workflow.mediaId;
+const hasMediaChoices = Boolean(workflow.mediaChoices?.length);
+const isAi = workflow.id.startsWith("ai-");
 ---
 
 <section
-  id={workflow.id === "ai" ? "ai" : undefined}
-  class:list={["workflow", `workflow--${workflow.tone}`, `workflow--${workflow.id}`]}
+  id={workflow.id === "ai-workbench" ? "ai" : undefined}
+  class:list={["workflow", `workflow--${workflow.tone}`, `workflow--${workflow.id}`, isAi && "workflow--ai"]}
 >
   <div class="workflow__inner">
     <div class="workflow__copy">
       <p class="section-index">{workflow.number}</p>
       <p class="workflow__eyebrow">{workflow.eyebrow}</p>
-      <h3>{workflow.title}</h3>
+      <BalancedTitle as="h3" text={workflow.title} segments={workflow.titleSegments} />
       <p class="workflow__description">{workflow.description}</p>
       <ol class="workflow__steps">
         {workflow.steps.map((step, index) => (
@@ -31,25 +35,32 @@ const proofIsPrimary = workflow.proofId === primaryId || workflow.proofId === wo
     </div>
 
     <div class="workflow__media">
-      <MediaFrame
-        id={primaryId}
-        posterId={workflow.posterId}
-        locale={locale}
-        autoplay={Boolean(workflow.videoId)}
-        controls={false}
-        alt={`${workflow.title} — ${workflow.eyebrow}`}
-      />
-      {workflow.proofId && !proofIsPrimary && (
+      {hasMediaChoices ? (
+        <WorkflowMediaSwitcher
+          locale={locale}
+          label={locale === "zh-CN" ? `${workflow.title} 演示内容` : `${workflow.title} demonstrations`}
+          choices={workflow.mediaChoices ?? []}
+          switcherId={`workflow-${workflow.id}`}
+        />
+      ) : (
+        <MediaFrame
+          id={primaryId}
+          posterId={workflow.posterId}
+          locale={locale}
+          autoplay={Boolean(workflow.videoId)}
+          alt={`${workflow.title} — ${workflow.eyebrow}`}
+        />
+      )}
+      {!hasMediaChoices && workflow.proofId && !proofIsPrimary && (
         <div class="workflow__proof">
           <MediaFrame
             id={workflow.proofId}
             locale={locale}
-            alt={locale === "zh-CN" ? `${workflow.title} 真实生产输出` : `${workflow.title} verified production output`}
+            alt={locale === "zh-CN" ? `${workflow.title} 生产输出示例` : `${workflow.title} production output example`}
           />
-          <p>{locale === "zh-CN" ? "真实生产输出" : "Verified production output"}</p>
+          <p>{locale === "zh-CN" ? "生产输出示例" : "Production output example"}</p>
         </div>
       )}
-      {workflow.mediaNote && <p class="media-note">{workflow.mediaNote}</p>}
     </div>
   </div>
 </section>

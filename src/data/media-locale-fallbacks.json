@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "fallbacks": [
+    {
+      "requested_locale": "en",
+      "source_locale": "zh-CN",
+      "reason": "User-approved runtime capture fallback when no equivalent English recording exists.",
+      "media_ids": [
+        "software-zh-videos-demo-overall-zh-v59",
+        "software-zh-posters-poster-overall-zh-v59",
+        "software-zh-runtime-update-dtf-multi-layout",
+        "software-zh-runtime-update-posters-dtf-multi-layout",
+        "software-zh-runtime-update-dtf-parameter-tour",
+        "software-zh-runtime-update-posters-dtf-parameter-tour",
+        "software-zh-runtime-update-dtf-single-artwork",
+        "software-zh-runtime-update-posters-dtf-single-artwork",
+        "software-zh-runtime-update-dtf-single-row-layout",
+        "software-zh-runtime-update-posters-dtf-single-row-layout",
+        "software-zh-runtime-update-dtf-one-meter-layout",
+        "software-zh-runtime-update-posters-dtf-one-meter-layout",
+        "software-zh-runtime-update-dtg-parameter-controls",
+        "software-zh-runtime-update-posters-dtg-parameter-controls",
+        "software-zh-runtime-update-sublimation-layout-workflow",
+        "software-zh-runtime-update-posters-sublimation-layout-workflow",
+        "software-zh-runtime-update-ai-artwork-extraction-compare",
+        "software-zh-runtime-update-posters-ai-artwork-extraction-compare",
+        "software-zh-runtime-update-ai-background-removal-compare",
+        "software-zh-runtime-update-posters-ai-background-removal-compare",
+        "software-zh-runtime-update-ai-continue-to-dtg",
+        "software-zh-runtime-update-posters-ai-continue-to-dtg"
+      ]
+    }
+  ]
+}

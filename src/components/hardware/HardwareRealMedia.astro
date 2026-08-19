@@ -1,0 +1,470 @@
+---
+import MediaFrame from "@/components/MediaFrame.astro";
+import type { HardwareProductKey } from "@/data/hardware";
+import type { Locale } from "@/data/media";
+
+interface Props {
+  locale: Locale;
+  productKey: Exclude<HardwareProductKey, "oven604">;
+}
+
+const { locale, productKey } = Astro.props;
+
+const machineMedia = productKey === "dtf604"
+  ? {
+      id: "hw-real-dtf604-machine-operation",
+      posterId: "hw-real-dtf604-machine-operation-poster",
+      autoplay: true,
+      loop: true
+    }
+  : {
+      id: `hw-real-${productKey}-machine-overview`,
+      posterId: undefined,
+      autoplay: false,
+      loop: false
+    };
+
+const sharedCopy = {
+  garment: {
+    kicker: { "zh-CN": "成品应用", en: "Finished applications" },
+    title: {
+      "zh-CN": ["从打印输出，", "走到服装成品。"],
+      en: ["From printed output", "to finished apparel."]
+    },
+    body: {
+      "zh-CN": "服装应用呈现大面积图案、细线与不同颜色在最终成品上的整体效果。",
+      en: "Finished apparel shows how large graphics, fine lines and varied colors come together in the final application."
+    }
+  },
+  quality: {
+    kicker: { "zh-CN": "输出表现", en: "Output quality" },
+    title: {
+      "zh-CN": ["颜色、边缘，", "还有细节。", "近处也清楚。"],
+      en: ["Color, edges and detail", "remain clear up close."]
+    },
+    body: {
+      "zh-CN": "从成品表面观察颜色层次、图案边缘、细线与不同面积的色块表现。",
+      en: "A close look at finished surfaces reveals color layers, graphic edges, fine lines and areas of solid color."
+    }
+  },
+  captions: {
+    garmentHoodie: {
+      "zh-CN": "大幅图案在连帽衫上的整体呈现。",
+      en: "A large-format graphic across a finished hoodie."
+    },
+    garmentSweatshirt: {
+      "zh-CN": "观察文字、线条和多层图形的成品细节。",
+      en: "Finished detail across lettering, lines and layered graphics."
+    },
+    output: {
+      "zh-CN": "查看成品表面的颜色覆盖与图案边缘。",
+      en: "Color coverage and graphic edges across the finished surface."
+    },
+    quality: {
+      "zh-CN": "观察不同色块、细线与图案细节。",
+      en: "A closer view of color areas, fine lines and graphic detail."
+    }
+  }
+} as const;
+
+const machineCopy = {
+  dtf604: {
+    kicker: { "zh-CN": "DTF604 · 标准生产", en: "DTF604 · Standard production" },
+    title: {
+      "zh-CN": ["把整机状态，", "清楚放到眼前。"],
+      en: ["See the complete system", "in its production setup."]
+    },
+    body: {
+      "zh-CN": "设备、走料与收料之间的关系，在一个完整画面里清楚呈现。",
+      en: "The complete view makes the relationship between the printer, media path and take-up easy to understand."
+    },
+    caption: {
+      "zh-CN": "DTF604 标准生产系统与收料衔接。",
+      en: "DTF604 standard production system and take-up connection."
+    }
+  },
+  dtf608: {
+    kicker: { "zh-CN": "DTF608 · 八头系统", en: "DTF608 · Eight-head system" },
+    title: {
+      "zh-CN": ["八头高速系统，", "完整看清。"],
+      en: ["A complete view", "of the eight-head system."]
+    },
+    body: {
+      "zh-CN": "从整机结构到走料与收料路径，为连续高产能生产建立清楚的设备关系。",
+      en: "From the machine structure to media travel and take-up, the full system is arranged for continuous high-throughput production."
+    },
+    caption: {
+      "zh-CN": "图示电脑与过滤装置为独立配置。",
+      en: "The computer and filtration equipment shown are configured separately."
+    }
+  }
+} as const;
+
+const productionCopy = {
+  kicker: { "zh-CN": "连续生产", en: "Continuous production" },
+  title: {
+    "zh-CN": ["连续生产，", "就让它自己说明。"],
+    en: ["Continuous production,", "shown in motion."]
+  },
+  body: {
+    "zh-CN": "整机运行、打印头移动与膜材输出分别呈现，让生产节奏和输出路径一目了然。",
+    en: "Full-system operation, print-carriage movement and media output reveal the production rhythm from three useful viewpoints."
+  },
+  captions: {
+    wide: { "zh-CN": "整机连续运行与走料。", en: "Full-system operation and media travel." },
+    closeup: { "zh-CN": "打印头连续工作的近景。", en: "Close view of the print carriage in motion." },
+    output: { "zh-CN": "打印与输出路径近景。", en: "Close view of printing and the output path." }
+  }
+} as const;
+
+---
+
+{(productKey === "dtf604" || productKey === "dtf608") && (
+  <section class:list={["hw-real-showcase", "hw-real-showcase--machine", `hw-real-showcase--${productKey}`]} data-hw-real-section="machine">
+    <div class="hw-real-showcase__copy">
+      <p class="hw-real-kicker">{machineCopy[productKey].kicker[locale]}</p>
+      <h2>{machineCopy[productKey].title[locale].map((line) => <span>{line}</span>)}</h2>
+      <p>{machineCopy[productKey].body[locale]}</p>
+    </div>
+    <div class="hw-real-media-shell" data-hw-media-id={machineMedia.id}>
+      <MediaFrame
+        id={machineMedia.id}
+        posterId={machineMedia.posterId}
+        locale={locale}
+        class="hw-real-media hw-real-media--machine"
+        caption={machineCopy[productKey].caption[locale]}
+        autoplay={machineMedia.autoplay}
+        loop={machineMedia.loop}
+      />
+    </div>
+  </section>
+)}
+
+{productKey === "dtf608" && (
+  <section class="hw-real-showcase hw-real-showcase--production" data-hw-real-section="production">
+    <header class="hw-real-showcase__header">
+      <div>
+        <p class="hw-real-kicker">{productionCopy.kicker[locale]}</p>
+        <h2>{productionCopy.title[locale].map((line) => <span>{line}</span>)}</h2>
+      </div>
+      <p>{productionCopy.body[locale]}</p>
+    </header>
+    <div class="hw-real-video-row">
+      <div class="hw-real-media-shell" data-hw-media-id="hw-real-dtf608-production-wide">
+        <MediaFrame
+          id="hw-real-dtf608-production-wide"
+          posterId="hw-real-dtf608-production-wide-poster"
+          locale={locale}
+          class="hw-real-media hw-real-media--portrait-video"
+          caption={productionCopy.captions.wide[locale]}
+          autoplay
+          loop
+        />
+      </div>
+      <div class="hw-real-media-shell" data-hw-media-id="hw-real-dtf608-print-closeup">
+        <MediaFrame
+          id="hw-real-dtf608-print-closeup"
+          posterId="hw-real-dtf608-print-closeup-poster"
+          locale={locale}
+          class="hw-real-media hw-real-media--portrait-video"
+          caption={productionCopy.captions.closeup[locale]}
+          autoplay
+          loop
+        />
+      </div>
+      <div class="hw-real-media-shell" data-hw-media-id="hw-real-dtf608-production-close">
+        <MediaFrame
+          id="hw-real-dtf608-production-close"
+          posterId="hw-real-dtf608-production-close-poster"
+          locale={locale}
+          class="hw-real-media hw-real-media--portrait-video"
+          caption={productionCopy.captions.output[locale]}
+          autoplay
+          loop
+        />
+      </div>
+    </div>
+  </section>
+)}
+
+{(productKey === "dtf604" || productKey === "dtf608") && (
+  <section class="hw-real-showcase hw-real-showcase--garments" data-hw-real-section="garments">
+    <header class="hw-real-showcase__header">
+      <div>
+        <p class="hw-real-kicker">{sharedCopy.garment.kicker[locale]}</p>
+        <h2>{sharedCopy.garment.title[locale].map((line) => <span>{line}</span>)}</h2>
+      </div>
+      <p>{sharedCopy.garment.body[locale]}</p>
+    </header>
+    <div class="hw-real-garment-grid">
+      <div class="hw-real-media-shell" data-hw-media-id="hw-real-garment-hoodie">
+        <MediaFrame
+          id="hw-real-garment-hoodie"
+          locale={locale}
+          class="hw-real-media hw-real-media--garment"
+          caption={sharedCopy.captions.garmentHoodie[locale]}
+        />
+      </div>
+      <div class="hw-real-media-shell" data-hw-media-id="hw-real-garment-sweatshirt">
+        <MediaFrame
+          id="hw-real-garment-sweatshirt"
+          locale={locale}
+          class="hw-real-media hw-real-media--garment"
+          caption={sharedCopy.captions.garmentSweatshirt[locale]}
+        />
+      </div>
+    </div>
+  </section>
+)}
+
+<section class="hw-real-showcase hw-real-showcase--quality" data-hw-real-section="quality">
+  <header class="hw-real-showcase__header">
+    <div>
+      <p class="hw-real-kicker">{sharedCopy.quality.kicker[locale]}</p>
+      <h2>{sharedCopy.quality.title[locale].map((line) => <span>{line}</span>)}</h2>
+    </div>
+    <p>{sharedCopy.quality.body[locale]}</p>
+  </header>
+  <div class="hw-real-quality-grid">
+    <div class="hw-real-media-shell" data-hw-media-id="hw-real-shared-output-demo">
+      <MediaFrame
+        id="hw-real-shared-output-demo"
+        posterId="hw-real-shared-output-demo-poster"
+        locale={locale}
+        class="hw-real-media hw-real-media--quality-square"
+        caption={sharedCopy.captions.output[locale]}
+        autoplay
+        loop
+      />
+    </div>
+    <div class="hw-real-media-shell" data-hw-media-id="hw-real-shared-quality-demo">
+      <MediaFrame
+        id="hw-real-shared-quality-demo"
+        posterId="hw-real-shared-quality-demo-poster"
+        locale={locale}
+        class="hw-real-media hw-real-media--quality-portrait"
+        caption={sharedCopy.captions.quality[locale]}
+        autoplay
+        loop
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hw-real-showcase {
+    --hw-real-rule: #dfe2e5;
+    --hw-real-muted: #626970;
+    --hw-real-soft: #f4f5f6;
+    --hw-real-ink: #111317;
+    --hw-real-gold: #a56b16;
+    width: min(100%, var(--page-max));
+    margin: 0 auto;
+    padding: clamp(6rem, 10vw, 10rem) var(--page-gutter);
+    border-top: 1px solid var(--hw-real-rule);
+    color: var(--hw-real-ink);
+  }
+
+  .hw-real-showcase *,
+  .hw-real-media-shell {
+    min-width: 0;
+  }
+
+  .hw-real-showcase--machine {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(3rem, 8vw, 10rem);
+    align-items: center;
+  }
+
+  .hw-real-showcase--dtf604 {
+    grid-template-columns: minmax(18rem, 0.8fr) minmax(22rem, 0.95fr);
+  }
+
+  .hw-real-showcase__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.54fr);
+    gap: clamp(3rem, 8vw, 10rem);
+    align-items: end;
+    margin-bottom: clamp(3rem, 6vw, 6rem);
+  }
+
+  .hw-real-kicker {
+    margin: 0;
+    color: var(--hw-real-gold);
+    font-size: 0.72rem;
+    font-weight: 780;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .hw-real-showcase h2 {
+    margin: 2.2rem 0 0;
+    font-size: clamp(2.9rem, 5.4vw, 5.7rem);
+    font-weight: 650;
+    letter-spacing: -0.06em;
+    line-height: 0.99;
+  }
+
+  .hw-real-showcase h2 span {
+    display: block;
+  }
+
+  :global(html[lang="zh-CN"]) .hw-real-showcase h2 span {
+    white-space: nowrap;
+  }
+
+  .hw-real-showcase__copy > p:last-child,
+  .hw-real-showcase__header > p {
+    margin: 1.7rem 0 0;
+    color: var(--hw-real-muted);
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    line-height: 1.75;
+  }
+
+  .hw-real-showcase__header > p {
+    margin: 0;
+  }
+
+  .hw-real-media-shell :global(.media-frame) {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .hw-real-media-shell :global(.media-frame__viewport) {
+    border: 0;
+    border-radius: 0;
+    background: var(--hw-real-soft);
+    box-shadow: none;
+  }
+
+  .hw-real-media-shell :global(.media-frame figcaption) {
+    margin-top: 1rem;
+    color: var(--hw-real-muted);
+    font-size: 0.86rem;
+    line-height: 1.65;
+  }
+
+  .hw-real-showcase--machine .hw-real-media-shell :global(img) {
+    padding: clamp(0.6rem, 1.5vw, 1.5rem);
+  }
+
+  .hw-real-video-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1rem, 2vw, 2.4rem);
+    align-items: start;
+  }
+
+  .hw-real-video-row > :nth-child(2) {
+    margin-top: clamp(2rem, 5vw, 6rem);
+  }
+
+  .hw-real-garment-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+    gap: clamp(1.2rem, 3vw, 3.5rem);
+    align-items: end;
+  }
+
+  .hw-real-garment-grid > :nth-child(2) {
+    margin-bottom: clamp(1rem, 4vw, 5rem);
+  }
+
+  .hw-real-garment-grid :global(.media-frame__viewport),
+  .hw-real-quality-grid :global(.media-frame__viewport),
+  .hw-real-video-row :global(.media-frame__viewport) {
+    overflow: hidden;
+  }
+
+  .hw-real-garment-grid :global(img),
+  .hw-real-quality-grid :global(video),
+  .hw-real-video-row :global(video) {
+    object-fit: cover;
+  }
+
+  .hw-real-quality-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(18rem, 0.72fr);
+    gap: clamp(1.2rem, 3vw, 3.5rem);
+    align-items: start;
+  }
+
+  .hw-real-quality-grid > :nth-child(2) {
+    margin-top: clamp(2rem, 6vw, 7rem);
+  }
+
+  @media (max-width: 900px) {
+    .hw-real-showcase--machine,
+    .hw-real-showcase--dtf604,
+    .hw-real-showcase__header {
+      grid-template-columns: 1fr;
+    }
+
+    .hw-real-showcase__header > p {
+      max-width: 40rem;
+    }
+
+    .hw-real-video-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hw-real-video-row > :nth-child(2),
+    .hw-real-video-row > :nth-child(3) {
+      margin-top: 0;
+    }
+
+    .hw-real-video-row > :first-child {
+      grid-row: span 2;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .hw-real-showcase {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .hw-real-showcase h2 {
+      font-size: clamp(2.25rem, 10.8vw, 3.15rem);
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+    }
+
+    .hw-real-video-row,
+    .hw-real-garment-grid,
+    .hw-real-quality-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hw-real-video-row > :first-child {
+      grid-row: auto;
+    }
+
+    .hw-real-video-row > :nth-child(2),
+    .hw-real-garment-grid > :nth-child(2),
+    .hw-real-quality-grid > :nth-child(2) {
+      margin: 0;
+    }
+
+    .hw-real-showcase--machine .hw-real-media-shell {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hw-real-showcase *,
+    .hw-real-showcase *::before,
+    .hw-real-showcase *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+</style>

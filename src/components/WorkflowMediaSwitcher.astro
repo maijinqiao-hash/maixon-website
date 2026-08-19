@@ -1,0 +1,99 @@
+---
+import MediaFrame from "@/components/MediaFrame.astro";
+import type { Locale } from "@/data/media";
+import type { MediaChoiceContent } from "@/data/site";
+
+interface Props {
+  locale: Locale;
+  label: string;
+  choices: MediaChoiceContent[];
+  switcherId: string;
+}
+
+const { locale, label, choices, switcherId } = Astro.props;
+const resolvedChoices = choices;
+---
+
+<div class="media-switcher" data-media-switcher>
+  <div class="media-switcher__panels">
+    {resolvedChoices.map((choice, index) => (
+      <div
+        class="media-switcher__panel"
+        id={`${switcherId}-panel-${index}`}
+        role="tabpanel"
+        aria-labelledby={`${switcherId}-tab-${index}`}
+        hidden={index !== 0}
+        data-media-panel
+      >
+        <MediaFrame
+          id={choice.mediaId}
+          posterId={choice.posterId}
+          locale={locale}
+          alt={choice.label}
+        />
+        <p class="media-switcher__caption">{choice.caption}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="media-switcher__tabs" role="tablist" aria-label={label}>
+    {resolvedChoices.map((choice, index) => (
+      <button
+        id={`${switcherId}-tab-${index}`}
+        type="button"
+        role="tab"
+        aria-selected={index === 0 ? "true" : "false"}
+        aria-controls={`${switcherId}-panel-${index}`}
+        tabindex={index === 0 ? 0 : -1}
+        data-media-tab
+      >
+        <span>{String(index + 1).padStart(2, "0")}</span>
+        {choice.label}
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-media-switcher]").forEach((switcher) => {
+    if (switcher.dataset.ready === "true") return;
+    switcher.dataset.ready = "true";
+
+    const tabs = Array.from(switcher.querySelectorAll<HTMLButtonElement>("[data-media-tab]"));
+    const panels = Array.from(switcher.querySelectorAll<HTMLElement>("[data-media-panel]"));
+
+    const activate = (targetIndex: number) => {
+      tabs.forEach((tab, index) => {
+        const selected = index === targetIndex;
+        tab.setAttribute("aria-selected", selected ? "true" : "false");
+        tab.tabIndex = selected ? 0 : -1;
+      });
+
+      panels.forEach((panel, index) => {
+        panel.querySelectorAll("video").forEach((video) => video.pause());
+        panel.hidden = index !== targetIndex;
+      });
+
+      const activeVideo = panels[targetIndex]?.querySelector("video");
+      if (activeVideo) {
+        activeVideo.currentTime = 0;
+        activeVideo.dispatchEvent(new CustomEvent("maixon:media-activate", {
+          bubbles: true,
+          detail: { restart: true }
+        }));
+      }
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activate(index));
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const nextIndex = (index + offset + tabs.length) % tabs.length;
+        activate(nextIndex);
+        tabs[nextIndex]?.focus();
+      });
+    });
+  });
+</script>

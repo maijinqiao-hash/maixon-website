@@ -1,4 +1,5 @@
 ---
+import BalancedTitle from "@/components/BalancedTitle.astro";
 import SiteLayout from "@/layouts/SiteLayout.astro";
 import { copy } from "@/data/site";
 import type { Locale } from "@/data/media";
@@ -11,14 +12,14 @@ const locale = Astro.params.locale as Locale;
 const content = copy[locale];
 const items = locale === "zh-CN"
   ? [
-      { title: "软件使用说明", body: "DTF、DTG、热升华与 MAIXON AI 的操作入口。", href: "/guide" },
-      { title: "设备使用说明", body: "打印机、烘干系统与日常维护信息。", href: "/equipment-manual" },
-      { title: "联系与授权", body: "获取软件授权、AI 点数与人工支持。", href: "https://wa.me/8615954870827" }
+      { title: content.support.guide, body: "查看安装、账号、DTF、DTG、热升华与 MAIXON AI 的操作方法。", href: `/${locale}/guide/` },
+      { title: content.support.contact, body: "通过电话、微信或 WhatsApp 联系 MAIXON。", href: `/${locale}/contact/` },
+      { title: content.support.authorization, body: "查看软件授权、MAIXON AI 点数方案与开通流程。", href: `/${locale}/authorization/` }
     ]
   : [
-      { title: "Software guides", body: "Operational entry points for DTF, DTG, Sublimation and MAIXON AI.", href: "/guide" },
-      { title: "Equipment guides", body: "Printer, curing system and maintenance information.", href: "/equipment-manual" },
-      { title: "Contact and licensing", body: "Software licensing, AI points and direct support.", href: "https://wa.me/8615954870827" }
+      { title: content.support.guide, body: "Guidance for setup, accounts, DTF, DTG, Sublimation and MAIXON AI.", href: `/${locale}/guide/` },
+      { title: content.support.contact, body: "Contact MAIXON by phone, WeChat or WhatsApp.", href: `/${locale}/contact/` },
+      { title: content.support.authorization, body: "Review software licenses, MAIXON AI credit packages and activation steps.", href: `/${locale}/authorization/` }
     ];
 ---
 
@@ -31,7 +32,7 @@ const items = locale === "zh-CN"
 >
   <section class="page-hero page-hero--compact" id="license">
     <p class="section-label">{content.support.label}</p>
-    <h1>{content.support.title}</h1>
+    <BalancedTitle as="h1" text={content.support.title} segments={content.support.titleSegments} />
     <p>{content.support.body}</p>
   </section>
   <section class="support-index">

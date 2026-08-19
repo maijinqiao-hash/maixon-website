@@ -1,5 +1,6 @@
 ---
-import { installer, nav } from "@/data/site";
+import BrandLogo from "@/components/BrandLogo.astro";
+import { nav } from "@/data/site";
 import type { Locale } from "@/data/media";
 
 interface Props {
@@ -14,7 +15,9 @@ const home = `/${locale}/`;
 ---
 
 <header class="site-header">
-  <a class="wordmark" href={home} aria-label="MAIXON home">MAIXON</a>
+  <a class="wordmark" href={home} aria-label={locale === "zh-CN" ? "MAIXON 首页" : "MAIXON home"}>
+    <BrandLogo />
+  </a>
 
   <nav class="desktop-nav" aria-label={locale === "zh-CN" ? "主要导航" : "Primary navigation"}>
     {nav[locale].map((item) => (
@@ -26,7 +29,7 @@ const home = `/${locale}/`;
     <a class="language-link" href={alternatePath} lang={locale === "zh-CN" ? "en" : "zh-CN"}>
       {locale === "zh-CN" ? "EN" : "中文"}
     </a>
-    <a class="button button--small button--dark" href={installer.url}>{downloadLabel}</a>
+    <a class="button button--small button--dark" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{downloadLabel}</a>
   </div>
 
   <details class="mobile-nav">
@@ -38,7 +41,7 @@ const home = `/${locale}/`;
         <a href={`${home}${item.href}`}>{item.label}</a>
       ))}
       <a href={alternatePath}>{locale === "zh-CN" ? "English" : "中文"}</a>
-      <a class="button button--dark" href={installer.url}>{downloadLabel}</a>
+      <a class="button button--dark" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{downloadLabel}</a>
     </div>
   </details>
 </header>

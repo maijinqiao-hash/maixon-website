@@ -1,0 +1,59 @@
+---
+import LockedQr from "@/components/support/LockedQr.astro";
+import SupportPageShell from "@/components/support/SupportPageShell.astro";
+import { contactCopy, qrAssets } from "@/data/support-content";
+import type { Locale } from "@/data/media";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "zh-CN" } }, { params: { locale: "en" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const content = contactCopy[locale];
+const contactOnlyNote = locale === "zh-CN" ? "仅用于联系" : "Contact only";
+---
+
+<SupportPageShell
+  locale={locale}
+  label={content.label}
+  title={content.title}
+  description={content.description}
+>
+  <div class="contact-layout">
+    <section class="contact-direct">
+      <div class="contact-phone">
+        <span class="contact-phone__label">{content.phoneLabel}</span>
+        <a class="contact-phone__number" href={content.phoneHref}>{content.phoneDisplay}</a>
+      </div>
+      <div>
+        <p class="support-section__label">{content.prepareTitle}</p>
+        <ul class="contact-prepare">
+          {content.prepare.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="contact-privacy">{content.privacy}</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <header class="contact-section__head">
+        <p class="support-section__label">QR</p>
+        <div>
+          <h2>{content.qrTitle}</h2>
+          <p class="contact-section__intro">{content.qrDescription}</p>
+        </div>
+      </header>
+      <div class="qr-grid">
+        <LockedQr
+          {...qrAssets.wechatContact}
+          label={content.wechat}
+          note={contactOnlyNote}
+        />
+        <LockedQr
+          {...qrAssets.whatsappContact}
+          label={content.whatsapp}
+          note={contactOnlyNote}
+        />
+      </div>
+    </section>
+  </div>
+</SupportPageShell>

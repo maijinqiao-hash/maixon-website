@@ -1,4 +1,5 @@
 ---
+import BrandLogo from "@/components/BrandLogo.astro";
 import type { Locale } from "@/data/media";
 import { copy } from "@/data/site";
 
@@ -12,13 +13,15 @@ const content = copy[locale].footer;
 
 <footer class="site-footer">
   <div>
-    <a class="wordmark wordmark--footer" href={`/${locale}/`}>MAIXON</a>
+    <a class="wordmark wordmark--footer" href={`/${locale}/`} aria-label={locale === "zh-CN" ? "MAIXON 首页" : "MAIXON home"}>
+      <BrandLogo />
+    </a>
     <p>{content.statement}</p>
   </div>
   <div class="footer-meta">
     <a href="tel:+8615954870827">+86 159 5487 0827</a>
     <a href="https://wa.me/8615954870827">WhatsApp</a>
-    <p>© {new Date().getFullYear()} MAIXON</p>
+    <p>© {new Date().getFullYear()} 青岛国晋数码科技发展有限公司</p>
   </div>
   <p class="footer-legal">{content.legal}</p>
 </footer>
