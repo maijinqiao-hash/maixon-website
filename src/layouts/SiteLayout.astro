@@ -66,6 +66,7 @@ const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
       const videos = Array.from(document.querySelectorAll("video[data-autoplay-media]"))
         .filter((node): node is HTMLVideoElement => node instanceof HTMLVideoElement);
+      const loadedVideos = new WeakSet<HTMLVideoElement>();
 
       const isRendered = (video: HTMLVideoElement) => Boolean(video.offsetWidth || video.offsetHeight || video.getClientRects().length);
       const isOnScreen = (video: HTMLVideoElement) => {
@@ -73,12 +74,30 @@ const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
         return rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
       };
 
+      const loadVideo = (video: HTMLVideoElement, preload: "metadata" | "auto") => {
+        if (reduceMotion.matches) return;
+        if (!loadedVideos.has(video)) {
+          const source = video.dataset.mediaSrc;
+          if (!source) return;
+          video.autoplay = preload === "auto";
+          video.preload = preload;
+          video.src = source;
+          video.load();
+          loadedVideos.add(video);
+          video.dataset.mediaLoaded = "true";
+        } else if (preload === "auto" && video.preload !== "auto") {
+          video.preload = "auto";
+        }
+      };
+
       const playVideo = (video: HTMLVideoElement, restart = false) => {
         if (reduceMotion.matches || document.hidden || !isRendered(video)) {
           video.pause();
           return;
         }
+        loadVideo(video, "auto");
         if (restart || video.ended) video.currentTime = 0;
+        video.autoplay = true;
         video.muted = true;
         video.play().catch(() => {});
       };
@@ -109,7 +128,15 @@ const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
         }
       });
 
-      const observer = new IntersectionObserver((entries) => {
+      const preloadObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (!(video instanceof HTMLVideoElement)) return;
+          if (entry.isIntersecting && isRendered(video)) loadVideo(video, "metadata");
+        });
+      }, { rootMargin: "180% 0px 180% 0px", threshold: 0 });
+
+      const playbackObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           const video = entry.target;
           if (!(video instanceof HTMLVideoElement)) return;
@@ -118,7 +145,10 @@ const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
         });
       }, { threshold: [0, 0.2, 0.5, 0.8] });
 
-      videos.forEach((video) => observer.observe(video));
+      videos.forEach((video) => {
+        preloadObserver.observe(video);
+        playbackObserver.observe(video);
+      });
 
       document.addEventListener("maixon:media-activate", (event) => {
         const video = event.target;
@@ -130,10 +160,12 @@ const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
         videos.forEach((video) => {
           if (reduceMotion.matches) {
             video.pause();
-            video.currentTime = 0;
+            if (loadedVideos.has(video)) video.currentTime = 0;
             syncProgress(video);
           } else if (isOnScreen(video)) {
             playVideo(video);
+          } else {
+            video.pause();
           }
         });
       };

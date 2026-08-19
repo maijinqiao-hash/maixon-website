@@ -12,6 +12,8 @@ export type MediaAsset = {
   id: string;
   src: string;
   original_src?: string;
+  source_media?: string;
+  derived_media?: string | null;
   srcset: MediaSource[];
   srcset_avif?: MediaSource[];
   kind: "image" | "video";
@@ -22,6 +24,8 @@ export type MediaAsset = {
   duration?: number;
   bytes: number;
   sha256: string;
+  source_bytes?: number;
+  source_sha256?: string;
   source_type: "official" | "runtime_capture" | "artwork_source" | "production_output" | "generated";
   status: "approved" | "provisional" | "review_pending";
   source_package: string;

@@ -5,9 +5,30 @@ import sharp from "sharp";
 
 const root = process.cwd();
 const inputRoot = path.join(root, "public", "media");
+const webVideoRoot = path.join(root, "public", "media-web");
 const outputRoot = path.join(root, "public", "media-responsive");
 const manifestPath = path.join(root, "src", "data", "media-manifest.json");
 const widths = [640, 1024, 1600];
+
+const webVideoDerivatives = new Set([
+  "software/zh/videos/demo_overall_zh_v59.mp4",
+  "software/zh/runtime-update/dtf/multi-layout.mp4",
+  "software/zh/runtime-update/dtf/one-meter-layout.mp4",
+  "software/zh/runtime-update/dtf/parameter-tour.mp4",
+  "software/zh/runtime-update/dtf/single-artwork.mp4",
+  "software/zh/runtime-update/dtf/single-row-layout.mp4",
+  "software/zh/runtime-update/dtg/parameter-controls.mp4",
+  "software/zh/runtime-update/sublimation/layout-workflow.mp4",
+  "software/zh/runtime-update/ai/artwork-extraction-compare.mp4",
+  "software/zh/runtime-update/ai/background-removal-compare.mp4",
+  "software/zh/runtime-update/ai/continue-to-dtg.mp4",
+  "hardware/real/videos/dtf604-machine-operation.mp4",
+  "hardware/real/videos/dtf608-print-closeup.mp4",
+  "hardware/real/videos/dtf608-production-wide.mp4",
+  "hardware/real/videos/dtf608-production-close.mp4",
+  "hardware/real/videos/shared-output-demo.mp4",
+  "hardware/real/videos/shared-quality-demo.mp4"
+]);
 
 const videoMetadata = {
   "software/zh/videos/demo_ai_zh_v59.mp4": { width: 1920, height: 1216, duration: 23 },
@@ -347,9 +368,15 @@ for (const absolutePath of inputFiles) {
   if (extension === ".mp4") {
     const video = videoMetadata[relativePath];
     if (!video) throw new Error(`Missing video metadata for ${relativePath}`);
+    const hasWebDerivative = webVideoDerivatives.has(relativePath);
+    const webAbsolutePath = path.join(webVideoRoot, relativePath);
+    const webStat = hasWebDerivative ? await stat(webAbsolutePath) : null;
+    const webHash = hasWebDerivative ? await sha256(webAbsolutePath) : null;
     records.push({
       id: mediaIdFor(relativePath),
-      src: `/media/${relativePath}`,
+      src: hasWebDerivative ? `/media-web/${relativePath}` : `/media/${relativePath}`,
+      source_media: `/media/${relativePath}`,
+      derived_media: hasWebDerivative ? `/media-web/${relativePath}` : null,
       srcset: [],
       kind: "video",
       locale: localeFor(relativePath),
@@ -357,8 +384,10 @@ for (const absolutePath of inputFiles) {
       width: video.width,
       height: video.height,
       duration: video.duration,
-      bytes: fileStat.size,
-      sha256: sourceHash,
+      bytes: webStat?.size ?? fileStat.size,
+      sha256: webHash ?? sourceHash,
+      source_bytes: fileStat.size,
+      source_sha256: sourceHash,
       ...provenance,
       ...hardwareRealFieldsFor(relativePath),
       ...frameFor(relativePath, video.width, video.height),

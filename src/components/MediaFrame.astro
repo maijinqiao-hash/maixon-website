@@ -44,7 +44,8 @@ const avifSrcset = (media.srcset_avif ?? [])
   <div class="media-frame__viewport">
     {media.kind === "video" ? (
       <video
-        src={media.src}
+        data-media-src={media.src}
+        data-media-tier={priority ? "critical" : "deferred"}
         poster={poster?.src}
         width={media.width}
         height={media.height}
@@ -52,7 +53,7 @@ const avifSrcset = (media.srcset_avif ?? [])
         loop={loop}
         playsinline
         autoplay={autoplay}
-        preload={priority ? "auto" : "metadata"}
+        preload="none"
         data-autoplay-media
         aria-label={resolvedAlt}
       />
