@@ -1,15 +1,15 @@
 {
-  "version": "5.9.0",
+  "version": "6.2.0.1",
   "name": "MAIXON TOOL",
-  "download_url": "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V5.9_Windows10_11_Setup.exe",
+  "download_url": "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V6.2_Windows10_11_Setup.exe",
   "guide_url": "https://maixon.vip/zh-CN/support/",
   "software_guide_url": "https://maixon.vip/zh-CN/support/",
   "equipment_guide_url": "https://maixon.vip/zh-CN/support/",
   "printer_url": "https://maixon.vip/zh-CN/hardware/",
   "oven_url": "https://maixon.vip/zh-CN/hardware/oven604/",
-  "website_revision": "5.9.0-astro-redesign",
-  "release_date": "2026-08-15",
-  "file_size_bytes": 71576430,
-  "sha256": "2528235A8E95CAAB8FAD0BCABFD4D1523B189EEEB61759464B53E6427E7550D7",
+  "website_revision": "6.2.0.1-astro-redesign",
+  "release_date": "2026-08-29",
+  "file_size_bytes": 71961014,
+  "sha256": "D425291FE7E5F57783A45250F9190BAD388A703EA09B51AA6875ECF66C4C607D",
   "operating_system": "Windows 10/11"
 }

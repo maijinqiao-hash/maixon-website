@@ -3,9 +3,9 @@ import { windows1011Installer } from "./downloads";
 
 export const installer = {
   version: windows1011Installer.version,
-  displayVersion: "V5.9",
+  displayVersion: "V6.2",
   os: "Windows 10/11",
-  size: "68.3 MB",
+  size: "68.6 MB",
   sha256: windows1011Installer.sha256,
   url: windows1011Installer.downloadUrl
 };
@@ -116,18 +116,18 @@ export type SiteCopy = {
 export const copy: Record<Locale, SiteCopy> = {
   "zh-CN": {
     meta: {
-      title: "MAIXON TOOL V5.9｜印花生产套件",
-      description: "面向 DTF、DTG 与热升华生产的 MAIXON TOOL V5.9，覆盖核心生产工作流程、MAIXON AI、软件下载与硬件设备。"
+      title: "MAIXON TOOL V6.2｜印花生产套件",
+      description: "面向 DTF、DTG 与热升华生产的 MAIXON TOOL V6.2，覆盖核心生产工作流程、MAIXON AI、软件下载与硬件设备。"
     },
     header: {
-      download: "下载 V5.9",
+      download: "下载 V6.2",
       menu: "打开导航"
     },
     hero: {
       title: "MAIXON TOOL",
       lead: "从图稿到可生产文件。",
-      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
-      primary: "下载 V5.9",
+      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V6.2",
+      primary: "下载 V6.2",
       secondary: "查看产品演示",
       mediaId: "software-zh-home-overview",
       videoId: "software-zh-videos-demo-overall-zh-v59",
@@ -340,7 +340,7 @@ export const copy: Record<Locale, SiteCopy> = {
     },
     download: {
       label: "下载",
-      title: "MAIXON TOOL V5.9",
+      title: "MAIXON TOOL V6.2",
       body: "支持多种操作系统，请选择适合你的软件版本。",
       button: "下载软件",
       integrity: "查看文件校验"
@@ -355,24 +355,24 @@ export const copy: Record<Locale, SiteCopy> = {
       authorization: "获取授权"
     },
     footer: {
-      statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
+      statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V6.2",
       legal: "产品规格与功能可能随版本更新而调整，详情请联系我们。"
     }
   },
   en: {
     meta: {
-      title: "MAIXON TOOL V5.9 | Print Production Suite",
-      description: "MAIXON TOOL V5.9 for DTF, DTG and sublimation production, with integrated workflows, MAIXON AI, software download and equipment."
+      title: "MAIXON TOOL V6.2 | Print Production Suite",
+      description: "MAIXON TOOL V6.2 for DTF, DTG and sublimation production, with integrated workflows, MAIXON AI, software download and equipment."
     },
     header: {
-      download: "Download V5.9",
+      download: "Download V6.2",
       menu: "Open navigation"
     },
     hero: {
       title: "MAIXON TOOL",
       lead: "From artwork to production-ready output.",
-      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
-      primary: "Download V5.9",
+      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V6.2",
+      primary: "Download V6.2",
       secondary: "Watch the product demo",
       mediaId: "software-en-home",
       videoId: "software-zh-videos-demo-overall-zh-v59",
@@ -531,7 +531,7 @@ export const copy: Record<Locale, SiteCopy> = {
     },
     download: {
       label: "Download",
-      title: "MAIXON TOOL V5.9",
+      title: "MAIXON TOOL V6.2",
       body: "Available for multiple operating systems. Choose the software version that fits your computer.",
       button: "Download software",
       integrity: "View file integrity"
@@ -545,7 +545,7 @@ export const copy: Record<Locale, SiteCopy> = {
       authorization: "Get a license"
     },
     footer: {
-      statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V5.9",
+      statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V6.2",
       legal: "Product specifications and features may change with version updates. Contact us for current details."
     }
   }
