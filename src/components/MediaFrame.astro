@@ -30,7 +30,7 @@ const poster = posterId ? getMedia(posterId, locale) : undefined;
 const resolvedAlt =
   alt ??
   media.alt?.[locale] ??
-  (locale === "zh-CN" ? "MAIXON V6.3 产品媒体" : "MAIXON V6.3 product media");
+  (locale === "zh-CN" ? "MAIXON V6.3.2 产品媒体" : "MAIXON V6.3.2 product media");
 const srcset = media.srcset.map((source) => `${source.src} ${source.width}w`).join(", ");
 const avifSrcset = (media.srcset_avif ?? [])
   .map((source) => `${source.src} ${source.width}w`)

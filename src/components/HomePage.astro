@@ -5,7 +5,7 @@ import MediaFrame from "@/components/MediaFrame.astro";
 import WorkflowSection from "@/components/WorkflowSection.astro";
 import HardwareOverview from "@/components/hardware/HardwareOverview.astro";
 import type { Locale } from "@/data/media";
-import { copy, installer } from "@/data/site";
+import { copy, installer, softwareStructuredData } from "@/data/site";
 
 interface Props {
   locale: Locale;
@@ -18,6 +18,8 @@ const orderedWorkflows = [
   ...content.workflows.filter((workflow) => !workflow.id.startsWith("ai-"))
 ];
 ---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(softwareStructuredData)} />
 
 <section class="hero">
   <div class="hero__copy">
@@ -36,7 +38,7 @@ const orderedWorkflows = [
       locale={locale}
       priority
       autoplay={Boolean(content.hero.videoId)}
-      alt={locale === "zh-CN" ? "MAIXON TOOL V6.3 生产概览" : "MAIXON TOOL V6.3 production overview"}
+      alt={locale === "zh-CN" ? "MAIXON TOOL V6.3.2 生产概览" : "MAIXON TOOL V6.3.2 production overview"}
     />
   </div>
 </section>
@@ -74,7 +76,7 @@ const orderedWorkflows = [
     <dl>
       <div>
         <dt>{locale === "zh-CN" ? "版本" : "Version"}</dt>
-        <dd>{installer.version}</dd>
+        <dd>{installer.displayVersion}</dd>
       </div>
       <div>
         <dt>{locale === "zh-CN" ? "系统" : "System"}</dt>

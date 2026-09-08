@@ -48,7 +48,7 @@ const zhTopics: GuideTopic[] = [
       },
       {
         title: "首次启动",
-        body: "打开 MAIXON TOOL V6.3，进入账号入口并确认软件界面能够正常显示。",
+        body: "打开 MAIXON TOOL V6.3.2，进入账号入口并确认软件界面能够正常显示。",
         notes: ["如安装或启动遇到问题，请记录提示内容与软件版本，再联系技术支持。"]
       }
     ]
@@ -320,7 +320,7 @@ const enTopics: GuideTopic[] = [
     description: "Start with the official installer, then verify first launch, sign-in and the working environment.",
     sections: [
       { title: "Get the installer", body: "Open the MAIXON Download page for the Windows 10 / 11 installer.", steps: ["Run the installer after download.", "Follow the installation prompts.", "Confirm that the computer is online before first launch."] },
-      { title: "First launch", body: "Open MAIXON TOOL V6.3, enter the account area and confirm that the interface loads correctly.", notes: ["If installation or launch fails, record the on-screen message and software version before contacting support."] }
+      { title: "First launch", body: "Open MAIXON TOOL V6.3.2, enter the account area and confirm that the interface loads correctly.", notes: ["If installation or launch fails, record the on-screen message and software version before contacting support."] }
     ]
   },
   {
