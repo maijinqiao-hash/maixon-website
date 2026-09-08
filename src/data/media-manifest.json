@@ -1299,8 +1299,8 @@
       "object_position": "50% 50%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON V6.2 英文 AI 工作区",
-        "en": "MAIXON V6.2 AI workspace"
+        "zh-CN": "MAIXON V6.3 英文 AI 工作区",
+        "en": "MAIXON V6.3 AI workspace"
       }
     },
     {
@@ -1342,8 +1342,8 @@
       "object_position": "50% 50%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON V6.2 英文 DTF 工作区",
-        "en": "MAIXON V6.2 DTF workspace"
+        "zh-CN": "MAIXON V6.3 英文 DTF 工作区",
+        "en": "MAIXON V6.3 DTF workspace"
       }
     },
     {
@@ -1385,8 +1385,8 @@
       "object_position": "50% 50%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON V6.2 英文生产概览",
-        "en": "MAIXON V6.2 Production Overview"
+        "zh-CN": "MAIXON V6.3 英文生产概览",
+        "en": "MAIXON V6.3 Production Overview"
       }
     },
     {
@@ -1504,8 +1504,8 @@
       "object_position": "50% 50%",
       "layout_depends_on_image": false,
       "alt": {
-        "zh-CN": "MAIXON V6.2 英文热升华工作区",
-        "en": "MAIXON V6.2 Sublimation workspace"
+        "zh-CN": "MAIXON V6.3 英文热升华工作区",
+        "en": "MAIXON V6.3 Sublimation workspace"
       }
     },
     {
