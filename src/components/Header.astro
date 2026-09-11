@@ -10,7 +10,8 @@ interface Props {
   menuLabel: string;
 }
 
-const { locale, alternatePath, downloadLabel, menuLabel } = Astro.props;
+const { locale, alternatePath, menuLabel } = Astro.props;
+const downloadLabel = locale === "zh-CN" ? "下载" : "Download";
 const home = `/${locale}/`;
 ---
 

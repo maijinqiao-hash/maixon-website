@@ -83,6 +83,21 @@ export const downloadPlatforms: readonly DownloadPlatform[] = [
   }
 ] as const;
 
+export const downloadResources = [
+  {
+    id: "installation-assistant",
+    downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_Installation_Assistant_20260912.zip",
+    filename: "MAIXON_Installation_Assistant_20260912.zip",
+    label: { "zh-CN": "下载辅助安装软件", en: "Download installation assistant" }
+  },
+  {
+    id: "test-images",
+    downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_Test_Images_20260912.zip",
+    filename: "MAIXON_Test_Images_20260912.zip",
+    label: { "zh-CN": "测试图文件", en: "Test image files" }
+  }
+] as const;
+
 type PlatformCopy = Record<DownloadPlatform["id"], { status: string; action: string }>;
 
 export const downloadSelectorCopy: Record<Locale, {
