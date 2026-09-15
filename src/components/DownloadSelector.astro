@@ -1,6 +1,6 @@
 ---
 import type { Locale } from "@/data/media";
-import { downloadPlatforms, downloadResources, downloadSelectorCopy } from "@/data/downloads";
+import { downloadAssistanceResources, downloadPlatforms, downloadResources, downloadSelectorCopy } from "@/data/downloads";
 import "@/styles/download-selector.css";
 
 interface Props {
@@ -66,6 +66,21 @@ const content = downloadSelectorCopy[locale];
       })}
     </ol>
     <div class="download-selector__resources">
+      <details class="download-selector__assistance">
+        <summary class="download-selector__action download-selector__resource">{content.assistance}</summary>
+        <div class="download-selector__assistance-options">
+          {downloadAssistanceResources.map((resource) => (
+            <a
+              class="download-selector__action download-selector__resource"
+              href={resource.downloadUrl}
+              download={resource.filename}
+              data-download-resource={resource.id}
+            >
+              {resource.label[locale]}
+            </a>
+          ))}
+        </div>
+      </details>
       {downloadResources.map((resource) => (
         <a
           class="download-selector__action download-selector__resource"

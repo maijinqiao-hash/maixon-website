@@ -170,6 +170,28 @@ html.download-selector-open {
   text-align: center;
 }
 
+.download-selector__assistance {
+  width: 100%;
+}
+
+.download-selector__assistance summary {
+  list-style: none;
+}
+
+.download-selector__assistance summary::-webkit-details-marker {
+  display: none;
+}
+
+.download-selector__assistance-options {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.75rem 0 0 1rem;
+}
+
+.download-selector__assistance-options .download-selector__resource {
+  width: 100%;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .download-selector__close:hover {
     border-color: var(--ink);
