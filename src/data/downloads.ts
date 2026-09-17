@@ -23,21 +23,21 @@ export type DownloadPlatform = Readonly<{
 }>;
 
 export const windows7Installer: DownloadInstaller = {
-  displayName: "MAIXON TOOL V7.9.0.2 for Windows 7",
-  version: "7.9.0.2",
-  installerFilename: "MAIXON_TOOL_V7.9.0.2_Windows7_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V7.9.0.2_Windows7_Setup.exe",
-  fileSize: 89_313_831,
-  sha256: "A9A7BF78C931545AF036A6C811BA4F39CE6A3E8AF5D2176994E68CFF549CBCC8"
+  displayName: "MAIXON TOOL V7.9.0.4 for Windows 7",
+  version: "7.9.0.4",
+  installerFilename: "MAIXON_TOOL_V7.9.0.4_Windows7_Setup.exe",
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V7.9.0.4_Windows7_Setup.exe",
+  fileSize: 89_330_796,
+  sha256: "73EA7DFC824CAE9D115A10919AF8770C3CB64C0099E465BDB589C0E47D9654B0"
 };
 
 export const windows1011Installer: DownloadInstaller = {
-  displayName: "MAIXON TOOL V7.9.0.2 for Windows 10 / 11",
-  version: "7.9.0.2",
-  installerFilename: "MAIXON_TOOL_V7.9.0.2_Windows10_11_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V7.9.0.2_Windows10_11_Setup.exe",
-  fileSize: 120_942_939,
-  sha256: "B5AE128550F39D7A1C59487F302FEEE3961D5944C39B53FE72EEE7D12034A73F"
+  displayName: "MAIXON TOOL V7.9.0.4 for Windows 10 / 11",
+  version: "7.9.0.4",
+  installerFilename: "MAIXON_TOOL_V7.9.0.4_Windows10_11_Setup.exe",
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V7.9.0.4_Windows10_11_Setup.exe",
+  fileSize: 120_973_618,
+  sha256: "FC568808FC96A96B1B622465D52D240F655C4F59CCD3754103B3E56AABFDA8E2"
 };
 
 export const downloadPlatforms: readonly DownloadPlatform[] = [

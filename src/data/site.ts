@@ -5,7 +5,7 @@ export const installer = {
   version: windows1011Installer.version,
   displayVersion: "V7.9.0.2",
   os: "Windows 10/11",
-  size: "115.3 MB",
+  size: "115.4 MB",
   sha256: windows1011Installer.sha256,
   url: windows1011Installer.downloadUrl
 };
