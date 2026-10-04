@@ -56,6 +56,3 @@
 .v86-media__subtitles p{margin:0;font-size:15px;line-height:1.65;overflow-wrap:anywhere}
 .v86-caption-toggle[aria-pressed=false]{color:#7b7b80}
 @media(max-width:700px){.v86-media__subtitles{padding:11px 13px;margin-top:10px}.v86-media__subtitles p{font-size:14px;line-height:1.65}}
-
-/* Keep the retained equipment card heading within its narrower text column. */
-.v86-preserved-hardware .hw-oven-spotlight h2{font-size:clamp(28px,3.8vw,52px);line-height:1.2;overflow-wrap:anywhere}

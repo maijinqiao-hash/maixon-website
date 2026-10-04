@@ -289,8 +289,11 @@
   align-content: center;
 }
 
-.hw-oven-spotlight h2 {
+.hw-overview .hw-oven-spotlight h2 {
   margin-top: 2rem;
+  font-size: clamp(28px, 3.8vw, 52px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .hw-oven-spotlight__copy > p {
@@ -331,14 +334,14 @@
 
 .hw-product-hero__copy h1 {
   margin: 2rem 0 0;
-  font-size: clamp(5.5rem, 10vw, 10rem);
+  font-size: clamp(5.5rem, 8.7vw, 8.5rem);
   font-weight: 660;
   letter-spacing: -0.085em;
   line-height: 0.82;
 }
 
 .hw-product-page--oven604 .hw-product-hero__copy h1 {
-  font-size: clamp(5rem, 8vw, 8.6rem);
+  font-size: clamp(5rem, 7.4vw, 7.3rem);
   white-space: nowrap;
 }
 
@@ -453,6 +456,12 @@
 
 .hw-editorial h2 {
   margin-top: 2.4rem;
+}
+
+@media (min-width: 58rem) {
+  html:lang(en) .hw-editorial h2 {
+    font-size: clamp(2.8rem, 4.8vw, 5.2rem);
+  }
 }
 
 .hw-editorial > div > p:last-child {
@@ -911,6 +920,10 @@
   margin-top: 2.2rem;
 }
 
+html:lang(en) .hw-specifications h2 {
+  font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+}
+
 .hw-specifications header > p:last-child {
   max-width: 30rem;
   margin-top: 1.6rem;
@@ -1114,7 +1127,13 @@ html:lang(zh-CN) .hw-shirt-gallery p {
   }
 
   .hw-product-hero__copy h1 {
-    font-size: clamp(4.8rem, 10vw, 8rem);
+    font-size: clamp(4.8rem, 8vw, 8rem);
+  }
+}
+
+@media (min-width: 58rem) and (max-width: 74rem) {
+  .hw-product-page--oven604 .hw-product-hero__copy h1 {
+    font-size: clamp(4rem, 7.1vw, 8rem);
   }
 }
 
@@ -1346,6 +1365,10 @@ html:lang(zh-CN) .hw-shirt-gallery p {
   .hw-product-hero__copy h1 {
     margin-top: 1.4rem;
     font-size: clamp(4.6rem, 22vw, 6.4rem);
+  }
+
+  .hw-product-page--oven604 .hw-product-hero__copy h1 {
+    font-size: clamp(3.8rem, 18vw, 5rem);
   }
 
   .hw-product-hero__copy h2 {
