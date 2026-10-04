@@ -17,13 +17,14 @@ interface Props {
 const { locale, title, description, downloadLabel, menuLabel, imageId = "brand-app-icon" } = Astro.props;
 const socialImage = getMedia(imageId, locale);
 const socialImageSrc = socialImage.original_src ?? socialImage.src;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const localizedPath = Astro.url.pathname === "/" ? `/${locale}/` : Astro.url.pathname;
+const canonical = new URL(localizedPath, Astro.site);
 const alternateLocale: Locale = locale === "zh-CN" ? "en" : "zh-CN";
 const alternatePath = Astro.url.pathname.startsWith(`/${locale}/`)
   ? Astro.url.pathname.replace(`/${locale}/`, `/${alternateLocale}/`)
   : `/${alternateLocale}/`;
-const zhPath = locale === "zh-CN" ? Astro.url.pathname : alternatePath;
-const enPath = locale === "en" ? Astro.url.pathname : alternatePath;
+const zhPath = locale === "zh-CN" ? localizedPath : alternatePath;
+const enPath = locale === "en" ? localizedPath : alternatePath;
 ---
 
 <!doctype html>

@@ -49,3 +49,13 @@
 
 /* Comfortable touch targets for video and appearance controls. */
 .v86-media__controls{flex-wrap:wrap;justify-content:flex-end}.v86-play{min-height:44px;padding-inline:8px}.v86-theme button{min-width:44px;min-height:38px}@media(max-width:700px){.v86-media__controls{width:100%;min-width:0;max-width:100%;justify-content:center;gap:5px 10px}.v86-play{font-size:12px}.v86-theme button{min-height:44px}}
+
+/* Keep the full software interface visible while the narration is captioned. */
+.v86-media__subtitles{margin-top:12px;padding:13px 18px;border-radius:10px;background:#f1f1f3;color:#48484d;text-align:center;min-height:3.2em}
+.v86-media__subtitles[hidden]{display:none}
+.v86-media__subtitles p{margin:0;font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.v86-caption-toggle[aria-pressed=false]{color:#7b7b80}
+@media(max-width:700px){.v86-media__subtitles{padding:11px 13px;margin-top:10px}.v86-media__subtitles p{font-size:14px;line-height:1.65}}
+
+/* Keep the retained equipment card heading within its narrower text column. */
+.v86-preserved-hardware .hw-oven-spotlight h2{font-size:clamp(28px,3.8vw,52px);line-height:1.2;overflow-wrap:anywhere}

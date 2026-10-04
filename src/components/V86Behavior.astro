@@ -1,6 +1,6 @@
 ---
 import '../styles/v86.css';
-const isChinese=Astro.url.pathname.startsWith('/zh-CN/');
+const isChinese=!Astro.url.pathname.startsWith('/en/');
 ---
 <dialog class="v86-lightbox" data-v86-lightbox aria-label={isChinese?'MAIXON V8.6 功能界面':'MAIXON V8.6 interface'}><button class="v86-lightbox__close" type="button" data-v86-close aria-label={isChinese?'关闭':'Close'}>✕</button><img width="2592" height="1618" alt=""/><p></p></dialog>
 <script>
@@ -21,8 +21,37 @@ const isChinese=Astro.url.pathname.startsWith('/zh-CN/');
     const video=frame.querySelector('video');
     const play=frame.querySelector<HTMLButtonElement>('[data-v86-play]');
     const sound=frame.querySelector<HTMLButtonElement>('[data-v86-sound]');
+    const subtitles=frame.querySelector<HTMLElement>('[data-v86-subtitles]');
+    const subtitleText=frame.querySelector<HTMLElement>('[data-v86-subtitle-text]');
+    const captionButton=frame.querySelector<HTMLButtonElement>('[data-v86-captions]');
+    const captionTrack=video?.querySelector('track');
+    let captionsEnabled=true;
+    let nativeFullscreen=false;
+    const fullscreenVideo=()=>!!video&&(nativeFullscreen||document.fullscreenElement===video||(video as HTMLVideoElement&{webkitDisplayingFullscreen?:boolean}).webkitDisplayingFullscreen===true);
+    const syncCaptions=()=>{
+      if(!video||!captionTrack||!subtitles||!subtitleText)return;
+      const fullscreen=fullscreenVideo();
+      // Inline captions belong below the picture. Keep the native track hidden
+      // and use its timing; only native video fullscreen uses native captions.
+      const mode=captionsEnabled&&fullscreen?'showing':'hidden';
+      if(captionTrack.track.mode!==mode)captionTrack.track.mode=mode;
+      const text=Array.from(captionTrack.track.activeCues||[]).map(cue=>(cue as VTTCue).text).join(' ');
+      if(subtitleText.textContent!==text)subtitleText.textContent=text;
+      subtitles.hidden=video.hidden||!captionsEnabled||fullscreen;
+    };
+    captionTrack?.track.addEventListener('cuechange',syncCaptions);
+    captionTrack?.addEventListener('load',syncCaptions);
+    video?.textTracks.addEventListener('change',syncCaptions);
+    video?.addEventListener('timeupdate',syncCaptions);
+    video?.addEventListener('loadedmetadata',syncCaptions);
+    video?.addEventListener('loadeddata',syncCaptions);
+    document.addEventListener('fullscreenchange',syncCaptions);
+    video?.addEventListener('webkitbeginfullscreen',()=>{nativeFullscreen=true;syncCaptions();});
+    video?.addEventListener('webkitendfullscreen',()=>{nativeFullscreen=false;syncCaptions();});
+    captionButton?.addEventListener('click',()=>{captionsEnabled=!captionsEnabled;captionButton.setAttribute('aria-pressed',String(captionsEnabled));syncCaptions();});
+    syncCaptions();
     const syncSound=()=>{if(!video||!sound)return;frame.dataset.sound=String(!video.muted);sound.setAttribute('aria-pressed',String(!video.muted));sound.textContent=video.muted?(zh?'开启讲解':'Enable narration'):(zh?'关闭讲解':'Mute narration');};
-    const resetVideo=()=>{if(video){delete video.dataset.requested;delete video.dataset.userStarted;video.pause();video.hidden=true;}img.hidden=false;play?.setAttribute('aria-pressed','false');if(play)play.textContent=zh?'▶ 有声播放':'▶ Play with sound';};
+    const resetVideo=()=>{if(video){delete video.dataset.requested;delete video.dataset.userStarted;video.pause();video.hidden=true;}if(subtitles)subtitles.hidden=true;img.hidden=false;play?.setAttribute('aria-pressed','false');if(play)play.textContent=zh?'▶ 有声播放':'▶ Play with sound';};
     const startWithSound=()=>{
       if(!video)return;
       frame.dataset.manualTheme='true';video.dataset.requested='true';
@@ -31,7 +60,7 @@ const isChinese=Astro.url.pathname.startsWith('/zh-CN/');
       if(!video.getAttribute('src')){video.src=videoSource(video);video.load();}
       if(video.readyState>=2){img.hidden=true;video.hidden=false;}
       document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
-      syncSound();video.play().catch(()=>{video.controls=true;img.hidden=true;video.hidden=false;});
+      syncSound();syncCaptions();video.play().catch(()=>{video.controls=true;img.hidden=true;video.hidden=false;syncCaptions();});
     };
     frame.querySelectorAll<HTMLButtonElement>('[data-v86-theme]').forEach(button=>button.addEventListener('click',event=>{
       const theme=button.dataset.v86Theme!;
@@ -52,7 +81,7 @@ const isChinese=Astro.url.pathname.startsWith('/zh-CN/');
     const syncPlay=()=>{if(!play||!video?.dataset.userStarted)return;play.setAttribute('aria-pressed',String(!video.paused));play.textContent=video.paused?(zh?'▶ 继续播放':'▶ Resume'):(zh?'暂停视频':'Pause video');};
     video?.addEventListener('play',()=>{syncPlay();document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});});
     video?.addEventListener('pause',syncPlay);video?.addEventListener('ended',syncPlay);
-    video?.addEventListener('loadeddata',()=>{if(video.dataset.requested){img.hidden=true;video.hidden=false;}});
+    video?.addEventListener('loadeddata',()=>{if(video.dataset.requested){img.hidden=true;video.hidden=false;syncCaptions();}});
     video?.addEventListener('error',()=>{frame.dataset.manualTheme='true';resetVideo();let message=frame.querySelector('[role=status]');if(!message){message=document.createElement('p');message.setAttribute('role','status');message.className='v86-runtime-note';frame.append(message);}message.textContent=zh?'视频暂时无法加载，请保留界面图并稍后重试。':'The video could not load. You can still view the interface image.';});
     frame.querySelector('[data-v86-expand]')?.addEventListener('click',e=>{
       if(!box)return;

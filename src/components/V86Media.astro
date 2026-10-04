@@ -7,14 +7,16 @@ const root='/media/v86/';
 <figure class="v86-media" data-v86-media data-poster={poster} data-theme={theme} id={`media-${id}`}>
   <div class="v86-media__viewport">
     <img src={`${root}screenshots/${theme}/${poster}.webp`} width="2592" height="1618" alt={zh ? `MAIXON TOOL V8.6 ${caption||id} · ${theme==='light'?'浅色':'深色'}界面` : `MAIXON TOOL V8.6 ${caption||id} — ${theme} interface`} loading={priority?'eager':'lazy'} decoding="async" fetchpriority={priority?'high':'auto'} />
-    {video && <video controls playsinline muted preload="none" poster={`${root}screenshots/${theme}/${poster}.webp`} data-src={`${root}videos/${zh?'':'en/'}${video}.mp4`} data-mobile-src={`${root}mobile/videos/${zh?'':'en/'}${video}.mp4`} data-v86-autoplay={autoplay||video==='overview'?'true':undefined} aria-label={zh?`${caption||id} 操作流程`:`${caption||id} workflow`} hidden><track kind="captions" srclang={locale} label={zh?'中文讲解':'English captions'} src={`${root}captions/${video}.${locale}.vtt`} default /></video>}
+    {video && <video controls playsinline muted preload="none" poster={`${root}screenshots/${theme}/${poster}.webp`} data-src={`${root}videos/${zh?'':'en/'}${video}.mp4`} data-mobile-src={`${root}mobile/videos/${zh?'':'en/'}${video}.mp4`} data-v86-autoplay={autoplay||video==='overview'?'true':undefined} aria-label={zh?`${caption||id} 操作流程`:`${caption||id} workflow`} hidden><track kind="captions" srclang={locale} label={zh?'中文字幕':'English captions'} src={`${root}captions/${video}.${locale}.vtt`} /></video>}
     <button class="v86-expand" type="button" data-v86-expand aria-label={zh?'放大查看界面':'Enlarge interface'}>↗</button>
   </div>
+  {video && <div class="v86-media__subtitles" data-v86-subtitles id={`subtitles-${id}`} aria-label={zh?'视频字幕':'Video captions'} hidden><p data-v86-subtitle-text></p></div>}
   <figcaption>
     <div class="v86-media__source"><span class="v86-dot"></span>{caption || (zh?'MAIXON TOOL V8.6':'MAIXON TOOL V8.6')}</div>
     <div class="v86-media__controls">
       {video && <button type="button" class="v86-play" data-v86-play aria-pressed="false">{zh?'▶ 有声播放':'▶ Play with sound'}</button>}
       {video && <button type="button" class="v86-play" data-v86-sound aria-pressed="false">{zh?'开启讲解':'Enable narration'}</button>}
+      {video && <button type="button" class="v86-play v86-caption-toggle" data-v86-captions aria-pressed="true" aria-controls={`subtitles-${id}`}>{zh?'字幕':'Captions'}</button>}
       <div class="v86-theme" role="group" aria-label={zh?'软件界面主题':'Software interface theme'}>
         <button type="button" data-v86-theme="light" aria-pressed={theme==='light'}>{zh?'浅色':'Light'}</button>
         <button type="button" data-v86-theme="dark" aria-pressed={theme==='dark'}>{zh?'深色':'Dark'}</button>
