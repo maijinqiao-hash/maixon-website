@@ -12,7 +12,20 @@
     "bytes": 21756416,
     "sha256": "dc6ef1778b63131726c0e726ed357cb7512cb38e4e79d559eb06afe23fc9783e",
     "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "pages": [
+      "/zh-CN/",
+      "/zh-CN/features/dtg/",
+      "/zh-CN/features/dtg/output/",
+      "/zh-CN/features/dtg/maintop/",
+      "/zh-CN/features/dtg/dark-fabric/",
+      "/zh-CN/workflows/dtg-ai-new/",
+      "/en/",
+      "/en/features/dtg/",
+      "/en/features/dtg/output/",
+      "/en/features/dtg/maintop/",
+      "/en/features/dtg/dark-fabric/",
+      "/en/workflows/dtg-ai-new/"
+    ]
   },
   {
     "id": "dtf-ai-layout",
@@ -24,10 +37,18 @@
     "height": 1440,
     "path": "/media/v86/owner/dtf-ai-layout.mp4",
     "poster": "/media/v86/owner/dtf-ai-layout.webp",
-    "bytes": 26317118,
-    "sha256": "837157013986e81ae9bd7cadef6eff459bcb06e6e99af29486f9e8f58ddd0102",
-    "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "bytes": 8016469,
+    "sha256": "7129ed757e00499e951a996a2eff448286f07fb9ac30489812851c2f1d93dec0",
+    "transformation": "Full-length web derivative bounded 1920x1080, H264 High L4.1, original audio copied, source timing and embedded subtitles retained, faststart. No editing or translation.",
+    "pages": [
+      "/zh-CN/features/ai/cutout/",
+      "/zh-CN/features/ai/extract/",
+      "/zh-CN/workflows/dtf-ai-layout/",
+      "/en/features/ai/cutout/",
+      "/en/features/ai/extract/",
+      "/en/workflows/dtf-ai-layout/"
+    ],
+    "original_remux_sha256": "837157013986e81ae9bd7cadef6eff459bcb06e6e99af29486f9e8f58ddd0102"
   },
   {
     "id": "dtg-ai",
@@ -42,7 +63,12 @@
     "bytes": 21919326,
     "sha256": "b714eab155ba49e5443fee82949f37777ffd3ee7f4dca9eaed103982cb2d7124",
     "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "pages": [
+      "/zh-CN/features/dtg/light-fabric/",
+      "/zh-CN/workflows/dtg-ai/",
+      "/en/features/dtg/light-fabric/",
+      "/en/workflows/dtg-ai/"
+    ]
   },
   {
     "id": "dtf-ai-flow",
@@ -54,10 +80,22 @@
     "height": 1440,
     "path": "/media/v86/owner/dtf-ai-flow.mp4",
     "poster": "/media/v86/owner/dtf-ai-flow.webp",
-    "bytes": 26346107,
-    "sha256": "eb34f8616f167a18147e7df3d6f59341405179f15ebc8f6a1bd20b4baf79d2ed",
-    "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "bytes": 8044994,
+    "sha256": "dcd116942bd29be688d7e894c78436a885a250ea7c26583a69973a507bd2f020",
+    "transformation": "Full-length web derivative bounded 1920x1080, H264 High L4.1, original audio copied, source timing and embedded subtitles retained, faststart. No editing or translation.",
+    "pages": [
+      "/zh-CN/",
+      "/zh-CN/features/dtf/",
+      "/zh-CN/features/dtf/maintop/",
+      "/zh-CN/workflows/dtf-ai-flow/",
+      "/zh-CN/maintop/",
+      "/en/",
+      "/en/features/dtf/",
+      "/en/features/dtf/maintop/",
+      "/en/workflows/dtf-ai-flow/",
+      "/en/maintop/"
+    ],
+    "original_remux_sha256": "eb34f8616f167a18147e7df3d6f59341405179f15ebc8f6a1bd20b4baf79d2ed"
   },
   {
     "id": "halftone",
@@ -69,10 +107,18 @@
     "height": 1440,
     "path": "/media/v86/owner/halftone.mp4",
     "poster": "/media/v86/owner/halftone.webp",
-    "bytes": 29042115,
-    "sha256": "4879ca290e74257fb2546c835051e55aff83ff4326b3c8651c436d4947daab37",
-    "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "bytes": 6185690,
+    "sha256": "0ae2548b1d4b04527c91978cc46f7c73bde77a9b863f6fbc87324790a480de3c",
+    "transformation": "Full-length web derivative bounded 1920x1080, H264 High L4.1, original audio copied, source timing and embedded subtitles retained, faststart. No editing or translation.",
+    "pages": [
+      "/zh-CN/features/halftone/modes/",
+      "/zh-CN/features/halftone/production/",
+      "/zh-CN/workflows/halftone/",
+      "/en/features/halftone/modes/",
+      "/en/features/halftone/production/",
+      "/en/workflows/halftone/"
+    ],
+    "original_remux_sha256": "4879ca290e74257fb2546c835051e55aff83ff4326b3c8651c436d4947daab37"
   },
   {
     "id": "dtf-single",
@@ -87,7 +133,14 @@
     "bytes": 18810396,
     "sha256": "f9ea015df88498b767e4f4dfa10b6a3d4a4d374ddd514822375031c613d27b02",
     "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "pages": [
+      "/zh-CN/features/dtf/output/",
+      "/zh-CN/features/dtf/white-edges/",
+      "/zh-CN/workflows/dtf-single/",
+      "/en/features/dtf/output/",
+      "/en/features/dtf/white-edges/",
+      "/en/workflows/dtf-single/"
+    ]
   },
   {
     "id": "dtf-canvas",
@@ -99,10 +152,14 @@
     "height": 1440,
     "path": "/media/v86/owner/dtf-canvas.mp4",
     "poster": "/media/v86/owner/dtf-canvas.webp",
-    "bytes": 77575635,
-    "sha256": "5c97640586671aeabdd896d4879f37dab8c761879d53b16293ac0de75c4c11d9",
-    "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "bytes": 14943437,
+    "sha256": "43d504e296ed9da45fc65d29373cc7f4863ff83d61528601094d53e159b230de",
+    "transformation": "Full-length web derivative bounded 1920x1080, H264 High L4.1, original audio copied, source timing and embedded subtitles retained, faststart. No editing or translation.",
+    "pages": [
+      "/zh-CN/workflows/dtf-canvas/",
+      "/en/workflows/dtf-canvas/"
+    ],
+    "original_remux_sha256": "5c97640586671aeabdd896d4879f37dab8c761879d53b16293ac0de75c4c11d9"
   },
   {
     "id": "sublimation-pdf",
@@ -114,10 +171,22 @@
     "height": 1440,
     "path": "/media/v86/owner/sublimation-pdf.mp4",
     "poster": "/media/v86/owner/sublimation-pdf.webp",
-    "bytes": 29148630,
-    "sha256": "7ce3592fe753eb58c1c141d36714fd68155d359222efc380079028b567867f8f",
-    "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "bytes": 7782727,
+    "sha256": "f69fd3ca276926e2dbe30255fa50682d385f2c3f005370108aa4390d4ffad528",
+    "transformation": "Full-length web derivative bounded 1920x1080, H264 High L4.1, original audio copied, source timing and embedded subtitles retained, faststart. No editing or translation.",
+    "pages": [
+      "/zh-CN/",
+      "/zh-CN/features/sublimation/",
+      "/zh-CN/features/sublimation/layout-options/",
+      "/zh-CN/features/sublimation/cut-lines/",
+      "/zh-CN/workflows/sublimation-pdf/",
+      "/en/",
+      "/en/features/sublimation/",
+      "/en/features/sublimation/layout-options/",
+      "/en/features/sublimation/cut-lines/",
+      "/en/workflows/sublimation-pdf/"
+    ],
+    "original_remux_sha256": "7ce3592fe753eb58c1c141d36714fd68155d359222efc380079028b567867f8f"
   },
   {
     "id": "dtf-stretch",
@@ -132,7 +201,10 @@
     "bytes": 14598590,
     "sha256": "73c11ef92e167d105368cdbf93a23435aac99f5927847797d0003ca0c2babf13",
     "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "pages": [
+      "/zh-CN/workflows/dtf-stretch/",
+      "/en/workflows/dtf-stretch/"
+    ]
   },
   {
     "id": "dtf-count",
@@ -147,7 +219,12 @@
     "bytes": 21614255,
     "sha256": "98fa752547524ffcdb1fd9cb1404c053730a78b5f676c736f563d0498acd672f",
     "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "pages": [
+      "/zh-CN/features/dtf/area-layout/",
+      "/zh-CN/workflows/dtf-count/",
+      "/en/features/dtf/area-layout/",
+      "/en/workflows/dtf-count/"
+    ]
   },
   {
     "id": "dtf-nesting",
@@ -159,10 +236,14 @@
     "height": 1440,
     "path": "/media/v86/owner/dtf-nesting.mp4",
     "poster": "/media/v86/owner/dtf-nesting.webp",
-    "bytes": 60830815,
-    "sha256": "784266f119fe4700d53ef0bf9980943d1c13ddc853fe8d27663337fb79fe1e85",
-    "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "bytes": 9415193,
+    "sha256": "d794f8c92ba8474fd84913dffbb5863722e447ed62175c94880ecded0ad138d6",
+    "transformation": "Full-length web derivative bounded 1920x1080, H264 High L4.1, original audio copied, source timing and embedded subtitles retained, faststart. No editing or translation.",
+    "pages": [
+      "/zh-CN/workflows/dtf-nesting/",
+      "/en/workflows/dtf-nesting/"
+    ],
+    "original_remux_sha256": "784266f119fe4700d53ef0bf9980943d1c13ddc853fe8d27663337fb79fe1e85"
   },
   {
     "id": "maintop-setup",
@@ -177,6 +258,9 @@
     "bytes": 15364246,
     "sha256": "3ca1514ca30ba0112aa0e793226b5350159aac9d7af27b8f88aa496a98a32109",
     "transformation": "Full-length stream copy to MP4; original video, audio and burned-in subtitles unchanged",
-    "pages": []
+    "pages": [
+      "/zh-CN/workflows/maintop-setup/",
+      "/en/workflows/maintop-setup/"
+    ]
   }
 ]
