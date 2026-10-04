@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run media:build && astro check && astro build && npm run validate:bilingual && npm run validate:v86",
+    "build": "npm run media:build && astro check && astro build && npm run validate:bilingual && npm run validate:v86 && npm run test:video-ranges",
     "preview": "astro preview",
     "check": "astro check",
     "media:build": "node scripts/build-media.mjs",
     "validate:bilingual": "node scripts/validate-bilingual.mjs",
-    "validate:v86": "node scripts/validate-v86-media.mjs"
+    "validate:v86": "node scripts/validate-v86-media.mjs",
+    "test:video-ranges": "node scripts/test-video-ranges.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

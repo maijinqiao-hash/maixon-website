@@ -1,0 +1,10 @@
+{
+  "name": "tight-snow-d985",
+  "main": "deployment/video-worker.mjs",
+  "compatibility_date": "2026-08-14",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/media/v86/*.mp4"]
+  }
+}
