@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://maixon.vip",
   output: "static",
+  devToolbar: {enabled:false},
   trailingSlash: "always",
   integrations: [
     sitemap({

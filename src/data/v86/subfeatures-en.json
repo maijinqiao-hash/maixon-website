@@ -1,0 +1,152 @@
+{
+ "voice/speak": {
+  "title":"Spoken instructions","lead":"Describe the task. Let the workspace organize the settings.","summary":"Choose artwork, then say the task, dimensions and units. Review the recognized text before turning it into production settings.",
+  "chapters":[{"title":"Choose the artwork first.","body":["Drag in artwork or select a file or folder. Confirm the input, then use the Voice Commands control.","Name the operation and size, such as a 30 cm wide DTG print. Include values and units for resolution, white-ink choke and margins when needed."]},{"title":"Review the recognized text.","body":["Check numbers, width or height, and units. Correct the text before parsing the instruction.","Use typed instructions when speaking is inconvenient. After parsing, review the task card before confirming execution."]}],
+  "checks":["The input matches the order","Width or height and units are explicit","Recognized text has been reviewed"]
+ },
+ "voice/type": {
+  "title":"Typed instructions","lead":"Turn the order into one clear request.","summary":"Type dimensions, resolution, white ink and margins together. Inspect the interpreted settings before the task runs.",
+  "chapters":[{"title":"Specify the operation and values.","body":["For example: prepare a 15 cm wide DTF print at 300 PPI, with a 2 px white choke and 5 mm margins on every edge. Select the artwork and enter the request.","Start with one defined task per instruction. Submit more complex workflows in stages so each result can be checked."]},{"title":"Review the settings, then run.","body":["Parse the instruction and inspect the task card. If anything differs from the order, edit the request and parse it again.","After execution, inspect the output. A 15 cm artwork with 5 mm on each side produces a canvas about 16 cm wide. Check artwork size and canvas size separately."]}],
+  "checks":["The operation is clearly named","Values include cm, mm, px or PPI","The task card matches the request"]
+ },
+ "voice/review": {
+  "title":"Review and execute","lead":"See every setting before automation begins.","summary":"The task card brings the interpreted operation and parameters together. Check the input, size and white ink, then run and inspect the output.",
+  "chapters":[{"title":"Check the current task.","body":["Review the input artwork, task type, dimensions, resolution, white choke and margins. Scroll through longer cards to see all settings.","Return to the request if changes are needed. Confirm execution only after the card is correct."]},{"title":"Inspect the completed output.","body":["For Photoshop-based tasks, confirm the connection and keep Photoshop available. Open the exported file to inspect canvas size, resolution and the white channel.","Use the run log to understand progress or errors. Resolve the cause before repeating a failed task."]}],
+  "checks":["Photoshop is connected","The complete task card has been reviewed","Output size, artwork and channels match the order"]
+ },
+ "finder/library": {
+  "title":"Build a local library","lead":"Prepare the library. Find artwork by its image.","summary":"Choose a local folder or external drive and prepare search data for your artwork. Originals stay in place; indexes and previews are stored locally.",
+  "chapters":[{"title":"Choose a folder or drive.","body":["Open Library Management and select the folder or drive containing the artwork. Keep external drives connected at an accessible path.","Initial preparation reads the files and builds search data. Time depends on the collection, file sizes and disk performance."]},{"title":"Check completion and usable files.","body":["Wait for preparation to finish and inspect usable and currently unreadable file counts. Library preparation and image search have separate progress indicators.","Validate the process with a known reference before expanding the collection. Review file status for items that could not be read."]}],
+  "checks":["The library path is accessible","Initial preparation has finished","There are usable files to search"]
+ },
+ "finder/image-search": {
+  "title":"Search by image","lead":"Remember the picture. Start from the picture.","summary":"Load a reference image, search your prepared library, compare candidates and locate the original artwork.",
+  "chapters":[{"title":"Load a reference and start searching.","body":["Choose a prepared library and import the reference image. Confirm the picture, then start the search.","Preparing a library and searching an image are separate steps. Selecting the library does not automatically start a query."]},{"title":"Compare and locate the original.","body":["Compare the subject, lettering, details and matched region. Locate the original file to inspect the complete design and file quality.","When clothing or background dominates the reference, switch to region search and select the intended print."]}],
+  "checks":["The reference is recognizable","Candidate details match the reference","The original file is complete and usable"]
+ },
+ "finder/region-search": {
+  "title":"Search a print region","lead":"Find this part. Leave distractions outside the frame.","summary":"Select the print within a reference image to reduce the influence of clothing and background, then compare the matching area in each candidate.",
+  "chapters":[{"title":"Select the distinctive artwork.","body":["Load the reference and select the print area. Retain useful lettering, contours and texture while excluding unrelated background.","Avoid selecting only a flat color or tiny generic detail. Keep enough context to distinguish similar designs."]},{"title":"Check the region and the full original.","body":["Run the search and inspect the matched area. Open a promising original to check the complete design.","Adjust the selected region and search again when useful. Similarity narrows the candidates; details in the original confirm the match."]}],
+  "checks":["The selection includes distinctive features","Unrelated background is excluded","Both the match and original have been checked"]
+ },
+ "finder/maintenance": {
+  "title":"Update and rebuild the library","lead":"As artwork changes, keep search data current.","summary":"Check added, modified and deleted files, inspect unusable items and rebuild search quality when needed.",
+  "chapters":[{"title":"Check changes after editing the collection.","body":["After adding, changing or moving artwork, use the library control to check additions, modifications and deletions.","Review progress and file status. Use Pause, Continue or Stop when you need to interrupt processing."]},{"title":"Resolve unreadable files by their status.","body":["Review unavailable files, unsupported formats and unreadable locations. Confirm that paths are accessible and the originals open normally.","For unreadable PSDs, retain the originals and export RGB reference images for searching. Confirm the selected library before using Quality Rebuild to prepare search data again."]}],
+  "checks":["The intended library is selected","Unavailable-file status has been reviewed","Updating is complete before searching"]
+ },
+ "finder/backup": {
+  "title":"Storage and external backup","lead":"Saved locally. With room for an extra copy.","summary":"Locate the local index and previews, and enable an external-drive backup when needed. Keep original artwork backed up separately.",
+  "chapters":[{"title":"Find the local storage folder.","body":["Open Save and Backup to view the index and preview location. Use the folder control to open that directory.","Local search data remains available for everyday use. Original artwork stays in the library folders you manage."]},{"title":"Set up an external backup.","body":["Connect the drive, choose a backup location, verify the target and enable backup as needed. Check the displayed state and destination availability.","This backup contains indexes and local previews. It does not contain client originals or this computer's search history; back up important artwork separately."]}],
+  "checks":["The backup destination is accessible","Backup is enabled as intended","Original artwork has a separate backup"]
+ },
+ "finder/records": {
+  "title":"Local search history","lead":"Look back through the work on this computer.","summary":"Use Local History in Image Finder to review local records, alongside library file status and processing progress when investigating a search.",
+  "chapters":[{"title":"Open Local History.","body":["Open MAIXON Image Finder and select Local History at the top, beside Library Management and Save and Backup.","When artwork does not appear, also check library preparation, the selected reference and unavailable-file status."]},{"title":"Keep history and artwork distinct.","body":["Local records describe activity on this computer. Indexes, previews and original artwork are separate items.","The external-drive backup does not include local search history. Confirm which originals and data you need to retain when organizing files or changing computers."]}],
+  "checks":["Use the Local History entry","Review the current library status too","Distinguish history, indexes and originals"]
+ },
+ "ai/extract": {
+  "title":"Extract Print","lead":"Bring the design out of the reference picture.","summary":"Extract print artwork from clothing, objects or reference images. Choose the method and quality, with optional background removal.",
+  "chapters":[{"title":"Choose the image and method.","body":["Select Extract Print in the AI Workbench and import a reference. Use a clear, complete view of the intended design with minimal obstruction.","Choose the method and quality for the task. When transparency is needed, review automatic background removal and the displayed credit cost."]},{"title":"Compare before continuing.","body":["Switch between Original, Compare and Result. Move the divider to inspect lettering, outlines and details that should remain.","Save the result or continue with it. Set physical dimensions and white ink separately when moving into production."]}],
+  "checks":["The design is complete","Lettering and details are correct","The background suits the next step"]
+ },
+ "ai/cutout": {
+  "title":"Remove Background","lead":"Keep the print. Let the background fall away.","summary":"Remove the background, compare fine openings, lettering and edges, then save a transparent image for preparation or layout.",
+  "chapters":[{"title":"Decide what should remain.","body":["Select Remove Background, import the artwork and review the method and credit cost. Check the subject and white design details that should stay.","Background removal handles transparency. With composition already in place, focus on clearing the background cleanly."]},{"title":"Inspect the transparent edges.","body":["Compare hair, fine lines, letter openings and the surrounding edge. Check the saved transparent image against light and dark backgrounds for residue.","Once the print is complete, continue to DTF, DTG or Halftone and review that task's dimensions and channels."]}],
+  "checks":["Transparency meets the task requirements","Fine lines and openings remain intact","Required white details have been preserved"]
+ },
+ "ai/upscale": {
+  "title":"Enhance Detail","lead":"Make it larger. Look closer at the details.","summary":"Choose 2×, 4× or 6× enlargement, compare text, lines and texture, then check the saved pixel dimensions.",
+  "chapters":[{"title":"Choose an appropriate factor.","body":["Open Enhance, load the image and select an enlargement factor for the intended use. Review the settings and credit cost before submitting.","A higher factor produces a larger image but does not guarantee correct reconstruction of unclear lettering. Choose with the source quality in mind."]},{"title":"Compare details and output size.","body":["Inspect text, fine lines, texture and edges. Use the comparison view to confirm changes still reflect the original design.","Save and check the actual pixel dimensions. Physical print size and PPI are still set for the order in the production module."]}],
+  "checks":["The factor suits the task","Lettering and outlines remain correct","Pixel size and print size are checked separately"]
+ },
+ "ai/edit": {
+  "title":"Edit with Instructions","lead":"Say what should change. Say what should stay.","summary":"Describe changes to colors, elements or image details, including what to preserve, then compare the result.",
+  "chapters":[{"title":"Describe changes and preserved content.","body":["Choose Edit with Instructions and load the original. Specify the area and desired change, and name any subject, lettering or composition to retain.","Use changes that are clear and easy to inspect. Work in stages when several edits are needed."]},{"title":"Confirm the result before the next step.","body":["Switch between Original, Compare and Result. Inspect both the requested change and the areas that should remain intact.","Save a suitable result before continuing. For another edit, confirm that the active input is the image you intend to use."]}],
+  "checks":["The change targets a clear area or element","Required preserved content is specified","Changed and unchanged areas are inspected"]
+ },
+ "ai/expand": {
+  "title":"Expand Image","lead":"Give the picture a little more room.","summary":"Set the extension on each edge to fit a new canvas shape, then inspect how generated areas meet the original.",
+  "chapters":[{"title":"Set each edge's extension.","body":["Choose Expand and import the image. Set the added pixels for the top, bottom, left and right, then review the input and credit cost.","Adjust only the relevant edge when space is needed in one direction. Define the intended canvas before choosing the extension."]},{"title":"Inspect the joins and new content.","body":["Compare with the original, focusing on seams, repeated shapes, lettering and generated areas. The extension should fit the composition.","Save and check the new pixel dimensions. Expansion changes image bounds; physical production dimensions are set later."]}],
+  "checks":["All four edge values are correct","Generated areas join the original cleanly","Saved dimensions meet the task requirements"]
+ },
+ "ai/crop": {
+  "title":"Crop Print","lead":"Keep the artwork within the right boundaries.","summary":"Trim the image around the intended print. Continue with background removal when transparency is also needed.",
+  "chapters":[{"title":"Refine the image bounds.","body":["Select Crop Print, import an image and run the task. Cropping organizes its bounds; handle the background separately for the next use.","Inspect every edge to make sure lettering, fine lines and decorative elements have not been cut off."]},{"title":"Choose what comes next.","body":["Compare the result with the original for completeness and suitable margins. Save, then continue with background removal, enlargement or production.","When changing tools, confirm the active input so work continues from the approved result."]}],
+  "checks":["The subject and text are complete","The boundaries fit the design","Transparency needs have been considered"]
+ },
+ "ai/vector": {
+  "title":"Vectorize","lead":"From pixels to paths you can keep editing.","summary":"Convert artwork to SVG, inspect outlines, details and colors, then save it for further editing.",
+  "chapters":[{"title":"Start with clear artwork.","body":["Open Vectorize, import the image and review settings and credit cost before submitting.","Inspect lettering, fine lines and complex gradients individually in the result. A thumbnail cannot show every detail."]},{"title":"Inspect and save the SVG.","body":["Compare contours and colors, then save the SVG. Open it in a suitable vector editor to inspect paths and small details.","For print preparation, provide an input format and size supported by the next tool, then check the final production file."]}],
+  "checks":["Contours and small details are complete","Colors match the design","The SVG opens for further editing"]
+ },
+ "halftone/modes": {
+  "title":"Halftone processing modes","lead":"Preserve tonal detail. Or cover the image with dots.","summary":"Choose the processing mode and compare tone-preserving and full-image dot effects for your artwork.",
+  "chapters":[{"title":"Load the artwork and choose a mode.","body":["Import a file or use the current Photoshop image. Confirm its content before choosing the processing mode.","If transparency is needed, remove the background in the AI Workbench and save a transparent image first."]},{"title":"Compare the dot effects.","body":["Switch between tone-preserving and full-image dots, observing highlights, shadows and details. Consider output width and dot density together.","Refine the settings, then inspect the artwork at its physical output size in Photoshop."]}],
+  "checks":["The intended image is loaded","The mode suits the effect","Tonal detail and edges have been compared"]
+ },
+ "halftone/settings": {
+  "title":"Dots, tone and advanced settings","lead":"Give every dot the right proportion.","summary":"Review output width, LPI, brightness and resolution, then refine angle, diameter and black-removal threshold.",
+  "chapters":[{"title":"Set the size before refining the dots.","body":["Enter the physical width, then adjust LPI. LPI describes dot density; PPI describes image resolution. Set them independently.","Compare brightness and dot effects. Recheck the result after changing physical dimensions."]},{"title":"Open additional settings.","body":["Review resolution, screen angle, diameter multiplier and black-removal threshold. Change one parameter at a time to understand its effect on edges and tones.","Inspect the saved image at print size and use a physical sample to confirm production settings."]}],
+  "checks":["Physical dimensions match the order","LPI and PPI are checked separately","Small text, edges and tones remain clear"]
+ },
+ "halftone/production": {
+  "title":"Continue from halftone to production","lead":"Dots prepared. The next step is connected.","summary":"Open the result in Photoshop or continue to DTF or DTG to prepare dimensions, white ink and production files.",
+  "chapters":[{"title":"Inspect the result and choose a workflow.","body":["Open the result in Photoshop to check details and physical dimensions. Choose the DTF or DTG entry for the order.","Halftone controls the image's dot effect. In the production module, review white ink, choke and margins for the task."]},{"title":"Export and continue into MainTop.","body":["Check production settings and generate color and white channels. For layouts, also verify quantity, spacing and complete edges.","Enable automatic MainTop integration as needed to continue preparing the files before printing."]}],
+  "checks":["The dot effect is confirmed","The production module matches the order","White ink and output settings are reviewed"]
+ },
+ "dtf/area-layout": {
+  "title":"Repeated layouts by area","lead":"Plan the sheet by area. Confirm each stage.","summary":"Set maximum width, target area, artwork size and margins. Generate the layout first, then create W1 and export the TIFF.",
+  "chapters":[{"title":"Define the image and layout bounds.","body":["Choose area-based Repeated Layout. Review proportional or independent sizing, artwork dimensions, maximum width, margins, rotation and target area.","Check the calculated height against the artwork. The layout must have enough room to hold complete images."]},{"title":"Check the layout before creating white ink.","body":["Generate the layout and inspect rows, quantity, spacing and completeness in Photoshop. This stage prepares the arrangement.","With the layout document active, review resolution and W1 choke, then generate W1 and export TIFF. This stage does not add margins to the sheet again."]}],
+  "checks":["Area and maximum width are correct","Complete images fit in the layout","The layout is confirmed before channel export"]
+ },
+ "dtf/white-edges": {
+  "title":"White choke and edge margins","lead":"Control the white edge. Leave the right canvas space.","summary":"W1 choke controls the white edge, while margins enlarge the canvas. Enter pixels and millimetres separately and inspect both artwork and canvas size.",
+  "chapters":[{"title":"Keep the units distinct.","body":["W1 choke uses pixels. Edge margins use millimetres. They affect the white edge and canvas bounds respectively.","Set artwork dimensions and PPI first, then choose choke and margins for the order and proven production settings."]},{"title":"Inspect the actual file.","body":["A 15 cm wide artwork with 5 mm added on each side gives a canvas about 16 cm wide. Review both sizes.","Open the output and compare W1 against the color artwork around edges, small text and fine lines before production."]}],
+  "checks":["Choke is specified in pixels","Each margin is specified in millimetres","Color and W1 edges are inspected separately"]
+ },
+ "dtf/output": {
+  "title":"Quick presets and TIFF output","lead":"Carry the production requirements into the file.","summary":"Choose the small-label or standard preset, review resolution, LZW compression and CMYK ICC options, then create a production file with W1.",
+  "chapters":[{"title":"Start with a preset and review it.","body":["Small Label at 2000 PPI and Standard at 300 PPI provide quick starting points. Review size, resolution, rotation and edge settings for the actual use.","Choose a separate export location and keep originals so source artwork and production results stay identifiable."]},{"title":"Review output options.","body":["Check LZW lossless compression and embedded CMYK ICC options. Confirm the current Photoshop document, then process and export the TIFF.","Open it to inspect CMYK, W1, PPI and canvas size. Review MainTop settings and the corresponding task when continuing automatically."]}],
+  "checks":["The preset has been reviewed for the order","Compression and ICC suit the workflow","TIFF, CMYK and W1 have been inspected"]
+ },
+ "dtg/dark-fabric": {
+  "title":"Dark-fabric preparation","lead":"Let the fabric color take part in the design.","summary":"Choose the dark-fabric workflow, set regular and black-region white ink separately, then prepare dimensions, channels and output.",
+  "chapters":[{"title":"Choose the dark-fabric workflow.","body":["Open the intended Photoshop artwork and select Dark Fabric in DTG. Base the choice on the actual substrate and design.","Set white ink for regular and black regions independently, considering the fabric color and required coverage."]},{"title":"Inspect artwork and white ink.","body":["Review the channel name, width, PPI, W1 choke and margins. Choose an output folder and run the task.","Inspect both color artwork and the white channel, then continue into MainTop and test on the actual fabric."]}],
+  "checks":["The fabric suits the dark-fabric workflow","Both white-ink regions are set independently","Channel coverage matches the intended design"]
+ },
+ "dtg/light-fabric": {
+  "title":"Light-fabric preparation","lead":"A dedicated approach for light fabrics.","summary":"Select the light-fabric workflow, set regular-region white ink and decide whether to remove the white background before exporting.",
+  "chapters":[{"title":"Choose light fabric and check the background.","body":["Select Light Fabric in DTG and review regular-region white ink. Decide whether Remove White Background suits the artwork.","Distinguish a white background from white design details that must remain. Inspect the processed subject and small elements."]},{"title":"Set dimensions and channels.","body":["Review the channel name, specified width, resolution, W1 choke and margins. Check the exported color and white layers.","For automatic MainTop integration, review the configuration and confirm the task suits the actual fabric."]}],
+  "checks":["The light-fabric workflow is appropriate","White-background removal suits the design","Required white details remain intact"]
+ },
+ "dtg/white-ink": {
+  "title":"White ink by region","lead":"Regular and black regions. Independent control.","summary":"Set the white underbase to suit the fabric and design. Treat white-ink percentages separately from color-image opacity.",
+  "chapters":[{"title":"Two regions for dark fabrics.","body":["Set regular-region and black-region white ink separately to balance the fabric base and the required coverage.","5% white ink for black regions refers to underbase quantity. It does not remove 95% of the color artwork or set overall image opacity to 5%."]},{"title":"Inspect coverage for the actual fabric.","body":["Review available controls after changing fabric type. The light-fabric workflow provides regular-region white ink and white-background removal.","Inspect color and W1 in Photoshop, then choose the amount using the actual ink, device and fabric sample."]}],
+  "checks":["White ink and color processing are understood separately","Settings match the chosen fabric workflow","Coverage is confirmed with a print sample"]
+ },
+ "dtg/output": {
+  "title":"Size, white channels and output","lead":"Prepare color and white ink together.","summary":"Set physical width, PPI, W1 choke, margins and channel name, then prepare the file and continue into MainTop.",
+  "chapters":[{"title":"Confirm the current Photoshop image.","body":["Check that the active document belongs to this order. Review width, resolution, white-channel name, choke and each margin.","The channel name should match the RIP workflow. W1 choke uses pixels and margins use millimetres."]},{"title":"Generate the file and continue.","body":["Choose an export folder and run preparation. Open the output to inspect dimensions, color artwork and the white channel.","With automatic MainTop integration enabled, inspect the task, output location and RIP result before printing."]}],
+  "checks":["The active artwork matches the order","The channel name matches RIP settings","Artwork and expanded canvas sizes are checked separately"]
+ },
+ "sublimation/psd-pieces": {
+  "title":"PSD / PSB piece layout","lead":"From Photoshop pieces to a planned roll.","summary":"Choose a PSD / PSB folder, set roll width, spacing and direction, compare three layouts and export CMYK TIFF.",
+  "chapters":[{"title":"Choose the workflow for the source files.","body":["Open PSD / PSB Pieces and select the folder. Check piece count and content.","Set roll width, clear spacing, maximum roll height and TIFF resolution. Review whether 180° rotation is allowed when direction matters."]},{"title":"Compare and export.","body":["Enable cutting lines and select their color as needed. Generate fast, balanced and material-saving layouts, comparing direction, utilization and rolls.","Export the selected layout as CMYK TIFF and inspect complete pieces, actual width and boundaries in the file."]}],
+  "checks":["The folder and piece count are correct","Roll and rotation settings suit the material","The chosen layout and exported size are reviewed"]
+ },
+ "sublimation/cut-lines": {
+  "title":"Automatic cutting lines","lead":"Add the contours. Choose their color.","summary":"Enable cutting lines, choose a color distinct from the artwork, and review contour offset and piece spacing.",
+  "chapters":[{"title":"Enable lines and choose a color.","body":["After loading the files, turn on cutting lines and use the line-color control to select the desired color.","Set paper width for the actual roll, such as 1820 mm. Consider cutting lines and clear spacing together for the next production step."]},{"title":"Inspect contours and offset.","body":["Review cut-line offset in the additional PDF settings. Set it for the cutting process, generate a layout and inspect every contour.","Before export, check line completeness, visibility and the required gap between neighboring pieces."]}],
+  "checks":["Cutting lines are enabled as needed","The color is easy to distinguish","Offset, contours and spacing are reviewed"]
+ },
+ "sublimation/layout-options": {
+  "title":"Paper width and layout options","lead":"Fit the paper. Compare the arrangements.","summary":"Customize roll width, spacing and direction rules, then compare fast, balanced and material-saving layouts.",
+  "chapters":[{"title":"Define the usable area.","body":["Enter the actual paper width, such as 1820 mm, then check clear spacing and maximum roll height. Enter a different width for a different roll.","Review rotation rules for grain direction and one-way designs. Additional PDF settings include rotation rules, free-rotation step and optimization iterations."]},{"title":"Compare the three options.","body":["After generation, compare piece count, roll count, layout height and utilization. The material-saving option may take longer to compute.","Choose with direction, cutting convenience and material use in mind. Wait for a complete layout before viewing or exporting it."]}],
+  "checks":["Paper width matches the usable roll","Direction rules suit the fabric and design","The layout is complete with every piece intact"]
+ },
+ "sublimation/export": {
+  "title":"Roll inspection and export","lead":"A clear layout. A clear production file.","summary":"Inspect pieces and roll boundaries, confirm the selected layout, then choose the appropriate PDF or TIFF output and destination.",
+  "chapters":[{"title":"Confirm the layout and rolls.","body":["With maximum roll height set, inspect piece count, roll count and boundaries. Zoom in to check completeness and collisions.","Confirm direction, spacing and cutting-line color before selecting the layout to export."]},{"title":"Choose the appropriate output.","body":["PDF Layout provides viewing, PDF opening, EPS printing and Photoshop TIFF export entries. PSD / PSB Pieces can export CMYK TIFF. Choose for the current task.","Open the output folder and inspect actual dimensions, resolution, piece count and contours before continuing to production."]}],
+  "checks":["Roll count and boundaries meet the task","The confirmed layout is being exported","File size, pieces and lines are complete"]
+ }
+}

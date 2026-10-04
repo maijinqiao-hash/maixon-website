@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:13.000
+Choose single artwork, repeated layout, multiple-image layout or a custom canvas, depending on the production step you need.
+
+00:00:13.000 --> 00:00:23.000
+For single artwork, review dimensions, resolution, white-ink choke and margins, then export TIFF.
+
+00:00:23.000 --> 00:00:27.500
+Single artwork is ready. Continue to the next step.
+
+00:00:27.500 --> 00:00:39.800
+For repeated layouts, set artwork dimensions, layout width and area. Allow enough space for the complete artwork, then generate the layout.
+
+00:00:39.800 --> 00:00:47.000
+Inspect the complete layout in Photoshop, checking every image and its boundaries.
+
+00:00:47.000 --> 00:00:55.800
+Finally, generate the white-ink channel and export TIFF. This stage uses the existing layout without adding margins again.

@@ -1,5 +1,6 @@
 ---
 import LockedQr from "@/components/support/LockedQr.astro";
+import V86LicenseRules from "@/components/V86LicenseRules.astro";
 import SupportPageShell from "@/components/support/SupportPageShell.astro";
 import { authorizationCopy, qrAssets } from "@/data/support-content";
 import type { Locale } from "@/data/media";
@@ -20,6 +21,7 @@ const paymentOnlyNote = locale === "zh-CN" ? "仅用于付款" : "Payment only";
   description={content.description}
 >
   <div class="authorization-body">
+    <V86LicenseRules locale={locale}/>
     <section class="authorization-section">
       <header class="authorization-section__head">
         <div>

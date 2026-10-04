@@ -1,0 +1,6 @@
+---
+import V86OwnerVideo from './V86OwnerVideo.astro';
+interface Props {locale:'zh-CN'|'en'}
+const {locale}=Astro.props;
+---
+<div data-maintop-slot><V86OwnerVideo id="dtf-ai-flow" instance="maintop" locale={locale}/></div>

@@ -48,7 +48,7 @@ const zhTopics: GuideTopic[] = [
       },
       {
         title: "首次启动",
-        body: "打开 MAIXON TOOL V8.3，进入账号入口并确认软件界面能够正常显示。",
+        body: "打开已安装的 MAIXON TOOL，进入账号入口并确认软件界面能够正常显示。",
         notes: ["如安装或启动遇到问题，请记录提示内容与软件版本，再联系技术支持。"]
       }
     ]
@@ -258,7 +258,7 @@ const zhTopics: GuideTopic[] = [
       {
         title: "切换外观",
         body: "在软件外观入口选择浅色或深色模式。",
-        steps: ["打开外观设置。", "选择浅色或深色。", "返回工作区检查文字、预览与参数是否清晰。"]
+        steps: ["点击左侧底部的主题切换按钮。", "选择浅色或深色。", "返回工作区检查文字、预览与参数是否清晰。"]
       },
       {
         title: "显示建议",
@@ -320,7 +320,7 @@ const enTopics: GuideTopic[] = [
     description: "Start with the official installer, then verify first launch, sign-in and the working environment.",
     sections: [
       { title: "Get the installer", body: "Open the MAIXON Download page for the Windows 10 / 11 installer.", steps: ["Run the installer after download.", "Follow the installation prompts.", "Confirm that the computer is online before first launch."] },
-      { title: "First launch", body: "Open MAIXON TOOL V8.3, enter the account area and confirm that the interface loads correctly.", notes: ["If installation or launch fails, record the on-screen message and software version before contacting support."] }
+      { title: "First launch", body: "Open the installed MAIXON TOOL version, enter the account area and confirm that the interface loads correctly.", notes: ["If installation or launch fails, record the on-screen message and software version before contacting support."] }
     ]
   },
   {
@@ -418,7 +418,7 @@ const enTopics: GuideTopic[] = [
     summary: "Choose a light or dark interface for the working environment.",
     description: "Interface appearance can change for viewing comfort without changing files or functions.",
     sections: [
-      { title: "Switch appearance", body: "Open appearance settings and select the light or dark interface.", steps: ["Open appearance settings.", "Choose light or dark.", "Return to the workspace and verify that text, previews and parameters are clear."] },
+      { title: "Switch appearance", body: "Use the theme button near the bottom of the left sidebar to switch between light and dark interfaces.", steps: ["Find the theme button at the bottom of the left sidebar.", "Choose light or dark.", "Return to the workspace and verify that text, previews and parameters are clear."] },
       { title: "Display guidance", body: "Try dark mode for extended work with dark artwork, or light mode in a bright room. Prioritize readable values and accurate operation." }
     ]
   },

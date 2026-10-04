@@ -1,0 +1,21 @@
+---
+import type { Locale } from "@/data/media";
+interface Props { locale: Locale; path: string; }
+const { locale, path } = Astro.props;
+const target = `/${locale}/${path}`;
+const title = locale === "zh-CN" ? "前往 V8.6 操作指南" : "Open the V8.6 guide";
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <title>{title} · MAIXON</title>
+    <link rel="canonical" href={`https://maixon.vip${target}`} />
+    <link rel="alternate" hreflang="zh-CN" href={`https://maixon.vip/zh-CN/${path}`} />
+    <link rel="alternate" hreflang="en" href={`https://maixon.vip/en/${path}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://maixon.vip/en/${path}`} />
+  </head>
+  <body><p><a href={target}>{title}</a></p></body>
+</html>

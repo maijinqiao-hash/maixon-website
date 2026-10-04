@@ -1,0 +1,34 @@
+---
+import V86AccessNote from '@/components/V86AccessNote.astro';
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import V86Behavior from '@/components/V86Behavior.astro';
+import V86Media from '@/components/V86Media.astro';
+import V86OwnerVideo from '@/components/V86OwnerVideo.astro';
+import V86SubfeatureIndex from '@/components/V86SubfeatureIndex.astro';
+import {features,type V86Locale} from '@/data/v86/content';
+import {subfeatures,subfeatureCopy,type Subfeature} from '@/data/v86/subfeatures';
+export function getStaticPaths(){return (['zh-CN','en'] as V86Locale[]).flatMap(locale=>subfeatures.map(detail=>({params:{locale,feature:detail.feature,tool:detail.id},props:{detail}})));}
+const locale=Astro.params.locale as V86Locale;const zh=locale==='zh-CN';const s=Astro.props.detail as Subfeature;const t=subfeatureCopy(s,locale);
+const parent=features[locale].find(f=>f.id===s.feature)!;
+const caption=s.id==='records'?(zh?'本机记录入口':'Local history entry'):t.title;
+---
+<SiteLayout locale={locale} title={`${t.title} · ${parent.tag} · MAIXON`} description={t.summary} downloadLabel={zh?'下载':'Download'} menuLabel={zh?'菜单':'Menu'}>
+ <div class="v86-root" data-v86-page>
+  <header class="v86-section v86-guide-head v86-detail-head">
+   <nav class="v86-breadcrumb"><a href={`/${locale}/`}>MAIXON</a><span>/</span><a href={`/${locale}/features/${s.feature}/`}>{parent.tag}</a><span>/</span><span>{t.title}</span></nav>
+   <p class="v86-eyebrow">{parent.tag}</p><h1>{t.title}</h1><p class="v86-detail-lead">{t.lead}</p><p class="v86-lead">{t.summary}</p>
+   <nav class="v86-detail-jumps" aria-label={zh?'本页内容':'On this page'}><a href="#walkthrough">{s.video||s.demo?(zh?'观看操作':'Watch the workflow'):(zh?'查看界面':'Explore the interface')} ↓</a><a href="#steps">{zh?'操作步骤':'Step by step'} ↓</a><a href="#more-tools">{zh?'更多功能':'More features'} ↓</a></nav>
+  </header>
+  <div class="v86-section v86-guide-main">
+   <V86AccessNote feature={s.feature} locale={locale}/>
+   <div id="walkthrough" class="v86-detail-anchor">{s.demo?<V86OwnerVideo id={s.demo} locale={locale}/>:<V86Media id={`detail-${s.feature}-${s.id}`} poster={s.poster} video={s.video} locale={locale} caption={caption} priority/>}</div>
+   <article id="steps" class="v86-guide-copy v86-chapters v86-detail-anchor">{t.chapters.map((chapter,i)=><section data-v86-reveal><p class="v86-chapter-number">{String(i+1).padStart(2,'0')}</p><h2>{chapter.title}</h2>{chapter.body.map(p=><p>{p}</p>)}</section>)}</article>
+   {(s.demo||s.secondPoster)&&<div class="v86-detail-interface"><V86Media id={`detail-view-${s.feature}-${s.id}`} poster={s.demo?s.poster:s.secondPoster!} locale={locale} caption={s.secondPoster==='dtg-light-fabric'?(zh?'浅色面料的白墨设置':'White ink for light fabric'):s.secondPoster==='sublimation-psd'?(zh?'PSD / PSB 裁片输出':'PSD / PSB piece output'):caption}/></div>}
+   <aside class="v86-detail-checks"><h2>{zh?'完成前，核对这几项。':'Before you continue.'}</h2><ul>{t.checks.map(c=><li><span aria-hidden="true">✓</span>{c}</li>)}</ul></aside>
+   {s.relatedDemo&&<section class="v86-related"><h2>{zh?'接着看完整流程。':'See the complete workflow.'}</h2><div class="v86-detail-full-video"><V86OwnerVideo id={s.relatedDemo} locale={locale} instance={`related-${s.id}`}/></div></section>}
+   {['dtf','dtg'].includes(s.feature)&&<a class="v86-maintop-link" href={`/${locale}/features/${s.feature}/maintop/`}><span><small>MAIXON × MainTop</small><strong>{zh?'制图完成，自动接入蒙泰。':'Artwork prepared. Continue into MainTop.'}</strong></span><span aria-hidden="true">↗</span></a>}
+   <V86SubfeatureIndex feature={s.feature} locale={locale} compact exclude={Astro.url.pathname} id="more-tools" title={zh?'继续了解。':'Keep exploring.'}/>
+   <div class="v86-guide-links"><a class="v86-text-link" href={`/${locale}/features/${s.feature}/`}>← {parent.tag}</a><a class="v86-text-link" href={`/${locale}/tour/#feature-topics`}>{zh?'全部功能专题':'All feature topics'} →</a></div>
+  </div>
+ </div><V86Behavior/>
+</SiteLayout>

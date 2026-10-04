@@ -1,0 +1,40 @@
+export const licensingRules={
+ 'zh-CN':{
+  title:'先了解，怎样使用。',
+  worldwideTitle:'全球开放。邮箱注册。',
+  worldwide:'全球用户都可以使用 MAIXON TOOL。使用常用邮箱注册账号，登录后查看试用、授权与 AI 点数。',
+  trialTitle:'注册后，开启 72 小时试用。',
+  trial:'新用户注册后可领取 DTF 白墨烫画、DTG 白墨直喷与热升华基础生产功能的 72 小时免费试用，有效期内不限次数。',
+  aiTrial:'（AI 点数不包含在 72 小时试用中；AI 另有 5 次免费体验，用完后需使用 AI 点数。）',
+  eligibility:'同一邮箱、同一电脑不能重复领取基础功能试用；试用起止时间与剩余次数请在软件内查看。',
+  freeTitle:'这三项，免费开放。',
+  free:'半色调处理、MAIXON 找图与语音作图入口免费，无需单独购买这些功能。',
+  voiceTitle:'语音免费。执行权限，跟随生产模块。',
+  voice:'语音作图是操作入口，执行权限由实际调用的功能决定。半色调本身免费，不购买生产模块也能用语音执行；DTF、DTG 或热升华任务，需要对应模块的有效授权或试用权限。',
+  voiceExamples:[['“请帮我做一个半色调图片”','可以使用。半色调免费，无需购买生产模块。'],['“请帮我做一个白墨烫画图片”','需要白墨烫画授权或有效试用权限；未购买且试用已结束时，不能执行。']],
+  example:'例如：72 小时试用结束后，只购买了白墨烫画，就可以用语音执行白墨烫画任务；不能用语音执行白墨直喷任务。要做白墨直喷，需要开通对应的 DTG 授权。',
+  tableTitle:'功能与授权，一眼看清。',
+  headings:['功能','使用规则'],
+  rows:[['半色调处理','免费使用；转入 DTF 或 DTG 后，按对应生产模块的权限执行。'],['MAIXON 找图','免费使用。'],['语音作图','入口免费；执行哪个生产功能，就需要哪个功能的有效授权或试用权限。'],['DTF / DTG / 热升华','72 小时基础功能试用；试用结束后，按已购买模块使用。'],['AI 工作台','另有 5 次免费体验；之后按点数使用。软件模块授权不包含 AI 点数。']],
+  link:'查看完整授权规则'
+ },
+ en:{
+  title:'Understand your access.',
+  worldwideTitle:'Worldwide access. Register by email.',
+  worldwide:'MAIXON TOOL is available to users worldwide. Register with your email address, then sign in to review trials, licenses and AI credits.',
+  trialTitle:'Start a 72-hour trial after registration.',
+  trial:'New users can claim a 72-hour free trial of the DTF, DTG and Sublimation production modules, with unlimited use during the valid trial period.',
+  aiTrial:'(AI credits are not included in the 72-hour trial. AI has 5 separate free uses; further processing requires AI credits.)',
+  eligibility:'The base-module trial cannot be claimed again with the same email or computer. Check trial dates and remaining AI uses in the app.',
+  freeTitle:'These three tools are free.',
+  free:'Halftone, MAIXON Image Finder and the Voice Commands interface are free to use, with no separate license purchase for these tools.',
+  voiceTitle:'Free voice control. Access follows the production module.',
+  voice:'Voice Commands is an input method, and access follows the tool it calls. Halftone is free, so it can be run by voice without buying a production module. DTF, DTG and Sublimation tasks require a valid license or trial for their corresponding module.',
+  voiceExamples:[['“Please make a halftone image.”','Available without a production-module purchase, because Halftone is free.'],['“Please prepare a DTF print.”','Requires a DTF license or valid trial. It cannot run without a purchase after the trial ends.']],
+  example:'For example, after the 72-hour trial ends, a DTF-only license lets you run DTF tasks by voice. It does not let you run DTG tasks by voice. DTG preparation requires the corresponding DTG license.',
+  tableTitle:'Features and access at a glance.',
+  headings:['Feature','Access'],
+  rows:[['Halftone','Free. Continuing into DTF or DTG requires access to the corresponding production module.'],['MAIXON Image Finder','Free to use.'],['Voice Commands','Free interface. Each production task requires a valid license or trial for its module.'],['DTF / DTG / Sublimation','72-hour base-module trial. After it ends, use the modules covered by your purchased license.'],['AI Workbench','5 separate free uses, then AI credits. Software module licenses do not include AI credits.']],
+  link:'Read the complete access rules'
+ }
+} as const;

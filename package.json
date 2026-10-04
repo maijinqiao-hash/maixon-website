@@ -1,15 +1,16 @@
 {
   "name": "maixon-v59-website",
-  "version": "5.9.0",
+  "version": "8.6.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run media:build && astro check && astro build && npm run validate:bilingual",
+    "build": "npm run media:build && astro check && astro build && npm run validate:bilingual && npm run validate:v86",
     "preview": "astro preview",
     "check": "astro check",
     "media:build": "node scripts/build-media.mjs",
-    "validate:bilingual": "node scripts/validate-bilingual.mjs"
+    "validate:bilingual": "node scripts/validate-bilingual.mjs",
+    "validate:v86": "node scripts/validate-v86-media.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

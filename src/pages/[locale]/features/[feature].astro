@@ -1,0 +1,33 @@
+---
+import V86AccessNote from '@/components/V86AccessNote.astro';
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import V86Media from '@/components/V86Media.astro';
+import V86AISamples from '@/components/V86AISamples.astro';
+import V86OwnerVideo from '@/components/V86OwnerVideo.astro';
+import V86SubfeatureIndex from '@/components/V86SubfeatureIndex.astro';
+import {homeDemo} from '@/data/v86/demos';
+import {guides} from '@/data/v86/guides';
+import V86Behavior from '@/components/V86Behavior.astro';
+import {features,type V86Locale,type Feature} from '@/data/v86/content';
+export function getStaticPaths(){return (['zh-CN','en'] as V86Locale[]).flatMap(locale=>features[locale].map(feature=>({params:{locale,feature:feature.id},props:{feature}})));}
+const locale=Astro.params.locale as V86Locale;const zh=locale==='zh-CN';const f=Astro.props.feature as Feature;
+const index=features[locale].findIndex(x=>x.id===f.id);const next=features[locale][(index+1)%features[locale].length];
+const labels:Record<string,string[]>={
+voice:['语音作图入口','导入图稿与文字要求','解析后的参数确认'],finder:['找图工作台','局部找图结果','图库目录','图库管理','存储位置'],ai:['提取印花','印花抠图','AI 变清晰','用指令改图','AI 扩图','印花裁切','转矢量'],halftone:['半色调工作台','更多参数'],dtf:['单图制图','单图排版','多图排版','指定画布','更多参数'],dtg:['深色面料','浅色面料'],sublimation:['PDF 排版','PSD / PSB 裁片','更多参数']};
+const labelsEn:Record<string,string[]>={voice:['Voice-command workspace','Artwork and typed requirements','Review interpreted parameters'],finder:['Image-finder workspace','Print-region search result','Library folders','Library management','Storage location'],ai:['Extract prints','Remove backgrounds','Enhance detail','Edit with instructions','Expand images','Crop prints','Vectorize'],halftone:['Halftone workspace','Additional settings'],dtf:['Single artwork','Repeated layout','Multiple-image layout','Custom canvas','Additional settings'],dtg:['Dark fabric','Light fabric'],sublimation:['PDF layout','PSD / PSB pieces','Additional settings']};
+---
+<SiteLayout locale={locale} title={`${f.tag} · MAIXON TOOL V8.6`} description={f.detail} downloadLabel={zh?'下载':'Download'} menuLabel={zh?'菜单':'Menu'}>
+<div class="v86-root" data-v86-page>
+
+<header class="v86-section v86-guide-head"><nav class="v86-breadcrumb"><a href={`/${locale}/`}>MAIXON</a><span>/</span><a href={`/${locale}/tour/`}>{zh?'全部功能':'All features'}</a><span>/</span><span>{f.tag}</span></nav><p class="v86-eyebrow">{f.tag}</p><h1>{f.title.split('\n').map((l,i)=><>{i>0&&<br/>}{l}</>)}</h1><p class="v86-lead">{f.detail}</p></header>
+<div class="v86-section v86-guide-main">
+<V86AccessNote feature={f.id} locale={locale}/>
+{f.id==='ai'?<V86AISamples locale={locale} id="ai-guide-samples"/>:homeDemo[f.id]?<V86OwnerVideo id={homeDemo[f.id]} locale={locale}/>:<V86Media id={`${f.id}-main`} locale={locale} poster={f.poster} video={f.video} priority caption={f.tag} />}
+{['dtf','dtg'].includes(f.id)&&<a class="v86-maintop-link" href={`/${locale}/features/${f.id}/maintop/`}><span><small>MAIXON × MainTop</small><strong>{zh?'制图之后，自动接入蒙泰。':'Continue automatically into MainTop.'}</strong></span><span aria-hidden="true">↗</span></a>}
+<V86SubfeatureIndex feature={f.id} locale={locale} title={zh?'每项功能，都单独了解。':'Explore each capability.'}/>
+<article class="v86-guide-copy"><h2>{zh?'按这个顺序，开始第一份任务。':'Start your first task in this order.'}</h2><ol>{f.steps.map(s=><li>{s}</li>)}</ol><h3>{zh?'操作时，留意这几件事。':'A few details to check.'}</h3><ul>{f.tips.map(s=><li>{s}</li>)}</ul>{f.id==='voice'&&<p class="v86-note">{zh?'可以这样表达要求：“帮我做成15厘米宽的DTF单图，300PPI，白墨收缩2像素，每边扩边5毫米。”输入文字或说出要求后，先核对解析卡片，再点击“确认执行”。':'For example: prepare a 15 cm wide DTF print at 300 PPI, with a 2 px white-ink choke and 5 mm margins on every edge. Speak or type your request, review the interpreted settings, then confirm.'}</p>}{f.id==='finder'&&<p class="v86-note">{zh?'首次建立图库后，检查可用文件数，再用已知参考图查找。对于无法读取的 PSD，可导出 RGB 参考图，同时保留对应原稿。':'Check the usable-file count and validate with a known reference after indexing. For unreadable PSDs, export RGB reference images while retaining the corresponding originals.'}</p>}</article>
+<article class="v86-guide-copy v86-chapters">{guides[locale][f.id]?.map(chapter=><section><h2>{chapter.title}</h2>{chapter.body.map(p=><p>{p}</p>)}</section>)}</article>
+{f.id!=='ai'&&<><h2>{zh?'把每个界面，看清楚。':'Explore every view.'}</h2><div class="v86-gallery">{f.gallery.map((poster,i)=><V86Media id={`${f.id}-${i}`} locale={locale} poster={f.id==='ai'?poster.replace('ai-','ai-sample-'):poster} video={['ai-cutout','ai-upscale','ai-edit','ai-expand','ai-crop','ai-vector','ai-extract','sublimation-psd'].includes(poster)?poster:undefined} caption={(zh?labels:labelsEn)[f.id]?.[i]||f.tag}/>)}</div></>}
+<div class="v86-guide-links"><a class="v86-text-link" href={`/${locale}/tour/`}>← {zh?'全部功能与教程':'All features and guides'}</a><a class="v86-text-link" href={`/${locale}/features/${next.id}/`}>{next.tag} →</a></div>
+</div></div><V86Behavior />
+</SiteLayout>

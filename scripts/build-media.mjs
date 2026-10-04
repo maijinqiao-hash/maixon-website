@@ -360,6 +360,8 @@ const records = [];
 
 for (const absolutePath of inputFiles) {
   const relativePath = path.relative(inputRoot, absolutePath).split(path.sep).join("/");
+  // V8.6 captures are already optimized and have a dedicated provenance manifest.
+  if (relativePath.startsWith("v86/")) continue;
   const extension = path.extname(relativePath).toLowerCase();
   const fileStat = await stat(absolutePath);
   const provenance = provenanceFor(relativePath);

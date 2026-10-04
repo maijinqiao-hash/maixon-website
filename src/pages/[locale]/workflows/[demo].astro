@@ -1,0 +1,20 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import V86Behavior from '@/components/V86Behavior.astro';
+import V86OwnerVideo from '@/components/V86OwnerVideo.astro';
+import V86DemoCollection from '@/components/V86DemoCollection.astro';
+import {demos,demoById,demoText} from '@/data/v86/demos';
+import {features,type V86Locale} from '@/data/v86/content';
+export function getStaticPaths(){return ['zh-CN','en'].flatMap(locale=>demos.map(d=>({params:{locale,demo:d.id}})));}
+const locale=Astro.params.locale as V86Locale;const zh=locale==='zh-CN';const d=demoById(Astro.params.demo!);const t=demoText(d,locale);
+const feature=features[locale].find(f=>f.id===d.feature);const tag=feature?.tag||(zh?'自动接入蒙泰':'MainTop');
+const related=demos.filter(other=>other.feature===d.feature&&other.id!==d.id).map(other=>other.id);
+---
+<SiteLayout locale={locale} title={`${t.title} · MAIXON`} description={t.summary} downloadLabel={zh?'下载':'Download'} menuLabel={zh?'菜单':'Menu'}>
+ <div class="v86-root" data-v86-page>
+ <header class="v86-section v86-guide-head"><nav class="v86-breadcrumb"><a href={`/${locale}/`}>MAIXON</a><span>/</span><a href={feature?`/${locale}/features/${d.feature}/`:`/${locale}/maintop/`}>{tag}</a></nav><p class="v86-eyebrow">{tag}</p><h1>{t.title}</h1><p class="v86-lead">{t.summary}</p></header>
+ <div class="v86-section v86-guide-main"><V86OwnerVideo id={d.id} locale={locale}/><article class="v86-guide-copy"><h2>{zh?'沿着流程，一步步完成。':'Follow the workflow, step by step.'}</h2><ol>{t.steps.map(s=><li>{s}</li>)}</ol></article>
+ {d.feature==='sublimation'&&<div class="v86-benefit-grid"><section><p class="v86-eyebrow">{zh?'纸张宽度':'PAPER WIDTH'}</p><h3>{zh?'按卷材，自由设定。':'Set it for your roll.'}</h3><p>{zh?'1820 mm 是一种生产选择。不同纸宽直接输入对应数值，让排版在实际可用宽度内完成。':'Enter the usable roll width, such as 1820 mm, to fit the layout to your material.'}</p></section><section><p class="v86-eyebrow">{zh?'切割线':'CUT LINES'}</p><h3>{zh?'自动添加，颜色可选。':'Automatic lines. Your choice of color.'}</h3><p>{zh?'按裁切需要添加切割线，选择容易区分的颜色。输出前检查每一片的轮廓、间距与完整性。':'Add cut lines and select a distinct color. Check every contour, gap and complete piece before export.'}</p></section></div>}
+ {related.length>0&&<section class="v86-related"><h2>{zh?'接着了解。':'Continue exploring.'}</h2><V86DemoCollection ids={related} locale={locale}/></section>}
+ <div class="v86-guide-links"><a class="v86-text-link" href={feature?`/${locale}/features/${d.feature}/`:`/${locale}/maintop/`}>← {tag}</a><a class="v86-text-link" href={`/${locale}/tour/#workflows`}>{zh?'全部操作视频':'All workflows'} →</a></div></div></div><V86Behavior/>
+</SiteLayout>

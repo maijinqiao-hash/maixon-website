@@ -1,5 +1,6 @@
 ---
-import HomePage from "@/components/HomePage.astro";
+import HomePage from "@/components/V86Home.astro";
+import V86Behavior from "@/components/V86Behavior.astro";
 import SiteLayout from "@/layouts/SiteLayout.astro";
 import { copy } from "@/data/site";
 
@@ -9,10 +10,11 @@ const content = copy[locale];
 
 <SiteLayout
   locale={locale}
-  title={content.meta.title}
+  title="MAIXON TOOL V8.6 · 打印之前，一气呵成"
   description={content.meta.description}
   downloadLabel={content.header.download}
   menuLabel={content.header.menu}
 >
   <HomePage locale={locale} />
+  <V86Behavior />
 </SiteLayout>

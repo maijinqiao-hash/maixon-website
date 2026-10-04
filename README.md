@@ -1,16 +1,19 @@
-# MAIXON 官网
+# MAIXON TOOL V8.6 website content release
 
-MAIXON DTF TOOL Professional V5.0 官方产品网站。网站以软件为主要推广对象，完整展示 DTF / DTG 自动制图、单图自动排版、多图智能排版、W1 通道和 TIFF 自动导出能力。
+Astro static website refresh based on commit ff7e7ff7f71933059491f4da3f7b14f576176c7a. The owner authorized direct publication on 2026-10-04 after the local preview work. Production installers remain V8.3; website content is V8.6.
 
-## 发布结构
+Use Node.js 22.12 or newer (verified with 22.23.2).
 
-- 官网：<https://maixon.vip>
-- 静态托管：Cloudflare Pages
-- 安装包：阿里云 OSS 固定下载地址
-- 下载对象：`downloads/MAIXON_DTF_TOOL_Professional_Setup.exe`
+```sh
+npm ci
+npm run dev -- --host 127.0.0.1 --port 8630
+npm run build
+```
 
-## 内容维护
+The build generates `dist/`, checks Astro types, validates bilingual pages, and verifies the V8.6 media hashes and paired themes / narration. New content lives in `src/data/v86/`; the website media lives in `public/media/v86/`.
 
-安装包地址、版本和联系方式统一维护在 `content/site-data.js`。`version.json` 提供机器可读的版本信息。
+Revision 2 integrates all 12 owner videos, 12 bilingual workflow pages, 30 bilingual subfeature topics, dedicated DTF and DTG MainTop pages, and seven built-in AI examples in both themes. Complete owner video content is shared across both locales, including the existing audio and subtitles. Six oversized desktop videos are encoded for web hosting without cuts or audio changes; original supplied files are retained in the handoff. Full-length mobile derivatives use compatible H.264/AAC encoding. User-initiated playback starts with sound; browser-controlled automatic previews are muted. The 17 assistant walkthroughs use Chinese and English narration processed with Jianying Pro's 生动解说 voice and independent WebVTT captions. `src/data/v86/maintop.ts` points to the complete owner DTF-to-MainTop workflow.
 
-网站使用原生 HTML、CSS 和 JavaScript，不依赖外部框架或第三方 CDN。
+The source entry is `src/pages/`. The root-level legacy `index.html`, `assets/`, `content/`, `version.json` and older audit documents are retained for history; they are not the V8.6 preview entry.
+
+Hardware, support contacts, prices, payment codes and existing installer URLs are preserved. Access rules explain global email registration, the 72-hour base trial, five independent AI uses, free tools and module-scoped voice execution. The owner's publication approval covers these website changes. Installer changes require the corresponding release packages; do not relabel existing V8.3 files as V8.6. The software-update fields in public/version.json retain V8.3, while website_revision identifies the V8.6 content release.

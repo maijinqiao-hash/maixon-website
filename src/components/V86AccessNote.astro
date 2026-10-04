@@ -1,0 +1,12 @@
+---
+interface Props {locale:'zh-CN'|'en';feature:string}
+const {locale,feature}=Astro.props;const zh=locale==='zh-CN';
+const copy:Record<string,[string,string]>={
+ voice:zh?['免费入口','语音作图免费。不购买生产模块，也能用语音做半色调；执行 DTF、DTG 或热升华任务，需要对应模块的有效授权或试用权限。']:['FREE INTERFACE','Voice Commands is free. Run Halftone by voice without buying a production module. DTF, DTG and Sublimation tasks require a valid license or trial for their module.'],
+ finder:zh?['免费使用','MAIXON 找图免费开放，无需单独购买找图功能。']:['FREE TO USE','MAIXON Image Finder is free, with no separate feature purchase.'],
+ halftone:zh?['免费使用','半色调处理免费开放；转入 DTF 或 DTG 后，按对应生产模块的权限执行。']:['FREE TO USE','Halftone is free. Continuing into DTF or DTG requires access to that production module.'],
+ ai:zh?['5 次免费体验','AI 体验与 72 小时基础功能试用分开计算，用完后按 AI 点数使用。']:['5 FREE AI USES','AI trial uses are separate from the 72-hour base-module trial. Further processing uses AI credits.']
+};const t=copy[feature];
+---
+{t&&<aside class="v86-access-note"><strong>{t[0]}</strong><p>{t[1]}</p><a href={`/${locale}/authorization/#license-rules`}>{zh?'授权规则':'Access rules'} →</a></aside>}
+<style>.v86-access-note{display:flex;align-items:baseline;gap:15px 22px;margin:28px 0;padding:20px 0;border-top:1px solid #dfd8ca;border-bottom:1px solid #dfd8ca;font-size:14px;line-height:1.8}.v86-access-note strong{white-space:nowrap;color:#927039;font-size:13px;font-weight:600}.v86-access-note p{color:#727277;margin:0;flex:1}.v86-access-note a{white-space:nowrap;color:#8f6c2e;text-decoration:none;font-size:13px}@media(max-width:700px){.v86-access-note{display:grid;grid-template-columns:1fr;gap:6px;margin:24px 0;font-size:13px}.v86-access-note a{margin-top:3px}}</style>

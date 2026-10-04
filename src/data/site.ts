@@ -126,8 +126,8 @@ export type SiteCopy = {
 export const copy: Record<Locale, SiteCopy> = {
   "zh-CN": {
     meta: {
-      title: "MAIXON TOOL V8.3｜印花生产套件",
-      description: "面向 DTF、DTG 与热升华生产的 MAIXON TOOL V8.3，覆盖核心生产工作流程、MAIXON AI、软件下载与硬件设备。"
+      title: "MAIXON TOOL V8.6｜印花生产套件",
+      description: "MAIXON TOOL V8.6：从找图、语音指令、AI 图像处理到白墨和排版输出，一起完成打印之前的准备工作。"
     },
     header: {
       download: "下载 V8.3",
@@ -365,14 +365,14 @@ export const copy: Record<Locale, SiteCopy> = {
       authorization: "获取授权"
     },
     footer: {
-      statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V8.3",
+      statement: "MAIXON · PRINT PRODUCTION SUITE · V8.6",
       legal: "产品规格与功能可能随版本更新而调整，详情请联系我们。"
     }
   },
   en: {
     meta: {
-      title: "MAIXON TOOL V8.3 | Print Production Suite",
-      description: "MAIXON TOOL V8.3 for DTF, DTG and sublimation production, with integrated workflows, MAIXON AI, software download and equipment."
+      title: "MAIXON TOOL V8.6 | Print Production Suite",
+      description: "MAIXON TOOL V8.6 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace."
     },
     header: {
       download: "Download V8.3",
@@ -555,7 +555,7 @@ export const copy: Record<Locale, SiteCopy> = {
       authorization: "Get a license"
     },
     footer: {
-      statement: "MAIXON · PRINT PRODUCTION SUITE · PROFESSIONAL V8.3",
+      statement: "MAIXON · PRINT PRODUCTION SUITE · V8.6",
       legal: "Product specifications and features may change with version updates. Contact us for current details."
     }
   }

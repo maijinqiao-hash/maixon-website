@@ -1,6 +1,8 @@
 ---
 import MediaFrame from "@/components/MediaFrame.astro";
+import V86LicenseRules from "@/components/V86LicenseRules.astro";
 import SupportPageShell from "@/components/support/SupportPageShell.astro";
+import LocaleRedirect from "@/components/LocaleRedirect.astro";
 import { guideCopy, type GuideTopic } from "@/data/support-content";
 import type { Locale } from "@/data/media";
 
@@ -16,9 +18,10 @@ export function getStaticPaths() {
 const locale = Astro.params.locale as Locale;
 const topic = Astro.props.topic as GuideTopic;
 const content = guideCopy[locale];
+const migrated = ["dtf", "dtg", "sublimation", "ai"].includes(topic.slug);
 ---
 
-<SupportPageShell
+{migrated ? <LocaleRedirect locale={locale} path={`features/${topic.slug}/`} /> : <SupportPageShell
   locale={locale}
   label={`${content.label} · ${topic.number}`}
   title={topic.title}
@@ -27,6 +30,7 @@ const content = guideCopy[locale];
   backLabel={content.back}
 >
   <article class="guide-document">
+    {['account','authorization','ai-credits'].includes(topic.slug)&&<V86LicenseRules locale={locale} compact/>}
     {topic.sections.map((section, index) => (
       <section class="guide-section">
         <span class="guide-section__index">{String(index + 1).padStart(2, "0")}</span>
@@ -56,4 +60,4 @@ const content = guideCopy[locale];
       </section>
     ))}
   </article>
-</SupportPageShell>
+</SupportPageShell>}

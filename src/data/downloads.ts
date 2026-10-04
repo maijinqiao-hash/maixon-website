@@ -94,7 +94,7 @@ export const downloadAssistanceResources = [
     id: "maintop-6.1",
     downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_MAINTOP_6.1_20250911.zip",
     filename: "MAIXON_MAINTOP_6.1_20250911.zip",
-    label: { "zh-CN": "蒙泰 6.1 版本", en: "MAINTOP 6.1" }
+    label: { "zh-CN": "蒙泰 6.1 版本", en: "MainTop 6.1" }
   }
 ] as const;
 

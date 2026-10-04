@@ -1,0 +1,32 @@
+---
+import V86Media from './V86Media.astro';
+interface Props {locale:'zh-CN'|'en';id?:string}
+const {locale,id='ai-samples'}=Astro.props;
+const zh=locale==='zh-CN';
+const tools=zh?[
+ ['extract','提取印花','把喜欢的图案，从画面里提取出来。','选择提取方案与清晰度，把服装、实物或参考图里的印花整理成图稿。需要透明背景时，可同时开启自动抠图。'],
+ ['cutout','印花抠图','留下图案，把背景交给 AI。','对照原图查看轮廓、文字与细小镂空，保存透明图片，继续制图和排版。'],
+ ['upscale','AI 变清晰','放大图稿，也看清细节。','按需要选择放大倍数，在对比窗口查看线条、文字和纹理，再保存适合下一步处理的图片。'],
+ ['edit','用指令改图','哪里要改，一句话说清楚。','写下修改要求，也写清需要保留的内容。颜色、元素与画面细节，都能在前后对比中逐一检查。'],
+ ['expand','AI 扩图','给画面，再多一点空间。','分别设置上、下、左、右的扩展范围，让图案适应新的画布比例，并检查延伸部分的内容。'],
+ ['crop','印花裁切','把边界，收拾得恰到好处。','整理图稿范围，保留需要的印花主体。裁切与抠图分别处理，方便按工作顺序继续操作。'],
+ ['vector','转矢量','从像素图，到可编辑的线条。','生成 SVG 矢量文件，放大查看轮廓与细节，保存后继续编辑与生产准备。'],
+]:[
+ ['extract','Extract Print','Bring the print out of the picture.','Choose a method and quality to extract artwork from clothing, objects or reference images. Enable automatic background removal when you need transparency.'],
+ ['cutout','Remove Background','Keep the artwork. Clear the background.','Compare outlines, lettering and small openings, then save a transparent image and continue to artwork preparation or layout.'],
+ ['upscale','Enhance','A larger image. A closer look.','Choose the enlargement factor, compare lines, text and texture, then save an image ready for the next step.'],
+ ['edit','Edit with Instructions','Describe the change you want.','Specify what should change and what should stay. Compare colors, elements and details before continuing.'],
+ ['expand','Expand','Give the image more room.','Set the extension on each edge to fit a new canvas shape, then inspect the newly generated areas.'],
+ ['crop','Crop Print','Keep the boundaries in order.','Trim the image around the print you need. Cropping and background removal are separate tools, ready for the order your work requires.'],
+ ['vector','Vectorize','From pixels to editable paths.','Create an SVG file, zoom in to inspect outlines and details, then save it for further editing and production preparation.'],
+];
+---
+<section class="v86-ai-samples" data-ai-samples>
+ <div class="v86-ai-tabs" role="tablist" aria-label={zh?'AI 功能':'AI tools'}>
+  {tools.map(([key,label,title,description],i)=><button type="button" role="tab" id={`${id}-tab-${key}`} aria-controls={`${id}-panel`} aria-selected={i===0} tabindex={i===0?0:-1} data-ai-sample={key} data-title={title} data-description={description}>{label}</button>)}
+ </div>
+ <div role="tabpanel" id={`${id}-panel`} aria-labelledby={`${id}-tab-extract`} tabindex="0">
+  <V86Media id={id} poster="ai-sample-extract" locale={locale} theme="light" caption={tools[0][1]} />
+  <div class="v86-ai-copy" aria-live="polite"><h3 data-ai-title>{tools[0][2]}</h3><p data-ai-description>{tools[0][3]}</p></div>
+ </div>
+</section>

@@ -1,0 +1,122 @@
+{
+  "dtf-ai-flow": {
+    "title": "From AI artwork to layout and MainTop",
+    "summary": "Prepare the artwork, build a DTF layout, generate the white-ink channel and continue automatically into MainTop. One connected path to production.",
+    "steps": [
+      "Finish the artwork in the AI Workbench and open the repeated-layout tool.",
+      "Choose proportional or independent sizing, then set the dimensions and arrangement for the order.",
+      "Generate the layout and check quantity, spacing and complete artwork in Photoshop.",
+      "Generate the white-ink channel and production files, then continue automatically into MainTop."
+    ]
+  },
+  "dtf-single": {
+    "title": "One artwork, straight into MainTop",
+    "summary": "Set the finished size, prepare white ink and output the file. A complete workflow, even for a single image.",
+    "steps": [
+      "Open the artwork in Photoshop and choose DTF Single Artwork.",
+      "Review dimensions, resolution, white-ink choke and margins.",
+      "Enable automatic MainTop integration and start processing.",
+      "Check the result, the MainTop job and the output folder."
+    ]
+  },
+  "dtf-count": {
+    "title": "Arrange the quantity your order needs",
+    "summary": "Repeat one design by quantity, generate white ink and continue into MainTop. Ideal for orders with multiple copies of the same artwork.",
+    "steps": [
+      "Open Repeated Layout and choose the quantity-based mode.",
+      "Enter the required quantity, artwork size, layout width and spacing.",
+      "Generate the layout and check the count and edges in Photoshop.",
+      "Create the white-ink channel, export the file and continue into MainTop."
+    ]
+  },
+  "dtf-stretch": {
+    "title": "Set width and height independently",
+    "summary": "When the order calls for exact dimensions in both directions, set width and height separately and check the resulting proportions.",
+    "steps": [
+      "Turn off proportional sizing in Single Artwork and enter the target width and height.",
+      "Check the shape, then review resolution, choke and margins.",
+      "Generate the artwork and verify both artwork and canvas dimensions.",
+      "Complete white ink and file output, then continue automatically into MainTop."
+    ]
+  },
+  "dtf-nesting": {
+    "title": "Nest different shapes with rotation",
+    "summary": "Combine multiple outlines on one layout. Rotation and close nesting help make better use of the available space.",
+    "steps": [
+      "Place the artwork in an input folder and choose Multiple-image Layout.",
+      "Review layout width, spacing and allowed rotation.",
+      "Generate the layout and inspect how the outlines fit together.",
+      "Check edges, spacing and overall dimensions, then generate channels and continue into MainTop."
+    ]
+  },
+  "dtf-canvas": {
+    "title": "Custom canvas to layout and MainTop",
+    "summary": "Prepare artwork to a defined canvas, arrange multiple images and generate production files before continuing into MainTop.",
+    "steps": [
+      "Select the artwork folder and configure custom-canvas cropping.",
+      "Check dimensions and processing settings, then prepare the images.",
+      "Generate the layout and inspect count, rotation and nesting in Photoshop.",
+      "Create the channels and export TIFF, then continue automatically into MainTop."
+    ]
+  },
+  "dtf-ai-layout": {
+    "title": "Turn AI artwork into a complete DTF layout",
+    "summary": "Continue from the AI Workbench into layout, white ink and MainTop without having to find a separate workflow for every step.",
+    "steps": [
+      "Review the finished artwork in the AI Workbench.",
+      "Open DTF layout and choose an arrangement suited to the order.",
+      "Check the layout, then generate white ink and production files.",
+      "Continue automatically into MainTop to complete prepress preparation."
+    ]
+  },
+  "dtg-ai-new": {
+    "title": "AI artwork to DTG and MainTop",
+    "summary": "Continue from the AI Workbench into DTG, choose the fabric and white-ink settings, then automatically pass the finished artwork to MainTop.",
+    "steps": [
+      "Prepare artwork in the AI Workbench and continue into DTG.",
+      "Choose the fabric workflow and review size and white-ink settings.",
+      "Enable automatic MainTop integration and start processing.",
+      "Check MainTop progress, the output and the corresponding print job."
+    ]
+  },
+  "dtg-ai": {
+    "title": "A connected DTG workflow",
+    "summary": "Image preparation, fabric selection, channel generation and MainTop processing follow one continuous path.",
+    "steps": [
+      "After preparing the artwork, open the DTG workspace.",
+      "Review fabric type, dimensions, white-ink amounts and margins.",
+      "Start processing to generate the production file.",
+      "Continue into MainTop and inspect the job and output."
+    ]
+  },
+  "sublimation-pdf": {
+    "title": "PDF pattern layout, from roll width to cut lines",
+    "summary": "Choose your paper width and let the pieces nest. Add cutting lines in a color you choose, compare layouts and export the result.",
+    "steps": [
+      "Import the PDF and check the pages and pattern pieces.",
+      "Set the roll width, such as 1820 mm, then review piece spacing and roll splitting.",
+      "Add cutting lines as needed and choose a clearly visible color.",
+      "Generate and compare layouts, then inspect the pieces, cutting lines and output file."
+    ]
+  },
+  "halftone": {
+    "title": "Automated halftone processing",
+    "summary": "Load artwork, refine the dot pattern and compare the result before continuing to production.",
+    "steps": [
+      "Import the artwork you want to process.",
+      "Choose the mode and adjust dimensions, dots and tone.",
+      "Compare the result and inspect detail and edges.",
+      "Save the result or continue into the next production tool."
+    ]
+  },
+  "maintop-setup": {
+    "title": "Set up automatic MainTop integration",
+    "summary": "Open the settings beside automatic MainTop integration. Review the detected program, output folder and ICC configuration for a smooth DTF or DTG workflow.",
+    "steps": [
+      "Open the settings beside automatic MainTop integration in a production module.",
+      "Review the detected MainTop program and related paths.",
+      "Confirm the output folder and ICC configuration, adjusting them for production.",
+      "Return to DTF or DTG, enable integration and check a complete job."
+    ]
+  }
+}

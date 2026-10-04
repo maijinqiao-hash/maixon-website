@@ -1,0 +1,57 @@
+---
+import V86AccessNote from '@/components/V86AccessNote.astro';
+import V86MaintopDemo from './V86MaintopDemo.astro';
+import V86OwnerVideo from './V86OwnerVideo.astro';
+import V86DemoCollection from './V86DemoCollection.astro';
+import {homeDemo} from '../data/v86/demos';
+import V86Media from './V86Media.astro';
+import V86AISamples from './V86AISamples.astro';
+import V86SubfeatureIndex from './V86SubfeatureIndex.astro';
+import HardwareOverview from './hardware/HardwareOverview.astro';
+import {features} from '../data/v86/content';
+interface Props {locale:'zh-CN'|'en'}
+const {locale}=Astro.props; const zh=locale==='zh-CN';const items=features[locale];
+const destinations=['finder','voice','ai','dtf','maintop','download'];
+const flow=zh?['找回图稿','表达要求','处理图像','制图排版','接入 MainTop','准备打印']:['Find artwork','Describe the task','Prepare images','Make the layout','Connect MainTop','Ready to print'];
+---
+<div class="v86-root" data-v86-page>
+  <section class="v86-hero" id="software">
+    <p class="v86-eyebrow">MAIXON TOOL <span>V8.6</span></p>
+    <h1>{zh?<>打印之前，<br/><span>一气呵成。</span></>:<>Before you print.<br/><span>Bring it all together.</span></>}</h1>
+    <p class="v86-hero__lead">{zh?'从找图、图稿处理到排版输出。':'From finding artwork to preparing the final layout.'}<br/>{zh?'把印前工作，放进同一个工作台。':'Your prepress workflow, in one workspace.'}</p>
+    <div class="v86-actions"><a href="#overview" class="v86-cta">{zh?'了解工作流程':'Explore the workflow'} <span>↗</span></a><a href="#maintop" class="v86-text-link">{zh?'认识自动接入蒙泰':'Discover MainTop integration'} <span>→</span></a></div>
+    <div class="v86-hero__screen" id="overview"><V86Media id="overview" poster="overview" video="overview" locale={locale} priority caption={zh?'生产概览':'Production overview'} /></div>
+    <p class="v86-micro">{zh?'找图、制图、白墨与排版。深浅之间，顺手切换。':'Find artwork. Prepare images, white ink and layouts. Switch between light and dark.'}</p>
+  </section>
+  <section class="v86-intro v86-section" data-v86-reveal>
+    <p class="v86-eyebrow">{zh?'不止做图。是让生产往前走。':'MORE THAN AN IMAGE TOOL'}</p>
+    <h2>{zh?<>你的下一步，<br/><span>已经有了衔接。</span></>:<>Every next step.<br/><span>Already connected.</span></>}</h2>
+    <p class="v86-lead">{zh?'图稿在哪里、参数怎么设、白墨如何控制、文件怎样输出——这些原本散落的工作，现在有了一条清楚的路径。':'Finding files, setting dimensions, controlling white ink and preparing output — work that used to be scattered now follows a clear path.'}</p>
+    <ol class="v86-flow" aria-label={zh?'印前工作流程':'Prepress workflow'}>{flow.map((s,i)=><li style={`--step:${i}`}><a href={`#${destinations[i]}`}><span>{String(i+1).padStart(2,'0')}</span><strong>{s}</strong><b aria-hidden="true">↗</b></a></li>)}</ol>
+  </section>
+  <section class="v86-maintop" id="maintop">
+    <div class="v86-section v86-maintop__content" data-v86-reveal>
+      <p class="v86-eyebrow">MAIXON × MainTop</p>
+      <h2>{zh?<>做完图。<br/>接下来，<span>就是打印。</span></>:<>Artwork prepared.<br/>The next step?<br/><span>Print.</span></>}</h2>
+      <div class="v86-maintop__copy"><h3>{zh?'自动接入蒙泰。让印前流程继续向前。':'Automatic MainTop integration. Keep prepress moving.'}</h3><p>{zh?'从图稿处理、白墨生成、排版到文件输出，再自动接入 MainTop。把点击打印机软件“打印”按钮之前的准备工作串联起来，让重复操作自动接续，让生产准备更连贯。':'MAIXON connects preparation before the printer software’s Print button: image processing, white ink, layouts, file output and the handoff to MainTop. Fewer repeated steps. A more continuous preparation workflow.'}</p><a href={`/${locale}/maintop/`} class="v86-text-link">{zh?'了解衔接流程':'Explore the workflow'} →</a></div>
+      <V86MaintopDemo locale={locale} />
+    </div>
+  </section>
+  <nav class="v86-feature-nav" aria-label={zh?'软件功能':'Software features'}>{items.map(f=><a href={`#${f.id}`}>{f.tag}</a>)}</nav>
+  {items.map((f,i)=><section class:list={['v86-feature',`v86-feature--${f.id}`,{'v86-feature--tinted':i%2===1}]} id={f.id}>
+    <div class="v86-section">
+      <div class="v86-feature__intro" data-v86-reveal><div><p class="v86-eyebrow">{f.tag}</p><h2>{f.title.split('\n').map((line,n)=><>{n>0&&<br/>}<span class:list={{'v86-title-secondary':n>0}}>{line}</span></>)}</h2></div><div class="v86-feature__summary"><h3>{f.lead}</h3><p>{f.detail}</p><a class="v86-text-link" href={`/${locale}/features/${f.id}/`}>{zh?'查看完整操作指南':'Read the complete walkthrough'} →</a></div></div>
+      <V86AccessNote feature={f.id} locale={locale}/>
+      {f.id==='ai'?<V86AISamples locale={locale}/>:homeDemo[f.id]?<V86OwnerVideo id={homeDemo[f.id]} locale={locale} instance={`home-${f.id}`}/>:<V86Media id={f.id} poster={f.poster} video={f.video} autoplay locale={locale} theme={['ai','halftone'].includes(f.id)?'dark':'light'} caption={f.tag} />}
+      <V86SubfeatureIndex feature={f.id} locale={locale} compact/>
+      <ol class="v86-step-row">{f.steps.map((s,n)=><li><span>{String(n+1).padStart(2,'0')}</span><p>{s}</p></li>)}</ol>
+      {f.id==='dtf'&&<div class="v86-feature-more"><h3>{zh?'一张图、多张图，都有合适的排法。':'The right layout for one image or many.'}</h3><V86DemoCollection ids={['dtf-count','dtf-nesting','dtf-canvas']} locale={locale}/></div>}
+      {['dtf','dtg'].includes(f.id)&&<a class="v86-maintop-link" href={`/${locale}/features/${f.id}/maintop/`}><span><small>MAIXON × MainTop</small><strong>{zh?`${f.id==='dtf'?'白墨烫画':'白墨直喷'}，自动接入蒙泰。`:`${f.id.toUpperCase()}, connected to MainTop.`}</strong></span><span aria-hidden="true">↗</span></a>}
+      {f.id==='sublimation'&&<div class="v86-benefit-grid"><section><p class="v86-eyebrow">{zh?'自定义纸张宽度':'CUSTOM ROLL WIDTH'}</p><h3>{zh?'卷材多宽，就按多宽排。':'Fit the roll you use.'}</h3><p>{zh?'按实际卷材输入纸张宽度，例如 1820 mm。结合间距与方向，安排每一片的位置。':'Set the usable roll width, such as 1820 mm, then arrange pieces with the spacing and direction you need.'}</p></section><section><p class="v86-eyebrow">{zh?'自动切割线':'AUTOMATIC CUT LINES'}</p><h3>{zh?'线条自动加，颜色自己选。':'Add the lines. Choose the color.'}</h3><p>{zh?'按生产需要添加切割线，颜色可以自由选择。裁片轮廓更清楚，后续裁切更方便。':'Add cutting outlines and choose a distinct color for the next production step.'}</p></section></div>}
+    </div>
+  </section>)}
+  <section class="v86-section v86-comfort" data-v86-reveal><p class="v86-eyebrow">{zh?'深浅之间，都很顺手。':'TWO THEMES. ONE FAMILIAR WORKFLOW.'}</p><h2>{zh?<>日常生产。<br/><span>也是日常的舒适。</span></>:<>Built for production.<br/><span>Comfortable every day.</span></>}</h2><p class="v86-lead">{zh?'保留同样的位置、同样的流程。浅色清晰舒展，深色沉静专注。点击界面下方的主题按钮，找到更舒服的工作方式。':'The same controls, in the same places. A clear light interface and a focused dark environment. Use the theme buttons below each image to explore both.'}</p><V86Media id="themes" poster="overview" video="overview-light" locale={locale} /><a class="v86-text-link" href={`/${locale}/tour/`}>{zh?'浏览完整界面图集':'Browse the complete interface gallery'} →</a></section>
+  <div class="v86-preserved-hardware"><HardwareOverview locale={locale} surface="home" /></div>
+  <section class="v86-section v86-download" id="download"><div><p class="v86-eyebrow">{zh?'开始你的工作流程':'START YOUR WORKFLOW'}</p><h2>{zh?<>为下一次生产，<br/><span>做好准备。</span></>:<>Ready for<br/><span>the next production run.</span></>}</h2><p>{zh?'选择适合电脑系统的安装包，按使用指南完成安装与连接。让下一份图稿，从准备到输出都有清楚的路径。':'Choose the installer for your Windows version, then follow the setup guide. Give your next artwork a clear path from preparation to output.'}</p><a class="v86-cta" href={`/${locale}/download/`}>{zh?'查看当前下载':'View current downloads'} ↗</a></div><div class="v86-download__stamp"><strong>V8.6</strong><span>MAIXON TOOL</span><small>{zh?'图稿到生产，一路衔接':'Artwork to production, connected'}</small></div></section>
+  <section class="support-section" id="support"><div><p class="section-label">{zh?'支持':'SUPPORT'}</p><h2>{zh?'从安装配置到\n稳定生产。':'From setup to\nstable production.'}</h2><p>{zh?'使用指南、授权服务与技术支持，继续陪你走好每一步。':'Guides, licensing and technical support for each step of your workflow.'}</p></div><nav class="support-links" aria-label={zh?'支持':'Support'}><a href={`/${locale}/guide/`}><span>01</span><strong>{zh?'V8.6 使用说明':'V8.6 guides'}</strong></a><a href={`/${locale}/contact/`}><span>02</span><strong>{zh?'联系支持':'Contact support'}</strong></a><a href={`/${locale}/authorization/`}><span>03</span><strong>{zh?'获取授权':'Licensing'}</strong></a></nav></section>
+</div>

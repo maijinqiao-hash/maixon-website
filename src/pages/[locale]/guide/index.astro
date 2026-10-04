@@ -1,5 +1,6 @@
 ---
 import SupportPageShell from "@/components/support/SupportPageShell.astro";
+import { features } from "@/data/v86/content";
 import { guideCopy } from "@/data/support-content";
 import type { Locale } from "@/data/media";
 
@@ -17,8 +18,10 @@ const content = guideCopy[locale];
   title={content.title}
   description={content.description}
 >
+  <p style="margin:0 0 2rem;font-size:1.1rem"><a href={`/${locale}/tour/`} style="color:#94723a">{locale==='zh-CN'?'V8.6 完整界面与操作演示 →':'V8.6 interface gallery and walkthroughs →'}</a></p>
   <nav class="guide-grid" aria-label={content.label}>
-    {content.topics.map((topic) => (
+    {features[locale].map(f=><a class="guide-grid__item" href={`/${locale}/features/${f.id}/`}><span class="guide-grid__number">V8.6</span><div><h2>{f.tag}</h2><p>{f.lead}</p></div><span class="guide-grid__open">↗</span></a>)}
+    {content.topics.filter(topic=>!["dtf","dtg","ai","sublimation"].includes(topic.slug)).map((topic) => (
       <a class="guide-grid__item" href={`/${locale}/guide/${topic.slug}/`}>
         <span class="guide-grid__number">{topic.number}</span>
         <div>

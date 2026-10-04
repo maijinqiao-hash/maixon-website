@@ -1,0 +1,17 @@
+---
+import {detailLinks} from '@/data/v86/subfeatures';
+import type {V86Locale} from '@/data/v86/content';
+interface Props {feature:string;locale:V86Locale;compact?:boolean;exclude?:string;id?:string;title?:string}
+const {feature,locale,compact=false,exclude,id=`details-${feature}`,title}=Astro.props;
+const zh=locale==='zh-CN';
+const links=detailLinks(feature,locale).filter(link=>link.href!==exclude);
+---
+<section id={id} class:list={['v86-detail-index',{'v86-detail-index--compact':compact}]} aria-label={zh?'功能专题':'Feature topics'}>
+ {title&&<h2>{title}</h2>}
+ <div class:list={['v86-detail-grid',{'v86-detail-grid--compact':compact}]}>
+  {links.map((link,i)=><a class="v86-detail-card" href={link.href}>
+   {!compact&&<div class="v86-detail-card__image"><img src={link.image} alt="" width="640" height="400" loading="lazy" decoding="async"/></div>}
+   <div class="v86-detail-card__body"><span class="v86-detail-card__number">{String(i+1).padStart(2,'0')}</span><h3>{link.title}</h3>{!compact&&<p>{link.summary}</p>}<span class="v86-detail-card__arrow" aria-hidden="true">↗</span></div>
+  </a>)}
+ </div>
+</section>
