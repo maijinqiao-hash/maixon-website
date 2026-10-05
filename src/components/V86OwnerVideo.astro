@@ -7,7 +7,9 @@ const demo=demoById(id);const copy=demoText(demo,locale);const zh=locale==='zh-C
 <figure class="v86-owner-video" id={`film-${instance}`} data-owner-demo={id}>
  <div class="v86-owner-video__screen" style={`aspect-ratio:${demo.width}/${demo.height}`}>
   <video controls playsinline preload="none" poster={demo.poster} src={demo.path} data-mobile-src={`/media/v86/mobile/owner/${id}.mp4`} aria-label={copy.title} data-owner-player></video>
-  <button type="button" class="v86-owner-video__start" data-owner-start aria-label={`${zh?'有声播放':'Play with sound'}：${copy.title}`}><span aria-hidden="true">▶</span>{zh?'有声播放完整流程':'Play with sound'}<small>{durationLabel(demo.duration)}</small></button>
+  <img class="v86-owner-video__poster" data-owner-poster src={demo.poster} width={demo.width} height={demo.height} alt="" loading="lazy" decoding="async" />
+  <button type="button" class="v86-owner-video__start" data-owner-start aria-label={`${zh?'有声播放':'Play with sound'}：${copy.title}`}><span aria-hidden="true">▶</span><span data-owner-start-label>{zh?'有声播放完整流程':'Play with sound'}</span><small>{durationLabel(demo.duration)}</small></button>
  </div>
  {caption&&<figcaption><span>{copy.title}</span><span class="v86-duration" aria-label={zh?'视频时长':'Video duration'}>{durationLabel(demo.duration)}</span></figcaption>}
+ <p class="v86-runtime-note" data-video-status role="status" hidden></p>
 </figure>

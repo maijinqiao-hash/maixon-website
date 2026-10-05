@@ -9,6 +9,86 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
   const connection=(navigator as Navigator&{connection?:{saveData?:boolean;effectiveType?:string}}).connection;
   const useMobile=matchMedia('(max-width: 1024px)').matches||connection?.saveData||/^(slow-2g|2g|3g)$/.test(connection?.effectiveType||'');
   const videoSource=(video:HTMLVideoElement)=>useMobile&&video.dataset.mobileSrc?video.dataset.mobileSrc:video.dataset.src||video.getAttribute('src')!;
+  type PlaybackState='idle'|'loading'|'playing'|'paused'|'ended'|'retry';
+  const bindPlayback=(video:HTMLVideoElement,frame:HTMLElement,poster:HTMLImageElement,render:(state:PlaybackState)=>void)=>{
+    const note=frame.querySelector<HTMLElement>('[data-video-status]');
+    let state:PlaybackState='idle';
+    let attempt=0;
+    let pending=false;
+    let timer:ReturnType<typeof setTimeout>|undefined;
+    let resumeAt=0;
+    const clearTimer=()=>{if(timer!==undefined){clearTimeout(timer);timer=undefined;}};
+    const update=(next:PlaybackState,message='')=>{
+      state=next;frame.dataset.playbackState=next;
+      frame.setAttribute('aria-busy',String(next==='loading'));
+      if(note){note.textContent=message;note.hidden=!message;}
+      render(next);
+    };
+    const loading=()=>{
+      pending=true;clearTimer();
+      update('loading',zh?'正在加载视频…':'Loading video…');
+      timer=setTimeout(()=>{
+        if(pending)update('retry',zh?'视频加载较慢，请点击重试。':'The video is taking longer to load. Select Retry.');
+      },12000);
+    };
+    const failed=(message:string)=>{
+      attempt++;pending=false;clearTimer();
+      update('retry',message);video.pause();poster.hidden=false;
+    };
+    const start=(withSound:boolean)=>{
+      const retry=state==='retry'||!!video.error;
+      video.dataset.requested='true';
+      // Safari must see the video at play() time. The separate image keeps
+      // the picture visible until a decoded frame is ready.
+      video.hidden=false;
+      if(withSound){video.muted=false;video.volume=1;video.loop=false;}
+      video.preload='auto';
+      const chosen=retry&&video.dataset.mobileSrc?video.dataset.mobileSrc:video.getAttribute('src')||videoSource(video);
+      if(!video.getAttribute('src')||retry){
+        resumeAt=video.ended?0:video.currentTime;
+        video.src=chosen;video.load();
+      }
+      const currentAttempt=++attempt;
+      document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
+      loading();
+      // Keep play() in the original click handler so Safari retains permission
+      // to play audio. Waiting for metadata first loses that permission.
+      video.play().catch((error:DOMException)=>{
+        if(currentAttempt!==attempt||!pending||error.name==='AbortError')return;
+        if(withSound)failed(zh?'播放未能开始，请点击重试。':'Playback could not start. Select Retry.');
+        else {pending=false;clearTimer();poster.hidden=false;update('idle');}
+      });
+    };
+    video.addEventListener('play',()=>{
+      video.dataset.requested='true';video.hidden=false;
+      if(!pending)loading();
+      document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
+    });
+    video.addEventListener('loadedmetadata',()=>{
+      if(resumeAt>0&&Number.isFinite(video.duration))video.currentTime=Math.min(resumeAt,Math.max(0,video.duration-.1));
+      resumeAt=0;
+    });
+    video.addEventListener('loadeddata',()=>{
+      if(video.dataset.requested&&video.readyState>=2&&state!=='retry')poster.hidden=true;
+    });
+    video.addEventListener('playing',()=>{
+      pending=false;clearTimer();poster.hidden=true;update('playing');
+    });
+    video.addEventListener('pause',()=>{
+      attempt++;pending=false;clearTimer();
+      if(state!=='retry')update(video.ended?'ended':'paused');
+    });
+    video.addEventListener('ended',()=>{poster.hidden=false;update('ended');});
+    ['waiting','stalled'].forEach(event=>video.addEventListener(event,()=>{
+      if(video.dataset.requested&&!video.paused&&state!=='retry')loading();
+    }));
+    video.addEventListener('error',()=>failed(zh?'视频暂时无法加载，请点击重试。':'The video could not load. Select Retry.'));
+    window.addEventListener('offline',()=>{
+      if(pending||!video.paused)failed(zh?'网络已断开，恢复连接后可点击重试。':'You are offline. Reconnect, then select Retry.');
+    });
+    update('idle');
+    return {start,reset:()=>{attempt++;pending=false;clearTimer();video.pause();delete video.dataset.requested;poster.hidden=false;update('idle');}};
+  };
   const root=document.querySelector<HTMLElement>('[data-v86-page]');
   const box=document.querySelector<HTMLDialogElement>('[data-v86-lightbox]');
   let returnFocus:HTMLElement|null=null;
@@ -25,6 +105,12 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     const subtitleText=frame.querySelector<HTMLElement>('[data-v86-subtitle-text]');
     const captionButton=frame.querySelector<HTMLButtonElement>('[data-v86-captions]');
     const captionTrack=video?.querySelector('track');
+    const player=video?bindPlayback(video,frame,img,state=>{
+      if(play){
+        play.setAttribute('aria-pressed',String(state==='playing'&&!!video.dataset.userStarted));
+        play.textContent=state==='loading'&&video.dataset.userStarted?(zh?'加载中…':'Loading…'):state==='retry'?(zh?'▶ 重试播放':'▶ Retry playback'):state==='playing'&&video.dataset.userStarted?(zh?'暂停视频':'Pause video'):video.dataset.userStarted?(zh?'▶ 继续播放':'▶ Resume'):(zh?'▶ 有声播放':'▶ Play with sound');
+      }
+    }):undefined;
     let captionsEnabled=true;
     let nativeFullscreen=false;
     const fullscreenVideo=()=>!!video&&(nativeFullscreen||document.fullscreenElement===video||(video as HTMLVideoElement&{webkitDisplayingFullscreen?:boolean}).webkitDisplayingFullscreen===true);
@@ -37,7 +123,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       if(captionTrack.track.mode!==mode)captionTrack.track.mode=mode;
       const text=Array.from(captionTrack.track.activeCues||[]).map(cue=>(cue as VTTCue).text).join(' ');
       if(subtitleText.textContent!==text)subtitleText.textContent=text;
-      subtitles.hidden=video.hidden||!captionsEnabled||fullscreen;
+      subtitles.hidden=video.hidden||!img.hidden||!captionsEnabled||fullscreen;
     };
     captionTrack?.track.addEventListener('cuechange',syncCaptions);
     captionTrack?.addEventListener('load',syncCaptions);
@@ -51,38 +137,36 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     captionButton?.addEventListener('click',()=>{captionsEnabled=!captionsEnabled;captionButton.setAttribute('aria-pressed',String(captionsEnabled));syncCaptions();});
     syncCaptions();
     const syncSound=()=>{if(!video||!sound)return;frame.dataset.sound=String(!video.muted);sound.setAttribute('aria-pressed',String(!video.muted));sound.textContent=video.muted?(zh?'开启讲解':'Enable narration'):(zh?'关闭讲解':'Mute narration');};
-    const resetVideo=()=>{if(video){delete video.dataset.requested;delete video.dataset.userStarted;video.pause();video.hidden=true;}if(subtitles)subtitles.hidden=true;img.hidden=false;play?.setAttribute('aria-pressed','false');if(play)play.textContent=zh?'▶ 有声播放':'▶ Play with sound';};
+    const resetVideo=()=>{if(video){delete video.dataset.userStarted;player?.reset();video.hidden=true;}if(subtitles)subtitles.hidden=true;img.hidden=false;};
     const startWithSound=()=>{
       if(!video)return;
       frame.dataset.manualTheme='true';video.dataset.requested='true';
       if(!video.dataset.userStarted){video.muted=false;video.volume=1;}
       video.dataset.userStarted='true';video.loop=false;
-      if(!video.getAttribute('src')){video.src=videoSource(video);video.load();}
-      if(video.readyState>=2){img.hidden=true;video.hidden=false;}
-      document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
-      syncSound();syncCaptions();video.play().catch(()=>{video.controls=true;img.hidden=true;video.hidden=false;syncCaptions();});
+      player?.start(true);syncSound();syncCaptions();
     };
     frame.querySelectorAll<HTMLButtonElement>('[data-v86-theme]').forEach(button=>button.addEventListener('click',event=>{
       const theme=button.dataset.v86Theme!;
       if(frame.dataset.theme===theme&&(!video||video.hidden))return;
       resetVideo();frame.dataset.manualTheme='true';frame.dataset.theme=theme;
       img.src=`/media/v86/screenshots/${theme}/${frame.dataset.poster}.webp`;
+      if(video)video.poster=img.src;
       img.alt=img.alt.replace(/浅色|深色|light|dark/g,m=>/[a-z]/.test(m)?theme:theme==='light'?'浅色':'深色');
       frame.querySelectorAll('[data-v86-theme]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       if(!reduce.matches&&event.detail>0)img.animate([{opacity:.65},{opacity:1}],{duration:240,easing:'ease-out'});
     }));
     play?.addEventListener('click',()=>{
       if(!video)return;
-      if(video.dataset.userStarted&&!video.paused){video.pause();return;}
+      if(video.dataset.userStarted&&!video.paused&&frame.dataset.playbackState!=='retry'){video.pause();return;}
       startWithSound();
     });
     sound?.addEventListener('click',()=>{if(!video)return;if(!video.dataset.userStarted){startWithSound();return;}video.muted=!video.muted;syncSound();});
     video?.addEventListener('volumechange',syncSound);
-    const syncPlay=()=>{if(!play||!video?.dataset.userStarted)return;play.setAttribute('aria-pressed',String(!video.paused));play.textContent=video.paused?(zh?'▶ 继续播放':'▶ Resume'):(zh?'暂停视频':'Pause video');};
-    video?.addEventListener('play',()=>{syncPlay();document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});});
-    video?.addEventListener('pause',syncPlay);video?.addEventListener('ended',syncPlay);
-    video?.addEventListener('loadeddata',()=>{if(video.dataset.requested){img.hidden=true;video.hidden=false;syncCaptions();}});
-    video?.addEventListener('error',()=>{frame.dataset.manualTheme='true';resetVideo();let message=frame.querySelector('[role=status]');if(!message){message=document.createElement('p');message.setAttribute('role','status');message.className='v86-runtime-note';frame.append(message);}message.textContent=zh?'视频暂时无法加载，请保留界面图并稍后重试。':'The video could not load. You can still view the interface image.';});
+    video?.addEventListener('playing',syncCaptions);
+    video?.addEventListener('loadeddata',syncCaptions);
+    video?.addEventListener('ended',syncCaptions);
+    video?.addEventListener('error',()=>{frame.dataset.manualTheme='true';if(subtitles)subtitles.hidden=true;});
+    frame.addEventListener('v86-autoplay',()=>{if(video){video.muted=true;video.loop=true;player?.start(false);}});
     frame.querySelector('[data-v86-expand]')?.addEventListener('click',e=>{
       if(!box)return;
       returnFocus=e.currentTarget as HTMLElement;video?.pause();
@@ -100,10 +184,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     if(video.dataset.userStarted||frame.dataset.manualTheme)return;
     if(Array.from(document.querySelectorAll('video')).some(other=>other!==video&&!other.paused&&!other.muted))return;
     if(!reduce.matches&&!document.hidden){
-      if(!video.getAttribute('src')){video.src=videoSource(video);video.load();}
-      video.dataset.requested='true';video.muted=frame.dataset.sound!=='true';video.loop=true;if(video.readyState>=2){video.hidden=false;frame.querySelector('img')!.hidden=true;}
-      const play=frame.querySelector<HTMLButtonElement>('[data-v86-play]');if(play){play.setAttribute('aria-pressed','false');play.textContent=zh?'▶ 有声播放':'▶ Play with sound';}
-      video.play().catch(()=>{});
+      frame.dispatchEvent(new Event('v86-autoplay'));
     }else video.pause();
   });},{threshold:.25});
   document.querySelectorAll<HTMLVideoElement>('video[data-v86-autoplay]').forEach(video=>autoObserver.observe(video.closest('.v86-media__viewport')!));
@@ -112,7 +193,20 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
   document.querySelectorAll('.v86-feature').forEach(el=>sections.observe(el));
   document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('video').forEach(v=>v.pause());});
   const ownerObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)(entry.target as HTMLVideoElement).pause();}),{threshold:.05});
-  document.querySelectorAll<HTMLVideoElement>('[data-owner-player]').forEach(video=>{video.dataset.src=video.getAttribute('src')!;const chosen=videoSource(video);if(chosen!==video.getAttribute('src'))video.src=chosen;ownerObserver.observe(video);const start=video.parentElement?.querySelector<HTMLButtonElement>('[data-owner-start]');start?.addEventListener('click',()=>{video.muted=false;video.volume=1;video.play().catch(()=>{if(start)start.hidden=false;});});video.addEventListener('play',()=>{if(start)start.hidden=true;document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});});video.addEventListener('ended',()=>{if(start)start.hidden=false;});});
+  document.querySelectorAll<HTMLVideoElement>('[data-owner-player]').forEach(video=>{
+    video.dataset.src=video.getAttribute('src')!;
+    const chosen=videoSource(video);if(chosen!==video.getAttribute('src'))video.src=chosen;
+    const frame=video.closest<HTMLElement>('[data-owner-demo]')!;
+    const poster=frame.querySelector<HTMLImageElement>('[data-owner-poster]')!;
+    const start=frame.querySelector<HTMLButtonElement>('[data-owner-start]')!;
+    const label=start.querySelector<HTMLElement>('[data-owner-start-label]')!;
+    const player=bindPlayback(video,frame,poster,state=>{
+      start.hidden=state==='playing'||(state==='paused'&&poster.hidden);
+      label.textContent=state==='loading'?(zh?'加载中…':'Loading…'):state==='retry'?(zh?'重试播放':'Retry playback'):state==='ended'?(zh?'再播放一次':'Play again'):(zh?'有声播放完整流程':'Play with sound');
+    });
+    ownerObserver.observe(video);
+    start.addEventListener('click',()=>{if(frame.dataset.playbackState==='loading'){video.pause();return;}player.start(true);});
+  });
   document.querySelectorAll<HTMLElement>('[data-ai-samples]').forEach(section=>{
     const tabs=Array.from(section.querySelectorAll<HTMLButtonElement>('[data-ai-sample]'));
     const select=(button:HTMLButtonElement)=>{

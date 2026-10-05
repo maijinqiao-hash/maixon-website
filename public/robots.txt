@@ -3,4 +3,4 @@ Allow: /
 
 Content-Signal: search=yes, ai-train=no, use=reference
 
-Sitemap: https://maixon.vip/sitemap-index.xml
+Sitemap: https://guojindigital.com/sitemap-index.xml
