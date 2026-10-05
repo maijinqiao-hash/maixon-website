@@ -80,7 +80,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     });
     video.addEventListener('ended',()=>{poster.hidden=false;update('ended');});
     ['waiting','stalled'].forEach(event=>video.addEventListener(event,()=>{
-      if(video.dataset.requested&&!video.paused&&state!=='retry')loading();
+      if(video.dataset.requested&&!video.paused&&video.readyState<3&&state!=='retry')loading();
     }));
     video.addEventListener('error',()=>failed(zh?'视频暂时无法加载，请点击重试。':'The video could not load. Select Retry.'));
     window.addEventListener('offline',()=>{
