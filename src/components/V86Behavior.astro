@@ -41,6 +41,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       // Safari must see the video at play() time. The separate image keeps
       // the picture visible until a decoded frame is ready.
       video.hidden=false;
+      video.poster=poster.currentSrc||poster.src;
       if(withSound){video.muted=false;video.volume=1;video.loop=false;}
       video.preload='auto';
       const chosen=retry&&video.dataset.mobileSrc?video.dataset.mobileSrc:video.getAttribute('src')||videoSource(video);
@@ -116,6 +117,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     const fullscreenVideo=()=>!!video&&(nativeFullscreen||document.fullscreenElement===video||(video as HTMLVideoElement&{webkitDisplayingFullscreen?:boolean}).webkitDisplayingFullscreen===true);
     const syncCaptions=()=>{
       if(!video||!captionTrack||!subtitles||!subtitleText)return;
+      if(!video.dataset.requested){captionTrack.track.mode='disabled';subtitles.hidden=true;return;}
       const fullscreen=fullscreenVideo();
       // Inline captions belong below the picture. Keep the native track hidden
       // and use its timing; only native video fullscreen uses native captions.
@@ -194,8 +196,6 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
   document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('video').forEach(v=>v.pause());});
   const ownerObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)(entry.target as HTMLVideoElement).pause();}),{threshold:.05});
   document.querySelectorAll<HTMLVideoElement>('[data-owner-player]').forEach(video=>{
-    video.dataset.src=video.getAttribute('src')!;
-    const chosen=videoSource(video);if(chosen!==video.getAttribute('src'))video.src=chosen;
     const frame=video.closest<HTMLElement>('[data-owner-demo]')!;
     const poster=frame.querySelector<HTMLImageElement>('[data-owner-poster]')!;
     const start=frame.querySelector<HTMLButtonElement>('[data-owner-start]')!;

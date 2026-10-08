@@ -7,7 +7,7 @@ const root='/media/v86/';
 <figure class="v86-media" data-v86-media data-poster={poster} data-theme={theme} id={`media-${id}`}>
   <div class="v86-media__viewport">
     <img src={`${root}screenshots/${theme}/${poster}.webp`} width="2592" height="1618" alt={zh ? `MAIXON TOOL V8.6 ${caption||id} · ${theme==='light'?'浅色':'深色'}界面` : `MAIXON TOOL V8.6 ${caption||id} — ${theme} interface`} loading={priority?'eager':'lazy'} decoding="async" fetchpriority={priority?'high':'auto'} />
-    {video && <video controls playsinline muted preload="none" poster={`${root}screenshots/${theme}/${poster}.webp`} data-src={`${root}videos/${zh?'':'en/'}${video}.mp4`} data-mobile-src={`${root}mobile/videos/${zh?'':'en/'}${video}.mp4`} data-v86-autoplay={autoplay||video==='overview'?'true':undefined} aria-label={zh?`${caption||id} 操作流程`:`${caption||id} workflow`} hidden><track kind="captions" srclang={locale} label={zh?'中文字幕':'English captions'} src={`${root}captions/${video}.${locale}.vtt`} /></video>}
+    {video && <video controls playsinline muted preload="none" data-src={`${root}videos/${zh?'':'en/'}${video}.mp4`} data-mobile-src={`${root}mobile/videos/${zh?'':'en/'}${video}.mp4`} data-v86-autoplay={autoplay||video==='overview'?'true':undefined} aria-label={zh?`${caption||id} 操作流程`:`${caption||id} workflow`} hidden><track kind="captions" srclang={locale} label={zh?'中文字幕':'English captions'} src={`${root}captions/${video}.${locale}.vtt`} /></video>}
     <button class="v86-expand" type="button" data-v86-expand aria-label={zh?'放大查看界面':'Enlarge interface'}>↗</button>
   </div>
   {video && <div class="v86-media__subtitles" data-v86-subtitles id={`subtitles-${id}`} aria-label={zh?'视频字幕':'Video captions'} hidden><p data-v86-subtitle-text></p></div>}

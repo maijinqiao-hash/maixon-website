@@ -26,9 +26,9 @@ export const windows7Installer: DownloadInstaller = {
   displayName: "MAIXON TOOL V8.3 for Windows 7",
   version: "8.3.0.0",
   installerFilename: "MAIXON_TOOL_V8.3_Windows7_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.3_Windows7_Setup.exe",
-  fileSize: 177_227_030,
-  sha256: "6FDEBC625FE330E56E0BA539AD31A0B64FAAF7BD5F36DDB19F5A8FAEA0386217"
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.3_Windows7_Setup.exe?v=fontfix-20261009",
+  fileSize: 177_242_915,
+  sha256: "8F0B24C8A19F57E7180B65C7A5494E0D43FE69BCF1D24A8BBAAAB0357596D75B"
 };
 
 export const windows1011Installer: DownloadInstaller = {

@@ -56,10 +56,12 @@ export default {
     assetRequest.headers.delete('If-Range');
     assetRequest.headers.set('Accept-Encoding', 'identity');
     const response = await env.ASSETS.fetch(assetRequest);
-    if (response.status !== 200) return response;
+    if (response.status !== 200 && response.status !== 304) return response;
     const headers = new Headers(response.headers);
     headers.set('Accept-Ranges', 'bytes');
     headers.set('X-Maixon-Video-Delivery', 'bytes-v1');
+    headers.set('Cache-Control', 'public, max-age=86400');
+    if (response.status === 304) return new Response(null, {status: 304, headers});
     const size = Number(headers.get('Content-Length') ?? videoSizes.get(path));
     if (request.method === 'HEAD' && Number.isSafeInteger(size) && size > 0) headers.set('Content-Length', String(size));
     const full = () => new Response(response.body, {status: 200, headers});
@@ -70,6 +72,7 @@ export default {
     if (!range) return full();
     if (range.invalid) {
       await response.body?.cancel();
+      headers.set('Cache-Control', 'no-store');
       headers.set('Content-Range', `bytes */${size}`);
       headers.set('Content-Length', '0');
       return new Response(null, {status: 416, headers});
