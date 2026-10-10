@@ -4,11 +4,12 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
 ---
 <dialog class="v86-lightbox" data-v86-lightbox aria-label={isChinese?'MAIXON V8.6 功能界面':'MAIXON V8.6 interface'}><button class="v86-lightbox__close" type="button" data-v86-close aria-label={isChinese?'关闭':'Close'}>✕</button><img width="2592" height="1618" alt=""/><p></p></dialog>
 <script>
+  import {assetUrl} from '@/data/asset-delivery';
   const zh=document.documentElement.lang==='zh-CN';
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
-  const connection=(navigator as Navigator&{connection?:{saveData?:boolean;effectiveType?:string}}).connection;
-  const useMobile=matchMedia('(max-width: 1024px)').matches||connection?.saveData||/^(slow-2g|2g|3g)$/.test(connection?.effectiveType||'');
-  const videoSource=(video:HTMLVideoElement)=>useMobile&&video.dataset.mobileSrc?video.dataset.mobileSrc:video.dataset.src||video.getAttribute('src')!;
+  // Every device starts with the complete web-optimized copy. Browser-reported
+  // connection speed does not measure the route to our video storage.
+  const videoSource=(video:HTMLVideoElement)=>video.dataset.mobileSrc||video.dataset.src||video.getAttribute('src')!;
   type PlaybackState='idle'|'loading'|'playing'|'paused'|'ended'|'retry';
   const bindPlayback=(video:HTMLVideoElement,frame:HTMLElement,poster:HTMLImageElement,render:(state:PlaybackState)=>void)=>{
     const note=frame.querySelector<HTMLElement>('[data-video-status]');
@@ -17,6 +18,10 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     let pending=false;
     let timer:ReturnType<typeof setTimeout>|undefined;
     let resumeAt=0;
+    let usingFallback=false;
+    let recover=()=>false;
+    const captionTrack=video.querySelector('track');
+    const primaryCaptions=captionTrack?.getAttribute('src');
     const clearTimer=()=>{if(timer!==undefined){clearTimeout(timer);timer=undefined;}};
     const update=(next:PlaybackState,message='')=>{
       state=next;frame.dataset.playbackState=next;
@@ -28,15 +33,16 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       pending=true;clearTimer();
       update('loading',zh?'正在加载视频…':'Loading video…');
       timer=setTimeout(()=>{
-        if(pending)update('retry',zh?'视频加载较慢，请点击重试。':'The video is taking longer to load. Select Retry.');
-      },12000);
+        if(pending&&!recover())update('retry',zh?'视频加载较慢，请点击重试。':'The video is taking longer to load. Select Retry.');
+      },8000);
     };
     const failed=(message:string)=>{
       attempt++;pending=false;clearTimer();
       update('retry',message);video.pause();poster.hidden=false;
     };
-    const start=(withSound:boolean)=>{
+    const start=(withSound:boolean,backup=false)=>{
       const retry=state==='retry'||!!video.error;
+      usingFallback=backup;
       video.dataset.requested='true';
       // Safari must see the video at play() time. The separate image keeps
       // the picture visible until a decoded frame is ready.
@@ -44,9 +50,13 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       video.poster=poster.currentSrc||poster.src;
       if(withSound){video.muted=false;video.volume=1;video.loop=false;}
       video.preload='auto';
-      const chosen=retry&&video.dataset.mobileSrc?video.dataset.mobileSrc:video.getAttribute('src')||videoSource(video);
-      if(!video.getAttribute('src')||retry){
-        resumeAt=video.ended?0:video.currentTime;
+      const chosen=backup?(video.dataset.fallbackMobileSrc||video.dataset.fallbackSrc||videoSource(video)):videoSource(video);
+      if(captionTrack){
+        const captions=backup?captionTrack.dataset.fallbackSrc:primaryCaptions;
+        if(captions&&captionTrack.getAttribute('src')!==captions)captionTrack.src=captions;
+      }
+      if(video.getAttribute('src')!==chosen||retry){
+        resumeAt=video.ended?0:(resumeAt||video.currentTime);
         video.src=chosen;video.load();
       }
       const currentAttempt=++attempt;
@@ -54,11 +64,21 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       loading();
       // Keep play() in the original click handler so Safari retains permission
       // to play audio. Waiting for metadata first loses that permission.
-      video.play().catch((error:DOMException)=>{
+      video.play().then(()=>{
+        if(currentAttempt!==attempt||video.paused||video.readyState<2)return;
+        // Calling play() on an already-playing preview need not emit playing.
+        pending=false;clearTimer();poster.hidden=true;update('playing');
+      }).catch((error:DOMException)=>{
         if(currentAttempt!==attempt||!pending||error.name==='AbortError')return;
+        if(error.name!=='NotAllowedError'&&recover())return;
         if(withSound)failed(zh?'播放未能开始，请点击重试。':'Playback could not start. Select Retry.');
         else {pending=false;clearTimer();poster.hidden=false;update('idle');}
       });
+    };
+    recover=()=>{
+      if(usingFallback||!navigator.onLine||!(video.dataset.fallbackMobileSrc||video.dataset.fallbackSrc))return false;
+      start(!video.muted,true);
+      return true;
     };
     video.addEventListener('play',()=>{
       video.dataset.requested='true';video.hidden=false;
@@ -83,7 +103,11 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     ['waiting','stalled'].forEach(event=>video.addEventListener(event,()=>{
       if(video.dataset.requested&&!video.paused&&video.readyState<3&&state!=='retry')loading();
     }));
-    video.addEventListener('error',()=>failed(zh?'视频暂时无法加载，请点击重试。':'The video could not load. Select Retry.'));
+    video.addEventListener('error',()=>{
+      if(!video.error)return;
+      if(video.dataset.requested&&recover())return;
+      failed(zh?'视频暂时无法加载，请点击重试。':'The video could not load. Select Retry.');
+    });
     window.addEventListener('offline',()=>{
       if(pending||!video.paused)failed(zh?'网络已断开，恢复连接后可点击重试。':'You are offline. Reconnect, then select Retry.');
     });
@@ -151,7 +175,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       const theme=button.dataset.v86Theme!;
       if(frame.dataset.theme===theme&&(!video||video.hidden))return;
       resetVideo();frame.dataset.manualTheme='true';frame.dataset.theme=theme;
-      img.src=`/media/v86/screenshots/${theme}/${frame.dataset.poster}.webp`;
+      img.src=assetUrl(`/media/v86/screenshots/${theme}/${frame.dataset.poster}.webp`);
       if(video)video.poster=img.src;
       img.alt=img.alt.replace(/浅色|深色|light|dark/g,m=>/[a-z]/.test(m)?theme:theme==='light'?'浅色':'深色');
       frame.querySelectorAll('[data-v86-theme]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
@@ -213,7 +237,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       const frame=section.querySelector<HTMLElement>('[data-v86-media]')!;
       const img=frame.querySelector('img')!;
       frame.dataset.poster=`ai-sample-${button.dataset.aiSample}`;
-      img.src=`/media/v86/screenshots/${frame.dataset.theme}/${frame.dataset.poster}.webp`;
+      img.src=assetUrl(`/media/v86/screenshots/${frame.dataset.theme}/${frame.dataset.poster}.webp`);
       img.alt=`MAIXON TOOL V8.6 · ${button.textContent} · ${frame.dataset.theme==='dark'?(zh?'深色':'Dark'):(zh?'浅色':'Light')}`;
       const label=frame.querySelector('.v86-media__source')!;
       label.lastChild!.textContent=button.textContent;

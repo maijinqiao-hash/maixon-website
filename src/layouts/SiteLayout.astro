@@ -3,6 +3,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import DownloadSelector from "@/components/DownloadSelector.astro";
 import { getMedia, type Locale } from "@/data/media";
+import {assetUrl, publicAssetsBase} from '@/data/asset-delivery';
 import "@/styles/global.css";
 
 interface Props {
@@ -34,11 +35,37 @@ const enPath = locale === "en" ? localizedPath : alternatePath;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="description" content={description} />
+    <link rel="preconnect" href={new URL(publicAssetsBase).origin} crossorigin />
+    <script is:inline define:vars={{publicAssetsBase}}>
+      // Keep the same-site copies usable if the media provider is unavailable.
+      window.addEventListener('error', function (event) {
+        var node = event.target;
+        if (!node || !node.getAttribute || node.tagName === 'VIDEO') return;
+        var key = node.tagName === 'LINK' ? 'href' : 'src';
+        var address = node.getAttribute(key);
+        if (!address || address.indexOf(publicAssetsBase + '/') !== 0) return;
+        node.setAttribute('data-delivery-fallback', 'true');
+        var local = address.slice(publicAssetsBase.length);
+        if (node.tagName === 'SCRIPT') {
+          var retry = document.createElement('script');
+          retry.type = node.type; retry.src = local;
+          document.head.appendChild(retry);
+        } else if (node.tagName === 'IMG') {
+          node.removeAttribute('srcset');
+          if (node.parentElement && node.parentElement.tagName === 'PICTURE') {
+            node.parentElement.querySelectorAll('source').forEach(function (source) {source.removeAttribute('srcset');});
+          }
+          node.src = local;
+        } else if (node.tagName === 'LINK') {
+          node.href = local;
+        }
+      }, true);
+    </script>
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="zh-CN" href={new URL(zhPath, Astro.site)} />
     <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
     <link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site)} />
-    <link rel="icon" type="image/webp" href="/media-responsive/brand/app-icon-640.webp" />
+    <link rel="icon" type="image/webp" href={assetUrl('/media-responsive/brand/app-icon-640.webp')} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MAIXON" />
     <meta property="og:title" content={title} />
@@ -64,6 +91,7 @@ const enPath = locale === "en" ? localizedPath : alternatePath;
     <Footer locale={locale} />
     <DownloadSelector locale={locale} />
     <script>
+      import {publicAssetsBase} from '@/data/asset-delivery';
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
       const videos = Array.from(document.querySelectorAll("video[data-autoplay-media]"))
         .filter((node): node is HTMLVideoElement => node instanceof HTMLVideoElement);
@@ -115,6 +143,14 @@ const enPath = locale === "en" ? localizedPath : alternatePath;
       videos.forEach((video) => {
         video.muted = true;
         video.playsInline = true;
+        video.addEventListener("error", () => {
+          const source = video.getAttribute("src");
+          if (!source?.startsWith(publicAssetsBase + "/")) return;
+          video.dataset.mediaSrc = source.slice(publicAssetsBase.length);
+          loadedVideos.delete(video);
+          if (isOnScreen(video)) playVideo(video);
+          else loadVideo(video, "metadata");
+        });
         ["loadedmetadata", "durationchange", "timeupdate", "ended"].forEach((eventName) => {
           video.addEventListener(eventName, () => syncProgress(video));
         });

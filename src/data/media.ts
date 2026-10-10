@@ -1,5 +1,6 @@
 import manifestJson from "./media-manifest.json";
 import fallbackJson from "./media-locale-fallbacks.json";
+import {assetUrl} from './asset-delivery';
 
 export type Locale = "zh-CN" | "en";
 
@@ -81,5 +82,11 @@ export function getMedia(id: string, locale?: Locale) {
       `Locale mismatch: ${id} is ${media.locale}, requested by ${locale}`
     );
   }
-  return media;
+  return {
+    ...media,
+    src: assetUrl(media.src),
+    original_src: media.original_src ? assetUrl(media.original_src) : undefined,
+    srcset: media.srcset.map(source => ({...source, src: assetUrl(source.src)})),
+    srcset_avif: media.srcset_avif?.map(source => ({...source, src: assetUrl(source.src)}))
+  };
 }

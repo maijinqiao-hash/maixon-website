@@ -1,13 +1,14 @@
 ---
 import {demoById,demoText,durationLabel} from '@/data/v86/demos';
+import {assetUrl} from '@/data/asset-delivery';
 interface Props{id:string;locale:'zh-CN'|'en';instance?:string;caption?:boolean;}
 const {id,locale,instance=id,caption=true}=Astro.props;
 const demo=demoById(id);const copy=demoText(demo,locale);const zh=locale==='zh-CN';
 ---
 <figure class="v86-owner-video" id={`film-${instance}`} data-owner-demo={id}>
  <div class="v86-owner-video__screen" style={`aspect-ratio:${demo.width}/${demo.height};--v86-video-padding:${100*demo.height/demo.width}%`}>
-  <video controls playsinline preload="none" data-src={demo.path} data-mobile-src={`/media/v86/mobile/owner/${id}.mp4`} aria-label={copy.title} data-owner-player hidden></video>
-  <img class="v86-owner-video__poster" data-owner-poster src={demo.poster} width={demo.width} height={demo.height} alt="" loading="lazy" decoding="async" />
+  <video controls playsinline crossorigin="anonymous" preload="none" data-src={assetUrl(demo.path)} data-mobile-src={assetUrl(`/media/v86/mobile/owner/${id}.mp4`)} data-fallback-src={demo.path} data-fallback-mobile-src={`/media/v86/mobile/owner/${id}.mp4`} aria-label={copy.title} data-owner-player hidden></video>
+  <img class="v86-owner-video__poster" data-owner-poster src={assetUrl(demo.poster)} width={demo.width} height={demo.height} alt="" loading="lazy" decoding="async" />
   <button type="button" class="v86-owner-video__start" data-owner-start aria-label={`${zh?'有声播放':'Play with sound'}：${copy.title}`}><span aria-hidden="true">▶</span><span data-owner-start-label>{zh?'有声播放完整流程':'Play with sound'}</span><small>{durationLabel(demo.duration)}</small></button>
  </div>
  {caption&&<figcaption><span>{copy.title}</span><span class="v86-duration" aria-label={zh?'视频时长':'Video duration'}>{durationLabel(demo.duration)}</span></figcaption>}

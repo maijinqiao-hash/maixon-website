@@ -1,6 +1,7 @@
 ---
 import {demoById,demoText,durationLabel} from '@/data/v86/demos';
+import {assetUrl} from '@/data/asset-delivery';
 interface Props {ids:string[];locale:'zh-CN'|'en';}
 const {ids,locale}=Astro.props;const zh=locale==='zh-CN';
 ---
-<div class="v86-demo-grid">{ids.map(id=>{const d=demoById(id);const t=demoText(d,locale);return <a class="v86-demo-card" href={`/${locale}/workflows/${id}/`}><div class="v86-demo-card__image"><img src={d.poster} alt={t.title} width={d.width} height={d.height} loading="lazy"/><span class="v86-demo-card__play" aria-hidden="true">▶</span><span class="v86-demo-card__duration">{durationLabel(d.duration)}</span></div><div class="v86-demo-card__text"><h3>{t.title}</h3><p>{t.summary}</p><span class="v86-text-link">{zh?'观看完整流程':'Watch the workflow'} ↗</span></div></a>})}</div>
+<div class="v86-demo-grid">{ids.map(id=>{const d=demoById(id);const t=demoText(d,locale);return <a class="v86-demo-card" href={`/${locale}/workflows/${id}/`}><div class="v86-demo-card__image"><img src={assetUrl(d.poster)} alt={t.title} width={d.width} height={d.height} loading="lazy"/><span class="v86-demo-card__play" aria-hidden="true">▶</span><span class="v86-demo-card__duration">{durationLabel(d.duration)}</span></div><div class="v86-demo-card__text"><h3>{t.title}</h3><p>{t.summary}</p><span class="v86-text-link">{zh?'观看完整流程':'Watch the workflow'} ↗</span></div></a>})}</div>
