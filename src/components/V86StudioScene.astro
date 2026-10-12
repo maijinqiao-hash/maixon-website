@@ -36,7 +36,9 @@ const initial=`left:${p0[0]*100}%;top:${p0[1]*100}%;transform:matrix(${p1[0]-p0[
    screen.style.transform=`matrix3d(${a/w},${b/w},0,${g/w},${c/h},${d/h},0,${j/h},0,0,1,0,${x0},${y0},0,1)`;
    picture.dataset.sceneReady='true';
   };
-  fit();new ResizeObserver(fit).observe(picture);
+  fit();
+  if(typeof ResizeObserver==='function')new ResizeObserver(fit).observe(picture);
+  else window.addEventListener('resize',fit);
  });
 </script>
 <style>
