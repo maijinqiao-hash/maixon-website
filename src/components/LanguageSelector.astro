@@ -1,0 +1,28 @@
+---
+import {siteLanguages,languagePath,type SiteLanguage} from '@/data/i18n/languages';
+interface Props {locale:SiteLanguage;mobile?:boolean}
+const {locale,mobile=false}=Astro.props;
+const current=siteLanguages.find(item=>item.code===locale)!;
+const label=locale==='zh-CN'?'选择语言':'Choose language';
+---
+{mobile?<nav class="language-options language-options--mobile" aria-label={label} data-language-menu>
+  {siteLanguages.map(item=><a href={languagePath(Astro.url.pathname,item.code)} lang={item.code} data-native-language={item.code} aria-current={item.code===locale?'true':undefined}>{item.name}</a>)}
+</nav>:<details class="language-selector" data-language-selector>
+  <summary aria-label={label}>
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4.2" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></svg>
+    <span data-current-language data-native-language={locale}>{current.name}</span><span class="language-selector__chevron" aria-hidden="true">⌄</span>
+  </summary>
+  <nav class="language-options" aria-label={label} data-language-menu>
+    {siteLanguages.map(item=><a href={languagePath(Astro.url.pathname,item.code)} lang={item.code} data-native-language={item.code} aria-current={item.code===locale?'true':undefined}>{item.name}</a>)}
+  </nav>
+</details>}
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('[data-native-language][href]').forEach(link=>{
+    const update=()=>{const url=new URL(link.href);url.hash=window.location.hash;link.href=url.pathname+url.hash;};
+    update();window.addEventListener('hashchange',update);
+  });
+  document.querySelectorAll<HTMLDetailsElement>('[data-language-selector]').forEach(menu=>{
+    document.addEventListener('click',event=>{if(event.target instanceof Node&&!menu.contains(event.target))menu.open=false;});
+    menu.addEventListener('keydown',event=>{if(event.key==='Escape'){menu.open=false;menu.querySelector('summary')?.focus();}});
+  });
+</script>

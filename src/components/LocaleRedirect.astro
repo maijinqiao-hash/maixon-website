@@ -1,5 +1,6 @@
 ---
 import type { Locale } from "@/data/media";
+import {siteLanguages} from '@/data/i18n/languages';
 interface Props { locale: Locale; path: string; }
 const { locale, path } = Astro.props;
 const target = `/${locale}/${path}`;
@@ -13,9 +14,8 @@ const title = locale === "zh-CN" ? "前往 V8.6 操作指南" : "Open the V8.6 g
     <meta http-equiv="refresh" content={`0;url=${target}`} />
     <title>{title} · MAIXON</title>
     <link rel="canonical" href={new URL(target, Astro.site)} />
-    <link rel="alternate" hreflang="zh-CN" href={new URL(`/zh-CN/${path}`, Astro.site)} />
-    <link rel="alternate" hreflang="en" href={new URL(`/en/${path}`, Astro.site)} />
-    <link rel="alternate" hreflang="x-default" href={new URL(`/en/${path}`, Astro.site)} />
+    {siteLanguages.map(language=><link rel="alternate" hreflang={language.code} href={new URL(`/${language.code}/${path}`, Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(`/zh-CN/${path}`, Astro.site)} />
   </head>
   <body><p><a href={target}>{title}</a></p></body>
 </html>

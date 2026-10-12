@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run media:build && astro check && astro build && npm run validate:bilingual && npm run validate:v86 && npm run test:video-ranges",
+    "build": "npm run media:build && astro check && astro build && npm run validate:bilingual && npm run validate:v86 && npm run validate:locales && npm run test:video-ranges",
     "preview": "astro preview",
     "check": "astro check",
     "media:build": "node scripts/build-media.mjs",
     "validate:bilingual": "node scripts/validate-bilingual.mjs",
+    "validate:locales": "node scripts/validate-localization.mjs",
     "validate:v86": "node scripts/validate-v86-media.mjs",
     "test:video-ranges": "node scripts/test-video-ranges.mjs"
   },
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.6",
+    "parse5": "^7.3.0",
     "sharp": "0.35.3",
     "typescript": "5.9.3"
   }

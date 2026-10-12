@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import delivery from "./deployment/public-assets.json" with {type: "json"};
+import localizedPages from './scripts/localized-pages.mjs';
 
 export default defineConfig({
   site: "https://guojindigital.com",
@@ -23,6 +24,7 @@ export default defineConfig({
           en: "en"
         }
       }
-    })
+    }),
+    localizedPages()
   ]
 });

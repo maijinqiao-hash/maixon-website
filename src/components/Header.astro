@@ -1,5 +1,6 @@
 ---
 import BrandLogo from "@/components/BrandLogo.astro";
+import LanguageSelector from './LanguageSelector.astro';
 import { nav } from "@/data/site";
 import type { Locale } from "@/data/media";
 
@@ -10,7 +11,7 @@ interface Props {
   menuLabel: string;
 }
 
-const { locale, alternatePath, menuLabel } = Astro.props;
+const { locale, menuLabel } = Astro.props;
 const downloadLabel = locale === "zh-CN" ? "下载" : "Download";
 const home = `/${locale}/`;
 ---
@@ -27,9 +28,7 @@ const home = `/${locale}/`;
   </nav>
 
   <div class="header-actions">
-    <a class="language-link" href={alternatePath} lang={locale === "zh-CN" ? "en" : "zh-CN"}>
-      {locale === "zh-CN" ? "EN" : "中文"}
-    </a>
+    <LanguageSelector locale={locale}/>
     <a class="button button--small button--dark" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{downloadLabel}</a>
   </div>
 
@@ -41,7 +40,7 @@ const home = `/${locale}/`;
       {nav[locale].map((item) => (
         <a href={`${home}${item.href}`}>{item.label}</a>
       ))}
-      <a href={alternatePath}>{locale === "zh-CN" ? "English" : "中文"}</a>
+      <LanguageSelector locale={locale} mobile/>
       <a class="button button--dark" href="#download-selector" data-download-selector-open aria-haspopup="dialog" aria-controls="download-selector">{downloadLabel}</a>
     </div>
   </details>

@@ -7,6 +7,7 @@ import {homeDemo} from '../data/v86/demos';
 import V86Media from './V86Media.astro';
 import V86AISamples from './V86AISamples.astro';
 import V86SubfeatureIndex from './V86SubfeatureIndex.astro';
+import V86StudioScene from './V86StudioScene.astro';
 import HardwareOverview from './hardware/HardwareOverview.astro';
 import {features} from '../data/v86/content';
 interface Props {locale:'zh-CN'|'en'}
@@ -35,6 +36,7 @@ const flow=zh?['找回图稿','表达要求','处理图像','制图排版','接�
       <h2>{zh?<>做完图。<br/>接下来，<span>就是打印。</span></>:<>Artwork prepared.<br/>The next step?<br/><span>Print.</span></>}</h2>
       <div class="v86-maintop__copy"><h3>{zh?'自动接入蒙泰。让印前流程继续向前。':'Automatic MainTop integration. Keep prepress moving.'}</h3><p>{zh?'从图稿处理、白墨生成、排版到文件输出，再自动接入 MainTop。把点击打印机软件“打印”按钮之前的准备工作串联起来，让重复操作自动接续，让生产准备更连贯。':'MAIXON connects preparation before the printer software’s Print button: image processing, white ink, layouts, file output and the handoff to MainTop. Fewer repeated steps. A more continuous preparation workflow.'}</p><a href={`/${locale}/maintop/`} class="v86-text-link">{zh?'了解衔接流程':'Explore the workflow'} →</a></div>
       <V86MaintopDemo locale={locale} />
+      <V86StudioScene id="print-team" locale={locale}/>
     </div>
   </section>
   <nav class="v86-feature-nav" aria-label={zh?'软件功能':'Software features'}>{items.map(f=><a href={`#${f.id}`}>{f.tag}</a>)}</nav>
@@ -48,6 +50,9 @@ const flow=zh?['找回图稿','表达要求','处理图像','制图排版','接�
       {f.id==='dtf'&&<div class="v86-feature-more"><h3>{zh?'一张图、多张图，都有合适的排法。':'The right layout for one image or many.'}</h3><V86DemoCollection ids={['dtf-count','dtf-nesting','dtf-canvas']} locale={locale}/></div>}
       {['dtf','dtg'].includes(f.id)&&<a class="v86-maintop-link" href={`/${locale}/features/${f.id}/maintop/`}><span><small>MAIXON × MainTop</small><strong>{zh?`${f.id==='dtf'?'白墨烫画':'白墨直喷'}，自动接入蒙泰。`:`${f.id.toUpperCase()}, connected to MainTop.`}</strong></span><span aria-hidden="true">↗</span></a>}
       {f.id==='sublimation'&&<div class="v86-benefit-grid"><section><p class="v86-eyebrow">{zh?'自定义纸张宽度':'CUSTOM ROLL WIDTH'}</p><h3>{zh?'卷材多宽，就按多宽排。':'Fit the roll you use.'}</h3><p>{zh?'按实际卷材输入纸张宽度，例如 1820 mm。结合间距与方向，安排每一片的位置。':'Set the usable roll width, such as 1820 mm, then arrange pieces with the spacing and direction you need.'}</p></section><section><p class="v86-eyebrow">{zh?'自动切割线':'AUTOMATIC CUT LINES'}</p><h3>{zh?'线条自动加，颜色自己选。':'Add the lines. Choose the color.'}</h3><p>{zh?'按生产需要添加切割线，颜色可以自由选择。裁片轮廓更清楚，后续裁切更方便。':'Add cutting outlines and choose a distinct color for the next production step.'}</p></section></div>}
+      {f.id==='voice'&&<V86StudioScene id="voice-daylight" locale={locale}/>}
+      {f.id==='ai'&&<V86StudioScene id="ai-evening" locale={locale}/>}
+      {f.id==='dtf'&&<V86StudioScene id="layout-daylight" locale={locale}/>}
     </div>
   </section>)}
   <section class="v86-section v86-comfort" data-v86-reveal><p class="v86-eyebrow">{zh?'深浅之间，都很顺手。':'TWO THEMES. ONE FAMILIAR WORKFLOW.'}</p><h2>{zh?<>日常生产。<br/><span>也是日常的舒适。</span></>:<>Built for production.<br/><span>Comfortable every day.</span></>}</h2><p class="v86-lead">{zh?'保留同样的位置、同样的流程。浅色清晰舒展，深色沉静专注。点击界面下方的主题按钮，找到更舒服的工作方式。':'The same controls, in the same places. A clear light interface and a focused dark environment. Use the theme buttons below each image to explore both.'}</p><V86Media id="themes" poster="overview" video="overview-light" locale={locale} /><a class="v86-text-link" href={`/${locale}/tour/`}>{zh?'浏览完整界面图集':'Browse the complete interface gallery'} →</a></section>

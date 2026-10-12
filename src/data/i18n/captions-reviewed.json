@@ -1,0 +1,277 @@
+{
+  "From finding artwork to AI processing, image preparation and layout, MAIXON eight point six brings prepress into one workspace.": [
+    "MAIXON 8.6 รวมการค้นหาภาพ การประมวลผล AI การเตรียมภาพ และการจัดวางงานไว้ในเวิร์กสเปซเดียว",
+    "図案検索、AI 処理、画像の準備、レイアウトまで。MAIXON 8.6 は印刷前の作業をひとつにまとめます。",
+    "도안 검색부터 AI 처리, 이미지 준비와 배치까지. MAIXON 8.6은 인쇄 전 작업을 하나의 작업 공간에 모읍니다."
+  ],
+  "Halftone adjusts the dot pattern. DTF offers single artwork, repeated layouts, multiple-image layouts and custom canvases. Choose the mode for your production task.": [
+    "ฮาล์ฟโทนใช้ปรับลายจุด ส่วน DTF รองรับภาพเดี่ยว การจัดวางภาพซ้ำ การจัดวางหลายภาพ และพื้นที่งานกำหนดเอง เลือกโหมดให้เหมาะกับงานผลิต",
+    "ハーフトーンで網点を調整。DTF では単一図案、繰り返し配置、複数画像配置、指定キャンバスを選べます。作業に合うモードを選択してください。",
+    "하프톤으로 망점을 조정합니다. DTF는 단일 도안, 반복 배치, 여러 이미지 배치와 사용자 지정 캔버스를 제공합니다. 작업에 맞는 모드를 선택하세요."
+  ],
+  "DTG controls fabric and white ink separately. For sublimation, compare layouts, review the result and export.": [
+    "DTG ให้เลือกชนิดผ้าและปรับหมึกขาวแยกกัน ส่วนงานซับลิเมชันสามารถเปรียบเทียบรูปแบบการจัดวาง ตรวจผลลัพธ์ และส่งออกไฟล์",
+    "DTG では生地に応じて白インクを調整します。昇華転写ではレイアウト案を比較し、結果を確認して書き出します。",
+    "DTG에서는 원단에 맞춰 흰색 잉크를 조정합니다. 승화전사는 배치안을 비교하고 결과를 확인한 뒤 내보냅니다."
+  ],
+  "Connect tasks with instructions and switch themes whenever you need.": [
+    "ใช้คำสั่งเชื่อมต่อขั้นตอนงาน และสลับธีมสว่างหรือมืดได้ตามต้องการ",
+    "指示を使って作業をつなぎ、必要に応じてライト・ダークテーマを切り替えられます。",
+    "명령으로 작업을 연결하고 필요할 때 밝은 테마와 어두운 테마를 전환하세요."
+  ],
+  "The light theme keeps the same controls. Start from Production Overview, then open Image Finder or the AI Workbench to prepare your artwork.": [
+    "ธีมสว่างยังคงใช้ปุ่มควบคุมชุดเดิม เริ่มจากภาพรวมการผลิต แล้วเปิดค้นหารูปภาพหรือเวิร์กสเปซ AI เพื่อเตรียมภาพ",
+    "ライトテーマでも操作は同じです。生産概要から画像検索や AI ワークスペースを開き、図案を準備します。",
+    "라이트 테마에서도 조작 방식은 같습니다. 생산 개요에서 이미지 검색이나 AI 작업실을 열어 도안을 준비하세요."
+  ],
+  "Choose Halftone, DTF or DTG as needed and keep working with the same artwork.": [
+    "เลือกฮาล์ฟโทน DTF หรือ DTG ตามงาน แล้วทำต่อด้วยภาพเดิม",
+    "必要に応じてハーフトーン、DTF、DTG を選び、同じ図案で作業を続けられます。",
+    "필요에 따라 하프톤, DTF 또는 DTG를 선택하고 같은 도안으로 작업을 이어가세요."
+  ],
+  "Continue with sublimation layout, or enter an instruction to prepare your next task.": [
+    "ทำต่อด้วยการจัดวางงานซับลิเมชัน หรือป้อนคำสั่งเพื่อเตรียมงานถัดไป",
+    "昇華転写のレイアウトへ進むか、指示を入力して次の作業を準備します。",
+    "승화전사 배치 작업으로 이어가거나 명령을 입력해 다음 작업을 준비하세요."
+  ],
+  "Choose the artwork and enter a clear instruction. When using speech, check the recognized text first.": [
+    "เลือกภาพและป้อนคำสั่งให้ชัดเจน หากใช้เสียง ให้ตรวจข้อความที่ระบบรู้จำก่อน",
+    "図案を選び、明確な指示を入力します。音声入力の場合は、認識されたテキストを先に確認してください。",
+    "도안을 선택하고 명확한 명령을 입력하세요. 음성 입력을 사용할 때는 인식된 문장을 먼저 확인하세요."
+  ],
+  "After parsing, review the task type, dimensions, resolution and white-ink settings.": [
+    "หลังระบบแปลคำสั่ง ให้ตรวจชนิดงาน ขนาด ความละเอียด และการตั้งค่าหมึกขาว",
+    "解析後、作業の種類、寸法、解像度、白インクの設定を確認します。",
+    "명령 분석 후 작업 유형, 크기, 해상도와 흰색 잉크 설정을 확인하세요."
+  ],
+  "Confirm the settings to run the task. Here, artwork width is fifteen centimeters, with five-millimeter margins on every edge.": [
+    "ยืนยันค่าก่อนเริ่มงาน ตัวอย่างนี้ตั้งความกว้างภาพ 15 เซนติเมตร และเพิ่มขอบทุกด้าน 5 มิลลิเมตร",
+    "設定を確認して実行します。この例では図案の幅を 15 センチメートルにし、各辺に 5 ミリメートルの余白を追加します。",
+    "설정을 확인하고 실행하세요. 이 예시는 도안 너비를 15센티미터로 설정하고 모든 가장자리에 5밀리미터의 여백을 추가합니다."
+  ],
+  "Open the exported TIFF in Photoshop to inspect the result.": [
+    "เปิด TIFF ที่ส่งออกใน Photoshop เพื่อตรวจผลลัพธ์",
+    "書き出した TIFF を Photoshop で開き、結果を確認します。",
+    "내보낸 TIFF를 Photoshop에서 열어 결과를 확인하세요."
+  ],
+  "Choose the local folder that holds your artwork and prepare its library. Once the first scan is complete, you can search with a reference image.": [
+    "เลือกโฟลเดอร์ภาพในเครื่องและสร้างคลังภาพ เมื่อสแกนครั้งแรกเสร็จแล้ว จะค้นหาด้วยภาพอ้างอิงได้",
+    "図案を保存したローカルフォルダーを選び、ライブラリを準備します。初回スキャンが完了すると、参照画像から検索できます。",
+    "도안이 저장된 로컬 폴더를 선택하고 라이브러리를 준비하세요. 첫 스캔이 완료되면 참고 이미지로 검색할 수 있습니다."
+  ],
+  "Check the usable file count in Library Management. Then return to the workspace and choose a reference image.": [
+    "ตรวจจำนวนไฟล์ที่ใช้งานได้ในหน้าจัดการคลังภาพ แล้วกลับไปยังพื้นที่ทำงานและเลือกภาพอ้างอิง",
+    "ライブラリ管理で利用可能なファイル数を確認します。ワークスペースに戻り、参照画像を選択してください。",
+    "라이브러리 관리에서 사용 가능한 파일 수를 확인하세요. 작업 공간으로 돌아가 참고 이미지를 선택하세요."
+  ],
+  "Compare the reference with the search results to find the artwork you need. You can compare similar designs side by side.": [
+    "เปรียบเทียบภาพอ้างอิงกับผลการค้นหาเพื่อหาภาพที่ต้องการ สามารถดูแบบที่คล้ายกันเคียงข้างกันได้",
+    "参照画像と検索結果を比較し、必要な図案を探します。似たデザインを並べて比較できます。",
+    "참고 이미지와 검색 결과를 비교해 필요한 도안을 찾으세요. 비슷한 디자인을 나란히 비교할 수 있습니다."
+  ],
+  "Looking for just one design? Select its region to reduce background distractions.": [
+    "ต้องการค้นหาเฉพาะลายเดียวหรือไม่ เลือกบริเวณลายนั้นเพื่อลดผลจากพื้นหลัง",
+    "ひとつの図案だけを探す場合は、その範囲を選択すると背景の影響を減らせます。",
+    "특정 도안 하나만 찾고 싶다면 해당 영역을 선택해 배경의 영향을 줄이세요."
+  ],
+  "Search again with the selected region, check the match, then open the folder containing the artwork.": [
+    "ค้นหาอีกครั้งด้วยบริเวณที่เลือก ตรวจภาพที่ตรงกัน แล้วเปิดโฟลเดอร์ที่เก็บภาพนั้น",
+    "選択範囲で再検索し、一致する図案を確認して、保存先フォルダーを開きます。",
+    "선택한 영역으로 다시 검색하고 일치하는 도안을 확인한 뒤 원본이 있는 폴더를 여세요."
+  ],
+  "Import the image and compare the original with the halftone effect in one window. Transparent artwork can also continue through halftone processing.": [
+    "นำเข้าภาพและเปรียบเทียบต้นฉบับกับเอฟเฟกต์ฮาล์ฟโทนในหน้าต่างเดียว ภาพพื้นหลังโปร่งใสก็ใช้ฮาล์ฟโทนต่อได้",
+    "画像を読み込み、元画像とハーフトーン効果を同じ画面で比較します。背景が透明な図案もハーフトーン処理できます。",
+    "이미지를 가져와 한 화면에서 원본과 하프톤 효과를 비교하세요. 배경이 투명한 도안도 하프톤으로 처리할 수 있습니다."
+  ],
+  "Set the finished width and lines per inch, then compare tone-preserving and full-image dot patterns.": [
+    "ตั้งความกว้างชิ้นงานและจำนวนเส้นต่อนิ้ว แล้วเปรียบเทียบโหมดรักษาเฉดสีกับโหมดจุดทั่วทั้งภาพ",
+    "仕上がり幅と LPI を設定し、階調を保つ処理と全体を網点にする処理を比較します。",
+    "완성 너비와 인치당 선 수를 설정하고 계조 유지 방식과 전체 망점 방식을 비교하세요."
+  ],
+  "Additional settings include resolution, screen angle, diameter ratio and black-removal threshold. Adjust one at a time and zoom in to inspect details.": [
+    "ค่าขั้นสูงมีความละเอียด มุมจุด อัตราส่วนเส้นผ่านศูนย์กลาง และเกณฑ์ลบสีดำ ค่อย ๆ ปรับทีละค่าและซูมตรวจรายละเอียด",
+    "追加設定には解像度、網点角度、直径比、黒の除去しきい値があります。ひとつずつ調整し、拡大して詳細を確認してください。",
+    "추가 설정에는 해상도, 망점 각도, 직경 비율과 검정 제거 임계값이 있습니다. 한 번에 하나씩 조정하고 확대해 세부 사항을 확인하세요."
+  ],
+  "When ready, open the result in Photoshop and continue to artwork preparation and layout.": [
+    "เมื่อพร้อม ให้เปิดผลลัพธ์ใน Photoshop แล้วทำต่อในขั้นเตรียมภาพและจัดวางงาน",
+    "準備ができたら Photoshop で結果を開き、図案の準備やレイアウトへ進みます。",
+    "준비가 끝나면 결과를 Photoshop에서 열어 도안 준비와 배치 작업으로 이어가세요."
+  ],
+  "Choose Remove Background, import an image and select the processing method for your artwork. Then start.": [
+    "เลือกการลบพื้นหลัง นำเข้าภาพ และเลือกวิธีประมวลผลให้เหมาะกับภาพ แล้วเริ่มทำงาน",
+    "背景除去を選び、画像を読み込み、図案に合う処理方法を選択して実行します。",
+    "배경 제거를 선택하고 이미지를 가져온 뒤 도안에 맞는 처리 방식을 선택해 실행하세요."
+  ],
+  "Drag the comparison divider to see the original and the processed result together. Check that the subject is complete.": [
+    "ลากเส้นแบ่งเพื่อเปรียบเทียบต้นฉบับกับผลลัพธ์ และตรวจว่ารายละเอียดของวัตถุยังครบถ้วน",
+    "比較スライダーを動かし、元画像と処理結果を同時に確認します。被写体が欠けていないか確認してください。",
+    "비교 슬라이더를 움직여 원본과 처리 결과를 함께 보세요. 피사체가 빠짐없이 유지됐는지 확인하세요."
+  ],
+  "Switch between Original, Compare and Result to inspect the edges. Save a transparent image when ready, or continue to the next step.": [
+    "สลับต้นฉบับ เปรียบเทียบ และผลลัพธ์เพื่อตรวจขอบภาพ เมื่อพร้อมให้บันทึกภาพโปร่งใสหรือทำขั้นตอนถัดไป",
+    "元画像・比較・結果を切り替えて輪郭を確認します。透明画像を保存するか、次の作業へ進んでください。",
+    "원본, 비교, 결과를 전환하며 가장자리를 확인하세요. 준비가 되면 투명 이미지를 저장하거나 다음 단계로 진행하세요."
+  ],
+  "For a sharper image, choose Enhance and select the enlargement factor you need.": [
+    "หากต้องการภาพคมชัดขึ้น ให้เลือกเพิ่มความคมชัดและอัตราขยายที่ต้องการ",
+    "画像を鮮明にするには、高画質化を選び、必要な拡大倍率を設定します。",
+    "더 선명한 이미지가 필요하면 선명도 향상을 선택하고 원하는 확대 배율을 설정하세요."
+  ],
+  "After four-times enlargement, this image measures 4380 by 5600 pixels. Zoom in to inspect text and lines, and check the details you want to keep.": [
+    "หลังขยายสี่เท่า ภาพนี้มีขนาด 4380 × 5600 พิกเซล ซูมตรวจตัวอักษร เส้น และรายละเอียดที่ต้องการเก็บ",
+    "4 倍に拡大したこの画像は 4380 × 5600 ピクセルです。文字や線を拡大し、残したい詳細を確認してください。",
+    "4배 확대한 이 이미지는 4380 × 5600픽셀입니다. 확대해 글자와 윤곽선, 유지할 세부 사항을 확인하세요."
+  ],
+  "When editing with instructions, describe the change you want and the artwork and text that should stay.": [
+    "เมื่อแก้ไขด้วยคำสั่ง ให้ระบุสิ่งที่ต้องการเปลี่ยน รวมทั้งภาพและข้อความที่ต้องคงไว้",
+    "指示で編集する場合は、変更したい内容と、残したい図案や文字を明確に伝えてください。",
+    "명령으로 편집할 때는 변경할 내용과 유지해야 할 도안 및 글자를 명확히 설명하세요."
+  ],
+  "For example, change the car body to blue. Compare the result with the original, then save it.": [
+    "เช่น เปลี่ยนตัวถังรถเป็นสีน้ำเงิน เปรียบเทียบผลกับต้นฉบับ แล้วบันทึก",
+    "たとえば、車体を青に変更します。元画像と結果を比較してから保存してください。",
+    "예를 들어 차체를 파란색으로 바꿉니다. 원본과 결과를 비교한 뒤 저장하세요."
+  ],
+  "Choose Extract Print, then set the extraction method, quality and aspect ratio.": [
+    "เลือกแยกลายพิมพ์ แล้วตั้งวิธีการ คุณภาพ และสัดส่วนภาพ",
+    "図案抽出を選び、抽出方法、品質、縦横比を設定します。",
+    "도안 추출을 선택하고 추출 방식, 품질과 화면 비율을 설정하세요."
+  ],
+  "Switch between the original and the result, and drag the divider to inspect the artwork. This example keeps the background. Enable automatic background removal when you need transparency.": [
+    "สลับต้นฉบับกับผลลัพธ์และลากเส้นแบ่งเพื่อตรวจภาพ ตัวอย่างนี้เก็บพื้นหลังไว้ หากต้องการความโปร่งใสให้เปิดลบพื้นหลังอัตโนมัติ",
+    "元画像と結果を切り替え、比較スライダーで図案を確認します。この例は背景を残しています。透明にする場合は自動背景除去を有効にしてください。",
+    "원본과 결과를 전환하고 비교 슬라이더로 도안을 확인하세요. 이 예시는 배경을 유지합니다. 투명 배경이 필요하면 자동 배경 제거를 켜세요."
+  ],
+  "Choose Enhance and set the enlargement factor. This artwork uses four-times enlargement.": [
+    "เลือกเพิ่มความคมชัดและตั้งอัตราขยาย ตัวอย่างนี้ใช้การขยายสี่เท่า",
+    "高画質化を選び、拡大倍率を設定します。この例では 4 倍に拡大します。",
+    "선명도 향상을 선택하고 확대 배율을 설정하세요. 이 도안은 4배 확대를 사용합니다."
+  ],
+  "The result measures 4380 by 5600 pixels. Zoom in to check lettering, outlines and details, then save.": [
+    "ผลลัพธ์มีขนาด 4380 × 5600 พิกเซล ซูมตรวจตัวอักษร เส้นขอบ และรายละเอียดก่อนบันทึก",
+    "結果は 4380 × 5600 ピクセルです。文字、輪郭、詳細を拡大して確認してから保存します。",
+    "결과 크기는 4380 × 5600픽셀입니다. 확대해 글자, 윤곽선과 세부 사항을 확인한 뒤 저장하세요."
+  ],
+  "Describe what you want to change and which parts should stay.": [
+    "ระบุสิ่งที่ต้องการเปลี่ยนและส่วนที่ต้องคงไว้",
+    "変更したい内容と、残す部分を明確に伝えます。",
+    "변경할 내용과 유지해야 할 부분을 설명하세요."
+  ],
+  "For example, change the car body to blue. Compare the result with the original, check the affected areas, then save.": [
+    "เช่น เปลี่ยนตัวถังรถเป็นสีน้ำเงิน เปรียบเทียบกับต้นฉบับ ตรวจบริเวณที่เปลี่ยน แล้วบันทึก",
+    "たとえば、車体を青に変更します。元画像と比較し、変更された範囲を確認してから保存してください。",
+    "예를 들어 차체를 파란색으로 바꿉니다. 원본과 비교하고 변경된 영역을 확인한 뒤 저장하세요."
+  ],
+  "Choose Expand and set how many pixels to add at the top, bottom, left and right. Compare the new areas with the original so the artwork fits the canvas you need.": [
+    "เลือกขยายขอบภาพและกำหนดจำนวนพิกเซลที่จะเพิ่มด้านบน ล่าง ซ้าย และขวา เปรียบเทียบพื้นที่ใหม่กับต้นฉบับให้ภาพพอดีกับพื้นที่งานที่ต้องการ",
+    "画像拡張を選び、上下左右に追加するピクセル数を設定します。新しい部分を元画像と比較し、必要なキャンバスに合わせてください。",
+    "이미지 확장을 선택하고 위, 아래, 왼쪽, 오른쪽에 추가할 픽셀 수를 설정하세요. 새 영역을 원본과 비교해 필요한 캔버스에 맞추세요."
+  ],
+  "Crop Print trims the image without removing its background. Check the retained area and make sure the subject, lettering and decoration are complete before saving.": [
+    "การครอบตัดลายพิมพ์จะตัดภาพโดยไม่ลบพื้นหลัง ตรวจพื้นที่ที่เก็บไว้ รวมถึงวัตถุ ตัวอักษร และองค์ประกอบตกแต่งให้ครบก่อนบันทึก",
+    "図案の切り抜きは、背景を除去せずに画像の範囲を整えます。被写体、文字、装飾が欠けていないか確認してから保存してください。",
+    "도안 자르기는 배경을 제거하지 않고 이미지 범위를 정리합니다. 피사체, 글자와 장식이 빠짐없이 남았는지 확인한 뒤 저장하세요."
+  ],
+  "Import artwork and choose Vectorize to create an editable SVG. Zoom in to inspect lines, lettering and proportions, then save it for further vector editing.": [
+    "นำเข้าภาพและเลือกแปลงเป็นเวกเตอร์เพื่อสร้าง SVG ที่แก้ไขได้ ซูมตรวจเส้น ตัวอักษร และสัดส่วน แล้วบันทึกเพื่อแก้ไขเวกเตอร์ต่อ",
+    "図案を読み込み、ベクター化を選んで編集可能な SVG を作成します。線、文字、比率を拡大して確認し、保存してベクター編集へ進みます。",
+    "도안을 가져와 벡터화를 선택하면 편집 가능한 SVG가 생성됩니다. 선, 글자와 비율을 확대해 확인한 뒤 저장해 벡터 편집을 이어가세요."
+  ],
+  "Choose single artwork, repeated layout, multiple-image layout or a custom canvas, depending on the production step you need.": [
+    "เลือกภาพเดี่ยว การจัดวางภาพซ้ำ การจัดวางหลายภาพ หรือพื้นที่งานกำหนดเองตามขั้นตอนผลิตที่ต้องการ",
+    "作業に合わせて、単一図案、繰り返し配置、複数画像配置、指定キャンバスを選択します。",
+    "필요한 생산 단계에 따라 단일 도안, 반복 배치, 여러 이미지 배치 또는 사용자 지정 캔버스를 선택하세요."
+  ],
+  "For single artwork, review dimensions, resolution, white-ink choke and margins, then export TIFF.": [
+    "สำหรับภาพเดี่ยว ให้ตรวจขนาด ความละเอียด การย่อขอบหมึกขาว และขอบภาพ แล้วส่งออก TIFF",
+    "単一図案では寸法、解像度、白インクの収縮、余白を確認して TIFF を書き出します。",
+    "단일 도안은 크기, 해상도, 흰색 잉크 가장자리 수축과 여백을 확인한 뒤 TIFF로 내보내세요."
+  ],
+  "Single artwork is ready. Continue to the next step.": [
+    "ภาพเดี่ยวพร้อมแล้ว ทำขั้นตอนถัดไปได้เลย",
+    "単一図案の準備ができました。次の作業へ進みます。",
+    "단일 도안이 준비됐습니다. 다음 단계로 진행하세요."
+  ],
+  "For repeated layouts, set artwork dimensions, layout width and area. Allow enough space for the complete artwork, then generate the layout.": [
+    "สำหรับการจัดวางภาพซ้ำ ให้ตั้งขนาดภาพ ความกว้างและพื้นที่จัดวาง เผื่อพื้นที่ให้ภาพครบถ้วน แล้วสร้างรูปแบบการจัดวาง",
+    "繰り返し配置では、図案の寸法、配置幅、配置範囲を設定します。図案全体が収まる空間を確保してから配置を生成してください。",
+    "반복 배치는 도안 크기, 배치 너비와 영역을 설정하세요. 도안 전체가 들어갈 공간을 확보한 뒤 배치안을 생성하세요."
+  ],
+  "Inspect the complete layout in Photoshop, checking every image and its boundaries.": [
+    "ตรวจทั้งงานใน Photoshop ให้แน่ใจว่าทุกภาพและขอบเขตครบถ้วน",
+    "Photoshop でレイアウト全体を開き、各画像と境界を確認します。",
+    "Photoshop에서 전체 배치를 열고 모든 이미지와 경계를 확인하세요."
+  ],
+  "Finally, generate the white-ink channel and export TIFF. This stage uses the existing layout without adding margins again.": [
+    "สุดท้าย สร้างช่องหมึกขาวและส่งออก TIFF ขั้นตอนนี้ใช้การจัดวางเดิมโดยไม่เพิ่มขอบซ้ำ",
+    "最後に白インクチャンネルを生成し、TIFF を書き出します。この段階では既存の配置を使い、余白は再度追加しません。",
+    "마지막으로 흰색 잉크 채널을 생성하고 TIFF로 내보냅니다. 이 단계는 기존 배치를 사용하며 여백을 다시 추가하지 않습니다."
+  ],
+  "Choose dark or light fabric to match the garment. Set white ink independently for regular and black regions.": [
+    "เลือกผ้าสีเข้มหรือสีอ่อนให้ตรงกับเสื้อผ้า แล้วปรับหมึกขาวแยกสำหรับบริเวณทั่วไปและบริเวณสีดำ",
+    "衣服に合わせて濃色・淡色生地を選びます。通常領域と黒色領域の白インクを別々に設定してください。",
+    "의류에 맞춰 어두운 원단이나 밝은 원단을 선택하세요. 일반 영역과 검정 영역의 흰색 잉크를 각각 설정하세요."
+  ],
+  "Check artwork dimensions, resolution, white-ink choke and margins, then start processing.": [
+    "ตรวจขนาดภาพ ความละเอียด การย่อขอบหมึกขาว และขอบภาพ แล้วเริ่มประมวลผล",
+    "図案の寸法、解像度、白インクの収縮、余白を確認して処理を開始します。",
+    "도안 크기, 해상도, 흰색 잉크 가장자리 수축과 여백을 확인한 뒤 처리를 시작하세요."
+  ],
+  "When processing is complete, export a TIFF for the next printing step.": [
+    "เมื่อประมวลผลเสร็จ ให้ส่งออก TIFF สำหรับขั้นตอนพิมพ์ถัดไป",
+    "処理が完了したら、次の印刷工程用に TIFF を書き出します。",
+    "처리가 끝나면 다음 인쇄 단계를 위한 TIFF를 내보내세요."
+  ],
+  "In Photoshop, inspect the color artwork and the white-ink channel to check how they align.": [
+    "ตรวจภาพสีและช่องหมึกขาวใน Photoshop เพื่อดูว่าตรงกันหรือไม่",
+    "Photoshop でカラー図案と白インクチャンネルを確認し、位置が合っているかチェックします。",
+    "Photoshop에서 컬러 도안과 흰색 잉크 채널의 정렬을 확인하세요."
+  ],
+  "Choose the PSD folder, then set paper width, spacing and rotation.": [
+    "เลือกโฟลเดอร์ PSD แล้วตั้งความกว้างกระดาษ ระยะห่าง และการหมุน",
+    "PSD フォルダーを選び、用紙幅、間隔、回転を設定します。",
+    "PSD 폴더를 선택하고 용지 너비, 간격과 회전을 설정하세요."
+  ],
+  "Photoshop reads the artwork and the software generates layout options.": [
+    "Photoshop อ่านภาพ และโปรแกรมสร้างตัวเลือกการจัดวาง",
+    "Photoshop が図案を読み込み、ソフトウェアがレイアウト案を生成します。",
+    "Photoshop이 도안을 읽으면 소프트웨어가 배치안을 생성합니다."
+  ],
+  "Once the files are ready, choose the balanced layout.": [
+    "เมื่อไฟล์พร้อมแล้ว ให้เลือกรูปแบบการจัดวางแบบสมดุล",
+    "ファイルの準備ができたら、バランス型のレイアウトを選択します。",
+    "파일이 준비되면 균형 배치안을 선택하세요."
+  ],
+  "Open the preview and inspect artwork and canvas boundaries.": [
+    "เปิดตัวอย่างและตรวจภาพกับขอบเขตพื้นที่งาน",
+    "プレビューを開き、図案とキャンバスの境界を確認します。",
+    "미리보기를 열어 도안과 캔버스 경계를 확인하세요."
+  ],
+  "Confirm the layout, then export CMYK TIFF.": [
+    "ยืนยันการจัดวาง แล้วส่งออก CMYK TIFF",
+    "レイアウトを確認し、CMYK TIFF を書き出します。",
+    "배치안을 확인하고 CMYK TIFF로 내보내세요."
+  ],
+  "Open the exported file and check the dimensions and layout.": [
+    "เปิดไฟล์ที่ส่งออกแล้วตรวจขนาดและการจัดวาง",
+    "書き出したファイルを開き、寸法と配置を確認します。",
+    "내보낸 파일을 열어 크기와 배치를 확인하세요."
+  ],
+  "Import a PDF and set paper width and artwork spacing. Then generate fast, balanced and material-saving layouts.": [
+    "นำเข้า PDF แล้วตั้งความกว้างกระดาษและระยะห่างชิ้นงาน จากนั้นสร้างแบบเร็ว แบบสมดุล และแบบประหยัดวัสดุ",
+    "PDF を読み込み、用紙幅と図案の間隔を設定します。高速・バランス・省資材のレイアウト案を生成してください。",
+    "PDF를 가져와 용지 너비와 도안 간격을 설정하세요. 빠른 배치, 균형 배치와 소재 절약 배치안을 생성하세요."
+  ],
+  "Open the layout preview and check direction, quantity and spacing between images.": [
+    "เปิดตัวอย่างการจัดวาง แล้วตรวจทิศทาง จำนวน และระยะห่างระหว่างภาพ",
+    "レイアウトのプレビューを開き、向き、数量、画像間の間隔を確認します。",
+    "배치 미리보기를 열고 방향, 수량과 이미지 사이의 간격을 확인하세요."
+  ],
+  "Choose a suitable layout and export TIFF through Photoshop to continue preparing for printing.": [
+    "เลือกการจัดวางที่เหมาะสมและส่งออก TIFF ผ่าน Photoshop เพื่อเตรียมงานพิมพ์ต่อ",
+    "適切なレイアウトを選び、Photoshop で TIFF を書き出して印刷準備を続けます。",
+    "적합한 배치안을 선택하고 Photoshop을 통해 TIFF로 내보내 인쇄 준비를 이어가세요."
+  ]
+}

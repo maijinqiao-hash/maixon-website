@@ -5,7 +5,8 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
 <dialog class="v86-lightbox" data-v86-lightbox aria-label={isChinese?'MAIXON V8.6 功能界面':'MAIXON V8.6 interface'}><button class="v86-lightbox__close" type="button" data-v86-close aria-label={isChinese?'关闭':'Close'}>✕</button><img width="2592" height="1618" alt=""/><p></p></dialog>
 <script>
   import {assetUrl} from '@/data/asset-delivery';
-  const zh=document.documentElement.lang==='zh-CN';
+  import {getPlayerCopy} from '@/data/i18n/player';
+  const t=getPlayerCopy(document.documentElement.lang);
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   // Every device starts with the complete web-optimized copy. Browser-reported
   // connection speed does not measure the route to our video storage.
@@ -31,9 +32,9 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     };
     const loading=()=>{
       pending=true;clearTimer();
-      update('loading',zh?'正在加载视频…':'Loading video…');
+      update('loading',t.loadingVideo);
       timer=setTimeout(()=>{
-        if(pending&&!recover())update('retry',zh?'视频加载较慢，请点击重试。':'The video is taking longer to load. Select Retry.');
+        if(pending&&!recover())update('retry',t.slow);
       },8000);
     };
     const failed=(message:string)=>{
@@ -71,7 +72,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       }).catch((error:DOMException)=>{
         if(currentAttempt!==attempt||!pending||error.name==='AbortError')return;
         if(error.name!=='NotAllowedError'&&recover())return;
-        if(withSound)failed(zh?'播放未能开始，请点击重试。':'Playback could not start. Select Retry.');
+        if(withSound)failed(t.failed);
         else {pending=false;clearTimer();poster.hidden=false;update('idle');}
       });
     };
@@ -106,10 +107,10 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     video.addEventListener('error',()=>{
       if(!video.error)return;
       if(video.dataset.requested&&recover())return;
-      failed(zh?'视频暂时无法加载，请点击重试。':'The video could not load. Select Retry.');
+      failed(t.error);
     });
     window.addEventListener('offline',()=>{
-      if(pending||!video.paused)failed(zh?'网络已断开，恢复连接后可点击重试。':'You are offline. Reconnect, then select Retry.');
+      if(pending||!video.paused)failed(t.offline);
     });
     update('idle');
     return {start,reset:()=>{attempt++;pending=false;clearTimer();video.pause();delete video.dataset.requested;poster.hidden=false;update('idle');}};
@@ -133,7 +134,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     const player=video?bindPlayback(video,frame,img,state=>{
       if(play){
         play.setAttribute('aria-pressed',String(state==='playing'&&!!video.dataset.userStarted));
-        play.textContent=state==='loading'&&video.dataset.userStarted?(zh?'加载中…':'Loading…'):state==='retry'?(zh?'▶ 重试播放':'▶ Retry playback'):state==='playing'&&video.dataset.userStarted?(zh?'暂停视频':'Pause video'):video.dataset.userStarted?(zh?'▶ 继续播放':'▶ Resume'):(zh?'▶ 有声播放':'▶ Play with sound');
+        play.textContent=state==='loading'&&video.dataset.userStarted?t.loading:state==='retry'?t.retryWithIcon:state==='playing'&&video.dataset.userStarted?t.pause:video.dataset.userStarted?t.resume:t.play;
       }
     }):undefined;
     let captionsEnabled=true;
@@ -162,7 +163,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     video?.addEventListener('webkitendfullscreen',()=>{nativeFullscreen=false;syncCaptions();});
     captionButton?.addEventListener('click',()=>{captionsEnabled=!captionsEnabled;captionButton.setAttribute('aria-pressed',String(captionsEnabled));syncCaptions();});
     syncCaptions();
-    const syncSound=()=>{if(!video||!sound)return;frame.dataset.sound=String(!video.muted);sound.setAttribute('aria-pressed',String(!video.muted));sound.textContent=video.muted?(zh?'开启讲解':'Enable narration'):(zh?'关闭讲解':'Mute narration');};
+    const syncSound=()=>{if(!video||!sound)return;frame.dataset.sound=String(!video.muted);sound.setAttribute('aria-pressed',String(!video.muted));sound.textContent=video.muted?t.narrationOn:t.narrationOff;};
     const resetVideo=()=>{if(video){delete video.dataset.userStarted;player?.reset();video.hidden=true;}if(subtitles)subtitles.hidden=true;img.hidden=false;};
     const startWithSound=()=>{
       if(!video)return;
@@ -177,7 +178,8 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       resetVideo();frame.dataset.manualTheme='true';frame.dataset.theme=theme;
       img.src=assetUrl(`/media/v86/screenshots/${theme}/${frame.dataset.poster}.webp`);
       if(video)video.poster=img.src;
-      img.alt=img.alt.replace(/浅色|深色|light|dark/g,m=>/[a-z]/.test(m)?theme:theme==='light'?'浅色':'深色');
+      const caption=frame.querySelector('.v86-media__source')?.textContent?.trim()||frame.dataset.poster;
+      img.alt=`MAIXON TOOL V8.6 ${caption} · ${theme==='light'?t.light:t.dark}`;
       frame.querySelectorAll('[data-v86-theme]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       if(!reduce.matches&&event.detail>0)img.animate([{opacity:.65},{opacity:1}],{duration:240,easing:'ease-out'});
     }));
@@ -226,7 +228,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
     const label=start.querySelector<HTMLElement>('[data-owner-start-label]')!;
     const player=bindPlayback(video,frame,poster,state=>{
       start.hidden=state==='playing'||(state==='paused'&&poster.hidden);
-      label.textContent=state==='loading'?(zh?'加载中…':'Loading…'):state==='retry'?(zh?'重试播放':'Retry playback'):state==='ended'?(zh?'再播放一次':'Play again'):(zh?'有声播放完整流程':'Play with sound');
+      label.textContent=state==='loading'?t.loading:state==='retry'?t.retry:state==='ended'?t.again:t.playFull;
     });
     ownerObserver.observe(video);
     start.addEventListener('click',()=>{if(frame.dataset.playbackState==='loading'){video.pause();return;}player.start(true);});
@@ -238,7 +240,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       const img=frame.querySelector('img')!;
       frame.dataset.poster=`ai-sample-${button.dataset.aiSample}`;
       img.src=assetUrl(`/media/v86/screenshots/${frame.dataset.theme}/${frame.dataset.poster}.webp`);
-      img.alt=`MAIXON TOOL V8.6 · ${button.textContent} · ${frame.dataset.theme==='dark'?(zh?'深色':'Dark'):(zh?'浅色':'Light')}`;
+      img.alt=`MAIXON TOOL V8.6 · ${button.textContent} · ${frame.dataset.theme==='dark'?t.dark:t.light}`;
       const label=frame.querySelector('.v86-media__source')!;
       label.lastChild!.textContent=button.textContent;
       section.querySelector('[data-ai-title]')!.textContent=button.dataset.title!;

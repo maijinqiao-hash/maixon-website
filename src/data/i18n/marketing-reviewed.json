@@ -1,0 +1,162 @@
+{
+  "5 free AI uses": [
+    "ทดลอง AI ฟรี 5 ครั้ง",
+    "AI を 5 回無料で試用",
+    "AI 무료 체험 5회"
+  ],
+  "Free interface": [
+    "ช่องทางสั่งงานฟรี",
+    "無料の操作入口",
+    "무료 입력 기능"
+  ],
+  "AI WORKBENCH": [
+    "เวิร์กสเปซ AI",
+    "AI ワークスペース",
+    "AI 작업실"
+  ],
+  "VOICE COMMANDS": [
+    "สั่งงานด้วยเสียง",
+    "音声コマンド",
+    "음성 명령"
+  ],
+  "SUBLIMATION": [
+    "งานพิมพ์ซับลิเมชัน",
+    "昇華転写",
+    "승화전사"
+  ],
+  "Automatic MainTop integration. Keep prepress moving.": [
+    "เชื่อมต่อ MainTop อัตโนมัติ ให้งานเตรียมพิมพ์เดินต่อเนื่อง",
+    "MainTop へ自動連携。印刷前の準備を、スムーズに。",
+    "MainTop 자동 연동으로 인쇄 전 준비를 이어갑니다."
+  ],
+  "Prepress workflow": [
+    "ขั้นตอนเตรียมงานพิมพ์",
+    "印刷前のワークフロー",
+    "인쇄 전 작업 흐름"
+  ],
+  "MORE THAN AN IMAGE TOOL": [
+    "มากกว่าเครื่องมือทำภาพ",
+    "画像づくりの、その先へ。",
+    "이미지 작업 그 이상"
+  ],
+  "Read the complete walkthrough": [
+    "ดูคู่มือการใช้งานครบทุกขั้นตอน",
+    "詳しい操作ガイドを見る",
+    "전체 사용 방법 보기"
+  ],
+  "Every next step.": [
+    "ทุกขั้นตอนถัดไป",
+    "次の作業へ。",
+    "다음 단계도."
+  ],
+  "Already connected.": [
+    "เชื่อมต่อพร้อมแล้ว",
+    "つながる準備が、できている。",
+    "이미 연결되어 있습니다."
+  ],
+  "Prepare the artwork.": [
+    "เตรียมภาพให้พร้อม",
+    "図案を、整える。",
+    "도안을 준비하고."
+  ],
+  "Keep production moving.": [
+    "ให้การผลิตเดินต่อ",
+    "生産を、次へ進める。",
+    "생산을 이어가세요."
+  ],
+  "Size. White ink. Layout.": [
+    "ขนาด หมึกขาว การจัดวาง",
+    "サイズ、白インク、レイアウト。",
+    "크기, 흰색 잉크, 배치."
+  ],
+  "One connected workflow.": [
+    "ครบในขั้นตอนเดียวกัน",
+    "ひとつにつながる、作業の流れ。",
+    "하나로 연결된 작업 흐름."
+  ],
+  "Dark or light fabric.": [
+    "ผ้าสีเข้มหรือสีอ่อน",
+    "濃色生地も、淡色生地も。",
+    "어두운 원단도 밝은 원단도."
+  ],
+  "White ink, with control.": [
+    "ควบคุมหมึกขาวได้อย่างเหมาะสม",
+    "白インクを、適切に。",
+    "흰색 잉크를 알맞게."
+  ],
+  "A place for every piece.": [
+    "จัดทุกชิ้นให้ลงตัว",
+    "すべてのパーツに、最適な場所を。",
+    "모든 조각에 알맞은 위치를."
+  ],
+  "A plan for the whole roll.": [
+    "วางแผนได้ทั้งม้วน",
+    "ロール全体を見据えた、配置を。",
+    "롤 전체를 위한 배치 계획."
+  ],
+  "Artwork prepared.": [
+    "ภาพพร้อมแล้ว",
+    "図案が整ったら。",
+    "도안 준비가 끝나면."
+  ],
+  "The next step?": [
+    "ขั้นตอนถัดไปคือ",
+    "次にすることは？",
+    "다음 단계는?"
+  ],
+  "Print.": [
+    "พิมพ์ได้เลย",
+    "印刷へ。",
+    "인쇄입니다."
+  ],
+  "Choose your artwork. Describe the task.": [
+    "เลือกภาพ แล้วบอกงานที่ต้องการ",
+    "図案を選んで、作業内容を伝える。",
+    "도안을 선택하고 원하는 작업을 설명하세요."
+  ],
+  "See the difference. Choose the next step.": [
+    "เห็นผลเปรียบเทียบ แล้วเลือกขั้นตอนถัดไป",
+    "違いを確かめて、次の作業を選ぶ。",
+    "차이를 확인하고 다음 단계를 선택하세요."
+  ],
+  "Control color artwork and the white underbase separately.": [
+    "ควบคุมภาพสีกับชั้นรองหมึกขาวแยกกัน",
+    "カラー図案と白インクの下地を、別々に調整。",
+    "컬러 도안과 흰색 잉크 밑칠을 각각 조절하세요."
+  ],
+  "Describe dimensions, resolution, white ink and margins in a clear instruction. Review the interpreted task and parameters, then confirm execution. Typed instructions are also supported.": [
+    "บอกขนาด ความละเอียด หมึกขาว และขอบภาพเป็นคำสั่งที่ชัดเจน ตรวจชนิดงานและค่าที่ระบบแปลแล้วก่อนยืนยันทำงาน รองรับการพิมพ์คำสั่งด้วย",
+    "寸法、解像度、白インク、余白を明確な指示で伝えます。解析された作業と設定値を確認してから実行。文字での指示入力にも対応します。",
+    "크기, 해상도, 흰색 잉크와 여백을 명확한 명령으로 설명하세요. 분석된 작업과 설정을 확인한 뒤 실행합니다. 글자로 명령을 입력할 수도 있습니다."
+  ],
+  "Choose a library on a local or external drive, prepare its index, then add a reference image. Select the print region when needed, compare candidates and locate the original file.": [
+    "เลือกคลังภาพในเครื่องหรือไดรฟ์ภายนอก สร้างดัชนี แล้วเพิ่มภาพอ้างอิง สามารถเลือกเฉพาะบริเวณลายพิมพ์ เปรียบเทียบผล และค้นหาตำแหน่งไฟล์ต้นฉบับได้",
+    "ローカル・外付けドライブのライブラリを選び、インデックスを準備して参照画像を追加します。必要に応じて図案の範囲を選び、候補を比較して元ファイルを探せます。",
+    "로컬 또는 외장 드라이브의 라이브러리를 선택하고 인덱스를 준비한 뒤 참고 이미지를 추가하세요. 필요하면 인쇄 도안 영역을 선택하고 후보를 비교해 원본 파일을 찾을 수 있습니다."
+  ],
+  "Extract prints, remove backgrounds, enhance detail, edit with instructions, expand, crop and vectorize from one workspace. Compare the result, save it, then continue into production.": [
+    "แยกลายพิมพ์ ลบพื้นหลัง เพิ่มความคมชัด แก้ไขด้วยคำสั่ง ขยายภาพ ครอบตัด และแปลงเป็นเวกเตอร์ในเวิร์กสเปซเดียว เปรียบเทียบผล บันทึก แล้วทำขั้นตอนผลิตต่อ",
+    "図案抽出、背景除去、高画質化、指示による編集、画像拡張、切り抜き、ベクター化をひとつのワークスペースに。結果を比較・保存して、生産へつなげます。",
+    "도안 추출, 배경 제거, 선명도 향상, 명령 편집, 이미지 확장, 자르기와 벡터화를 한 작업 공간에서 처리하세요. 결과를 비교하고 저장한 뒤 생산 작업으로 이어갑니다."
+  ],
+  "Single-artwork output, repeated layouts, multiple-image layouts and custom canvases cover different tasks. Confirm dimensions, resolution, W1 choke and margins, then process the Photoshop artwork and export.": [
+    "รองรับภาพเดี่ยว การจัดวางภาพซ้ำ การจัดวางหลายภาพ และพื้นที่งานกำหนดเอง ตรวจขนาด ความละเอียด การย่อขอบ W1 และขอบภาพ แล้วประมวลผลภาพใน Photoshop และส่งออก",
+    "単一図案、繰り返し配置、複数画像配置、指定キャンバスで、さまざまな作業に対応。寸法、解像度、W1 の収縮、余白を確認して、Photoshop の図案を処理・書き出します。",
+    "단일 도안, 반복 배치, 여러 이미지 배치와 사용자 지정 캔버스로 다양한 작업을 처리합니다. 크기, 해상도, W1 가장자리 수축과 여백을 확인하고 Photoshop 도안을 처리해 내보내세요."
+  ],
+  "Choose the fabric type, adjust white ink for regular and black regions, then review dimensions, channel naming, choke and margins. Process the current Photoshop artwork and export.": [
+    "เลือกชนิดผ้า ปรับหมึกขาวแยกสำหรับบริเวณทั่วไปและสีดำ แล้วตรวจขนาด ชื่อช่องสี การย่อขอบ และขอบภาพ ประมวลผลภาพปัจจุบันใน Photoshop และส่งออก",
+    "生地の種類を選び、通常領域・黒色領域の白インクを調整します。寸法、チャンネル名、収縮、余白を確認して、Photoshop の現在の図案を処理・書き出します。",
+    "원단 종류를 선택하고 일반 영역과 검정 영역의 흰색 잉크를 조절하세요. 크기, 채널 이름, 가장자리 수축과 여백을 확인한 뒤 현재 Photoshop 도안을 처리해 내보냅니다."
+  ],
+  "MAIXON Image Finder is free, without a separate feature purchase.": [
+    "MAIXON ค้นหารูปภาพใช้ฟรี ไม่ต้องซื้อฟังก์ชันนี้แยก",
+    "MAIXON 画像検索は無料です。この機能単体の購入は不要です。",
+    "MAIXON 이미지 검색은 무료이며 별도 기능 구매가 필요하지 않습니다."
+  ],
+  "Voice Commands is free. Run Halftone by voice without buying a production module. DTF, DTG and Sublimation tasks require a valid license or trial for their module.": [
+    "สั่งงานด้วยเสียงใช้ฟรี และสั่งงานฮาล์ฟโทนได้โดยไม่ต้องซื้อโมดูล ส่วนงาน DTF, DTG และซับลิเมชัน ต้องมีไลเซนส์หรือสิทธิ์ทดลองใช้ที่ยังมีผลสำหรับโมดูลนั้น",
+    "音声コマンドは無料です。ハーフトーンは生産機能を購入せずに音声で実行できます。DTF、DTG、昇華転写の作業には、それぞれの有効なライセンスまたは試用権限が必要です。",
+    "음성 명령은 무료입니다. 하프톤은 생산 모듈을 구매하지 않아도 음성으로 실행할 수 있습니다. DTF, DTG와 승화전사 작업은 해당 모듈의 유효한 라이선스 또는 체험 권한이 필요합니다."
+  ]
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "id": "print-team",
+    "file": "exec-c516fb48-4776-4bf3-9168-88bb292a1fea.png",
+    "screen": "light/dtf.webp",
+    "quad": [
+      [
+        1031,
+        383
+      ],
+      [
+        1475,
+        377
+      ],
+      [
+        1466,
+        660
+      ],
+      [
+        1021,
+        641
+      ]
+    ],
+    "width": 1536,
+    "height": 1024,
+    "sourceSha256": "c861cf69b1e322e971e59881899d6994d647f70125c41cacc4e9fd359099f0c2",
+    "normalizedQuad": [
+      [
+        0.6712239583333334,
+        0.3740234375
+      ],
+      [
+        0.9602864583333334,
+        0.3681640625
+      ],
+      [
+        0.9544270833333334,
+        0.64453125
+      ],
+      [
+        0.6647135416666666,
+        0.6259765625
+      ]
+    ],
+    "background": "/media/v86/scenes/20261012/print-team.webp",
+    "screenSha256": "4072102948d3e63c74637ac831f27838eb4a4d3685e5c56bee615e15ac4fd167"
+  },
+  {
+    "id": "layout-daylight",
+    "file": "exec-89a2d948-53f8-4c39-bca3-7f4e8f8d100d.png",
+    "screen": "light/dtf-multi-layout.webp",
+    "quad": [
+      [
+        819,
+        247
+      ],
+      [
+        1258,
+        253
+      ],
+      [
+        1216,
+        605
+      ],
+      [
+        783,
+        523
+      ]
+    ],
+    "width": 1536,
+    "height": 1024,
+    "sourceSha256": "919fdb3bc9550cab92c848c094ff2c7c42f161e4aef76e08fc91bc6b8470093a",
+    "normalizedQuad": [
+      [
+        0.533203125,
+        0.2412109375
+      ],
+      [
+        0.8190104166666666,
+        0.2470703125
+      ],
+      [
+        0.7916666666666666,
+        0.5908203125
+      ],
+      [
+        0.509765625,
+        0.5107421875
+      ]
+    ],
+    "background": "/media/v86/scenes/20261012/layout-daylight.webp",
+    "screenSha256": "607ac418ede548cf306e96ed7773937993b0ac2db89fbb39303f1cccccbec843"
+  },
+  {
+    "id": "ai-evening",
+    "file": "exec-e77a5444-598a-4bd5-87bb-181ea73868f6.png",
+    "screen": "dark/ai-sample-cutout.webp",
+    "quad": [
+      [
+        196,
+        278
+      ],
+      [
+        701,
+        270
+      ],
+      [
+        714,
+        551
+      ],
+      [
+        218,
+        628
+      ]
+    ],
+    "width": 1586,
+    "height": 992,
+    "sourceSha256": "0a907aca072616e0b6a159895aba1eb289ad37f7738878ba7f121ba56933e3eb",
+    "normalizedQuad": [
+      [
+        0.1235813366960908,
+        0.28024193548387094
+      ],
+      [
+        0.44199243379571246,
+        0.2721774193548387
+      ],
+      [
+        0.4501891551071879,
+        0.5554435483870968
+      ],
+      [
+        0.13745271122320302,
+        0.6330645161290323
+      ]
+    ],
+    "background": "/media/v86/scenes/20261012/ai-evening.webp",
+    "screenSha256": "1dbf35ddffbfe95500e0ff72d48cb22db74522f92cef1eb87e8472cc21788e24"
+  },
+  {
+    "id": "voice-daylight",
+    "file": "exec-7444e298-fabd-4f2a-a118-13a2cd18bd79.png",
+    "screen": "light/voice.webp",
+    "quad": [
+      [
+        219,
+        161
+      ],
+      [
+        800,
+        132
+      ],
+      [
+        816,
+        472
+      ],
+      [
+        245,
+        576
+      ]
+    ],
+    "width": 1536,
+    "height": 1024,
+    "sourceSha256": "fcb2178bb352bbd6d2d94726de80ed71e4dabfb17ba39a7513d8d720f1fcfdf8",
+    "normalizedQuad": [
+      [
+        0.142578125,
+        0.1572265625
+      ],
+      [
+        0.5208333333333334,
+        0.12890625
+      ],
+      [
+        0.53125,
+        0.4609375
+      ],
+      [
+        0.15950520833333334,
+        0.5625
+      ]
+    ],
+    "background": "/media/v86/scenes/20261012/voice-daylight.webp",
+    "screenSha256": "0b347581b301829938ed3bcacb61198f4e8624d3d73effdf65f01a902add89f9"
+  }
+]

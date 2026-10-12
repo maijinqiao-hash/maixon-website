@@ -4,6 +4,7 @@ import Footer from "@/components/Footer.astro";
 import DownloadSelector from "@/components/DownloadSelector.astro";
 import { getMedia, type Locale } from "@/data/media";
 import {assetUrl, publicAssetsBase} from '@/data/asset-delivery';
+import {siteLanguages, languagePath} from '@/data/i18n/languages';
 import "@/styles/global.css";
 
 interface Props {
@@ -24,8 +25,6 @@ const alternateLocale: Locale = locale === "zh-CN" ? "en" : "zh-CN";
 const alternatePath = Astro.url.pathname.startsWith(`/${locale}/`)
   ? Astro.url.pathname.replace(`/${locale}/`, `/${alternateLocale}/`)
   : `/${alternateLocale}/`;
-const zhPath = locale === "zh-CN" ? localizedPath : alternatePath;
-const enPath = locale === "en" ? localizedPath : alternatePath;
 ---
 
 <!doctype html>
@@ -56,15 +55,16 @@ const enPath = locale === "en" ? localizedPath : alternatePath;
             node.parentElement.querySelectorAll('source').forEach(function (source) {source.removeAttribute('srcset');});
           }
           node.src = local;
+        } else if (node.tagName === 'TRACK') {
+          node.src = local;
         } else if (node.tagName === 'LINK') {
           node.href = local;
         }
       }, true);
     </script>
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="zh-CN" href={new URL(zhPath, Astro.site)} />
-    <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
-    <link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site)} />
+    {siteLanguages.map(language=><link rel="alternate" hreflang={language.code} href={new URL(languagePath(localizedPath,language.code),Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname==='/'?'/':languagePath(localizedPath,'zh-CN'), Astro.site)} />
     <link rel="icon" type="image/webp" href={assetUrl('/media-responsive/brand/app-icon-640.webp')} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MAIXON" />

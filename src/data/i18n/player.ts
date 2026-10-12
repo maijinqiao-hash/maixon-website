@@ -1,0 +1,12 @@
+import type {SiteLanguage} from './languages';
+const en={
+ loading:'Loading…',loadingVideo:'Loading video…',slow:'The video is taking longer to load. Select Retry.',failed:'Playback could not start. Select Retry.',error:'The video could not load. Select Retry.',offline:'You are offline. Reconnect, then select Retry.',retry:'Retry playback',retryWithIcon:'▶ Retry playback',pause:'Pause video',resume:'▶ Resume',play:'▶ Play with sound',playFull:'Play with sound',again:'Play again',narrationOn:'Enable narration',narrationOff:'Mute narration',light:'Light',dark:'Dark'
+};
+type Copy=typeof en;
+const copy:Record<SiteLanguage,Copy>={en,
+ 'zh-CN':{loading:'加载中…',loadingVideo:'正在加载视频…',slow:'视频加载较慢，请点击重试。',failed:'播放未能开始，请点击重试。',error:'视频暂时无法加载，请点击重试。',offline:'网络已断开，恢复连接后可点击重试。',retry:'重试播放',retryWithIcon:'▶ 重试播放',pause:'暂停视频',resume:'▶ 继续播放',play:'▶ 有声播放',playFull:'有声播放完整流程',again:'再播放一次',narrationOn:'开启讲解',narrationOff:'关闭讲解',light:'浅色',dark:'深色'},
+ th:{loading:'กำลังโหลด…',loadingVideo:'กำลังโหลดวิดีโอ…',slow:'วิดีโอโหลดช้า กรุณากดลองใหม่',failed:'ไม่สามารถเริ่มเล่นได้ กรุณากดลองใหม่',error:'ไม่สามารถโหลดวิดีโอได้ กรุณากดลองใหม่',offline:'การเชื่อมต่อขาดหาย กรุณาเชื่อมต่ออินเทอร์เน็ตแล้วกดลองใหม่',retry:'ลองเล่นอีกครั้ง',retryWithIcon:'▶ ลองเล่นอีกครั้ง',pause:'หยุดวิดีโอชั่วคราว',resume:'▶ เล่นต่อ',play:'▶ เล่นพร้อมเสียง',playFull:'เล่นพร้อมเสียง',again:'เล่นอีกครั้ง',narrationOn:'เปิดเสียงบรรยาย',narrationOff:'ปิดเสียงบรรยาย',light:'โหมดสว่าง',dark:'โหมดมืด'},
+ ja:{loading:'読み込み中…',loadingVideo:'動画を読み込み中…',slow:'動画の読み込みに時間がかかっています。再試行してください。',failed:'再生を開始できませんでした。再試行してください。',error:'動画を読み込めませんでした。再試行してください。',offline:'インターネット接続を確認してから、再試行してください。',retry:'再生を再試行',retryWithIcon:'▶ 再生を再試行',pause:'動画を一時停止',resume:'▶ 再開',play:'▶ 音声付きで再生',playFull:'音声付きで再生',again:'もう一度再生',narrationOn:'解説音声をオン',narrationOff:'解説音声をオフ',light:'ライト',dark:'ダーク'},
+ ko:{loading:'불러오는 중…',loadingVideo:'동영상을 불러오는 중…',slow:'동영상 로딩이 지연되고 있습니다. 다시 시도해 주세요.',failed:'재생을 시작하지 못했습니다. 다시 시도해 주세요.',error:'동영상을 불러오지 못했습니다. 다시 시도해 주세요.',offline:'인터넷 연결을 확인한 후 다시 시도해 주세요.',retry:'재생 다시 시도',retryWithIcon:'▶ 재생 다시 시도',pause:'동영상 일시 정지',resume:'▶ 계속 재생',play:'▶ 소리와 함께 재생',playFull:'소리와 함께 재생',again:'다시 재생',narrationOn:'해설 음성 켜기',narrationOff:'해설 음성 끄기',light:'라이트',dark:'다크'}
+};
+export function getPlayerCopy(language:string):Copy{return copy[language as SiteLanguage]||copy.en;}
