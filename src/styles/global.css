@@ -2200,11 +2200,19 @@ html:lang(zh-CN) .machine-hero__type {
 .language-selector summary:focus-visible{outline:2px solid var(--gold,#997535);outline-offset:4px;border-radius:3px}
 .language-selector__chevron{font-size:1rem}
 .language-options{position:absolute;right:0;top:100%;min-width:10rem;padding:.4rem;background:#fff;border:1px solid #e7e4de;border-radius:12px;box-shadow:0 12px 36px #00000013;z-index:110}
-.language-options a{display:block;padding:.7rem .9rem;border-radius:7px;text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:0}
+.language-options a{display:flex;align-items:center;gap:.65rem;padding:.7rem .9rem;border-radius:7px;text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:0}
+.language-options a span{min-width:0;overflow-wrap:anywhere}
+.language-flag{width:24px;height:18px;flex:0 0 24px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px #00000012}
 .language-options a:hover,.language-options a:focus-visible{background:#f5f3ef}
 .language-options a[aria-current=true]{color:#8e6a2e;background:#f8f5ee}
-.language-options--mobile{position:static;box-shadow:none;border:0;border-top:1px solid var(--line);border-radius:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.15rem;margin:1rem 0;padding:.75rem 0}
-.language-options--mobile a{padding:.65rem .45rem;text-align:center}
+.language-options--mobile{position:static;box-shadow:none;border:0;border-top:1px solid var(--line);border-radius:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.15rem;margin:1rem 0;padding:.75rem 0}
+.language-options--mobile a{padding:.65rem .45rem;text-align:left;gap:.45rem}
+html:is([lang=ms],[lang=id],[lang=vi]) h1,html:is([lang=ms],[lang=id],[lang=vi]) h2{overflow-wrap:break-word}
+html:is([lang=ms],[lang=id],[lang=vi]) .v86-media__controls{flex-wrap:wrap}
+html[lang=vi] body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Arial",sans-serif}
+html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3{line-height:1.25}
+@media(max-width:700px){html:is([lang=ms],[lang=id],[lang=vi]) .v86-hero h1{font-size:clamp(34px,9.5vw,48px)}}
+@media(min-width:58rem) and (max-width:70rem){html:is([lang=ms],[lang=id],[lang=vi]) .site-header{column-gap:.8rem}html:is([lang=ms],[lang=id],[lang=vi]) .desktop-nav{gap:.7rem}html:is([lang=ms],[lang=id],[lang=vi]) .header-actions{gap:.75rem}html:is([lang=ms],[lang=id],[lang=vi]) .wordmark{width:7rem}}
 html[lang=th] body{font-family:-apple-system,BlinkMacSystemFont,"Thonburi","Leelawadee UI","Tahoma",sans-serif}
 html[lang=ja] body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif}
 html[lang=ko] body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}

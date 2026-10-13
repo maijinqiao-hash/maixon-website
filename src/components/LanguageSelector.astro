@@ -1,19 +1,20 @@
 ---
 import {siteLanguages,languagePath,type SiteLanguage} from '@/data/i18n/languages';
+import {assetUrl} from '@/data/asset-delivery';
 interface Props {locale:SiteLanguage;mobile?:boolean}
 const {locale,mobile=false}=Astro.props;
 const current=siteLanguages.find(item=>item.code===locale)!;
 const label=locale==='zh-CN'?'选择语言':'Choose language';
 ---
 {mobile?<nav class="language-options language-options--mobile" aria-label={label} data-language-menu>
-  {siteLanguages.map(item=><a href={languagePath(Astro.url.pathname,item.code)} lang={item.code} data-native-language={item.code} aria-current={item.code===locale?'true':undefined}>{item.name}</a>)}
+  {siteLanguages.map(item=><a href={languagePath(Astro.url.pathname,item.code)} lang={item.code} data-native-language={item.code} aria-current={item.code===locale?'true':undefined}><img class="language-flag" src={assetUrl(`/media/flags/${item.flag}.svg`)} width="24" height="18" alt="" aria-hidden="true"/><span>{item.name}</span></a>)}
 </nav>:<details class="language-selector" data-language-selector>
   <summary aria-label={label}>
     <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4.2" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></svg>
-    <span data-current-language data-native-language={locale}>{current.name}</span><span class="language-selector__chevron" aria-hidden="true">⌄</span>
+    <img class="language-flag" src={assetUrl(`/media/flags/${current.flag}.svg`)} width="24" height="18" alt="" aria-hidden="true" data-current-language-flag data-native-language={locale}/><span data-current-language data-native-language={locale}>{current.name}</span><span class="language-selector__chevron" aria-hidden="true">⌄</span>
   </summary>
   <nav class="language-options" aria-label={label} data-language-menu>
-    {siteLanguages.map(item=><a href={languagePath(Astro.url.pathname,item.code)} lang={item.code} data-native-language={item.code} aria-current={item.code===locale?'true':undefined}>{item.name}</a>)}
+    {siteLanguages.map(item=><a href={languagePath(Astro.url.pathname,item.code)} lang={item.code} data-native-language={item.code} aria-current={item.code===locale?'true':undefined}><img class="language-flag" src={assetUrl(`/media/flags/${item.flag}.svg`)} width="24" height="18" alt="" aria-hidden="true"/><span>{item.name}</span></a>)}
   </nav>
 </details>}
 <script>

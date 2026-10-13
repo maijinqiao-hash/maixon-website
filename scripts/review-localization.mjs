@@ -113,3 +113,4 @@ for(const [index,locale] of ['th','ja','ko'].entries()){
  await fs.writeFile(filename,JSON.stringify(Object.fromEntries(Object.entries(catalog).sort((a,b)=>a[0].localeCompare(b[0]))),null,2)+'\n');
 }
 console.log(`Reviewed ${Object.keys(reviewed).length} essential marketing, navigation and licensing phrases in all three languages.`);
+await import('./review-southeast-asian-localization.mjs');

@@ -1,10 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {parse,serialize,attrs,walkContent,normalized,invariant,htmlFiles,languages,nativeNames} from './localization-core.mjs';
+import {parse,serialize,attrs,walkContent,normalized,invariant,htmlFiles,languages,localizedLanguages,nativeNames,countries} from './localization-core.mjs';
 
-const captionNames={th:'คำบรรยายภาษาไทย',ja:'日本語字幕',ko:'한국어 자막'};
-const ogLocales={'zh-CN':'zh_CN',en:'en_US',th:'th_TH',ja:'ja_JP',ko:'ko_KR'};
+const captionNames={th:'คำบรรยายภาษาไทย',ja:'日本語字幕',ko:'한국어 자막',ms:'Sari kata Bahasa Melayu',id:'Subtitel Bahasa Indonesia',vi:'Phụ đề tiếng Việt'};
+const ogLocales={'zh-CN':'zh_CN',en:'en_US',th:'th_TH',ja:'ja_JP',ko:'ko_KR',ms:'ms_MY',id:'id_ID',vi:'vi_VN'};
 function setAttr(node,name,value){const existing=node.attrs?.find(a=>a.name===name);if(existing)existing.value=value;else(node.attrs ||= []).push({name,value});}
 function localize(document,locale,catalog){
   const missing=new Set();
@@ -20,6 +20,7 @@ function localize(document,locale,catalog){
     const a=attrs(node);
     if(node.tagName==='html')setAttr(node,'lang',locale);
     if('data-current-language' in a){node.childNodes=[{nodeName:'#text',value:nativeNames[locale],parentNode:node}];setAttr(node,'data-native-language',locale);}
+    if('data-current-language-flag' in a){setAttr(node,'src',a.src.replace(/\/flags\/[a-z]{2}\.svg$/,`/flags/${countries[locale]}.svg`));setAttr(node,'data-native-language',locale);}
     if(node.tagName==='a'&&a['data-native-language']){
       if(a['data-native-language']===locale)setAttr(node,'aria-current','true');
       else node.attrs=node.attrs.filter(item=>item.name!=='aria-current');
@@ -43,10 +44,10 @@ export async function buildLocalizedPages({dir,site='https://guojindigital.com',
   const dist=fileURLToPath(dir);
   const captions=path.resolve('public/media/v86/captions');
   const foundation=await htmlFiles(path.join(dist,'en'));
-  const catalogs={};for(const locale of ['th','ja','ko'])catalogs[locale]=JSON.parse(await fs.readFile(`src/data/i18n/${locale}.json`,'utf8'));
+  const catalogs={};for(const locale of localizedLanguages)catalogs[locale]=JSON.parse(await fs.readFile(`src/data/i18n/${locale}.json`,'utf8'));
   for(const file of foundation){
     const source=await fs.readFile(file,'utf8'),relative=path.relative(path.join(dist,'en'),file);
-    for(const locale of ['th','ja','ko']){
+    for(const locale of localizedLanguages){
       const output=path.join(dist,locale,relative);await fs.mkdir(path.dirname(output),{recursive:true});
       await fs.writeFile(output,serialize(localize(parse(source),locale,catalogs[locale])));
     }
@@ -56,7 +57,7 @@ export async function buildLocalizedPages({dir,site='https://guojindigital.com',
   for(const name of await fs.readdir(captions)){
     if(!name.endsWith('.en.vtt'))continue;
     const source=await fs.readFile(path.join(captions,name),'utf8');
-    for(const locale of ['th','ja','ko']){
+    for(const locale of localizedLanguages){
       const translated=source.trim().split(/\n\s*\n/).map(block=>{
         const lines=block.split('\n'),at=lines.findIndex(line=>line.includes('-->'));
         if(at<0)return block;
@@ -71,13 +72,13 @@ export async function buildLocalizedPages({dir,site='https://guojindigital.com',
   }
   const routes=['/',...languages.flatMap(locale=>foundation.map(file=>`/${locale}/${path.relative(path.join(dist,'en'),path.dirname(file)).replaceAll(path.sep,'/')}`.replace(/\/?$/,'/')))];
   const items=routes.map(route=>{
-    const sibling=route==='/'?'/':route.replace(/^\/(?:zh-CN|en|th|ja|ko)\//,'/');
+    const sibling=route==='/'?'/':route.replace(new RegExp(`^/(?:${languages.join('|')})/`),'/');
     const alternates=languages.map(locale=>`<xhtml:link rel="alternate" hreflang="${locale}" href="${escapeXml(`${site}/${locale}${sibling}`)}"/>`).join('');
     return `<url><loc>${escapeXml(site+route)}</loc>${alternates}<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(route==='/'?site+'/':`${site}/zh-CN${sibling}`)}"/></url>`;
   });
   await fs.writeFile(path.join(dist,'sitemap-0.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${items.join('')}</urlset>`);
   await fs.writeFile(path.join(dist,'sitemap-index.xml'),`<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>${site}/sitemap-0.xml</loc></sitemap></sitemapindex>`);
-  logger?.info(`Published ${foundation.length} complete pages per language; ${routes.length} routes in five languages; ${captionCount} additional caption files.`);
+  logger?.info(`Published ${foundation.length} complete pages per language; ${routes.length} routes in ${languages.length} languages; ${captionCount} additional caption files.`);
   return {pagesPerLanguage:foundation.length,totalPages:routes.length,captionCount};
 }
 

@@ -2,8 +2,10 @@ import {parse, serialize} from 'parse5';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-export const languages = ['zh-CN', 'en', 'th', 'ja', 'ko'];
-export const nativeNames = {'zh-CN':'中文', en:'English', th:'ไทย', ja:'日本語', ko:'한국어'};
+export const languages = ['zh-CN', 'en', 'th', 'ja', 'ko', 'ms', 'id', 'vi'];
+export const localizedLanguages = languages.filter(locale => !['zh-CN', 'en'].includes(locale));
+export const nativeNames = {'zh-CN':'中文', en:'English', th:'ไทย', ja:'日本語', ko:'한국어', ms:'Bahasa Melayu', id:'Bahasa Indonesia', vi:'Tiếng Việt'};
+export const countries = {'zh-CN':'cn', en:'us', th:'th', ja:'jp', ko:'kr', ms:'my', id:'id', vi:'vn'};
 export const normalized = value => value.replace(/\s+/g,' ').trim();
 export const attributeNames = new Set(['alt','aria-label','title','placeholder','data-title','data-description']);
 const metaNames = new Set(['description','og:title','og:description','twitter:title','twitter:description']);

@@ -1,12 +1,12 @@
 # Website languages and studio scenes
 
-The site publishes Chinese, English, Thai, Japanese and Korean pages. All 76 routes are available in each language. Translation happens during the build; visitors do not call a translation service.
+The site publishes Chinese, English, Thai, Japanese, Korean, Malay, Indonesian and Vietnamese pages. All 76 routes are available in each language. Translation happens during the build; visitors do not call a translation service.
 
 ## Build and update
 
-Run `npm run build`. The `localized-pages` Astro integration runs after the English and Chinese build and sitemap integration. It translates visible text, accessibility labels, metadata, internal routes and 17 caption files per added language. Existing user-recorded films and their burned-in subtitles remain unchanged. The generated film audio remains the existing Chinese or English audio; the three added languages use matching translated captions.
+Run `npm run build`. The `localized-pages` Astro integration runs after the English and Chinese build and sitemap integration. It translates visible text, accessibility labels, metadata, internal routes and 17 caption files per added language. Existing user-recorded films and their burned-in subtitles remain unchanged. The generated film audio remains the existing Chinese or English audio; the six additional languages use matching translated captions.
 
-When English source copy changes, run `node scripts/collect-localization.mjs`, update the corresponding static `th.json`, `ja.json` and `ko.json` entries, then run `node scripts/review-localization.mjs` and build. Missing translations fail the build. Reviewed marketing, licensing and caption translations are stored alongside the catalogs. Preserve module access rules, numeric values, MainTop spelling and CNY prices.
+When English source copy changes, run `node scripts/collect-localization.mjs`, update the corresponding static `th.json`, `ja.json`, `ko.json`, `ms.json`, `id.json` and `vi.json` entries, then run `node scripts/review-localization.mjs` and build. Missing translations fail the build. Reviewed marketing, licensing and caption translations are stored alongside the catalogs. Preserve module access rules, numeric values, MainTop spelling and CNY prices.
 
 Run `npm run validate:locales` for route coverage, accessible text, metadata, internal links, caption text and timing, media identity, download mapping and screenshot integrity. This complements the existing bilingual, original-media and video-range validators.
 
@@ -16,7 +16,9 @@ Four photographic backgrounds live under `public/media/v86/scenes/20261012/`. Th
 
 Upload only new hashed scripts/styles, new backgrounds and generated localized VTT files to the existing configured public-assets prefix. Verify content hashes, content types and CORS before promotion. Do not delete previous assets, change download mappings, expose unrelated bucket data, or change the bucket ACL.
 
-The five-language selector preserves the current subpage and anchor. Captions start enabled, display below inline video, and use native captions when the video itself enters fullscreen. Caption delivery falls back to the same-site copy when the primary storage path fails.
+The eight-language selector preserves the current subpage and anchor. Each native language name has a small SVG flag, using China, USA, Thailand, Japan, South Korea, Malaysia, Indonesia and Vietnam as the visual associations. These are presentation choices, not restrictions on who may use a language. The flags are vendored from `lipis/flag-icons` at the immutable revision recorded in `flag-provenance.json`, with its MIT license in `public/media/flags/LICENSE.txt`. They use the existing asset delivery and same-site fallback; no additional external icon service or script is loaded.
+
+Captions start enabled, display below inline video, and use native captions when the video itself enters fullscreen. Caption delivery falls back to the same-site copy when the primary storage path fails.
 
 ## Validation boundary
 

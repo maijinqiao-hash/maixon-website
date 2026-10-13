@@ -1,0 +1,1237 @@
+{
+  "Before you print.": [
+    "Sebelum anda mencetak.",
+    "Sebelum Anda mencetak.",
+    "Trước khi in."
+  ],
+  "Bring it all together.": [
+    "Semua langkah, satu aliran.",
+    "Semua langkah, satu alur.",
+    "Tất cả trong một quy trình."
+  ],
+  "From finding artwork to preparing the final layout.": [
+    "Daripada mencari corak hingga menyediakan susun atur akhir.",
+    "Dari mencari gambar hingga menyiapkan tata letak akhir.",
+    "Từ tìm ảnh đến chuẩn bị bố cục hoàn chỉnh."
+  ],
+  "Your prepress workflow, in one workspace.": [
+    "Aliran kerja pracetak, dalam satu ruang kerja.",
+    "Alur kerja pracetak, dalam satu ruang kerja.",
+    "Quy trình trước in, trong một không gian làm việc."
+  ],
+  "Software": [
+    "Perisian",
+    "Perangkat lunak",
+    "Phần mềm"
+  ],
+  "Hardware": [
+    "Perkakasan",
+    "Perangkat keras",
+    "Thiết bị"
+  ],
+  "Support": [
+    "Sokongan",
+    "Dukungan",
+    "Hỗ trợ"
+  ],
+  "Download": [
+    "Muat turun",
+    "Unduh",
+    "Tải xuống"
+  ],
+  "Choose language": [
+    "Pilih bahasa",
+    "Pilih bahasa",
+    "Chọn ngôn ngữ"
+  ],
+  "MAIXON home": [
+    "Laman utama MAIXON",
+    "Beranda MAIXON",
+    "Trang chủ MAIXON"
+  ],
+  "Primary navigation": [
+    "Navigasi utama",
+    "Navigasi utama",
+    "Điều hướng chính"
+  ],
+  "Open navigation": [
+    "Buka navigasi",
+    "Buka navigasi",
+    "Mở điều hướng"
+  ],
+  "Menu": [
+    "Menu",
+    "Menu",
+    "Trình đơn"
+  ],
+  "Skip to content": [
+    "Langkau ke kandungan",
+    "Lewati ke konten",
+    "Chuyển đến nội dung"
+  ],
+  "Close": [
+    "Tutup",
+    "Tutup",
+    "Đóng"
+  ],
+  "Coming Soon": [
+    "Akan datang",
+    "Segera hadir",
+    "Sắp ra mắt"
+  ],
+  "macOS · Coming Soon": [
+    "macOS · Akan datang",
+    "macOS · Segera hadir",
+    "macOS · Sắp ra mắt"
+  ],
+  "Choose your operating system": [
+    "Pilih sistem pengendalian",
+    "Pilih sistem operasi",
+    "Chọn hệ điều hành"
+  ],
+  "Close operating system selector": [
+    "Tutup pilihan sistem pengendalian",
+    "Tutup pemilih sistem operasi",
+    "Đóng lựa chọn hệ điều hành"
+  ],
+  "Select the version that matches your computer.": [
+    "Pilih versi yang sesuai dengan komputer anda.",
+    "Pilih versi yang sesuai dengan komputer Anda.",
+    "Chọn phiên bản phù hợp với máy tính của bạn."
+  ],
+  "Download Windows 7": [
+    "Muat turun untuk Windows 7",
+    "Unduh untuk Windows 7",
+    "Tải cho Windows 7"
+  ],
+  "Download Windows 10": [
+    "Muat turun untuk Windows 10",
+    "Unduh untuk Windows 10",
+    "Tải cho Windows 10"
+  ],
+  "Download Windows 11": [
+    "Muat turun untuk Windows 11",
+    "Unduh untuk Windows 11",
+    "Tải cho Windows 11"
+  ],
+  "Download auxiliary software": [
+    "Muat turun perisian tambahan",
+    "Unduh perangkat lunak pendukung",
+    "Tải phần mềm hỗ trợ"
+  ],
+  "Photoshop installation package": [
+    "Pakej pemasangan Photoshop",
+    "Paket instalasi Photoshop",
+    "Bộ cài Photoshop"
+  ],
+  "MainTop 6.1": [
+    "MainTop 6.1",
+    "MainTop 6.1",
+    "MainTop 6.1"
+  ],
+  "Test image files": [
+    "Fail imej ujian",
+    "File gambar uji",
+    "File ảnh thử nghiệm"
+  ],
+  "Light": [
+    "Cerah",
+    "Terang",
+    "Sáng"
+  ],
+  "Dark": [
+    "Gelap",
+    "Gelap",
+    "Tối"
+  ],
+  "Software interface theme": [
+    "Tema antara muka perisian",
+    "Tema antarmuka perangkat lunak",
+    "Giao diện sáng và tối"
+  ],
+  "Video captions": [
+    "Sari kata video",
+    "Subtitel video",
+    "Phụ đề video"
+  ],
+  "Captions": [
+    "Sari kata",
+    "Subtitel",
+    "Phụ đề"
+  ],
+  "Enable narration": [
+    "Hidupkan penerangan suara",
+    "Aktifkan narasi",
+    "Bật thuyết minh"
+  ],
+  "Play with sound": [
+    "Main dengan suara",
+    "Putar dengan suara",
+    "Phát có âm thanh"
+  ],
+  "▶ Play with sound": [
+    "▶ Main dengan suara",
+    "▶ Putar dengan suara",
+    "▶ Phát có âm thanh"
+  ],
+  "Video duration": [
+    "Tempoh video",
+    "Durasi video",
+    "Thời lượng video"
+  ],
+  "Enlarge interface": [
+    "Besarkan antara muka",
+    "Perbesar antarmuka",
+    "Phóng to giao diện"
+  ],
+  "MAIXON V8.6 interface": [
+    "Antara muka MAIXON V8.6",
+    "Antarmuka MAIXON V8.6",
+    "Giao diện MAIXON V8.6"
+  ],
+  "Production overview": [
+    "Gambaran Pengeluaran",
+    "Ringkasan Produksi",
+    "Tổng quan sản xuất"
+  ],
+  "Production overview workflow": [
+    "Aliran Gambaran Pengeluaran",
+    "Alur Ringkasan Produksi",
+    "Quy trình tổng quan sản xuất"
+  ],
+  "Explore the workflow": [
+    "Terokai aliran kerja",
+    "Jelajahi alur kerja",
+    "Khám phá quy trình"
+  ],
+  "Explore the workflow →": [
+    "Terokai aliran kerja →",
+    "Jelajahi alur kerja →",
+    "Khám phá quy trình →"
+  ],
+  "Discover MainTop integration": [
+    "Kenali integrasi MainTop",
+    "Kenali integrasi MainTop",
+    "Khám phá kết nối MainTop"
+  ],
+  "MainTop integration →": [
+    "Integrasi MainTop →",
+    "Integrasi MainTop →",
+    "Kết nối MainTop →"
+  ],
+  "Automatic MainTop integration": [
+    "Integrasi MainTop automatik",
+    "Integrasi MainTop otomatis",
+    "Tự động kết nối MainTop"
+  ],
+  "Automatic MainTop integration · MAIXON TOOL V8.6": [
+    "Integrasi MainTop automatik · MAIXON TOOL V8.6",
+    "Integrasi MainTop otomatis · MAIXON TOOL V8.6",
+    "Tự động kết nối MainTop · MAIXON TOOL V8.6"
+  ],
+  "Automatic MainTop integration. Keep prepress moving.": [
+    "Integrasi MainTop automatik. Teruskan aliran pracetak.",
+    "Integrasi MainTop otomatis. Lanjutkan alur pracetak.",
+    "Tự động kết nối MainTop. Tiếp nối quy trình trước in."
+  ],
+  "DTF · Automatic MainTop integration · MAIXON": [
+    "DTF · Integrasi MainTop automatik · MAIXON",
+    "DTF · Integrasi MainTop otomatis · MAIXON",
+    "DTF · Tự động kết nối MainTop · MAIXON"
+  ],
+  "DTG · Automatic MainTop integration · MAIXON": [
+    "DTG · Integrasi MainTop automatik · MAIXON",
+    "DTG · Integrasi MainTop otomatis · MAIXON",
+    "DTG · Tự động kết nối MainTop · MAIXON"
+  ],
+  "DTG × MainTop": [
+    "DTG × MainTop",
+    "DTG × MainTop",
+    "DTG × MainTop"
+  ],
+  "← MainTop": [
+    "← MainTop",
+    "← MainTop",
+    "← MainTop"
+  ],
+  "Voice Commands": [
+    "Arahan Suara",
+    "Perintah Suara",
+    "Lệnh giọng nói"
+  ],
+  "VOICE COMMANDS": [
+    "ARAHAN SUARA",
+    "PERINTAH SUARA",
+    "LỆNH GIỌNG NÓI"
+  ],
+  "AI Workbench": [
+    "Ruang Kerja AI",
+    "Ruang Kerja AI",
+    "Không gian làm việc AI"
+  ],
+  "AI WORKBENCH": [
+    "RUANG KERJA AI",
+    "RUANG KERJA AI",
+    "KHÔNG GIAN LÀM VIỆC AI"
+  ],
+  "MAIXON Image Finder": [
+    "Pencari Imej MAIXON",
+    "Pencari Gambar MAIXON",
+    "Tìm ảnh MAIXON"
+  ],
+  "MAIXON IMAGE FINDER": [
+    "PENCARI IMEJ MAIXON",
+    "PENCARI GAMBAR MAIXON",
+    "TÌM ẢNH MAIXON"
+  ],
+  "Halftone": [
+    "Halftone",
+    "Halftone",
+    "Bán sắc"
+  ],
+  "HALFTONE": [
+    "HALFTONE",
+    "HALFTONE",
+    "BÁN SẮC"
+  ],
+  "Sublimation": [
+    "Sublimasi",
+    "Sublimasi",
+    "In thăng hoa"
+  ],
+  "SUBLIMATION": [
+    "SUBLIMASI",
+    "SUBLIMASI",
+    "IN THĂNG HOA"
+  ],
+  "Extract Print": [
+    "Ekstrak Corak",
+    "Ekstrak Motif",
+    "Tách họa tiết"
+  ],
+  "Remove Background": [
+    "Buang Latar",
+    "Hapus Latar",
+    "Xóa nền"
+  ],
+  "Enhance": [
+    "Tingkatkan Perincian",
+    "Tingkatkan Detail",
+    "Nâng cao chi tiết"
+  ],
+  "Enhance Detail": [
+    "Tingkatkan Perincian",
+    "Tingkatkan Detail",
+    "Nâng cao chi tiết"
+  ],
+  "Edit with Instructions": [
+    "Edit dengan Arahan",
+    "Edit dengan Perintah",
+    "Chỉnh sửa bằng lệnh"
+  ],
+  "Expand": [
+    "Luaskan Imej",
+    "Perluas Gambar",
+    "Mở rộng ảnh"
+  ],
+  "Expand Image": [
+    "Luaskan Imej",
+    "Perluas Gambar",
+    "Mở rộng ảnh"
+  ],
+  "Crop Print": [
+    "Pangkas Corak",
+    "Pangkas Motif",
+    "Cắt họa tiết"
+  ],
+  "Vectorize": [
+    "Tukar ke Vektor",
+    "Ubah ke Vektor",
+    "Chuyển sang vector"
+  ],
+  "Build a local library": [
+    "Bina pustaka tempatan",
+    "Buat pustaka lokal",
+    "Tạo thư viện trên máy"
+  ],
+  "Search by image": [
+    "Cari menggunakan imej",
+    "Cari dengan gambar",
+    "Tìm bằng ảnh"
+  ],
+  "Search a print region": [
+    "Cari kawasan corak",
+    "Cari area motif",
+    "Tìm vùng họa tiết"
+  ],
+  "Update and rebuild the library": [
+    "Kemas kini dan bina semula pustaka",
+    "Perbarui dan bangun ulang pustaka",
+    "Cập nhật và tạo lại thư viện"
+  ],
+  "Storage and external backup": [
+    "Penyimpanan dan sandaran luaran",
+    "Penyimpanan dan cadangan eksternal",
+    "Lưu trữ và sao lưu ngoài"
+  ],
+  "Local search history": [
+    "Sejarah carian tempatan",
+    "Riwayat pencarian lokal",
+    "Lịch sử tìm kiếm trên máy"
+  ],
+  "Library Management": [
+    "Pengurusan Pustaka",
+    "Pengelolaan Pustaka",
+    "Quản lý thư viện"
+  ],
+  "Local History": [
+    "Sejarah Tempatan",
+    "Riwayat Lokal",
+    "Lịch sử trên máy"
+  ],
+  "Save and Backup": [
+    "Simpan dan Sandarkan",
+    "Simpan dan Cadangkan",
+    "Lưu và sao lưu"
+  ],
+  "Quality Rebuild": [
+    "Bina Semula Indeks Berkualiti",
+    "Bangun Ulang Indeks Berkualitas",
+    "Tạo lại chỉ mục chất lượng cao"
+  ],
+  "Spoken instructions": [
+    "Arahan melalui suara",
+    "Perintah lisan",
+    "Lệnh bằng giọng nói"
+  ],
+  "Typed instructions": [
+    "Arahan bertulis",
+    "Perintah teks",
+    "Lệnh bằng văn bản"
+  ],
+  "Review and execute": [
+    "Semak dan jalankan",
+    "Periksa dan jalankan",
+    "Kiểm tra và thực hiện"
+  ],
+  "Feature topics": [
+    "Topik fungsi",
+    "Topik fitur",
+    "Các chức năng"
+  ],
+  "Software features": [
+    "Fungsi perisian",
+    "Fitur perangkat lunak",
+    "Chức năng phần mềm"
+  ],
+  "All feature topics →": [
+    "Semua topik fungsi →",
+    "Semua topik fitur →",
+    "Tất cả chức năng →"
+  ],
+  "All workflows →": [
+    "Semua aliran kerja →",
+    "Semua alur kerja →",
+    "Tất cả quy trình →"
+  ],
+  "Back to guides": [
+    "Kembali ke panduan",
+    "Kembali ke panduan",
+    "Quay lại hướng dẫn"
+  ],
+  "Before you continue.": [
+    "Sebelum meneruskan.",
+    "Sebelum melanjutkan.",
+    "Trước khi tiếp tục."
+  ],
+  "Keep exploring.": [
+    "Teruskan meneroka.",
+    "Terus jelajahi.",
+    "Tiếp tục khám phá."
+  ],
+  "On this page": [
+    "Pada halaman ini",
+    "Di halaman ini",
+    "Trên trang này"
+  ],
+  "More features ↓": [
+    "Lagi fungsi ↓",
+    "Fitur lainnya ↓",
+    "Thêm chức năng ↓"
+  ],
+  "Step by step ↓": [
+    "Langkah demi langkah ↓",
+    "Langkah demi langkah ↓",
+    "Từng bước ↓"
+  ],
+  "Watch the workflow ↓": [
+    "Tonton aliran kerja ↓",
+    "Tonton alur kerja ↓",
+    "Xem quy trình ↓"
+  ],
+  "Watch the workflow ↗": [
+    "Tonton aliran kerja ↗",
+    "Tonton alur kerja ↗",
+    "Xem quy trình ↗"
+  ],
+  "Read the complete walkthrough →": [
+    "Baca panduan lengkap →",
+    "Baca panduan lengkap →",
+    "Xem hướng dẫn đầy đủ →"
+  ],
+  "FREE TO USE": [
+    "PERCUMA",
+    "GRATIS",
+    "MIỄN PHÍ"
+  ],
+  "FREE INTERFACE": [
+    "ANTARA MUKA PERCUMA",
+    "ANTARMUKA GRATIS",
+    "GIAO DIỆN MIỄN PHÍ"
+  ],
+  "5 FREE AI USES": [
+    "5 PENGGUNAAN AI PERCUMA",
+    "5 KALI PENGGUNAAN AI GRATIS",
+    "5 LẦN DÙNG AI MIỄN PHÍ"
+  ],
+  "Access rules →": [
+    "Peraturan lesen →",
+    "Aturan lisensi →",
+    "Quy tắc cấp phép →"
+  ],
+  "Licensing": [
+    "Pelesenan",
+    "Lisensi",
+    "Cấp phép"
+  ],
+  "Get a license": [
+    "Dapatkan lesen",
+    "Dapatkan lisensi",
+    "Mua giấy phép"
+  ],
+  "Choose a license": [
+    "Pilih lesen",
+    "Pilih lisensi",
+    "Chọn giấy phép"
+  ],
+  "Contact support": [
+    "Hubungi sokongan",
+    "Hubungi dukungan",
+    "Liên hệ hỗ trợ"
+  ],
+  "V8.6 guides": [
+    "Panduan V8.6",
+    "Panduan V8.6",
+    "Hướng dẫn V8.6"
+  ],
+  "AI tools": [
+    "Alat AI",
+    "Alat AI",
+    "Công cụ AI"
+  ],
+  "MORE THAN AN IMAGE TOOL": [
+    "LEBIH DARIPADA ALAT IMEJ",
+    "LEBIH DARI ALAT GAMBAR",
+    "HƠN MỘT CÔNG CỤ HÌNH ẢNH"
+  ],
+  "Every next step.": [
+    "Setiap langkah seterusnya.",
+    "Setiap langkah berikutnya.",
+    "Mỗi bước tiếp theo."
+  ],
+  "Already connected.": [
+    "Sudah bersambung.",
+    "Sudah terhubung.",
+    "Đã được kết nối."
+  ],
+  "Prepress workflow": [
+    "Aliran kerja pracetak",
+    "Alur kerja pracetak",
+    "Quy trình trước in"
+  ],
+  "Find artwork": [
+    "Cari corak",
+    "Cari gambar",
+    "Tìm hình"
+  ],
+  "Describe the task": [
+    "Nyatakan tugasan",
+    "Jelaskan tugas",
+    "Mô tả tác vụ"
+  ],
+  "Prepare images": [
+    "Sediakan imej",
+    "Siapkan gambar",
+    "Chuẩn bị hình"
+  ],
+  "Make the layout": [
+    "Buat susun atur",
+    "Buat tata letak",
+    "Dàn trang"
+  ],
+  "Connect MainTop": [
+    "Sambungkan MainTop",
+    "Hubungkan MainTop",
+    "Kết nối MainTop"
+  ],
+  "Ready to print": [
+    "Sedia untuk dicetak",
+    "Siap dicetak",
+    "Sẵn sàng in"
+  ],
+  "Artwork prepared.": [
+    "Corak sudah siap.",
+    "Gambar sudah siap.",
+    "Hình đã sẵn sàng."
+  ],
+  "The next step?": [
+    "Langkah seterusnya?",
+    "Langkah berikutnya?",
+    "Bước tiếp theo?"
+  ],
+  "Print.": [
+    "Cetak.",
+    "Cetak.",
+    "In."
+  ],
+  "Say what you need.": [
+    "Nyatakan keperluan anda.",
+    "Sampaikan kebutuhan Anda.",
+    "Nói điều bạn cần."
+  ],
+  "Put every setting in place.": [
+    "Semua tetapan, tersedia.",
+    "Semua pengaturan, siap.",
+    "Thiết lập đầy đủ."
+  ],
+  "Choose your artwork. Describe the task.": [
+    "Pilih corak. Nyatakan tugasan.",
+    "Pilih gambar. Jelaskan tugas.",
+    "Chọn hình. Mô tả tác vụ."
+  ],
+  "Remember the picture.": [
+    "Ingat gambarnya.",
+    "Ingat gambarnya.",
+    "Nhớ hình ảnh."
+  ],
+  "Forget the filename.": [
+    "Tak perlu ingat nama fail.",
+    "Tak perlu ingat nama file.",
+    "Không cần nhớ tên file."
+  ],
+  "Prepare the artwork.": [
+    "Sediakan corak.",
+    "Siapkan gambar.",
+    "Chuẩn bị hình."
+  ],
+  "Keep production moving.": [
+    "Teruskan pengeluaran.",
+    "Lanjutkan produksi.",
+    "Tiếp nối sản xuất."
+  ],
+  "See the difference. Choose the next step.": [
+    "Lihat perbezaannya. Pilih langkah seterusnya.",
+    "Lihat perbedaannya. Pilih langkah berikutnya.",
+    "Xem sự khác biệt. Chọn bước tiếp theo."
+  ],
+  "Bring the print out of the picture.": [
+    "Ekstrak corak daripada imej.",
+    "Ambil motif dari gambar.",
+    "Tách họa tiết từ ảnh."
+  ],
+  "Keep the artwork. Clear the background.": [
+    "Kekalkan corak. Buang latar.",
+    "Pertahankan gambar. Hapus latar.",
+    "Giữ hình. Xóa nền."
+  ],
+  "A larger image. A closer look.": [
+    "Imej lebih besar. Butiran lebih jelas.",
+    "Gambar lebih besar. Detail lebih jelas.",
+    "Ảnh lớn hơn. Chi tiết rõ hơn."
+  ],
+  "Describe the change you want.": [
+    "Nyatakan perubahan yang dikehendaki.",
+    "Jelaskan perubahan yang diinginkan.",
+    "Mô tả thay đổi bạn muốn."
+  ],
+  "Give the image more room.": [
+    "Luaskan ruang imej.",
+    "Perluas ruang gambar.",
+    "Mở rộng không gian ảnh."
+  ],
+  "Keep the boundaries in order.": [
+    "Kemaskan sempadan imej.",
+    "Rapikan batas gambar.",
+    "Cắt gọn vùng hình."
+  ],
+  "From pixels to editable paths.": [
+    "Daripada piksel kepada laluan yang boleh diedit.",
+    "Dari piksel ke jalur yang dapat diedit.",
+    "Từ pixel đến đường vector có thể chỉnh sửa."
+  ],
+  "Give every tone": [
+    "Berikan setiap tona",
+    "Berikan setiap gradasi",
+    "Để từng sắc độ"
+  ],
+  "room to breathe.": [
+    "ruang untuk menyerlah.",
+    "ruang untuk tampil.",
+    "được thể hiện rõ."
+  ],
+  "Size. White ink. Layout.": [
+    "Saiz. Dakwat putih. Susun atur.",
+    "Ukuran. Tinta putih. Tata letak.",
+    "Kích thước. Mực trắng. Dàn trang."
+  ],
+  "One connected workflow.": [
+    "Satu aliran kerja yang bersambung.",
+    "Satu alur kerja terhubung.",
+    "Một quy trình liền mạch."
+  ],
+  "From a single print to a complete sheet.": [
+    "Daripada satu corak kepada helaian lengkap.",
+    "Dari satu gambar ke lembar lengkap.",
+    "Từ một hình đến cả tờ in."
+  ],
+  "Dark or light fabric.": [
+    "Fabrik gelap atau cerah.",
+    "Kain gelap atau terang.",
+    "Vải tối hoặc sáng."
+  ],
+  "White ink, with control.": [
+    "Dakwat putih, terkawal.",
+    "Tinta putih, terkendali.",
+    "Mực trắng, kiểm soát rõ ràng."
+  ],
+  "Control color artwork and the white underbase separately.": [
+    "Kawal corak berwarna dan lapisan asas putih secara berasingan.",
+    "Atur gambar berwarna dan lapisan dasar putih secara terpisah.",
+    "Kiểm soát hình màu và lớp lót trắng riêng biệt."
+  ],
+  "A place for every piece.": [
+    "Ruang untuk setiap kepingan.",
+    "Tempat untuk setiap potongan.",
+    "Chỗ cho từng mảnh."
+  ],
+  "A plan for the whole roll.": [
+    "Pelan untuk seluruh gulungan.",
+    "Rencana untuk seluruh gulungan.",
+    "Bố cục cho cả cuộn."
+  ],
+  "CUSTOM ROLL WIDTH": [
+    "LEBAR GULUNGAN TERSUAI",
+    "LEBAR GULUNGAN KHUSUS",
+    "TÙY CHỈNH CHIỀU RỘNG CUỘN"
+  ],
+  "Fit the roll you use.": [
+    "Sesuaikan dengan gulungan anda.",
+    "Sesuaikan dengan gulungan Anda.",
+    "Phù hợp với cuộn bạn dùng."
+  ],
+  "AUTOMATIC CUT LINES": [
+    "GARIS POTONG AUTOMATIK",
+    "GARIS POTONG OTOMATIS",
+    "ĐƯỜNG CẮT TỰ ĐỘNG"
+  ],
+  "Add the lines. Choose the color.": [
+    "Tambah garis. Pilih warna.",
+    "Tambahkan garis. Pilih warna.",
+    "Thêm đường cắt. Chọn màu."
+  ],
+  "TWO THEMES. ONE FAMILIAR WORKFLOW.": [
+    "DUA TEMA. ALIRAN KERJA YANG SAMA.",
+    "DUA TEMA. ALUR KERJA YANG SAMA.",
+    "HAI GIAO DIỆN. MỘT QUY TRÌNH QUEN THUỘC."
+  ],
+  "Built for production.": [
+    "Dibina untuk pengeluaran.",
+    "Dibuat untuk produksi.",
+    "Dành cho sản xuất."
+  ],
+  "Comfortable every day.": [
+    "Selesa setiap hari.",
+    "Nyaman setiap hari.",
+    "Thoải mái mỗi ngày."
+  ],
+  "Browse the complete interface gallery →": [
+    "Lihat galeri antara muka lengkap →",
+    "Lihat galeri antarmuka lengkap →",
+    "Xem toàn bộ giao diện →"
+  ],
+  "START YOUR WORKFLOW": [
+    "MULAKAN ALIRAN KERJA ANDA",
+    "MULAI ALUR KERJA ANDA",
+    "BẮT ĐẦU QUY TRÌNH CỦA BẠN"
+  ],
+  "Ready for": [
+    "Sedia untuk",
+    "Siap untuk",
+    "Sẵn sàng cho"
+  ],
+  "The right layout for one image or many.": [
+    "Susun atur yang tepat untuk satu atau banyak imej.",
+    "Tata letak yang tepat untuk satu atau banyak gambar.",
+    "Bố cục phù hợp cho một hoặc nhiều hình."
+  ],
+  "Artwork, white ink and MainTop. Connected.": [
+    "Corak, dakwat putih dan MainTop. Bersambung.",
+    "Gambar, tinta putih dan MainTop. Terhubung.",
+    "Hình, mực trắng và MainTop. Kết nối liền mạch."
+  ],
+  "DTF, connected to MainTop.": [
+    "DTF, bersambung ke MainTop.",
+    "DTF, terhubung ke MainTop.",
+    "DTF, kết nối MainTop."
+  ],
+  "DTG, connected to MainTop.": [
+    "DTG, bersambung ke MainTop.",
+    "DTG, terhubung ke MainTop.",
+    "DTG, kết nối MainTop."
+  ],
+  "From artwork to the next production run.": [
+    "Daripada corak kepada pengeluaran seterusnya.",
+    "Dari gambar ke produksi berikutnya.",
+    "Từ hình đến đợt sản xuất tiếp theo."
+  ],
+  "A smoother layout, together.": [
+    "Susun atur lebih lancar, bersama-sama.",
+    "Tata letak lebih lancar, bersama.",
+    "Cùng dàn trang thuận tiện hơn."
+  ],
+  "Focus on the artwork. Feel comfortable at work.": [
+    "Fokus pada corak. Bekerja dengan selesa.",
+    "Fokus pada gambar. Bekerja dengan nyaman.",
+    "Tập trung vào hình. Làm việc thoải mái."
+  ],
+  "Say what you need. Keep moving.": [
+    "Nyatakan keperluan. Teruskan bekerja.",
+    "Sampaikan kebutuhan. Lanjutkan bekerja.",
+    "Nói điều bạn cần. Tiếp tục công việc."
+  ],
+  "Colleagues reviewing artwork in a print studio with the light MAIXON TOOL interface.": [
+    "Rakan sekerja menyemak corak di studio percetakan dengan antara muka cerah MAIXON TOOL.",
+    "Rekan kerja memeriksa gambar di studio cetak dengan antarmuka terang MAIXON TOOL.",
+    "Đồng nghiệp xem hình trong xưởng in với giao diện sáng của MAIXON TOOL."
+  ],
+  "Colleagues working at a computer with the light MAIXON TOOL multi-image layout interface.": [
+    "Rakan sekerja menggunakan komputer dengan antara muka susun atur pelbagai imej MAIXON TOOL bertema cerah.",
+    "Rekan kerja menggunakan komputer dengan antarmuka tata letak banyak gambar MAIXON TOOL bertema terang.",
+    "Đồng nghiệp làm việc trên máy tính với giao diện sáng dàn trang nhiều hình của MAIXON TOOL."
+  ],
+  "Colleagues viewing the dark MAIXON TOOL AI Workbench in an evening print studio.": [
+    "Rakan sekerja melihat Ruang Kerja AI MAIXON TOOL bertema gelap di studio percetakan pada waktu petang.",
+    "Rekan kerja melihat Ruang Kerja AI MAIXON TOOL bertema gelap di studio cetak pada malam hari.",
+    "Đồng nghiệp xem Không gian làm việc AI của MAIXON TOOL với giao diện tối trong xưởng in buổi tối."
+  ],
+  "An operator using voice input at a computer with the light MAIXON TOOL Voice Commands interface.": [
+    "Pengguna memasukkan arahan suara pada komputer dengan antara muka cerah Arahan Suara MAIXON TOOL.",
+    "Pengguna memasukkan perintah suara pada komputer dengan antarmuka terang Perintah Suara MAIXON TOOL.",
+    "Người dùng nhập giọng nói trên máy tính với giao diện sáng Lệnh giọng nói của MAIXON TOOL."
+  ],
+  "MAIXON TOOL is available to users worldwide. Register with your email address, then sign in to review trials, licenses and AI credits.": [
+    "MAIXON TOOL boleh digunakan di seluruh dunia. Daftar dengan alamat e-mel, kemudian log masuk untuk menyemak percubaan, lesen dan kredit AI.",
+    "MAIXON TOOL dapat digunakan di seluruh dunia. Daftar dengan alamat email, lalu masuk untuk memeriksa uji coba, lisensi dan kredit AI.",
+    "MAIXON TOOL dành cho người dùng trên toàn thế giới. Đăng ký bằng email, rồi đăng nhập để xem thời gian dùng thử, giấy phép và điểm AI."
+  ],
+  "Start a 72-hour trial after registration.": [
+    "Mulakan percubaan 72 jam selepas pendaftaran.",
+    "Mulai uji coba 72 jam setelah pendaftaran.",
+    "Bắt đầu dùng thử 72 giờ sau khi đăng ký."
+  ],
+  "New users can claim a 72-hour free trial of the DTF, DTG and Sublimation production modules, with unlimited use during the valid trial period.": [
+    "Pengguna baharu boleh mendapatkan percubaan percuma 72 jam untuk modul DTF, DTG dan Sublimasi, tanpa had penggunaan sepanjang tempoh percubaan yang sah.",
+    "Pengguna baru dapat memperoleh uji coba gratis 72 jam untuk modul DTF, DTG dan Sublimasi, dengan penggunaan tanpa batas selama masa uji coba yang berlaku.",
+    "Người dùng mới được dùng thử miễn phí các mô-đun DTF, DTG và In thăng hoa trong 72 giờ, không giới hạn số lần sử dụng trong thời gian dùng thử hợp lệ."
+  ],
+  "(AI credits are not included in the 72-hour trial. AI has 5 separate free uses; further processing requires AI credits.)": [
+    "(Kredit AI tidak termasuk dalam percubaan 72 jam. AI boleh dicuba secara berasingan sebanyak 5 kali secara percuma; pemprosesan seterusnya memerlukan kredit AI.)",
+    "(Kredit AI tidak termasuk dalam uji coba 72 jam. AI memiliki 5 kali penggunaan gratis secara terpisah; pemrosesan selanjutnya memerlukan kredit AI.)",
+    "(Điểm AI không nằm trong chương trình dùng thử 72 giờ. AI được dùng thử riêng 5 lần miễn phí; những lần xử lý tiếp theo cần điểm AI.)"
+  ],
+  "The base-module trial cannot be claimed again with the same email or computer. Check trial dates and remaining AI uses in the app.": [
+    "Percubaan modul asas tidak boleh dituntut semula dengan e-mel atau komputer yang sama. Semak tarikh percubaan dan baki penggunaan AI dalam aplikasi.",
+    "Uji coba modul dasar tidak dapat diklaim lagi dengan email atau komputer yang sama. Periksa masa uji coba dan sisa penggunaan AI di aplikasi.",
+    "Không thể nhận lại quyền dùng thử mô-đun cơ bản bằng cùng email hoặc máy tính. Kiểm tra thời gian dùng thử và số lần dùng AI còn lại trong ứng dụng."
+  ],
+  "These three tools are free.": [
+    "Ketiga-tiga alat ini percuma.",
+    "Ketiga alat ini gratis.",
+    "Ba công cụ này miễn phí."
+  ],
+  "Halftone, MAIXON Image Finder and the Voice Commands interface are free to use, with no separate license purchase for these tools.": [
+    "Halftone, Pencari Imej MAIXON dan antara muka Arahan Suara boleh digunakan secara percuma, tanpa membeli lesen berasingan untuk alat ini.",
+    "Halftone, Pencari Gambar MAIXON dan antarmuka Perintah Suara dapat digunakan gratis, tanpa membeli lisensi terpisah untuk alat ini.",
+    "Bán sắc, Tìm ảnh MAIXON và giao diện Lệnh giọng nói được sử dụng miễn phí, không cần mua giấy phép riêng cho các công cụ này."
+  ],
+  "Free voice control. Access follows the production module.": [
+    "Kawalan suara percuma. Akses mengikut modul pengeluaran.",
+    "Kontrol suara gratis. Akses mengikuti modul produksi.",
+    "Điều khiển giọng nói miễn phí. Quyền sử dụng theo mô-đun sản xuất."
+  ],
+  "Voice Commands is an input method, and access follows the tool it calls. Halftone is free, so it can be run by voice without buying a production module. DTF, DTG and Sublimation tasks require a valid license or trial for their corresponding module.": [
+    "Arahan Suara ialah kaedah input; akses mengikut fungsi yang dipanggil. Halftone percuma, jadi ia boleh dijalankan melalui suara tanpa membeli modul pengeluaran. Tugasan DTF, DTG dan Sublimasi memerlukan lesen atau percubaan yang sah untuk modul berkenaan.",
+    "Perintah Suara adalah metode input; akses mengikuti fungsi yang dipanggil. Halftone gratis, sehingga dapat dijalankan dengan suara tanpa membeli modul produksi. Tugas DTF, DTG dan Sublimasi memerlukan lisensi atau uji coba yang berlaku untuk modul terkait.",
+    "Lệnh giọng nói là phương thức nhập lệnh; quyền thực hiện phụ thuộc vào chức năng được gọi. Bán sắc miễn phí nên có thể chạy bằng giọng nói mà không cần mua mô-đun sản xuất. Tác vụ DTF, DTG và In thăng hoa cần giấy phép hoặc quyền dùng thử hợp lệ của mô-đun tương ứng."
+  ],
+  "Voice Commands is free. Run Halftone by voice without buying a production module. DTF, DTG and Sublimation tasks require a valid license or trial for their module.": [
+    "Arahan Suara percuma. Jalankan Halftone melalui suara tanpa membeli modul pengeluaran. Tugasan DTF, DTG dan Sublimasi memerlukan lesen atau percubaan yang sah untuk modul berkenaan.",
+    "Perintah Suara gratis. Jalankan Halftone dengan suara tanpa membeli modul produksi. Tugas DTF, DTG dan Sublimasi memerlukan lisensi atau uji coba yang berlaku untuk modul terkait.",
+    "Lệnh giọng nói miễn phí. Có thể chạy Bán sắc bằng giọng nói mà không cần mua mô-đun sản xuất. Tác vụ DTF, DTG và In thăng hoa cần giấy phép hoặc quyền dùng thử hợp lệ của mô-đun tương ứng."
+  ],
+  "For example, after the 72-hour trial ends, a DTF-only license lets you run DTF tasks by voice. It does not let you run DTG tasks by voice. DTG preparation requires the corresponding DTG license.": [
+    "Contohnya, selepas percubaan 72 jam tamat, lesen DTF sahaja membolehkan tugasan DTF melalui suara. Tugasan DTG melalui suara memerlukan lesen DTG yang berkenaan.",
+    "Misalnya, setelah uji coba 72 jam berakhir, lisensi DTF saja memungkinkan tugas DTF dengan suara. Tugas DTG dengan suara memerlukan lisensi DTG yang sesuai.",
+    "Ví dụ, sau khi hết 72 giờ dùng thử, giấy phép chỉ dành cho DTF cho phép chạy tác vụ DTF bằng giọng nói. Tác vụ DTG bằng giọng nói cần giấy phép DTG tương ứng."
+  ],
+  "Available without a production-module purchase, because Halftone is free.": [
+    "Boleh digunakan tanpa membeli modul pengeluaran kerana Halftone percuma.",
+    "Dapat digunakan tanpa membeli modul produksi karena Halftone gratis.",
+    "Có thể dùng mà không cần mua mô-đun sản xuất vì Bán sắc miễn phí."
+  ],
+  "Requires a DTF license or valid trial. It cannot run without a purchase after the trial ends.": [
+    "Memerlukan lesen DTF atau percubaan yang sah. Selepas percubaan tamat, lesen DTF perlu dibeli untuk menjalankannya.",
+    "Memerlukan lisensi DTF atau uji coba yang berlaku. Setelah uji coba berakhir, lisensi DTF harus dibeli untuk menjalankannya.",
+    "Cần giấy phép DTF hoặc quyền dùng thử hợp lệ. Sau khi hết dùng thử, cần mua giấy phép DTF để thực hiện."
+  ],
+  "AI trial uses are separate from the 72-hour base-module trial. Further processing uses AI credits.": [
+    "Percubaan AI berasingan daripada percubaan modul asas 72 jam. Pemprosesan seterusnya menggunakan kredit AI.",
+    "Uji coba AI terpisah dari uji coba modul dasar 72 jam. Pemrosesan selanjutnya menggunakan kredit AI.",
+    "Lượt dùng thử AI tách riêng khỏi chương trình dùng thử mô-đun cơ bản 72 giờ. Những lần xử lý tiếp theo dùng điểm AI."
+  ],
+  "5 separate free uses, then AI credits. Software module licenses do not include AI credits.": [
+    "5 penggunaan percuma secara berasingan, kemudian gunakan kredit AI. Lesen modul perisian tidak termasuk kredit AI.",
+    "5 kali penggunaan gratis secara terpisah, lalu gunakan kredit AI. Lisensi modul perangkat lunak tidak mencakup kredit AI.",
+    "5 lần dùng miễn phí riêng, sau đó dùng điểm AI. Giấy phép mô-đun phần mềm không bao gồm điểm AI."
+  ],
+  "72-hour base-module trial. After it ends, use the modules covered by your purchased license.": [
+    "Percubaan modul asas 72 jam. Selepas tamat, gunakan modul yang diliputi oleh lesen yang dibeli.",
+    "Uji coba modul dasar 72 jam. Setelah berakhir, gunakan modul yang tercakup dalam lisensi yang dibeli.",
+    "Dùng thử mô-đun cơ bản 72 giờ. Khi hết hạn, sử dụng các mô-đun trong giấy phép đã mua."
+  ],
+  "Halftone is free. Continuing into DTF or DTG requires access to that production module.": [
+    "Halftone percuma. Untuk meneruskan ke DTF atau DTG, anda memerlukan akses kepada modul pengeluaran berkenaan.",
+    "Halftone gratis. Untuk melanjutkan ke DTF atau DTG, diperlukan akses ke modul produksi terkait.",
+    "Bán sắc miễn phí. Để tiếp tục sang DTF hoặc DTG, cần quyền sử dụng mô-đun sản xuất tương ứng."
+  ],
+  "MAIXON Image Finder is free, with no separate feature purchase.": [
+    "Pencari Imej MAIXON percuma, tanpa pembelian fungsi berasingan.",
+    "Pencari Gambar MAIXON gratis, tanpa pembelian fitur terpisah.",
+    "Tìm ảnh MAIXON miễn phí, không cần mua chức năng riêng."
+  ],
+  "Free interface. Each production task requires a valid license or trial for its module.": [
+    "Antara muka percuma. Setiap tugasan pengeluaran memerlukan lesen atau percubaan yang sah untuk modulnya.",
+    "Antarmuka gratis. Setiap tugas produksi memerlukan lisensi atau uji coba yang berlaku untuk modulnya.",
+    "Giao diện miễn phí. Mỗi tác vụ sản xuất cần giấy phép hoặc quyền dùng thử hợp lệ của mô-đun tương ứng."
+  ],
+  "Software licenses and MAIXON AI credits are purchased separately. All prices are in CNY.": [
+    "Lesen perisian dan kredit AI MAIXON dibeli secara berasingan. Semua harga dalam yuan China (CNY).",
+    "Lisensi perangkat lunak dan kredit AI MAIXON dibeli terpisah. Semua harga dalam yuan Tiongkok (CNY).",
+    "Giấy phép phần mềm và điểm AI MAIXON được mua riêng. Tất cả giá tính bằng nhân dân tệ Trung Quốc (CNY)."
+  ],
+  "AI credits are purchased separately and are not included in software licenses.": [
+    "Kredit AI dibeli secara berasingan dan tidak termasuk dalam lesen perisian.",
+    "Kredit AI dibeli terpisah dan tidak termasuk dalam lisensi perangkat lunak.",
+    "Điểm AI được mua riêng và không nằm trong giấy phép phần mềm."
+  ],
+  "AI credits are available in 100, 300 and 1,000 credit packages and are added using the registered email.": [
+    "Kredit AI tersedia dalam pakej 100, 300 dan 1,000 kredit, serta ditambah menggunakan e-mel berdaftar.",
+    "Kredit AI tersedia dalam paket 100, 300 dan 1,000 kredit, dan ditambahkan melalui email terdaftar.",
+    "Điểm AI có các gói 100, 300 và 1,000 điểm, được cộng qua email đã đăng ký."
+  ],
+  "1,000 credits": [
+    "1,000 kredit",
+    "1,000 kredit",
+    "1,000 điểm"
+  ],
+  "CNY / ¥": [
+    "CNY / ¥",
+    "CNY / ¥",
+    "CNY / ¥"
+  ],
+  "0.873 m³": [
+    "0.873 m³",
+    "0.873 m³",
+    "0.873 m³"
+  ],
+  "1.14 m³": [
+    "1.14 m³",
+    "1.14 m³",
+    "1.14 m³"
+  ],
+  "≈ +200 mm": [
+    "≈ +200 mm",
+    "≈ +200 mm",
+    "≈ +200 mm"
+  ],
+  "No": [
+    "Tidak",
+    "Tidak",
+    "Không"
+  ],
+  "Hoodies": [
+    "Baju hoodie",
+    "Hoodie",
+    "Áo hoodie"
+  ],
+  "White Choke": [
+    "Pengecilan Tepi Dakwat Putih",
+    "Penyusutan Tepi Tinta Putih",
+    "Co mép mực trắng"
+  ],
+  "Dark Fabric": [
+    "Fabrik Gelap",
+    "Kain Gelap",
+    "Vải tối màu"
+  ],
+  "Light Fabric": [
+    "Fabrik Cerah",
+    "Kain Terang",
+    "Vải sáng màu"
+  ],
+  "Single Artwork": [
+    "Corak Tunggal",
+    "Gambar Tunggal",
+    "Hình đơn"
+  ],
+  "Multiple-image Layout": [
+    "Susun Atur Pelbagai Imej",
+    "Tata Letak Banyak Gambar",
+    "Dàn trang nhiều hình"
+  ],
+  "PSD / PSB Pieces": [
+    "Kepingan PSD / PSB",
+    "Potongan PSD / PSB",
+    "Mảnh PSD / PSB"
+  ],
+  "MAIXON TOOL V8.6 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace.": [
+    "MAIXON TOOL V8.6 menyatukan carian imej, arahan suara, pemprosesan AI, dakwat putih dan susun atur dalam satu ruang kerja pracetak.",
+    "MAIXON TOOL V8.6 menyatukan pencarian gambar, perintah suara, pemrosesan AI, tinta putih dan tata letak dalam satu ruang kerja pracetak.",
+    "MAIXON TOOL V8.6 tập hợp tìm ảnh, lệnh giọng nói, xử lý AI, mực trắng và dàn trang trong một không gian làm việc trước in."
+  ],
+  "MAIXON TOOL V8.6 · Before you print": [
+    "MAIXON TOOL V8.6 · Sebelum anda mencetak",
+    "MAIXON TOOL V8.6 · Sebelum Anda mencetak",
+    "MAIXON TOOL V8.6 · Trước khi in"
+  ],
+  "MAIXON connects preparation before the printer software’s Print button: image processing, white ink, layouts, file output and the handoff to MainTop. Fewer repeated steps. A more continuous preparation workflow.": [
+    "MAIXON menyambungkan persediaan sebelum butang Cetak pada perisian pencetak: pemprosesan imej, dakwat putih, susun atur, eksport fail dan penghantaran ke MainTop. Kurangkan langkah berulang dan lancarkan aliran kerja.",
+    "MAIXON menghubungkan persiapan sebelum tombol Cetak pada perangkat lunak printer: pemrosesan gambar, tinta putih, tata letak, ekspor file dan pengiriman ke MainTop. Kurangi langkah berulang dan lanjutkan alur persiapan.",
+    "MAIXON kết nối các bước chuẩn bị trước nút In của phần mềm máy in: xử lý hình, mực trắng, dàn trang, xuất file và chuyển sang MainTop. Giảm thao tác lặp, giúp quy trình chuẩn bị liền mạch hơn."
+  ],
+  "Describe dimensions, resolution, white ink and margins in a clear instruction. Review the interpreted task and parameters, then confirm execution. Typed instructions are also supported.": [
+    "Nyatakan dimensi, resolusi, dakwat putih dan jidar melalui arahan yang jelas. Semak tugasan serta parameter yang dianalisis, kemudian sahkan pelaksanaan. Arahan bertulis juga disokong.",
+    "Jelaskan ukuran, resolusi, tinta putih dan margin melalui perintah yang jelas. Periksa tugas serta parameter yang dikenali, lalu konfirmasikan pelaksanaan. Perintah teks juga didukung.",
+    "Mô tả kích thước, độ phân giải, mực trắng và lề bằng lệnh rõ ràng. Kiểm tra tác vụ và thông số đã phân tích, rồi xác nhận thực hiện. Có thể nhập lệnh bằng văn bản."
+  ],
+  "Extract prints, remove backgrounds, enhance detail, edit with instructions, expand, crop and vectorize from one workspace. Compare the result, save it, then continue into production.": [
+    "Ekstrak corak, buang latar, tingkatkan perincian, edit melalui arahan, luaskan, pangkas dan tukar ke vektor dalam satu ruang kerja. Bandingkan hasil, simpan, kemudian teruskan pengeluaran.",
+    "Ekstrak motif, hapus latar, tingkatkan detail, edit dengan perintah, perluas, pangkas dan ubah ke vektor dalam satu ruang kerja. Bandingkan hasil, simpan, lalu lanjutkan produksi.",
+    "Tách họa tiết, xóa nền, nâng cao chi tiết, chỉnh sửa bằng lệnh, mở rộng, cắt và chuyển sang vector trong cùng một không gian làm việc. So sánh kết quả, lưu rồi tiếp tục sản xuất."
+  ],
+  "Set the usable roll width, such as 1820 mm, then arrange pieces with the spacing and direction you need.": [
+    "Tetapkan lebar gulungan yang boleh digunakan, contohnya 1820 mm, kemudian susun kepingan mengikut jarak dan arah yang diperlukan.",
+    "Atur lebar gulungan yang dapat digunakan, misalnya 1820 mm, lalu susun potongan dengan jarak dan arah yang diperlukan.",
+    "Đặt chiều rộng cuộn sử dụng được, ví dụ 1820 mm, rồi bố trí các mảnh với khoảng cách và hướng cần dùng."
+  ],
+  "Add cutting outlines and choose a distinct color for the next production step.": [
+    "Tambah garis potong dan pilih warna yang jelas untuk langkah pengeluaran seterusnya.",
+    "Tambahkan garis potong dan pilih warna yang jelas untuk tahap produksi berikutnya.",
+    "Thêm đường cắt và chọn màu dễ phân biệt cho công đoạn sản xuất tiếp theo."
+  ],
+  "White choke and edge margins": [
+    "Pengecilan tepi putih dan jidar",
+    "Penyusutan tepi putih dan margin",
+    "Co mép trắng và lề"
+  ],
+  "White choke and edge margins · DTF · MAIXON": [
+    "Pengecilan tepi putih dan jidar · DTF · MAIXON",
+    "Penyusutan tepi putih dan margin · DTF · MAIXON",
+    "Co mép trắng và lề · DTF · MAIXON"
+  ],
+  "Choke is specified in pixels": [
+    "Pengecilan tepi dinyatakan dalam piksel",
+    "Penyusutan tepi ditentukan dalam piksel",
+    "Co mép được tính bằng pixel"
+  ],
+  "Check that the active document belongs to this order. Review width, resolution, white-channel name, choke and each margin.": [
+    "Pastikan dokumen aktif adalah untuk pesanan ini. Semak lebar, resolusi, nama saluran putih, pengecilan tepi dan setiap jidar.",
+    "Pastikan dokumen aktif sesuai pesanan ini. Periksa lebar, resolusi, nama kanal putih, penyusutan tepi dan setiap margin.",
+    "Bảo đảm tài liệu đang mở thuộc đơn hàng này. Kiểm tra chiều rộng, độ phân giải, tên kênh trắng, co mép và lề ở từng cạnh."
+  ],
+  "Check the shape, then review resolution, choke and margins.": [
+    "Semak bentuk, kemudian resolusi, pengecilan tepi dan jidar.",
+    "Periksa bentuk, lalu resolusi, penyusutan tepi dan margin.",
+    "Kiểm tra hình dạng, rồi kiểm tra độ phân giải, co mép và lề."
+  ],
+  "Choose the fabric type, adjust white ink for regular and black regions, then review dimensions, channel naming, choke and margins. Process the current Photoshop artwork and export.": [
+    "Pilih jenis fabrik, laraskan dakwat putih untuk kawasan biasa dan hitam, kemudian semak dimensi, nama saluran, pengecilan tepi dan jidar. Proses corak Photoshop semasa dan eksport.",
+    "Pilih jenis kain, atur tinta putih untuk area umum dan hitam, lalu periksa ukuran, nama kanal, penyusutan tepi dan margin. Proses gambar Photoshop yang aktif dan ekspor.",
+    "Chọn loại vải, điều chỉnh mực trắng cho vùng thông thường và vùng đen, rồi kiểm tra kích thước, tên kênh, co mép và lề. Xử lý hình đang mở trong Photoshop rồi xuất file."
+  ],
+  "Example: make a 15 cm wide DTF print at 300 PPI, with a 2 px white choke and 5 mm margins on every edge. Correct the instruction before parsing again.": [
+    "Contoh: sediakan cetakan DTF selebar 15 cm pada 300 PPI, dengan pengecilan tepi putih 2 px dan jidar 5 mm pada setiap sisi. Betulkan arahan sebelum menganalisis semula.",
+    "Contoh: siapkan cetakan DTF selebar 15 cm pada 300 PPI, dengan penyusutan tepi putih 2 px dan margin 5 mm di setiap sisi. Perbaiki perintah sebelum menganalisis ulang.",
+    "Ví dụ: tạo hình in DTF rộng 15 cm ở 300 PPI, co mép trắng 2 px và thêm lề 5 mm ở mỗi cạnh. Sửa lệnh trước khi phân tích lại."
+  ],
+  "For example: prepare a 15 cm wide DTF print at 300 PPI, with a 2 px white choke and 5 mm margins on every edge. Select the artwork and enter the request.": [
+    "Contohnya: sediakan cetakan DTF selebar 15 cm pada 300 PPI, dengan pengecilan tepi putih 2 px dan jidar 5 mm pada setiap sisi. Pilih corak dan masukkan permintaan.",
+    "Misalnya: siapkan cetakan DTF selebar 15 cm pada 300 PPI, dengan penyusutan tepi putih 2 px dan margin 5 mm di setiap sisi. Pilih gambar dan masukkan permintaan.",
+    "Ví dụ: chuẩn bị hình in DTF rộng 15 cm ở 300 PPI, co mép trắng 2 px và thêm lề 5 mm ở mỗi cạnh. Chọn hình rồi nhập yêu cầu."
+  ],
+  "For example: prepare a 15 cm wide DTF print at 300 PPI, with a 2 px white-ink choke and 5 mm margins on every edge. Speak or type your request, review the interpreted settings, then confirm.": [
+    "Contohnya: sediakan cetakan DTF selebar 15 cm pada 300 PPI, dengan pengecilan tepi dakwat putih 2 px dan jidar 5 mm pada setiap sisi. Sebut atau taip permintaan, semak tetapan yang dianalisis, kemudian sahkan.",
+    "Misalnya: siapkan cetakan DTF selebar 15 cm pada 300 PPI, dengan penyusutan tepi tinta putih 2 px dan margin 5 mm di setiap sisi. Ucapkan atau ketik permintaan, periksa pengaturan yang dikenali, lalu konfirmasikan.",
+    "Ví dụ: chuẩn bị hình in DTF rộng 15 cm ở 300 PPI, co mép mực trắng 2 px và thêm lề 5 mm ở mỗi cạnh. Nói hoặc nhập yêu cầu, kiểm tra thiết lập đã phân tích rồi xác nhận."
+  ],
+  "Halftone controls the image's dot effect. In the production module, review white ink, choke and margins for the task.": [
+    "Halftone mengawal kesan titik imej. Dalam modul pengeluaran, semak dakwat putih, pengecilan tepi dan jidar untuk tugasan.",
+    "Halftone mengatur efek titik gambar. Di modul produksi, periksa tinta putih, penyusutan tepi dan margin untuk tugas tersebut.",
+    "Bán sắc điều chỉnh hiệu ứng chấm của ảnh. Trong mô-đun sản xuất, kiểm tra mực trắng, co mép và lề cho tác vụ."
+  ],
+  "Name the operation and size, such as a 30 cm wide DTG print. Include values and units for resolution, white-ink choke and margins when needed.": [
+    "Nyatakan operasi dan saiz, contohnya cetakan DTG selebar 30 cm. Sertakan nilai serta unit resolusi, pengecilan tepi dakwat putih dan jidar apabila diperlukan.",
+    "Sebutkan operasi dan ukuran, misalnya cetakan DTG selebar 30 cm. Sertakan nilai serta satuan resolusi, penyusutan tepi tinta putih dan margin bila diperlukan.",
+    "Nêu thao tác và kích thước, ví dụ hình in DTG rộng 30 cm. Ghi giá trị cùng đơn vị của độ phân giải, co mép mực trắng và lề khi cần."
+  ],
+  "Proportional sizing preserves shape. Resolution is in PPI, W1 choke in pixels and edge margins in millimetres.": [
+    "Penskalaan berkadar mengekalkan bentuk. Resolusi dalam PPI, pengecilan tepi W1 dalam piksel dan jidar dalam milimeter.",
+    "Penskalaan proporsional mempertahankan bentuk. Resolusi dalam PPI, penyusutan tepi W1 dalam piksel dan margin dalam milimeter.",
+    "Thay đổi kích thước theo tỷ lệ giữ nguyên hình dạng. Độ phân giải tính bằng PPI, co mép W1 bằng pixel và lề bằng milimét."
+  ],
+  "Review dimensions, resolution, white-ink choke and margins.": [
+    "Semak dimensi, resolusi, pengecilan tepi dakwat putih dan jidar.",
+    "Periksa ukuran, resolusi, penyusutan tepi tinta putih dan margin.",
+    "Kiểm tra kích thước, độ phân giải, co mép mực trắng và lề."
+  ],
+  "Review dimensions, W1 choke and edge margins": [
+    "Semak dimensi, pengecilan tepi W1 dan jidar",
+    "Periksa ukuran, penyusutan tepi W1 dan margin",
+    "Kiểm tra kích thước, co mép W1 và lề"
+  ],
+  "Review physical size, resolution, white-channel name, choke and margins against the order and sampling experience.": [
+    "Semak saiz fizikal, resolusi, nama saluran putih, pengecilan tepi dan jidar mengikut pesanan serta pengalaman sampel.",
+    "Periksa ukuran fisik, resolusi, nama kanal putih, penyusutan tepi dan margin sesuai pesanan serta hasil uji sampel.",
+    "Kiểm tra kích thước thực, độ phân giải, tên kênh trắng, co mép và lề theo đơn hàng cùng kết quả thử mẫu."
+  ],
+  "Review the channel name, specified width, resolution, W1 choke and margins. Check the exported color and white layers.": [
+    "Semak nama saluran, lebar, resolusi, pengecilan tepi W1 dan jidar. Periksa lapisan warna serta putih yang dieksport.",
+    "Periksa nama kanal, lebar, resolusi, penyusutan tepi W1 dan margin. Periksa lapisan warna serta putih hasil ekspor.",
+    "Kiểm tra tên kênh, chiều rộng đã đặt, độ phân giải, co mép W1 và lề. Kiểm tra các lớp màu và trắng đã xuất."
+  ],
+  "Review the channel name, width, PPI, W1 choke and margins. Choose an output folder and run the task.": [
+    "Semak nama saluran, lebar, PPI, pengecilan tepi W1 dan jidar. Pilih folder output dan jalankan tugasan.",
+    "Periksa nama kanal, lebar, PPI, penyusutan tepi W1 dan margin. Pilih folder keluaran dan jalankan tugas.",
+    "Kiểm tra tên kênh, chiều rộng, PPI, co mép W1 và lề. Chọn thư mục đầu ra rồi chạy tác vụ."
+  ],
+  "Review the input artwork, task type, dimensions, resolution, white choke and margins. Scroll through longer cards to see all settings.": [
+    "Semak corak input, jenis tugasan, dimensi, resolusi, pengecilan tepi putih dan jidar. Tatal kad yang panjang untuk melihat semua tetapan.",
+    "Periksa gambar masukan, jenis tugas, ukuran, resolusi, penyusutan tepi putih dan margin. Gulir kartu panjang untuk melihat seluruh pengaturan.",
+    "Kiểm tra hình đầu vào, loại tác vụ, kích thước, độ phân giải, co mép trắng và lề. Cuộn thẻ dài để xem toàn bộ thiết lập."
+  ],
+  "Set artwork dimensions and PPI first, then choose choke and margins for the order and proven production settings.": [
+    "Tetapkan dimensi corak dan PPI dahulu, kemudian pengecilan tepi serta jidar mengikut pesanan dan tetapan pengeluaran yang telah diuji.",
+    "Atur ukuran gambar dan PPI terlebih dahulu, lalu penyusutan tepi serta margin sesuai pesanan dan pengaturan produksi yang telah diuji.",
+    "Đặt kích thước hình và PPI trước, rồi chọn co mép cùng lề theo đơn hàng và thiết lập sản xuất đã được kiểm chứng."
+  ],
+  "Set physical width, PPI, W1 choke, margins and channel name, then prepare the file and continue into MainTop.": [
+    "Tetapkan lebar fizikal, PPI, pengecilan tepi W1, jidar dan nama saluran, kemudian sediakan fail dan teruskan ke MainTop.",
+    "Atur lebar fisik, PPI, penyusutan tepi W1, margin dan nama kanal, lalu siapkan file dan lanjutkan ke MainTop.",
+    "Đặt chiều rộng thực, PPI, co mép W1, lề và tên kênh, rồi chuẩn bị file và tiếp tục sang MainTop."
+  ],
+  "Single-artwork output, repeated layouts, multiple-image layouts and custom canvases cover different tasks. Confirm dimensions, resolution, W1 choke and margins, then process the Photoshop artwork and export.": [
+    "Corak tunggal, susun atur berulang, pelbagai imej dan kanvas tersuai memenuhi tugasan berbeza. Sahkan dimensi, resolusi, pengecilan tepi W1 dan jidar, kemudian proses corak Photoshop dan eksport.",
+    "Gambar tunggal, tata letak berulang, banyak gambar dan kanvas khusus memenuhi tugas berbeda. Konfirmasikan ukuran, resolusi, penyusutan tepi W1 dan margin, lalu proses gambar Photoshop dan ekspor.",
+    "Xuất hình đơn, bố trí lặp, nhiều hình và khổ làm việc tùy chỉnh đáp ứng các tác vụ khác nhau. Xác nhận kích thước, độ phân giải, co mép W1 và lề, rồi xử lý hình Photoshop và xuất file."
+  ],
+  "The channel name should match the RIP workflow. W1 choke uses pixels and margins use millimetres.": [
+    "Nama saluran perlu sepadan dengan aliran RIP. Pengecilan tepi W1 menggunakan piksel dan jidar menggunakan milimeter.",
+    "Nama kanal harus sesuai alur RIP. Penyusutan tepi W1 menggunakan piksel dan margin menggunakan milimeter.",
+    "Tên kênh cần phù hợp với quy trình RIP. Co mép W1 tính bằng pixel và lề tính bằng milimét."
+  ],
+  "Then review resolution and W1 choke and select Generate W1 and Export TIFF. The app does not add margins again at this stage.": [
+    "Kemudian semak resolusi dan pengecilan tepi W1, lalu pilih Jana W1 dan Eksport TIFF. Aplikasi tidak menambah jidar semula pada langkah ini.",
+    "Lalu periksa resolusi dan penyusutan tepi W1, kemudian pilih Buat W1 dan Ekspor TIFF. Aplikasi tidak menambahkan margin lagi pada tahap ini.",
+    "Sau đó kiểm tra độ phân giải và co mép W1, chọn Tạo W1 và Xuất TIFF. Ứng dụng không thêm lề lần nữa ở bước này."
+  ],
+  "W1 choke controls the white edge, while margins enlarge the canvas. Enter pixels and millimetres separately and inspect both artwork and canvas size.": [
+    "Pengecilan tepi W1 mengawal tepi putih, manakala jidar meluaskan kanvas. Masukkan piksel dan milimeter secara berasingan, lalu semak corak serta saiz kanvas.",
+    "Penyusutan tepi W1 mengatur tepi putih, sedangkan margin memperluas kanvas. Masukkan piksel dan milimeter secara terpisah, lalu periksa gambar serta ukuran kanvas.",
+    "Co mép W1 điều chỉnh mép trắng, còn lề mở rộng khổ làm việc. Nhập riêng pixel và milimét, kiểm tra cả hình và kích thước khổ làm việc."
+  ],
+  "W1 choke is in pixels; margins are in millimetres.": [
+    "Pengecilan tepi W1 dalam piksel; jidar dalam milimeter.",
+    "Penyusutan tepi W1 dalam piksel; margin dalam milimeter.",
+    "Co mép W1 tính bằng pixel; lề tính bằng milimét."
+  ],
+  "W1 choke uses pixels. Edge margins use millimetres. They affect the white edge and canvas bounds respectively.": [
+    "Pengecilan tepi W1 menggunakan piksel. Jidar menggunakan milimeter. Kedua-duanya mempengaruhi tepi putih dan sempadan kanvas secara berasingan.",
+    "Penyusutan tepi W1 menggunakan piksel. Margin menggunakan milimeter. Keduanya memengaruhi tepi putih dan batas kanvas secara terpisah.",
+    "Co mép W1 tính bằng pixel. Lề tính bằng milimét. Hai thiết lập lần lượt tác động đến mép trắng và ranh giới khổ làm việc."
+  ],
+  "With the layout document active, review resolution and W1 choke, then generate W1 and export TIFF. This stage does not add margins to the sheet again.": [
+    "Dengan dokumen susun atur aktif, semak resolusi dan pengecilan tepi W1, kemudian jana W1 dan eksport TIFF. Langkah ini tidak menambah jidar semula pada helaian.",
+    "Dengan dokumen tata letak aktif, periksa resolusi dan penyusutan tepi W1, lalu buat W1 dan ekspor TIFF. Tahap ini tidak menambahkan margin lagi pada lembar.",
+    "Khi tài liệu dàn trang đang mở, kiểm tra độ phân giải và co mép W1, rồi tạo W1 và xuất TIFF. Bước này không thêm lề lần nữa vào tờ in."
+  ],
+  "Light-fabric preparation": [
+    "Penyediaan fabrik cerah",
+    "Persiapan kain terang",
+    "Chuẩn bị cho vải sáng"
+  ],
+  "Dark-fabric preparation": [
+    "Penyediaan fabrik gelap",
+    "Persiapan kain gelap",
+    "Chuẩn bị cho vải tối"
+  ],
+  "White ink by region": [
+    "Dakwat putih mengikut kawasan",
+    "Tinta putih berdasarkan area",
+    "Mực trắng theo vùng"
+  ],
+  "Nest different shapes with rotation": [
+    "Susun rapat pelbagai bentuk dengan putaran",
+    "Susun rapat beragam bentuk dengan rotasi",
+    "Xếp lồng các hình khác nhau bằng cách xoay"
+  ],
+  "PSD / PSB piece layout": [
+    "Susun atur kepingan PSD / PSB",
+    "Tata letak potongan PSD / PSB",
+    "Dàn trang mảnh PSD / PSB"
+  ],
+  "PSD / PSB piece output": [
+    "Output kepingan PSD / PSB",
+    "Keluaran potongan PSD / PSB",
+    "Xuất mảnh PSD / PSB"
+  ],
+  "PSD / PSB pieces": [
+    "Kepingan PSD / PSB",
+    "Potongan PSD / PSB",
+    "Mảnh PSD / PSB"
+  ],
+  "Choose the PDF or PSD / PSB workflow for your task.": [
+    "Pilih aliran PDF atau PSD / PSB yang sesuai untuk tugasan.",
+    "Pilih alur PDF atau PSD / PSB sesuai tugas Anda.",
+    "Chọn quy trình PDF hoặc PSD / PSB phù hợp với tác vụ."
+  ],
+  "Choose PDF layout or PSD / PSB pieces": [
+    "Pilih susun atur PDF atau kepingan PSD / PSB",
+    "Pilih tata letak PDF atau potongan PSD / PSB",
+    "Chọn dàn trang PDF hoặc mảnh PSD / PSB"
+  ],
+  "Prepare artwork in the AI Workbench and review changes with a clear before-and-after comparison.": [
+    "Sediakan corak dalam Ruang Kerja AI dan semak perubahan melalui perbandingan sebelum dan selepas yang jelas.",
+    "Siapkan gambar di Ruang Kerja AI dan periksa perubahan melalui perbandingan sebelum dan sesudah yang jelas.",
+    "Chuẩn bị hình trong Không gian làm việc AI và xem thay đổi qua so sánh trước và sau rõ ràng."
+  ],
+  "From AI artwork to layout and MainTop": [
+    "Daripada corak AI kepada susun atur dan MainTop",
+    "Dari gambar AI ke tata letak dan MainTop",
+    "Từ hình AI đến dàn trang và MainTop"
+  ],
+  "AI artwork to DTG and MainTop": [
+    "Corak AI kepada DTG dan MainTop",
+    "Gambar AI ke DTG dan MainTop",
+    "Hình AI đến DTG và MainTop"
+  ]
+}

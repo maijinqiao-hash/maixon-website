@@ -1,15 +1,18 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import {parse,attrs,walkContent,normalized,invariant,htmlFiles,languages} from './localization-core.mjs';
+import {parse,attrs,walkContent,normalized,invariant,htmlFiles,languages,localizedLanguages,countries,nativeNames} from './localization-core.mjs';
 const failures=[];
 const source=JSON.parse(await fs.readFile('src/data/i18n/source.json','utf8'));
 const english=await htmlFiles('dist/en');
-const catalogs={};for(const locale of ['th','ja','ko'])catalogs[locale]=JSON.parse(await fs.readFile(`src/data/i18n/${locale}.json`,'utf8'));
+const catalogs={};for(const locale of localizedLanguages)catalogs[locale]=JSON.parse(await fs.readFile(`src/data/i18n/${locale}.json`,'utf8'));
 const values=document=>{const result=[];walkContent(document,(node,kind,value)=>{const text=normalized(value);if(text)result.push({node,kind,text});});return result;};
 const allNodes=document=>{const result=[];function visit(node){if(node.tagName)result.push(node);for(const child of node.childNodes||[])visit(child);}visit(document);return result;};
 const technical=value=>!value.replace(/\b(?:MAIXON(?: TOOL)?|MainTop|DTF\d*|DFG\d*|DTG|AI|WORKBENCH|HALFTONE|Windows|SP1|x64|macOS|Photoshop|CNY|V\d+(?:\.\d+)*|SHA256|[A-F0-9]{64}|ICC|RGB|CMYK|PDF|PSD|PSB|PNG|TIFF|JPG|JPEG|EPS|USB|QR|WhatsApp|mm|cm|m|ml|kW|W|V|h)\b/g,'').replace(/°C/g,'').replace(/[^A-Za-z]/g,'');
-for(const locale of ['th','ja','ko']){
+// These loanwords, product names and technical units are correct as written.
+const sharedTerms={ms:new Set(['Halftone','Menu','Model','Epson WF-7610','Ethernet / LAN','WeChat Pay','SUBLIMATION · MAIXON TOOL V8.6','OVEN604','kg','m³']),id:new Set(['Halftone','Menu','Model','Epson WF-7610','Ethernet / LAN','WeChat Pay','OVEN604','kg','m³']),vi:new Set(['Epson WF-7610','Ethernet / LAN','WeChat Pay','OVEN604','kg','m³'])};
+const protectedPrintTerms=/\b(?:MAIXON|MainTop|Photoshop|Windows|macOS|DTF|DTG|AI|PDF|PSD|PSB|PNG|TIFF|JPG|JPEG|EPS|SVG|RGB|CMYK|ICC|DPI|LPI|PPI|W1|W2|W3|W5)\b/g;
+for(const locale of localizedLanguages){
  const catalog=catalogs[locale];
  for(const key of Object.keys(source)){
   const text=catalog[key];if(!text){failures.push(`${locale}: missing phrase ${key}`);continue;}
@@ -17,7 +20,8 @@ for(const locale of ['th','ja','ko']){
   for(const number of key.match(/\d+(?:[.,]\d+)*/g)||[])if(!text.includes(number))failures.push(`${locale}: changed numeric value ${number}: ${key}`);
   for(const brand of ['MainTop','MAIXON'])if(key.includes(brand)&&!text.includes(brand))failures.push(`${locale}: changed brand ${brand}: ${key}`);
   for(const money of ['CNY','¥'])if(key.includes(money)&&!text.includes(money))failures.push(`${locale}: changed currency ${money}: ${key}`);
-  if(text===key&&!invariant(key)&&!technical(key))failures.push(`${locale}: untranslated phrase ${key}`);
+  if(['ms','id','vi'].includes(locale))for(const term of new Set(key.match(protectedPrintTerms)||[]))if(!new RegExp(`\\b${term}\\b`,'i').test(text))failures.push(`${locale}: changed printing identifier ${term}: ${key}`);
+  if(text===key&&!invariant(key)&&!technical(key)&&!sharedTerms[locale]?.has(key)&&!/^\d+(?:\.\d+)?\s*(?:kg|m³)$/.test(key)&&!/^\d+\s*×\s*\d+\s*×\s*\d+\s*mm$/.test(key))failures.push(`${locale}: untranslated phrase ${key}`);
  }
  const pages=await htmlFiles(`dist/${locale}`);
  if(pages.length!==english.length)failures.push(`${locale}: ${pages.length} pages, expected ${english.length}`);
@@ -42,6 +46,14 @@ for(const locale of ['th','ja','ko']){
     const localPath=a['data-fallback-src'];
     try{await fs.access(path.join('dist',localPath));}catch{failures.push(`${file}: missing caption ${localPath}`);}
    }
+   if(node.tagName==='a'&&a['data-native-language']){
+    const target=a['data-native-language'];
+    const flag=node.childNodes.find(child=>child.tagName==='img');
+    if(!languages.includes(target)||!attrs(flag).src?.endsWith(`/flags/${countries[target]}.svg`))failures.push(`${file}: missing or wrong ${target} language flag`);
+    if((a['aria-current']==='true')!==(target===locale))failures.push(`${file}: wrong selected language ${target}`);
+   }
+   if('data-current-language' in a&&normalized(node.childNodes.map(child=>child.value||'').join(''))!==nativeNames[locale])failures.push(`${file}: wrong current language name`);
+   if('data-current-language-flag' in a&&!a.src?.endsWith(`/flags/${countries[locale]}.svg`))failures.push(`${file}: wrong current language flag`);
    if(node.tagName==='a'&&a.href?.startsWith('/')){
     const route=a.href.split(/[?#]/)[0];
     const destination=route.endsWith('/')?route+'index.html':route;
@@ -63,7 +75,7 @@ for(const name of await fs.readdir('public/media/v86/captions')){
  const base=timing(originalText);
  const cueText=text=>text.split('\n').filter(line=>line.trim()&&line.trim()!=='WEBVTT'&&!line.includes('-->')).map(normalized);
  const originalCues=cueText(originalText);
- for(const locale of ['th','ja','ko']){
+ for(const locale of localizedLanguages){
   const localizedText=await fs.readFile(`dist/media/v86/captions/${name.replace('.en.vtt',`.${locale}.vtt`)}`,'utf8');
   const translated=timing(localizedText);
   const expectedCues=originalCues.map(cue=>normalized(catalogs[locale][cue]||cue));
@@ -73,6 +85,8 @@ for(const name of await fs.readdir('public/media/v86/captions')){
 }
 const scenes=JSON.parse(await fs.readFile('src/data/v86/studio-scenes.json','utf8'));
 for(const scene of scenes){const data=await fs.readFile(`public/media/v86/screenshots/${scene.screen}`);if(crypto.createHash('sha256').update(data).digest('hex')!==scene.screenSha256)failures.push(`${scene.id}: real screenshot changed`);}
+const flags=JSON.parse(await fs.readFile('src/data/i18n/flag-provenance.json','utf8'));
+for(const flag of flags.files){const data=await fs.readFile(`public/media/flags/${flag.country}.svg`);if(crypto.createHash('sha256').update(data).digest('hex')!==flag.sha256)failures.push(`${flag.country}: flag source changed`);}
 const sitemap=await fs.readFile('dist/sitemap-0.xml','utf8');
 const total=(await htmlFiles('dist')).length;
 if((sitemap.match(/<url>/g)||[]).length!==total)failures.push('Sitemap does not cover all published routes');

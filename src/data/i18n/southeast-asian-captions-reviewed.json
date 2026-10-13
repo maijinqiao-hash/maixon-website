@@ -1,0 +1,277 @@
+{
+  "From finding artwork to AI processing, image preparation and layout, MAIXON eight point six brings prepress into one workspace.": [
+    "Daripada mencari corak hingga pemprosesan AI, penyediaan imej dan susun atur, MAIXON 8.6 menyatukan kerja pracetak dalam satu ruang kerja.",
+    "Dari pencarian gambar hingga pemrosesan AI, persiapan gambar dan tata letak, MAIXON 8.6 menyatukan pekerjaan pracetak dalam satu ruang kerja.",
+    "Từ tìm ảnh, xử lý AI đến chuẩn bị hình và dàn trang, MAIXON 8.6 tập hợp công việc trước in trong một không gian làm việc."
+  ],
+  "Halftone adjusts the dot pattern. DTF offers single artwork, repeated layouts, multiple-image layouts and custom canvases. Choose the mode for your production task.": [
+    "Halftone melaraskan corak titik. DTF menyediakan corak tunggal, susun atur berulang, pelbagai imej dan kanvas tersuai. Pilih mod yang sesuai untuk kerja pengeluaran.",
+    "Halftone mengatur pola titik. DTF menyediakan gambar tunggal, tata letak berulang, banyak gambar dan kanvas khusus. Pilih mode sesuai pekerjaan produksi.",
+    "Bán sắc điều chỉnh mẫu chấm. DTF hỗ trợ hình đơn, bố trí lặp, nhiều hình và khổ làm việc tùy chỉnh. Chọn chế độ phù hợp với công việc sản xuất."
+  ],
+  "DTG controls fabric and white ink separately. For sublimation, compare layouts, review the result and export.": [
+    "DTG menyediakan tetapan fabrik dan dakwat putih secara berasingan. Untuk sublimasi, bandingkan susun atur, semak hasil dan eksport.",
+    "DTG menyediakan pengaturan kain dan tinta putih secara terpisah. Untuk sublimasi, bandingkan tata letak, periksa hasil dan ekspor.",
+    "DTG có các thiết lập riêng cho vải và mực trắng. Với in thăng hoa, hãy so sánh phương án dàn trang, kiểm tra kết quả rồi xuất file."
+  ],
+  "Connect tasks with instructions and switch themes whenever you need.": [
+    "Sambungkan tugasan melalui arahan dan tukar tema mengikut keperluan.",
+    "Hubungkan tugas melalui perintah dan ganti tema sesuai kebutuhan.",
+    "Kết nối các tác vụ bằng lệnh và chuyển giao diện sáng hoặc tối khi cần."
+  ],
+  "The light theme keeps the same controls. Start from Production Overview, then open Image Finder or the AI Workbench to prepare your artwork.": [
+    "Tema cerah mengekalkan kawalan yang sama. Mulakan daripada Gambaran Pengeluaran, kemudian buka Pencari Imej atau Ruang Kerja AI untuk menyediakan corak.",
+    "Tema terang memiliki kontrol yang sama. Mulai dari Ringkasan Produksi, lalu buka Pencari Gambar atau Ruang Kerja AI untuk menyiapkan gambar.",
+    "Giao diện sáng giữ nguyên các nút điều khiển. Bắt đầu từ Tổng quan sản xuất, rồi mở Tìm ảnh hoặc Không gian làm việc AI để chuẩn bị hình."
+  ],
+  "Choose Halftone, DTF or DTG as needed and keep working with the same artwork.": [
+    "Pilih Halftone, DTF atau DTG mengikut keperluan dan teruskan menggunakan corak yang sama.",
+    "Pilih Halftone, DTF atau DTG sesuai kebutuhan dan lanjutkan dengan gambar yang sama.",
+    "Chọn Bán sắc, DTF hoặc DTG theo nhu cầu và tiếp tục với cùng một hình."
+  ],
+  "Continue with sublimation layout, or enter an instruction to prepare your next task.": [
+    "Teruskan dengan susun atur sublimasi, atau masukkan arahan untuk menyediakan tugasan seterusnya.",
+    "Lanjutkan dengan tata letak sublimasi, atau masukkan perintah untuk menyiapkan tugas berikutnya.",
+    "Tiếp tục dàn trang in thăng hoa hoặc nhập lệnh để chuẩn bị tác vụ tiếp theo."
+  ],
+  "Choose the artwork and enter a clear instruction. When using speech, check the recognized text first.": [
+    "Pilih corak dan masukkan arahan yang jelas. Jika menggunakan suara, semak teks yang dikenali terlebih dahulu.",
+    "Pilih gambar dan masukkan perintah yang jelas. Jika menggunakan suara, periksa teks yang dikenali terlebih dahulu.",
+    "Chọn hình và nhập lệnh rõ ràng. Khi dùng giọng nói, hãy kiểm tra văn bản được nhận diện trước."
+  ],
+  "After parsing, review the task type, dimensions, resolution and white-ink settings.": [
+    "Selepas arahan dianalisis, semak jenis tugasan, dimensi, resolusi dan tetapan dakwat putih.",
+    "Setelah perintah dianalisis, periksa jenis tugas, ukuran, resolusi dan pengaturan tinta putih.",
+    "Sau khi phân tích lệnh, kiểm tra loại tác vụ, kích thước, độ phân giải và thiết lập mực trắng."
+  ],
+  "Confirm the settings to run the task. Here, artwork width is fifteen centimeters, with five-millimeter margins on every edge.": [
+    "Sahkan tetapan untuk menjalankan tugasan. Dalam contoh ini, lebar corak ialah 15 cm, dengan jidar 5 mm pada setiap sisi.",
+    "Konfirmasikan pengaturan untuk menjalankan tugas. Pada contoh ini, lebar gambar 15 cm dengan margin 5 mm di setiap sisi.",
+    "Xác nhận thiết lập để chạy tác vụ. Trong ví dụ này, hình rộng 15 cm và thêm lề 5 mm ở mỗi cạnh."
+  ],
+  "Open the exported TIFF in Photoshop to inspect the result.": [
+    "Buka TIFF yang dieksport dalam Photoshop untuk memeriksa hasil.",
+    "Buka TIFF hasil ekspor di Photoshop untuk memeriksa hasilnya.",
+    "Mở TIFF đã xuất trong Photoshop để kiểm tra kết quả."
+  ],
+  "Choose the local folder that holds your artwork and prepare its library. Once the first scan is complete, you can search with a reference image.": [
+    "Pilih folder tempatan yang menyimpan corak dan bina pustaka imej. Selepas imbasan pertama selesai, anda boleh mencari menggunakan imej rujukan.",
+    "Pilih folder lokal yang menyimpan gambar dan buat pustaka gambar. Setelah pemindaian pertama selesai, Anda dapat mencari dengan gambar referensi.",
+    "Chọn thư mục trên máy chứa hình và tạo thư viện ảnh. Sau khi quét lần đầu hoàn tất, bạn có thể tìm bằng ảnh tham chiếu."
+  ],
+  "Check the usable file count in Library Management. Then return to the workspace and choose a reference image.": [
+    "Semak bilangan fail yang boleh digunakan dalam Pengurusan Pustaka. Kemudian kembali ke ruang kerja dan pilih imej rujukan.",
+    "Periksa jumlah file yang dapat digunakan di Pengelolaan Pustaka. Lalu kembali ke ruang kerja dan pilih gambar referensi.",
+    "Kiểm tra số file sử dụng được trong Quản lý thư viện. Sau đó trở lại không gian làm việc và chọn ảnh tham chiếu."
+  ],
+  "Compare the reference with the search results to find the artwork you need. You can compare similar designs side by side.": [
+    "Bandingkan imej rujukan dengan hasil carian untuk mencari corak yang diperlukan. Anda boleh membandingkan reka bentuk yang serupa secara sebelah menyebelah.",
+    "Bandingkan gambar referensi dengan hasil pencarian untuk menemukan gambar yang diperlukan. Desain serupa dapat dibandingkan berdampingan.",
+    "So sánh ảnh tham chiếu với kết quả tìm kiếm để tìm hình cần dùng. Bạn có thể xem các mẫu tương tự cạnh nhau."
+  ],
+  "Looking for just one design? Select its region to reduce background distractions.": [
+    "Mahu mencari satu corak sahaja? Pilih kawasan corak tersebut untuk mengurangkan gangguan daripada latar.",
+    "Ingin mencari satu motif saja? Pilih area motif tersebut untuk mengurangi gangguan dari latar.",
+    "Chỉ muốn tìm một họa tiết? Chọn vùng họa tiết đó để giảm ảnh hưởng của nền."
+  ],
+  "Search again with the selected region, check the match, then open the folder containing the artwork.": [
+    "Cari semula menggunakan kawasan terpilih, semak padanan, kemudian buka folder yang menyimpan corak.",
+    "Cari lagi menggunakan area yang dipilih, periksa kecocokannya, lalu buka folder penyimpanan gambar.",
+    "Tìm lại bằng vùng đã chọn, kiểm tra hình khớp rồi mở thư mục chứa hình."
+  ],
+  "Import the image and compare the original with the halftone effect in one window. Transparent artwork can also continue through halftone processing.": [
+    "Import imej dan bandingkan imej asal dengan kesan Halftone dalam satu tetingkap. Corak berlatar telus juga boleh diproses dengan Halftone.",
+    "Impor gambar dan bandingkan gambar asli dengan efek Halftone dalam satu jendela. Gambar berlatar transparan juga dapat diproses dengan Halftone.",
+    "Nhập ảnh và so sánh ảnh gốc với hiệu ứng bán sắc trong cùng một cửa sổ. Hình có nền trong suốt cũng có thể xử lý bán sắc."
+  ],
+  "Set the finished width and lines per inch, then compare tone-preserving and full-image dot patterns.": [
+    "Tetapkan lebar hasil dan bilangan garisan per inci, kemudian bandingkan mod yang mengekalkan tona dengan corak titik seluruh imej.",
+    "Atur lebar hasil dan jumlah garis per inci, lalu bandingkan mode yang mempertahankan gradasi dengan pola titik seluruh gambar.",
+    "Đặt chiều rộng thành phẩm và số đường mỗi inch, rồi so sánh chế độ giữ sắc độ với chế độ chấm toàn ảnh."
+  ],
+  "Additional settings include resolution, screen angle, diameter ratio and black-removal threshold. Adjust one at a time and zoom in to inspect details.": [
+    "Tetapan tambahan termasuk resolusi, sudut raster, nisbah diameter dan ambang pembuangan hitam. Laraskan satu demi satu dan zum masuk untuk memeriksa butiran.",
+    "Pengaturan tambahan mencakup resolusi, sudut raster, rasio diameter dan ambang penghapusan hitam. Sesuaikan satu per satu dan perbesar untuk memeriksa detail.",
+    "Các thiết lập bổ sung gồm độ phân giải, góc tram, tỷ lệ đường kính và ngưỡng xóa màu đen. Điều chỉnh từng mục rồi phóng to để kiểm tra chi tiết."
+  ],
+  "When ready, open the result in Photoshop and continue to artwork preparation and layout.": [
+    "Apabila siap, buka hasil dalam Photoshop dan teruskan penyediaan corak serta susun atur.",
+    "Setelah siap, buka hasil di Photoshop dan lanjutkan persiapan gambar serta tata letak.",
+    "Khi hoàn tất, mở kết quả trong Photoshop rồi tiếp tục chuẩn bị hình và dàn trang."
+  ],
+  "Choose Remove Background, import an image and select the processing method for your artwork. Then start.": [
+    "Pilih Buang Latar, import imej dan pilih kaedah pemprosesan yang sesuai untuk corak. Kemudian mulakan.",
+    "Pilih Hapus Latar, impor gambar dan pilih metode pemrosesan yang sesuai. Lalu mulai.",
+    "Chọn Xóa nền, nhập ảnh và chọn phương pháp xử lý phù hợp. Sau đó bắt đầu."
+  ],
+  "Drag the comparison divider to see the original and the processed result together. Check that the subject is complete.": [
+    "Seret pembahagi perbandingan untuk melihat imej asal dan hasil serentak. Pastikan subjek lengkap.",
+    "Geser pembatas perbandingan untuk melihat gambar asli dan hasil bersamaan. Pastikan objek tetap lengkap.",
+    "Kéo thanh chia so sánh để xem ảnh gốc và kết quả cùng lúc. Kiểm tra chủ thể còn đầy đủ."
+  ],
+  "Switch between Original, Compare and Result to inspect the edges. Save a transparent image when ready, or continue to the next step.": [
+    "Tukar antara Asal, Bandingkan dan Hasil untuk memeriksa tepi. Simpan imej telus apabila siap, atau teruskan ke langkah seterusnya.",
+    "Beralih antara Asli, Bandingkan dan Hasil untuk memeriksa tepi. Simpan gambar transparan setelah siap, atau lanjutkan ke langkah berikutnya.",
+    "Chuyển giữa Gốc, So sánh và Kết quả để kiểm tra mép hình. Lưu ảnh trong suốt khi hoàn tất hoặc tiếp tục bước tiếp theo."
+  ],
+  "For a sharper image, choose Enhance and select the enlargement factor you need.": [
+    "Untuk imej yang lebih tajam, pilih Tingkatkan Perincian dan tetapkan faktor pembesaran yang diperlukan.",
+    "Untuk gambar lebih tajam, pilih Tingkatkan Detail dan tentukan faktor pembesaran yang diperlukan.",
+    "Để ảnh sắc nét hơn, chọn Nâng cao chi tiết và đặt hệ số phóng lớn cần dùng."
+  ],
+  "After four-times enlargement, this image measures 4380 by 5600 pixels. Zoom in to inspect text and lines, and check the details you want to keep.": [
+    "Selepas pembesaran 4 kali, imej ini berukuran 4380 × 5600 piksel. Zum masuk untuk memeriksa teks, garisan dan butiran yang ingin dikekalkan.",
+    "Setelah diperbesar 4 kali, gambar ini berukuran 4380 × 5600 piksel. Perbesar tampilan untuk memeriksa teks, garis dan detail yang ingin dipertahankan.",
+    "Sau khi phóng lớn 4 lần, ảnh có kích thước 4380 × 5600 pixel. Phóng to để kiểm tra chữ, đường nét và các chi tiết cần giữ."
+  ],
+  "When editing with instructions, describe the change you want and the artwork and text that should stay.": [
+    "Apabila mengedit dengan arahan, nyatakan perubahan yang dikehendaki serta corak dan teks yang perlu dikekalkan.",
+    "Saat mengedit dengan perintah, jelaskan perubahan yang diinginkan serta gambar dan teks yang harus dipertahankan.",
+    "Khi chỉnh sửa bằng lệnh, mô tả thay đổi mong muốn cùng hình và chữ cần giữ nguyên."
+  ],
+  "For example, change the car body to blue. Compare the result with the original, then save it.": [
+    "Contohnya, tukar badan kereta kepada warna biru. Bandingkan hasil dengan imej asal, kemudian simpan.",
+    "Misalnya, ubah bodi mobil menjadi biru. Bandingkan hasil dengan gambar asli, lalu simpan.",
+    "Ví dụ, đổi thân xe sang màu xanh dương. So sánh kết quả với ảnh gốc rồi lưu."
+  ],
+  "Choose Extract Print, then set the extraction method, quality and aspect ratio.": [
+    "Pilih Ekstrak Corak, kemudian tetapkan kaedah pengekstrakan, kualiti dan nisbah bidang.",
+    "Pilih Ekstrak Motif, lalu atur metode ekstraksi, kualitas dan rasio aspek.",
+    "Chọn Tách họa tiết, rồi đặt phương pháp tách, chất lượng và tỷ lệ khung hình."
+  ],
+  "Switch between the original and the result, and drag the divider to inspect the artwork. This example keeps the background. Enable automatic background removal when you need transparency.": [
+    "Tukar antara imej asal dan hasil, lalu seret pembahagi untuk memeriksa corak. Contoh ini mengekalkan latar. Hidupkan pembuangan latar automatik jika memerlukan ketelusan.",
+    "Beralih antara gambar asli dan hasil, lalu geser pembatas untuk memeriksa gambar. Contoh ini mempertahankan latar. Aktifkan penghapusan latar otomatis jika memerlukan transparansi.",
+    "Chuyển giữa ảnh gốc và kết quả, rồi kéo thanh chia để kiểm tra hình. Ví dụ này giữ lại nền. Bật xóa nền tự động khi cần nền trong suốt."
+  ],
+  "Choose Enhance and set the enlargement factor. This artwork uses four-times enlargement.": [
+    "Pilih Tingkatkan Perincian dan tetapkan faktor pembesaran. Corak ini menggunakan pembesaran 4 kali.",
+    "Pilih Tingkatkan Detail dan tentukan faktor pembesaran. Gambar ini diperbesar 4 kali.",
+    "Chọn Nâng cao chi tiết và đặt hệ số phóng lớn. Hình này được phóng lớn 4 lần."
+  ],
+  "The result measures 4380 by 5600 pixels. Zoom in to check lettering, outlines and details, then save.": [
+    "Hasil berukuran 4380 × 5600 piksel. Zum masuk untuk memeriksa tulisan, garis luar dan butiran, kemudian simpan.",
+    "Hasilnya berukuran 4380 × 5600 piksel. Perbesar untuk memeriksa tulisan, garis tepi dan detail, lalu simpan.",
+    "Kết quả có kích thước 4380 × 5600 pixel. Phóng to để kiểm tra chữ, đường viền và chi tiết rồi lưu."
+  ],
+  "Describe what you want to change and which parts should stay.": [
+    "Nyatakan perkara yang ingin diubah dan bahagian yang perlu dikekalkan.",
+    "Jelaskan bagian yang ingin diubah dan bagian yang harus dipertahankan.",
+    "Mô tả những gì muốn thay đổi và các phần cần giữ nguyên."
+  ],
+  "For example, change the car body to blue. Compare the result with the original, check the affected areas, then save.": [
+    "Contohnya, tukar badan kereta kepada warna biru. Bandingkan dengan imej asal, semak kawasan yang berubah, kemudian simpan.",
+    "Misalnya, ubah bodi mobil menjadi biru. Bandingkan dengan gambar asli, periksa area yang berubah, lalu simpan.",
+    "Ví dụ, đổi thân xe sang màu xanh dương. So sánh với ảnh gốc, kiểm tra các vùng bị thay đổi rồi lưu."
+  ],
+  "Choose Expand and set how many pixels to add at the top, bottom, left and right. Compare the new areas with the original so the artwork fits the canvas you need.": [
+    "Pilih Luaskan Imej dan tetapkan bilangan piksel yang ditambah di atas, bawah, kiri dan kanan. Bandingkan kawasan baharu dengan imej asal supaya corak muat pada kanvas yang diperlukan.",
+    "Pilih Perluas Gambar dan tentukan jumlah piksel yang ditambahkan di atas, bawah, kiri dan kanan. Bandingkan area baru dengan gambar asli agar sesuai dengan kanvas yang diperlukan.",
+    "Chọn Mở rộng ảnh và đặt số pixel thêm ở trên, dưới, trái và phải. So sánh vùng mới với ảnh gốc để hình phù hợp với khổ làm việc cần dùng."
+  ],
+  "Crop Print trims the image without removing its background. Check the retained area and make sure the subject, lettering and decoration are complete before saving.": [
+    "Pangkas Corak memangkas imej tanpa membuang latarnya. Semak kawasan yang dikekalkan dan pastikan subjek, tulisan serta hiasan lengkap sebelum menyimpan.",
+    "Pangkas Motif memotong gambar tanpa menghapus latarnya. Periksa area yang dipertahankan dan pastikan objek, tulisan serta hiasan tetap lengkap sebelum menyimpan.",
+    "Cắt họa tiết cắt gọn ảnh mà không xóa nền. Kiểm tra vùng giữ lại, bảo đảm chủ thể, chữ và chi tiết trang trí đầy đủ trước khi lưu."
+  ],
+  "Import artwork and choose Vectorize to create an editable SVG. Zoom in to inspect lines, lettering and proportions, then save it for further vector editing.": [
+    "Import corak dan pilih Tukar ke Vektor untuk menghasilkan SVG yang boleh diedit. Zum masuk untuk memeriksa garisan, tulisan dan nisbah, kemudian simpan untuk penyuntingan vektor selanjutnya.",
+    "Impor gambar dan pilih Ubah ke Vektor untuk membuat SVG yang dapat diedit. Perbesar untuk memeriksa garis, tulisan dan proporsi, lalu simpan untuk pengeditan vektor berikutnya.",
+    "Nhập hình và chọn Chuyển sang vector để tạo SVG có thể chỉnh sửa. Phóng to kiểm tra đường nét, chữ và tỷ lệ, rồi lưu để tiếp tục chỉnh sửa vector."
+  ],
+  "Choose single artwork, repeated layout, multiple-image layout or a custom canvas, depending on the production step you need.": [
+    "Pilih corak tunggal, susun atur berulang, pelbagai imej atau kanvas tersuai mengikut langkah pengeluaran yang diperlukan.",
+    "Pilih gambar tunggal, tata letak berulang, banyak gambar atau kanvas khusus sesuai tahap produksi yang diperlukan.",
+    "Chọn hình đơn, bố trí lặp, nhiều hình hoặc khổ làm việc tùy chỉnh theo công đoạn sản xuất cần dùng."
+  ],
+  "For single artwork, review dimensions, resolution, white-ink choke and margins, then export TIFF.": [
+    "Untuk corak tunggal, semak dimensi, resolusi, pengecilan tepi dakwat putih dan jidar, kemudian eksport TIFF.",
+    "Untuk gambar tunggal, periksa ukuran, resolusi, penyusutan tepi tinta putih dan margin, lalu ekspor TIFF.",
+    "Với hình đơn, kiểm tra kích thước, độ phân giải, co mép mực trắng và lề, rồi xuất TIFF."
+  ],
+  "Single artwork is ready. Continue to the next step.": [
+    "Corak tunggal sudah siap. Teruskan ke langkah seterusnya.",
+    "Gambar tunggal sudah siap. Lanjutkan ke langkah berikutnya.",
+    "Hình đơn đã sẵn sàng. Tiếp tục bước tiếp theo."
+  ],
+  "For repeated layouts, set artwork dimensions, layout width and area. Allow enough space for the complete artwork, then generate the layout.": [
+    "Untuk susun atur berulang, tetapkan dimensi corak, lebar dan kawasan susun atur. Sediakan ruang yang cukup untuk corak lengkap, kemudian jana susun atur.",
+    "Untuk tata letak berulang, atur ukuran gambar, lebar dan area tata letak. Sisakan ruang yang cukup untuk gambar utuh, lalu buat tata letak.",
+    "Với bố trí lặp, đặt kích thước hình, chiều rộng và vùng bố trí. Chừa đủ chỗ cho hình đầy đủ rồi tạo bố cục."
+  ],
+  "Inspect the complete layout in Photoshop, checking every image and its boundaries.": [
+    "Periksa susun atur lengkap dalam Photoshop, termasuk setiap imej dan sempadannya.",
+    "Periksa tata letak lengkap di Photoshop, termasuk setiap gambar dan batasnya.",
+    "Kiểm tra toàn bộ bố cục trong Photoshop, gồm từng hình và ranh giới của chúng."
+  ],
+  "Finally, generate the white-ink channel and export TIFF. This stage uses the existing layout without adding margins again.": [
+    "Akhir sekali, jana saluran dakwat putih dan eksport TIFF. Langkah ini menggunakan susun atur sedia ada tanpa menambah jidar semula.",
+    "Terakhir, buat kanal tinta putih dan ekspor TIFF. Tahap ini menggunakan tata letak yang ada tanpa menambahkan margin lagi.",
+    "Cuối cùng, tạo kênh mực trắng và xuất TIFF. Bước này dùng bố cục hiện có, không thêm lề lần nữa."
+  ],
+  "Choose dark or light fabric to match the garment. Set white ink independently for regular and black regions.": [
+    "Pilih fabrik gelap atau cerah mengikut pakaian. Tetapkan dakwat putih secara berasingan untuk kawasan biasa dan kawasan hitam.",
+    "Pilih kain gelap atau terang sesuai pakaian. Atur tinta putih secara terpisah untuk area umum dan area hitam.",
+    "Chọn vải tối hoặc sáng phù hợp với quần áo. Đặt mực trắng riêng cho vùng thông thường và vùng màu đen."
+  ],
+  "Check artwork dimensions, resolution, white-ink choke and margins, then start processing.": [
+    "Semak dimensi corak, resolusi, pengecilan tepi dakwat putih dan jidar, kemudian mulakan pemprosesan.",
+    "Periksa ukuran gambar, resolusi, penyusutan tepi tinta putih dan margin, lalu mulai pemrosesan.",
+    "Kiểm tra kích thước hình, độ phân giải, co mép mực trắng và lề, rồi bắt đầu xử lý."
+  ],
+  "When processing is complete, export a TIFF for the next printing step.": [
+    "Apabila pemprosesan selesai, eksport TIFF untuk langkah percetakan seterusnya.",
+    "Setelah pemrosesan selesai, ekspor TIFF untuk tahap pencetakan berikutnya.",
+    "Khi xử lý xong, xuất TIFF cho công đoạn in tiếp theo."
+  ],
+  "In Photoshop, inspect the color artwork and the white-ink channel to check how they align.": [
+    "Dalam Photoshop, periksa corak berwarna dan saluran dakwat putih untuk memastikan penjajarannya.",
+    "Di Photoshop, periksa gambar berwarna dan kanal tinta putih untuk memastikan kesesuaiannya.",
+    "Trong Photoshop, kiểm tra hình màu và kênh mực trắng để xem chúng có khớp nhau không."
+  ],
+  "Choose the PSD folder, then set paper width, spacing and rotation.": [
+    "Pilih folder PSD, kemudian tetapkan lebar kertas, jarak dan putaran.",
+    "Pilih folder PSD, lalu atur lebar kertas, jarak dan rotasi.",
+    "Chọn thư mục PSD, rồi đặt chiều rộng giấy, khoảng cách và góc xoay."
+  ],
+  "Photoshop reads the artwork and the software generates layout options.": [
+    "Photoshop membaca corak dan perisian menjana pilihan susun atur.",
+    "Photoshop membaca gambar dan perangkat lunak membuat pilihan tata letak.",
+    "Photoshop đọc hình và phần mềm tạo các phương án dàn trang."
+  ],
+  "Once the files are ready, choose the balanced layout.": [
+    "Apabila fail siap, pilih susun atur seimbang.",
+    "Setelah file siap, pilih tata letak seimbang.",
+    "Khi file sẵn sàng, chọn phương án dàn trang cân bằng."
+  ],
+  "Open the preview and inspect artwork and canvas boundaries.": [
+    "Buka pratonton dan periksa corak serta sempadan kanvas.",
+    "Buka pratinjau dan periksa gambar serta batas kanvas.",
+    "Mở bản xem trước và kiểm tra hình cùng ranh giới khổ làm việc."
+  ],
+  "Confirm the layout, then export CMYK TIFF.": [
+    "Sahkan susun atur, kemudian eksport CMYK TIFF.",
+    "Konfirmasikan tata letak, lalu ekspor CMYK TIFF.",
+    "Xác nhận bố cục rồi xuất CMYK TIFF."
+  ],
+  "Open the exported file and check the dimensions and layout.": [
+    "Buka fail yang dieksport dan semak dimensi serta susun atur.",
+    "Buka file hasil ekspor dan periksa ukuran serta tata letak.",
+    "Mở file đã xuất và kiểm tra kích thước cùng bố cục."
+  ],
+  "Import a PDF and set paper width and artwork spacing. Then generate fast, balanced and material-saving layouts.": [
+    "Import PDF dan tetapkan lebar kertas serta jarak antara corak. Kemudian jana susun atur pantas, seimbang dan jimat bahan.",
+    "Impor PDF dan atur lebar kertas serta jarak antar gambar. Lalu buat tata letak cepat, seimbang dan hemat bahan.",
+    "Nhập PDF, đặt chiều rộng giấy và khoảng cách giữa các hình. Sau đó tạo phương án dàn trang nhanh, cân bằng và tiết kiệm vật liệu."
+  ],
+  "Open the layout preview and check direction, quantity and spacing between images.": [
+    "Buka pratonton susun atur dan semak arah, kuantiti serta jarak antara imej.",
+    "Buka pratinjau tata letak dan periksa arah, jumlah serta jarak antar gambar.",
+    "Mở bản xem trước bố cục và kiểm tra hướng, số lượng cùng khoảng cách giữa các hình."
+  ],
+  "Choose a suitable layout and export TIFF through Photoshop to continue preparing for printing.": [
+    "Pilih susun atur yang sesuai dan eksport TIFF melalui Photoshop untuk meneruskan persediaan percetakan.",
+    "Pilih tata letak yang sesuai dan ekspor TIFF melalui Photoshop untuk melanjutkan persiapan cetak.",
+    "Chọn bố cục phù hợp và xuất TIFF qua Photoshop để tiếp tục chuẩn bị in."
+  ]
+}
