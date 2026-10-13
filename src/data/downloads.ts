@@ -23,21 +23,21 @@ export type DownloadPlatform = Readonly<{
 }>;
 
 export const windows7Installer: DownloadInstaller = {
-  displayName: "MAIXON TOOL V8.3 for Windows 7",
-  version: "8.3.0.0",
-  installerFilename: "MAIXON_TOOL_V8.3_Windows7_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.3_Windows7_Setup.exe?v=fontfix-20261009",
-  fileSize: 177_242_915,
-  sha256: "8F0B24C8A19F57E7180B65C7A5494E0D43FE69BCF1D24A8BBAAAB0357596D75B"
+  displayName: "MAIXON TOOL V8.5 for Windows 7",
+  version: "8.5.0.0",
+  installerFilename: "MAIXON_TOOL_V8.5_Windows7_SP1_x64_Setup.exe",
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.5_Windows7_SP1_x64_Setup.exe",
+  fileSize: 194_851_742,
+  sha256: "A21971821FE4FD3CB209DE8E75D38FF4B77F6A4246EC0D1C19B7A6ED6AE3C407"
 };
 
 export const windows1011Installer: DownloadInstaller = {
-  displayName: "MAIXON TOOL V8.3 for Windows 10 / 11",
-  version: "8.3.0.0",
-  installerFilename: "MAIXON_TOOL_V8.3_Windows10_11_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.3_Windows10_11_Setup.exe",
-  fileSize: 197_864_538,
-  sha256: "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC"
+  displayName: "MAIXON TOOL V8.5 for Windows 10 / 11",
+  version: "8.5.0.0",
+  installerFilename: "MAIXON_TOOL_V8.5_Windows10_11_x64_Setup.exe",
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.5_Windows10_11_x64_Setup.exe",
+  fileSize: 251_826_927,
+  sha256: "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B"
 };
 
 export const downloadPlatforms: readonly DownloadPlatform[] = [
@@ -124,9 +124,9 @@ export const downloadSelectorCopy: Record<Locale, {
     download: "下载",
     assistance: "下载辅助软件",
     platforms: {
-      windows7: { status: "V8.3", action: "下载" },
-      windows10: { status: "V8.3", action: "下载" },
-      windows11: { status: "V8.3", action: "下载" },
+      windows7: { status: "V8.5", action: "下载" },
+      windows10: { status: "V8.5", action: "下载" },
+      windows11: { status: "V8.5", action: "下载" },
       macos: { status: "开发中", action: "开发中" }
     }
   },
@@ -137,9 +137,9 @@ export const downloadSelectorCopy: Record<Locale, {
     download: "Download",
     assistance: "Download auxiliary software",
     platforms: {
-      windows7: { status: "V8.3", action: "Download" },
-      windows10: { status: "V8.3", action: "Download" },
-      windows11: { status: "V8.3", action: "Download" },
+      windows7: { status: "V8.5", action: "Download" },
+      windows10: { status: "V8.5", action: "Download" },
+      windows11: { status: "V8.5", action: "Download" },
       macos: { status: "Coming Soon", action: "Coming Soon" }
     }
   }

@@ -454,7 +454,6 @@
   "Cut-and-use mode": "โหมดตัดและใช้งาน",
   "Cut-and-use take-up": "การตัดและใช้งาน",
   "Cutting lines are enabled as needed": "เปิดใช้งานเส้นตัดตามต้องการ",
-  "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC": "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC",
   "Dark": "โหมดมืด",
   "Dark fabric": "ผ้าสีเข้ม",
   "Dark or light fabric.": "ผ้าสีเข้มหรือสีอ่อน",
@@ -845,7 +844,6 @@
   "MAIXON Image Finder is free, without a separate feature purchase.": "MAIXON ค้นหารูปภาพใช้ฟรี ไม่ต้องซื้อฟังก์ชันนี้แยก",
   "MAIXON IMAGE FINDER workflow": "เวิร์กโฟลว์ MAIXON IMAGE FINDER",
   "MAIXON TOOL is available to users worldwide. Register with your email address, then sign in to review trials, licenses and AI credits.": "ผู้ใช้ทั่วโลกสามารถใช้ MAIXON TOOL ได้ สมัครด้วยอีเมล แล้วเข้าสู่ระบบเพื่อดูสิทธิ์ทดลองใช้ ไลเซนส์ และเครดิต AI",
-  "MAIXON TOOL V8.3 | MAIXON": "เครื่องมือ MAIXON V8.3 | MAIXON",
   "MAIXON TOOL V8.6 · Before you print": "MAIXON TOOL V8.6 · ก่อนพิมพ์",
   "MAIXON TOOL V8.6 Additional settings — light interface": "MAIXON TOOL V8.6 การตั้งค่าเพิ่มเติม — อินเทอร์เฟซแบบแสง",
   "MAIXON TOOL V8.6 Artwork and typed requirements — light interface": "MAIXON TOOL V8.6 ข้อกำหนดด้านอาร์ตเวิร์คและการพิมพ์ — อินเทอร์เฟซแบบเบา",
@@ -1434,7 +1432,6 @@
   "Use these quick answers first, then contact support with the required details if the issue remains.": "ใช้คำตอบด่วนเหล่านี้ก่อน จากนั้นติดต่อฝ่ายสนับสนุนพร้อมรายละเอียดที่จำเป็นหากยังมีปัญหาอยู่",
   "Use typed instructions when speaking is inconvenient. After parsing, review the task card before confirming execution.": "ใช้คำสั่งที่พิมพ์เมื่อพูดไม่สะดวก หลังจากแยกวิเคราะห์แล้ว ให้ตรวจสอบการ์ดงานก่อนที่จะยืนยันการดำเนินการ",
   "Use what is finished without waiting for the full roll.": "ใช้สิ่งที่เสร็จแล้วโดยไม่ต้องรอม้วนเต็ม",
-  "V8.3": "V8.3",
   "V8.6": "V8.6",
   "V8.6 features and walkthroughs · MAIXON": "คุณลักษณะและบทสรุปของ V8.6 · MAIXON",
   "V8.6 guides": "คู่มือ V8.6",
@@ -1514,5 +1511,8 @@
   "Yes": "ใช่",
   "Your account connects software licensing, AI credits and current access status.": "บัญชีของคุณเชื่อมต่อกับลิขสิทธิ์ซอฟต์แวร์ เครดิต AI และสถานะการเข้าถึงปัจจุบัน",
   "Your prepress workflow, in one workspace.": "รวมงานเตรียมพิมพ์ไว้ในเวิร์กสเปซเดียว",
-  "Your software registration email is required so the license or credits are added to the correct account.": "จำเป็นต้องมีอีเมลลงทะเบียนซอฟต์แวร์ของคุณ เพื่อเพิ่มใบอนุญาตหรือเครดิตลงในบัญชีที่ถูกต้อง"
+  "Your software registration email is required so the license or credits are added to the correct account.": "จำเป็นต้องมีอีเมลลงทะเบียนซอฟต์แวร์ของคุณ เพื่อเพิ่มใบอนุญาตหรือเครดิตลงในบัญชีที่ถูกต้อง",
+  "MAIXON TOOL V8.5 | MAIXON": "เครื่องมือ MAIXON V8.5 | MAIXON",
+  "V8.5": "V8.5",
+  "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B": "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B"
 }

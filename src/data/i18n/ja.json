@@ -454,7 +454,6 @@
   "Cut-and-use mode": "カットアンドユースモード",
   "Cut-and-use take-up": "カットして使える巻き取り",
   "Cutting lines are enabled as needed": "必要に応じてカットラインが有効になります",
-  "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC": "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC",
   "Dark": "ダーク",
   "Dark fabric": "ダークファブリック",
   "Dark or light fabric.": "濃色生地も、淡色生地も。",
@@ -845,7 +844,6 @@
   "MAIXON Image Finder is free, without a separate feature purchase.": "MAIXON 画像検索は無料です。この機能単体の購入は不要です。",
   "MAIXON IMAGE FINDER workflow": "MAIXON IMAGE FINDER ワークフロー",
   "MAIXON TOOL is available to users worldwide. Register with your email address, then sign in to review trials, licenses and AI credits.": "MAIXON TOOL は世界中のユーザーが利用できます。メールアドレスで登録し、ログインすると試用期間、ライセンス、AI ポイントを確認できます。",
-  "MAIXON TOOL V8.3 | MAIXON": "MAIXON TOOL V8.3 |MAIXON",
   "MAIXON TOOL V8.6 · Before you print": "MAIXON TOOL V8.6 · 印刷する前に",
   "MAIXON TOOL V8.6 Additional settings — light interface": "MAIXON TOOL V8.6 追加設定 — ライト インターフェイス",
   "MAIXON TOOL V8.6 Artwork and typed requirements — light interface": "MAIXON TOOL V8.6 アートワークと型指定された要件 — 軽いインターフェイス",
@@ -1434,7 +1432,6 @@
   "Use these quick answers first, then contact support with the required details if the issue remains.": "まずこれらの簡単な回答を使用し、問題が解決しない場合は必要な詳細をサポートに連絡してください。",
   "Use typed instructions when speaking is inconvenient. After parsing, review the task card before confirming execution.": "話すのが不便な場合は、入力された指示を使用してください。解析後、実行を確認する前にタスク カードを確認します。",
   "Use what is finished without waiting for the full roll.": "フルロールを待たずに完成したものを使用してください。",
-  "V8.3": "V8.3",
   "V8.6": "V8.6",
   "V8.6 features and walkthroughs · MAIXON": "V8.6 の機能とウォークスルー · MAIXON",
   "V8.6 guides": "V8.6 ガイド",
@@ -1514,5 +1511,8 @@
   "Yes": "はい",
   "Your account connects software licensing, AI credits and current access status.": "アカウントは、ソフトウェア ライセンス、AI ポイント、および現在のアクセス ステータスを結び付けます。",
   "Your prepress workflow, in one workspace.": "印刷前の作業を、ひとつのワークスペースで。",
-  "Your software registration email is required so the license or credits are added to the correct account.": "ライセンスまたはクレジットを正しいアカウントに追加するには、ソフトウェア登録電子メールが必要です。"
+  "Your software registration email is required so the license or credits are added to the correct account.": "ライセンスまたはクレジットを正しいアカウントに追加するには、ソフトウェア登録電子メールが必要です。",
+  "MAIXON TOOL V8.5 | MAIXON": "MAIXON TOOL V8.5 |MAIXON",
+  "V8.5": "V8.5",
+  "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B": "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B"
 }

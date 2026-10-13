@@ -453,7 +453,6 @@
   "Cut-and-use mode": "Chế độ cắt và sử dụng",
   "Cut-and-use take-up": "Cắt và sử dụng",
   "Cutting lines are enabled as needed": "Đường cắt được kích hoạt khi cần thiết",
-  "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC": "D62958DA71A681DB8D479DAE983763F169A3E49B469F34F7B6C068D7FE1FB3CC",
   "Dark": "Tối",
   "Dark fabric": "Vải tối màu",
   "Dark Fabric": "Vải tối màu",
@@ -846,7 +845,6 @@
   "MAIXON Image Finder is free, with no separate feature purchase.": "Tìm ảnh MAIXON miễn phí, không cần mua chức năng riêng.",
   "MAIXON IMAGE FINDER workflow": "Quy trình · TÌM ẢNH MAIXON",
   "MAIXON TOOL is available to users worldwide. Register with your email address, then sign in to review trials, licenses and AI credits.": "MAIXON TOOL dành cho người dùng trên toàn thế giới. Đăng ký bằng email, rồi đăng nhập để xem thời gian dùng thử, giấy phép và điểm AI.",
-  "MAIXON TOOL V8.3 | MAIXON": "CÔNG CỤ MAIXON V8.3 | MAIXON",
   "MAIXON TOOL V8.6 · Before you print": "MAIXON TOOL V8.6 · Trước khi in",
   "MAIXON TOOL V8.6 Additional settings — light interface": "MAIXON TOOL V8.6 · Cài đặt bổ sung · Sáng",
   "MAIXON TOOL V8.6 Artwork and typed requirements — light interface": "MAIXON TOOL V8.6 · Yêu cầu về hình và đánh máy · Sáng",
@@ -1439,7 +1437,6 @@
   "Use these quick answers first, then contact support with the required details if the issue remains.": "Trước tiên hãy sử dụng các câu trả lời nhanh này, sau đó liên hệ với bộ phận hỗ trợ kèm theo thông tin chi tiết cần thiết nếu sự cố vẫn còn.",
   "Use typed instructions when speaking is inconvenient. After parsing, review the task card before confirming execution.": "Sử dụng hướng dẫn đã nhập khi việc nói không thuận tiện. Sau khi phân tích cú pháp, hãy xem lại thẻ nhiệm vụ trước khi xác nhận thực hiện.",
   "Use what is finished without waiting for the full roll.": "Sử dụng những gì đã hoàn thành mà không cần chờ cuộn đầy đủ.",
-  "V8.3": "V8.3",
   "V8.6": "V8.6",
   "V8.6 features and walkthroughs · MAIXON": "Các tính năng và hướng dẫn của V8.6 · MAIXON",
   "V8.6 guides": "Hướng dẫn V8.6",
@@ -1520,5 +1517,8 @@
   "Yes": "Có",
   "Your account connects software licensing, AI credits and current access status.": "Tài khoản của bạn kết nối cấp phép phần mềm, điểm AI và trạng thái truy cập hiện tại.",
   "Your prepress workflow, in one workspace.": "Quy trình trước in, trong một không gian làm việc.",
-  "Your software registration email is required so the license or credits are added to the correct account.": "Email đăng ký phần mềm của bạn là bắt buộc để giấy phép hoặc điểm được thêm vào đúng tài khoản."
+  "Your software registration email is required so the license or credits are added to the correct account.": "Email đăng ký phần mềm của bạn là bắt buộc để giấy phép hoặc điểm được thêm vào đúng tài khoản.",
+  "MAIXON TOOL V8.5 | MAIXON": "CÔNG CỤ MAIXON V8.5 | MAIXON",
+  "V8.5": "V8.5",
+  "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B": "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B"
 }
