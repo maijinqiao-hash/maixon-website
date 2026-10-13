@@ -1233,5 +1233,20 @@
     "Corak AI kepada DTG dan MainTop",
     "Gambar AI ke DTG dan MainTop",
     "Hình AI đến DTG và MainTop"
+  ],
+  "Find artwork. Prepare images, white ink and layouts. Switch between light and dark.": [
+    "Cari corak. Sediakan imej, dakwat putih dan susun atur. Tukar antara tema cerah dan gelap.",
+    "Cari gambar. Siapkan gambar, tinta putih dan tata letak. Beralih antara tema terang dan gelap.",
+    "Tìm hình. Chuẩn bị ảnh, mực trắng và dàn trang. Chuyển giữa giao diện sáng và tối."
+  ],
+  "Find artwork in your own library using a reference image.": [
+    "Cari corak dalam pustaka sendiri menggunakan imej rujukan.",
+    "Cari gambar di pustaka Anda sendiri dengan gambar referensi.",
+    "Tìm hình trong thư viện của bạn bằng ảnh tham chiếu."
+  ],
+  "Choose a library on a local or external drive, prepare its index, then add a reference image. Select the print region when needed, compare candidates and locate the original file.": [
+    "Pilih pustaka pada pemacu tempatan atau luaran, bina indeksnya, kemudian tambah imej rujukan. Pilih kawasan corak jika perlu, bandingkan imej padanan dan cari fail asal.",
+    "Pilih pustaka di drive lokal atau eksternal, siapkan indeksnya, lalu tambahkan gambar referensi. Pilih area motif bila perlu, bandingkan gambar hasil dan temukan file asli.",
+    "Chọn thư viện trên ổ đĩa trong hoặc ngoài, tạo chỉ mục rồi thêm ảnh tham chiếu. Chọn vùng họa tiết khi cần, so sánh các ảnh phù hợp và tìm file gốc."
   ]
 }

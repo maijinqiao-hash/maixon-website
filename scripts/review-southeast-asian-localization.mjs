@@ -20,6 +20,18 @@ for(const [index,locale] of locales.entries()){
   }
   if(locale==='id'&&/light[- ]fabric/i.test(key))result=result.replace(/kain ringan/gi,'kain terang');
   if(locale==='vi'&&/light[- ]fabric/i.test(key))result=result.replace(/vải nhẹ/gi,'vải sáng màu');
+  if(locale==='id')result=result.replaceAll('Meja Kerja AI','Ruang Kerja AI');
+  if(locale==='vi')result=result.replace(/bàn làm việc AI/gi,'Không gian làm việc AI');
+  if(/artwork/i.test(key)){
+   const expression={ms:/karya seni/gi,id:/karya seni/gi,vi:/tác phẩm nghệ thuật/gi}[locale];
+   const replacement={ms:'corak',id:'gambar',vi:'hình'}[locale];
+   result=result.replace(expression,match=>match[0]===match[0].toUpperCase()?replacement[0].toUpperCase()+replacement.slice(1):replacement);
+  }
+  if(/candidate/i.test(key)){
+   if(locale==='ms')result=result.replace(/calon/gi,'imej padanan');
+   if(locale==='id')result=result.replace(/kandidat/gi,'gambar hasil');
+   if(locale==='vi')result=result.replace(/(?:các )?ứng (?:cử )?viên/gi,'các ảnh phù hợp');
+  }
   if(locale==='vi')result=result.replaceAll('Tín dụng AI','Điểm AI').replaceAll('tín dụng AI','điểm AI').replaceAll('tín dụng','điểm');
   if(/^Play with sound[:：]/.test(key)){
    const title=key.replace(/^Play with sound[:：]\s*/,'');
