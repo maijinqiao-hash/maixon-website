@@ -1,0 +1,461 @@
+{
+  "filename-recognition": {
+    "video": "update-filename-recognition",
+    "shots": [
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_input_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "导入图稿",
+        "en": "Import artwork",
+        "source": "01_文件名识别/screenshots/01_input_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_output_color_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "彩色输出",
+        "en": "Color output",
+        "source": "01_文件名识别/screenshots/01_output_color_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_output_color_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "彩色输出",
+        "en": "Color output",
+        "source": "01_文件名识别/screenshots/01_output_color_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_output_white_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "W1 白墨输出",
+        "en": "W1 white-ink output",
+        "source": "01_文件名识别/screenshots/01_output_white_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_output_white_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "W1 白墨输出",
+        "en": "W1 white-ink output",
+        "source": "01_文件名识别/screenshots/01_output_white_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_recognition_results_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "尺寸与数量识别结果",
+        "en": "Recognized dimensions and quantities",
+        "source": "01_文件名识别/screenshots/01_recognition_results_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_recognition_results_dark_detail.webp",
+        "width": 1002,
+        "height": 680,
+        "theme": "dark",
+        "zh": "尺寸与数量识别结果 · 详细参数",
+        "en": "Recognized dimensions and quantities · Detailed settings",
+        "source": "01_文件名识别/screenshots/01_recognition_results_dark_detail.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_recognition_results_light_desktop.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "尺寸与数量识别结果",
+        "en": "Recognized dimensions and quantities",
+        "source": "01_文件名识别/screenshots/01_recognition_results_light_desktop.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/filename-recognition/01_recognition_results_light_desktop_detail.webp",
+        "width": 1002,
+        "height": 680,
+        "theme": "light",
+        "zh": "尺寸与数量识别结果 · 详细参数",
+        "en": "Recognized dimensions and quantities · Detailed settings",
+        "source": "01_文件名识别/screenshots/01_recognition_results_light_desktop_detail.png"
+      }
+    ],
+    "outputs": [
+      {
+        "color": "/media/v86/updates/20261014/filename-recognition/output-result-color.webp",
+        "white": "/media/v86/updates/20261014/filename-recognition/output-result-white.webp",
+        "width": 1800,
+        "height": 900,
+        "label": "result"
+      }
+    ]
+  },
+  "cut-frame": {
+    "video": "update-cut-frame",
+    "shots": [
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_output_color_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "彩色输出",
+        "en": "Color output",
+        "source": "02_切割框/screenshots/02_output_color_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_output_color_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "彩色输出",
+        "en": "Color output",
+        "source": "02_切割框/screenshots/02_output_color_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_output_white_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "W1 白墨输出",
+        "en": "W1 white-ink output",
+        "source": "02_切割框/screenshots/02_output_white_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_output_white_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "W1 白墨输出",
+        "en": "W1 white-ink output",
+        "source": "02_切割框/screenshots/02_output_white_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_both_dark_desktop.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "上下双缺口",
+        "en": "Top and bottom notches",
+        "source": "02_切割框/screenshots/02_settings_both_dark_desktop.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_both_dark_desktop_detail.webp",
+        "width": 402,
+        "height": 689,
+        "theme": "dark",
+        "zh": "上下双缺口 · 详细参数",
+        "en": "Top and bottom notches · Detailed settings",
+        "source": "02_切割框/screenshots/02_settings_both_dark_desktop_detail.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_both_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "上下双缺口",
+        "en": "Top and bottom notches",
+        "source": "02_切割框/screenshots/02_settings_both_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_both_light_detail.webp",
+        "width": 402,
+        "height": 689,
+        "theme": "light",
+        "zh": "上下双缺口 · 详细参数",
+        "en": "Top and bottom notches · Detailed settings",
+        "source": "02_切割框/screenshots/02_settings_both_light_detail.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_bottom_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "仅下缺口",
+        "en": "Bottom notch only",
+        "source": "02_切割框/screenshots/02_settings_bottom_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_bottom_dark_detail.webp",
+        "width": 402,
+        "height": 689,
+        "theme": "dark",
+        "zh": "仅下缺口 · 详细参数",
+        "en": "Bottom notch only · Detailed settings",
+        "source": "02_切割框/screenshots/02_settings_bottom_dark_detail.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_depth7_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "缺口深度 7 mm",
+        "en": "Notch depth: 7 mm",
+        "source": "02_切割框/screenshots/02_settings_depth7_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_depth7_dark_detail.webp",
+        "width": 402,
+        "height": 689,
+        "theme": "dark",
+        "zh": "缺口深度 7 mm · 详细参数",
+        "en": "Notch depth: 7 mm · Detailed settings",
+        "source": "02_切割框/screenshots/02_settings_depth7_dark_detail.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_plain_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "无缺口矩形框",
+        "en": "Plain rectangular frame",
+        "source": "02_切割框/screenshots/02_settings_plain_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_plain_dark_detail.webp",
+        "width": 402,
+        "height": 689,
+        "theme": "dark",
+        "zh": "无缺口矩形框 · 详细参数",
+        "en": "Plain rectangular frame · Detailed settings",
+        "source": "02_切割框/screenshots/02_settings_plain_dark_detail.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_top_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "仅上缺口",
+        "en": "Top notch only",
+        "source": "02_切割框/screenshots/02_settings_top_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/cut-frame/02_settings_top_dark_detail.webp",
+        "width": 402,
+        "height": 689,
+        "theme": "dark",
+        "zh": "仅上缺口 · 详细参数",
+        "en": "Top notch only · Detailed settings",
+        "source": "02_切割框/screenshots/02_settings_top_dark_detail.png"
+      }
+    ],
+    "outputs": [
+      {
+        "color": "/media/v86/updates/20261014/cut-frame/output-result-color.webp",
+        "white": "/media/v86/updates/20261014/cut-frame/output-result-white.webp",
+        "width": 1800,
+        "height": 1724,
+        "label": "result"
+      }
+    ]
+  },
+  "fabric-colors": {
+    "video": "update-fabric-colors",
+    "shots": [
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_green_color_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "绿色面料：彩色输出",
+        "en": "Green fabric: color output",
+        "source": "03_多色白墨直喷/screenshots/03_green_color_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_green_color_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "绿色面料：彩色输出",
+        "en": "Green fabric: color output",
+        "source": "03_多色白墨直喷/screenshots/03_green_color_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_green_input_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "绿色面料设置",
+        "en": "Green fabric settings",
+        "source": "03_多色白墨直喷/screenshots/03_green_input_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_green_white_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "绿色面料：W1 白墨",
+        "en": "Green fabric: W1 white ink",
+        "source": "03_多色白墨直喷/screenshots/03_green_white_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_green_white_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "绿色面料：W1 白墨",
+        "en": "Green fabric: W1 white ink",
+        "source": "03_多色白墨直喷/screenshots/03_green_white_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_input_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "导入图稿",
+        "en": "Import artwork",
+        "source": "03_多色白墨直喷/screenshots/03_input_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_red_color_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "红色面料：彩色输出",
+        "en": "Red fabric: color output",
+        "source": "03_多色白墨直喷/screenshots/03_red_color_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_red_color_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "红色面料：彩色输出",
+        "en": "Red fabric: color output",
+        "source": "03_多色白墨直喷/screenshots/03_red_color_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_red_input_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "红色面料设置",
+        "en": "Red fabric settings",
+        "source": "03_多色白墨直喷/screenshots/03_red_input_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_red_white_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "红色面料：W1 白墨",
+        "en": "Red fabric: W1 white ink",
+        "source": "03_多色白墨直喷/screenshots/03_red_white_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/fabric-colors/03_red_white_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "红色面料：W1 白墨",
+        "en": "Red fabric: W1 white ink",
+        "source": "03_多色白墨直喷/screenshots/03_red_white_light.png"
+      }
+    ],
+    "outputs": [
+      {
+        "color": "/media/v86/updates/20261014/fabric-colors/output-red-color.webp",
+        "white": "/media/v86/updates/20261014/fabric-colors/output-red-white.webp",
+        "width": 1441,
+        "height": 1740,
+        "label": "red"
+      },
+      {
+        "color": "/media/v86/updates/20261014/fabric-colors/output-green-color.webp",
+        "white": "/media/v86/updates/20261014/fabric-colors/output-green-white.webp",
+        "width": 1441,
+        "height": 1740,
+        "label": "green"
+      }
+    ]
+  },
+  "platen-placement": {
+    "video": "update-platen-placement",
+    "shots": [
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_centered_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "居中套位",
+        "en": "Centered placement",
+        "source": "04_DTG套位/screenshots/04_centered_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_dragged_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "拖动图稿定位",
+        "en": "Drag artwork into position",
+        "source": "04_DTG套位/screenshots/04_dragged_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_output_color_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "彩色输出",
+        "en": "Color output",
+        "source": "04_DTG套位/screenshots/04_output_color_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_output_color_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "彩色输出",
+        "en": "Color output",
+        "source": "04_DTG套位/screenshots/04_output_color_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_output_white_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "W1 白墨输出",
+        "en": "W1 white-ink output",
+        "source": "04_DTG套位/screenshots/04_output_white_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_output_white_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "W1 白墨输出",
+        "en": "W1 white-ink output",
+        "source": "04_DTG套位/screenshots/04_output_white_light.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_position_dark.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "dark",
+        "zh": "台板尺寸与图稿位置",
+        "en": "Platen size and artwork position",
+        "source": "04_DTG套位/screenshots/04_position_dark.png"
+      },
+      {
+        "path": "/media/v86/updates/20261014/platen-placement/04_position_light.webp",
+        "width": 1296,
+        "height": 770,
+        "theme": "light",
+        "zh": "台板尺寸与图稿位置",
+        "en": "Platen size and artwork position",
+        "source": "04_DTG套位/screenshots/04_position_light.png"
+      }
+    ],
+    "outputs": [
+      {
+        "color": "/media/v86/updates/20261014/platen-placement/output-result-color.webp",
+        "white": "/media/v86/updates/20261014/platen-placement/output-result-white.webp",
+        "width": 1440,
+        "height": 1800,
+        "label": "result"
+      }
+    ]
+  }
+}

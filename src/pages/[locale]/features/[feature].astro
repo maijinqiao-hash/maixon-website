@@ -5,6 +5,7 @@ import V86Media from '@/components/V86Media.astro';
 import V86AISamples from '@/components/V86AISamples.astro';
 import V86OwnerVideo from '@/components/V86OwnerVideo.astro';
 import V86SubfeatureIndex from '@/components/V86SubfeatureIndex.astro';
+import V86UpdateHighlights from '@/components/V86UpdateHighlights.astro';
 import {homeDemo} from '@/data/v86/demos';
 import {guides} from '@/data/v86/guides';
 import V86Behavior from '@/components/V86Behavior.astro';
@@ -24,6 +25,7 @@ const labelsEn:Record<string,string[]>={voice:['Voice-command workspace','Artwor
 <V86AccessNote feature={f.id} locale={locale}/>
 {f.id==='ai'?<V86AISamples locale={locale} id="ai-guide-samples"/>:homeDemo[f.id]?<V86OwnerVideo id={homeDemo[f.id]} locale={locale}/>:<V86Media id={`${f.id}-main`} locale={locale} poster={f.poster} video={f.video} priority caption={f.tag} />}
 {['dtf','dtg'].includes(f.id)&&<a class="v86-maintop-link" href={`/${locale}/features/${f.id}/maintop/`}><span><small>MAIXON × MainTop</small><strong>{zh?'制图之后，自动接入蒙泰。':'Continue automatically into MainTop.'}</strong></span><span aria-hidden="true">↗</span></a>}
+<V86UpdateHighlights feature={f.id} locale={locale}/>
 <V86SubfeatureIndex feature={f.id} locale={locale} title={zh?'每项功能，都单独了解。':'Explore each capability.'}/>
 <article class="v86-guide-copy"><h2>{zh?'按这个顺序，开始第一份任务。':'Start your first task in this order.'}</h2><ol>{f.steps.map(s=><li>{s}</li>)}</ol><h3>{zh?'操作时，留意这几件事。':'A few details to check.'}</h3><ul>{f.tips.map(s=><li>{s}</li>)}</ul>{f.id==='voice'&&<p class="v86-note">{zh?'可以这样表达要求：“帮我做成15厘米宽的DTF单图，300PPI，白墨收缩2像素，每边扩边5毫米。”输入文字或说出要求后，先核对解析卡片，再点击“确认执行”。':'For example: prepare a 15 cm wide DTF print at 300 PPI, with a 2 px white-ink choke and 5 mm margins on every edge. Speak or type your request, review the interpreted settings, then confirm.'}</p>}{f.id==='finder'&&<p class="v86-note">{zh?'首次建立图库后，检查可用文件数，再用已知参考图查找。对于无法读取的 PSD，可导出 RGB 参考图，同时保留对应原稿。':'Check the usable-file count and validate with a known reference after indexing. For unreadable PSDs, export RGB reference images while retaining the corresponding originals.'}</p>}</article>
 <article class="v86-guide-copy v86-chapters">{guides[locale][f.id]?.map(chapter=><section><h2>{chapter.title}</h2>{chapter.body.map(p=><p>{p}</p>)}</section>)}</article>

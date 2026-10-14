@@ -1,0 +1,74 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:03.773
+DTG white-ink control supports
+multiple fabric colors.
+
+2
+00:00:03.773 --> 00:00:09.998
+Here we use the same color artwork to demonstrate
+white-ink settings for different garments.
+
+3
+00:00:10.753 --> 00:00:18.219
+The panel provides ten preset colors, plus a custom color
+option and color picking from the artwork.
+
+4
+00:00:18.219 --> 00:00:20.011
+First choose red fabric.
+
+5
+00:00:20.011 --> 00:00:22.251
+The color artwork is retained.
+
+6
+00:00:22.787 --> 00:00:29.075
+White-ink amounts are controlled separately for areas close to
+the fabric color and for the rest of the
+
+7
+00:00:29.075 --> 00:00:29.563
+artwork.
+
+8
+00:00:29.563 --> 00:00:32.249
+Here they are set to five and fifty percent.
+
+9
+00:00:34.387 --> 00:00:36.365
+Click Generate DTG Artwork.
+
+10
+00:00:36.365 --> 00:00:43.619
+The software performs the actual processing through
+Photoshop and saves a TIFF with the W1 channel.
+
+11
+00:00:43.987 --> 00:00:50.044
+Use the actual color output to inspect the print, and the
+white-ink preview to inspect coverage.
+
+12
+00:00:50.044 --> 00:00:54.524
+The red matching areas and the other colors
+can be compared separately.
+
+13
+00:00:57.187 --> 00:01:00.399
+Change the fabric to green and generate again.
+
+14
+00:01:00.399 --> 00:01:06.264
+The artwork colors remain, while white ink is
+recalculated for the new fabric color.
+
+15
+00:01:07.320 --> 00:01:14.086
+Review the output for the selected fabric and production
+needs, then send the finished artwork directly
+
+16
+00:01:14.086 --> 00:01:15.203
+to DTG placement.

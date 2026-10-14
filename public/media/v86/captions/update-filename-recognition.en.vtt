@@ -1,0 +1,79 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:06.216
+Multi-image layout can now read print dimensions and
+quantities directly from filenames.
+
+2
+00:00:06.216 --> 00:00:10.927
+Chinese, English, and mixed filenames can be
+used in the same batch.
+
+3
+00:00:13.653 --> 00:00:16.478
+This batch uses three original designs.
+
+4
+00:00:16.478 --> 00:00:23.141
+Artwork numbers remain identifiers, rather than being
+mistaken for a print size or quantity.
+
+5
+00:00:24.453 --> 00:00:28.555
+Open the recognition settings and results
+to review each item.
+
+6
+00:00:28.555 --> 00:00:35.237
+W eight centimeters and P two mean an eight-centimeter width
+and two copies, with the original aspect
+
+7
+00:00:35.237 --> 00:00:36.296
+ratio preserved.
+
+8
+00:00:38.920 --> 00:00:43.794
+The English filename specifies a
+six-centimeter width and three copies.
+
+9
+00:00:43.794 --> 00:00:48.051
+The Chinese filename specifies seven
+centimeters and one copy.
+
+10
+00:00:48.051 --> 00:00:52.857
+The single-dimension direction and default
+unit are also configurable.
+
+11
+00:00:53.187 --> 00:00:57.757
+Once the values are checked, start the
+layout and export a TIFF.
+
+12
+00:00:57.757 --> 00:01:04.469
+This batch contains six copies across three designs, each
+using its own recognized print size.
+
+13
+00:01:05.387 --> 00:01:10.236
+After generation, the color preview shows
+the actual layout output.
+
+14
+00:01:10.236 --> 00:01:16.534
+Print dimensions refer to the artwork itself,
+excluding added frames and blank margins.
+
+15
+00:01:18.320 --> 00:01:22.630
+Switch to the white-ink preview to inspect
+the actual W1 channel.
+
+16
+00:01:22.630 --> 00:01:27.273
+Both the color artwork and white ink can be
+checked before production.

@@ -1,0 +1,29 @@
+---
+import media from '@/data/v86/update-media-20261014.json';
+import {assetUrl} from '@/data/asset-delivery';
+interface Props {id:string;locale:'zh-CN'|'en'}
+const {id,locale}=Astro.props;const zh=locale==='zh-CN';
+const group=media[id as keyof typeof media];
+---
+<section class="v86-update-outputs">
+ <h2>{zh?'彩色与白墨，分别检查。':'Inspect color and white ink separately.'}</h2>
+ {group.outputs.map((output,i)=><section class="v86-update-output-pair">
+  {output.label!=='result'&&<h3>{zh?(output.label==='red'?'红色面料':'绿色面料'):(output.label==='red'?'Red fabric':'Green fabric')}</h3>}
+  <div class="v86-update-gallery-grid">
+   {(['color','white'] as const).map(channel=>{const label=channel==='color'?(zh?'彩色输出':'Color output'):(zh?'W1 白墨输出':'W1 white-ink output');return <figure class="v86-media v86-update-shot" data-v86-media id={`output-${id}-${i}-${channel}`}>
+    <div class="v86-media__viewport"><img src={assetUrl(output[channel])} width={output.width} height={output.height} alt={label} loading="lazy" decoding="async"/><button class="v86-expand" type="button" data-v86-expand aria-label={zh?'放大查看界面':'Enlarge interface'}>↗</button></div><figcaption>{label}</figcaption>
+   </figure>})}
+  </div>
+ </section>)}
+</section>
+<details class="v86-update-gallery">
+ <summary>{zh?'查看全部界面与设置':'Explore all views and settings'} <span aria-hidden="true">＋</span></summary>
+ <div class="v86-update-gallery-grid">{group.shots.map((shot,i)=>{const label=zh?shot.zh:shot.en;return <figure class="v86-media v86-update-shot" data-v86-media id={`shot-${id}-${i}`}>
+  <div class="v86-media__viewport"><img src={assetUrl(shot.path)} width={shot.width} height={shot.height} alt={label} loading="lazy" decoding="async"/><button class="v86-expand" type="button" data-v86-expand aria-label={zh?'放大查看界面':'Enlarge interface'}>↗</button></div>
+  <figcaption><span>{label}</span><small>{zh?(shot.theme==='light'?'浅色':'深色'):(shot.theme==='light'?'Light':'Dark')}</small></figcaption>
+ </figure>})}</div>
+</details>
+<style>
+ .v86-update-outputs{margin:64px 0}.v86-update-outputs>h2{font-size:clamp(25px,3vw,38px);line-height:1.4;margin-bottom:30px}.v86-update-output-pair{margin-top:32px}.v86-update-output-pair h3{font-size:23px;margin-bottom:18px}.v86-update-gallery{border-top:1px solid #dcd9d2;border-bottom:1px solid #dcd9d2;margin:58px 0;padding:26px 0}.v86-update-gallery>summary{font-size:23px;line-height:1.6;cursor:pointer;min-height:44px;list-style:none;display:flex;justify-content:space-between;gap:20px}.v86-update-gallery>summary::-webkit-details-marker{display:none}.v86-update-gallery>summary span{color:#96713b}.v86-update-gallery[open]>summary{margin-bottom:28px}.v86-update-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}.v86-update-shot{min-width:0}.v86-update-shot .v86-media__viewport{aspect-ratio:16/10;background:#efede7}.v86-update-shot .v86-media__viewport img{width:100%;height:100%;object-fit:contain}.v86-update-shot figcaption{align-items:flex-start;line-height:1.6;gap:14px}.v86-update-shot figcaption small{white-space:nowrap;color:#927349}
+ @media(max-width:640px){.v86-update-gallery-grid{grid-template-columns:1fr;gap:28px}.v86-update-gallery>summary{font-size:19px}.v86-update-outputs>h2{font-size:26px}.v86-update-shot figcaption{font-size:14px}}
+</style>

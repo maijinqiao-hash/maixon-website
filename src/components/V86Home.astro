@@ -7,6 +7,7 @@ import {homeDemo} from '../data/v86/demos';
 import V86Media from './V86Media.astro';
 import V86AISamples from './V86AISamples.astro';
 import V86SubfeatureIndex from './V86SubfeatureIndex.astro';
+import V86UpdateHighlights from './V86UpdateHighlights.astro';
 import V86StudioScene from './V86StudioScene.astro';
 import HardwareOverview from './hardware/HardwareOverview.astro';
 import {features} from '../data/v86/content';
@@ -45,6 +46,7 @@ const flow=zh?['找回图稿','表达要求','处理图像','制图排版','接�
       <div class="v86-feature__intro" data-v86-reveal><div><p class="v86-eyebrow">{f.tag}</p><h2>{f.title.split('\n').map((line,n)=><>{n>0&&<br/>}<span class:list={{'v86-title-secondary':n>0}}>{line}</span></>)}</h2></div><div class="v86-feature__summary"><h3>{f.lead}</h3><p>{f.detail}</p><a class="v86-text-link" href={`/${locale}/features/${f.id}/`}>{zh?'查看完整操作指南':'Read the complete walkthrough'} →</a></div></div>
       <V86AccessNote feature={f.id} locale={locale}/>
       {f.id==='ai'?<V86AISamples locale={locale}/>:homeDemo[f.id]?<V86OwnerVideo id={homeDemo[f.id]} locale={locale} instance={`home-${f.id}`}/>:<V86Media id={f.id} poster={f.poster} video={f.video} autoplay locale={locale} theme={['ai','halftone'].includes(f.id)?'dark':'light'} caption={f.tag} />}
+      <V86UpdateHighlights feature={f.id} locale={locale}/>
       <V86SubfeatureIndex feature={f.id} locale={locale} compact/>
       <ol class="v86-step-row">{f.steps.map((s,n)=><li><span>{String(n+1).padStart(2,'0')}</span><p>{s}</p></li>)}</ol>
       {f.id==='dtf'&&<div class="v86-feature-more"><h3>{zh?'一张图、多张图，都有合适的排法。':'The right layout for one image or many.'}</h3><V86DemoCollection ids={['dtf-count','dtf-nesting','dtf-canvas']} locale={locale}/></div>}

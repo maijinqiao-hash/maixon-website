@@ -1,0 +1,1106 @@
+{
+  "Filename size and quantity recognition": [
+    "การอ่านขนาดและจำนวนจากชื่อไฟล์",
+    "ファイル名からサイズと数量を認識",
+    "파일명에서 크기와 수량 인식",
+    "Pengecaman saiz dan kuantiti daripada nama fail",
+    "Pengenalan ukuran dan jumlah dari nama file",
+    "Nhận dạng kích thước và số lượng từ tên tệp"
+  ],
+  "Read the size and quantity from the filename.": [
+    "อ่านขนาดและจำนวนจากชื่อไฟล์",
+    "ファイル名からサイズと数量を読み取る。",
+    "파일명에서 크기와 수량을 읽어옵니다.",
+    "Baca saiz dan kuantiti daripada nama fail.",
+    "Baca ukuran dan jumlah dari nama file.",
+    "Đọc kích thước và số lượng từ tên tệp."
+  ],
+  "Read print dimensions and quantities from Chinese, English, or mixed filenames, then review the values before layout.": [
+    "อ่านขนาดพิมพ์และจำนวนจากชื่อไฟล์ภาษาจีน ภาษาอังกฤษ หรือชื่อที่ใช้สองภาษาร่วมกัน แล้วตรวจสอบค่าก่อนจัดวาง",
+    "中国語・英語・両言語が混在したファイル名から印刷サイズと数量を読み取り、配置前に確認します。",
+    "중국어, 영어 또는 두 언어가 섞인 파일명에서 인쇄 크기와 수량을 읽고 배치 전에 확인합니다.",
+    "Baca saiz cetakan dan kuantiti daripada nama fail bahasa Cina, Inggeris atau campuran kedua-duanya, kemudian semak sebelum menyusun.",
+    "Baca ukuran cetak dan jumlah dari nama file berbahasa Mandarin, Inggris, atau campuran keduanya, lalu periksa sebelum menata.",
+    "Đọc kích thước in và số lượng từ tên tệp tiếng Trung, tiếng Anh hoặc kết hợp cả hai, rồi kiểm tra trước khi dàn bố cục."
+  ],
+  "Mixed filenames. One batch.": [
+    "ชื่อไฟล์ต่างภาษา ในงานชุดเดียวกัน",
+    "異なる言語のファイル名を、同じバッチで。",
+    "서로 다른 언어의 파일명을 한 번에.",
+    "Nama fail bercampur. Satu kelompok.",
+    "Nama file campuran. Satu kelompok.",
+    "Tên tệp nhiều ngôn ngữ. Cùng một lô."
+  ],
+  "Import Chinese, English and mixed filenames together for multiple-image layout. Artwork numbers remain identifiers, rather than becoming a print size or quantity.": [
+    "นำเข้าไฟล์ที่ใช้ชื่อภาษาจีน ภาษาอังกฤษ หรือสองภาษาร่วมกันเพื่อจัดวางหลายภาพ หมายเลขแบบยังคงเป็นรหัส ไม่ถูกนำไปใช้เป็นขนาดพิมพ์หรือจำนวน",
+    "中国語・英語・両言語が混在したファイル名をまとめて読み込み、複数画像を配置します。図柄の番号は識別子として扱い、印刷サイズや数量と誤認しません。",
+    "중국어, 영어 및 혼합 파일명을 함께 불러와 여러 이미지를 배치합니다. 도안 번호는 식별자로 유지되며 인쇄 크기나 수량으로 해석되지 않습니다.",
+    "Import nama fail bahasa Cina, Inggeris dan campuran untuk susun atur berbilang imej. Nombor reka bentuk kekal sebagai pengecam, bukan saiz cetakan atau kuantiti.",
+    "Impor nama file Mandarin, Inggris, dan campuran untuk penataan banyak gambar. Nomor desain tetap menjadi pengenal, bukan ukuran cetak atau jumlah.",
+    "Nhập chung các tệp có tên tiếng Trung, tiếng Anh và kết hợp hai ngôn ngữ để dàn nhiều hình. Số hiệu mẫu vẫn là mã nhận dạng, không bị hiểu thành kích thước in hay số lượng."
+  ],
+  "W8cm P2 means an 8 cm artwork width and 2 copies, with the original aspect ratio preserved. Review dimensions, quantities, the single-dimension direction and default unit in the recognition settings and results.": [
+    "W8cm P2 หมายถึงภาพกว้าง 8 cm จำนวน 2 ชิ้น โดยคงสัดส่วนเดิม ตรวจสอบขนาด จำนวน ทิศทางของขนาดเดี่ยว และหน่วยเริ่มต้นในหน้าตั้งค่าและผลการอ่านชื่อไฟล์",
+    "W8cm P2 は図柄の幅 8 cm、数量 2 部を意味し、元の縦横比を保ちます。認識設定と結果で、サイズ・数量・寸法が一つの場合の方向・既定単位を確認します。",
+    "W8cm P2는 도안 너비 8 cm와 2장을 뜻하며 원래 비율을 유지합니다. 인식 설정과 결과에서 크기, 수량, 단일 치수 방향 및 기본 단위를 확인하세요.",
+    "W8cm P2 bermaksud lebar reka bentuk 8 cm dan 2 salinan, dengan nisbah asal dikekalkan. Semak saiz, kuantiti, arah dimensi tunggal dan unit lalai dalam tetapan serta hasil pengecaman.",
+    "W8cm P2 berarti lebar desain 8 cm dan 2 salinan, dengan rasio asli dipertahankan. Periksa ukuran, jumlah, arah dimensi tunggal, dan satuan bawaan pada pengaturan serta hasil pengenalan.",
+    "W8cm P2 nghĩa là hình rộng 8 cm và 2 bản, giữ nguyên tỷ lệ gốc. Kiểm tra kích thước, số lượng, hướng khi chỉ có một kích thước và đơn vị mặc định trong phần cài đặt và kết quả nhận dạng."
+  ],
+  "Review the values. Then build the layout.": [
+    "ตรวจสอบค่า แล้วเริ่มจัดวาง",
+    "数値を確認してから、配置を作成。",
+    "값을 확인한 다음 배치합니다.",
+    "Semak nilai. Kemudian susun.",
+    "Periksa nilai. Lalu susun tata letak.",
+    "Kiểm tra các giá trị. Sau đó dàn bố cục."
+  ],
+  "The demonstration uses artwork widths of 8 / 6 / 7 cm and quantities of 2 / 3 / 1, producing 6 copies in total. Each design uses its own recognized size.": [
+    "ตัวอย่างใช้ภาพกว้าง 8 / 6 / 7 cm และจำนวน 2 / 3 / 1 รวม 6 ชิ้น แต่ละแบบใช้ขนาดที่อ่านได้ของตนเอง",
+    "デモでは図柄の幅が 8 / 6 / 7 cm、数量が 2 / 3 / 1 で、合計 6 部を配置します。各図柄には認識された個別のサイズを使用します。",
+    "데모의 도안 너비는 8 / 6 / 7 cm, 수량은 2 / 3 / 1이며 총 6장을 배치합니다. 각 도안에 인식된 개별 크기를 적용합니다.",
+    "Demonstrasi menggunakan lebar 8 / 6 / 7 cm dan kuantiti 2 / 3 / 1, menghasilkan 6 salinan keseluruhan. Setiap reka bentuk menggunakan saiz yang dikenal pasti sendiri.",
+    "Demonstrasi memakai lebar 8 / 6 / 7 cm dan jumlah 2 / 3 / 1, menghasilkan total 6 salinan. Setiap desain memakai ukuran yang dikenali masing-masing.",
+    "Video minh họa dùng chiều rộng 8 / 6 / 7 cm và số lượng 2 / 3 / 1, tạo tổng cộng 6 bản. Mỗi mẫu dùng kích thước riêng đã được nhận dạng."
+  ],
+  "After exporting TIFF, inspect the color and W1 previews separately. Dimensions refer to the artwork itself, excluding added cutting frames and blank margins.": [
+    "หลังส่งออก TIFF ให้ตรวจสอบภาพสีและ W1 แยกกัน ขนาดหมายถึงตัวภาพ ไม่รวมกรอบตัดและขอบว่างที่เพิ่มเข้ามา",
+    "TIFF の書き出し後、カラーと W1 のプレビューをそれぞれ確認します。サイズは図柄自体を指し、追加したカット枠や余白は含みません。",
+    "TIFF를 내보낸 후 컬러와 W1 미리보기를 각각 확인하세요. 크기는 도안 자체를 뜻하며 추가된 재단 프레임과 여백은 포함하지 않습니다.",
+    "Selepas mengeksport TIFF, semak pratonton warna dan W1 secara berasingan. Saiz merujuk kepada reka bentuk itu sendiri, tanpa bingkai potong dan ruang kosong tambahan.",
+    "Setelah mengekspor TIFF, periksa pratinjau warna dan W1 secara terpisah. Ukuran mengacu pada desain itu sendiri, tanpa bingkai potong dan margin kosong tambahan.",
+    "Sau khi xuất TIFF, kiểm tra riêng bản xem trước màu và W1. Kích thước là của hình in, không bao gồm khung cắt và lề trống được thêm vào."
+  ],
+  "Recognized dimensions match the order": [
+    "ขนาดที่อ่านได้ตรงกับคำสั่งงาน",
+    "認識サイズが注文と一致している",
+    "인식된 크기가 주문과 일치합니다",
+    "Saiz yang dikenal pasti sepadan dengan pesanan",
+    "Ukuran yang dikenali sesuai pesanan",
+    "Kích thước nhận dạng khớp với đơn hàng"
+  ],
+  "Quantities are confirmed for each artwork": [
+    "ตรวจสอบจำนวนของแต่ละแบบแล้ว",
+    "各図柄の数量を確認済み",
+    "도안별 수량을 확인했습니다",
+    "Kuantiti setiap reka bentuk telah disahkan",
+    "Jumlah setiap desain sudah diperiksa",
+    "Đã xác nhận số lượng của từng mẫu"
+  ],
+  "Color and W1 outputs are inspected separately": [
+    "ตรวจสอบไฟล์สีและ W1 แยกกันแล้ว",
+    "カラーと W1 の出力を個別に確認済み",
+    "컬러와 W1 출력을 각각 확인했습니다",
+    "Output warna dan W1 disemak berasingan",
+    "Hasil warna dan W1 diperiksa terpisah",
+    "Đã kiểm tra riêng đầu ra màu và W1"
+  ],
+  "Cutting frames and independent notches": [
+    "กรอบตัดและรอยบากแยกอิสระ",
+    "カット枠と独立した位置合わせノッチ",
+    "재단 프레임과 독립 위치 맞춤 노치",
+    "Bingkai potong dan takuk bebas",
+    "Bingkai potong dan takik independen",
+    "Khung cắt và rãnh định vị độc lập"
+  ],
+  "Top and bottom notches. Switch each one as needed.": [
+    "รอยบากด้านบนและด้านล่าง เปิดแยกได้ตามต้องการ",
+    "上と下のノッチを、必要に応じて個別に。",
+    "위와 아래 노치를 필요에 따라 각각 켭니다.",
+    "Takuk atas dan bawah. Aktifkan mengikut keperluan.",
+    "Takik atas dan bawah. Aktifkan masing-masing sesuai kebutuhan.",
+    "Rãnh trên và dưới. Bật riêng theo nhu cầu."
+  ],
+  "Control top and bottom notches independently, with a live settings diagram. Frame lines, notches and added blank areas receive no W1 white ink.": [
+    "ควบคุมรอยบากด้านบนและล่างแยกกัน พร้อมแผนภาพที่อัปเดตทันที เส้นกรอบ รอยบาก และพื้นที่ว่างที่เพิ่มเข้ามาไม่มีหมึกขาว W1",
+    "上・下のノッチを個別に設定でき、設定図がリアルタイムで更新されます。枠線・ノッチ・追加余白には W1 白インクを生成しません。",
+    "위와 아래 노치를 독립적으로 제어하며 설정 도식이 실시간으로 갱신됩니다. 프레임 선, 노치 및 추가 여백에는 W1 흰색 잉크가 생성되지 않습니다.",
+    "Kawal takuk atas dan bawah secara bebas dengan rajah tetapan langsung. Garisan bingkai, takuk dan ruang kosong tambahan tidak menerima dakwat putih W1.",
+    "Atur takik atas dan bawah secara independen dengan diagram pengaturan langsung. Garis bingkai, takik, dan area kosong tambahan tidak diberi tinta putih W1.",
+    "Điều khiển riêng rãnh trên và dưới, với sơ đồ cài đặt cập nhật ngay. Đường khung, rãnh và vùng trống thêm vào không có mực trắng W1."
+  ],
+  "Set the frame, spacing and notches.": [
+    "ตั้งค่ากรอบ ระยะ และรอยบาก",
+    "枠・間隔・ノッチを設定。",
+    "프레임, 간격과 노치를 설정합니다.",
+    "Tetapkan bingkai, jarak dan takuk.",
+    "Atur bingkai, jarak, dan takik.",
+    "Thiết lập khung, khoảng cách và rãnh."
+  ],
+  "Open Cutting Frame in the DTF workflow to adjust artwork-to-frame spacing, notch depth and line width. Keep artwork dimensions separate from frame dimensions.": [
+    "เปิดการตั้งค่ากรอบตัดในงาน DTF เพื่อปรับระยะจากภาพถึงกรอบ ความลึกรอยบาก และความหนาเส้น แยกขนาดภาพออกจากขนาดกรอบ",
+    "DTF のカット枠設定を開き、図柄から枠までの距離、ノッチの深さ、線幅を調整します。図柄のサイズと枠のサイズは別々に扱います。",
+    "DTF 작업에서 재단 프레임 설정을 열어 도안과 프레임 사이 간격, 노치 깊이 및 선 너비를 조정합니다. 도안 크기와 프레임 크기를 구분하세요.",
+    "Buka Bingkai Potong dalam aliran DTF untuk melaras jarak reka bentuk ke bingkai, kedalaman takuk dan lebar garisan. Bezakan saiz reka bentuk daripada saiz bingkai.",
+    "Buka Bingkai Potong dalam alur DTF untuk menyesuaikan jarak desain ke bingkai, kedalaman takik, dan lebar garis. Bedakan ukuran desain dari ukuran bingkai.",
+    "Mở cài đặt Khung cắt trong quy trình DTF để chỉnh khoảng cách từ hình đến khung, độ sâu rãnh và độ rộng đường. Phân biệt kích thước hình với kích thước khung."
+  ],
+  "Separate switches let you choose a plain rectangle, a top notch, a bottom notch, or both. The diagram updates immediately when a switch or value changes.": [
+    "สวิตช์แยกช่วยเลือกกรอบสี่เหลี่ยมล้วน รอยบากบน รอยบากล่าง หรือทั้งสองด้าน แผนภาพอัปเดตทันทีเมื่อเปลี่ยนสวิตช์หรือค่า",
+    "独立したスイッチで、通常の長方形枠、上ノッチ、下ノッチ、上下両方を選べます。スイッチや数値を変えると、図がすぐ更新されます。",
+    "독립 스위치로 일반 직사각형, 위쪽 노치, 아래쪽 노치 또는 양쪽 노치를 선택합니다. 스위치나 값을 바꾸면 도식이 즉시 갱신됩니다.",
+    "Suis berasingan membolehkan bingkai segi empat biasa, takuk atas, takuk bawah atau kedua-duanya. Rajah dikemas kini serta-merta apabila suis atau nilai berubah.",
+    "Sakelar terpisah menyediakan bingkai persegi panjang biasa, takik atas, takik bawah, atau keduanya. Diagram langsung diperbarui saat sakelar atau nilai berubah.",
+    "Các công tắc riêng cho phép chọn khung chữ nhật thường, rãnh trên, rãnh dưới hoặc cả hai. Sơ đồ cập nhật ngay khi đổi công tắc hay giá trị."
+  ],
+  "Clear alignment. Separate white ink.": [
+    "จัดแนวชัดเจน หมึกขาวแยกอิสระ",
+    "位置合わせを明確に。白インクは別管理。",
+    "선명한 위치 맞춤. 흰색 잉크는 따로.",
+    "Penjajaran jelas. Dakwat putih berasingan.",
+    "Penyelarasan jelas. Tinta putih terpisah.",
+    "Căn chỉnh rõ ràng. Mực trắng riêng biệt."
+  ],
+  "Apply the settings and generate TIFF. With rotation enabled, frames and notches rotate with the artwork. Inspect margins and notch direction after export.": [
+    "ใช้การตั้งค่าแล้วสร้าง TIFF เมื่อเปิดการหมุน กรอบและรอยบากจะหมุนตามภาพ ตรวจสอบขอบและทิศทางรอยบากหลังส่งออก",
+    "設定を適用して TIFF を生成します。回転を有効にすると、枠とノッチも図柄と一緒に回転します。書き出し後に余白とノッチの方向を確認します。",
+    "설정을 적용하고 TIFF를 생성합니다. 회전을 켜면 프레임과 노치도 도안과 함께 회전합니다. 내보낸 후 여백과 노치 방향을 확인하세요.",
+    "Gunakan tetapan dan jana TIFF. Apabila putaran diaktifkan, bingkai dan takuk berputar bersama reka bentuk. Semak margin dan arah takuk selepas eksport.",
+    "Terapkan pengaturan dan buat TIFF. Saat rotasi aktif, bingkai dan takik ikut berputar bersama desain. Periksa margin dan arah takik setelah ekspor.",
+    "Áp dụng cài đặt và tạo TIFF. Khi bật xoay, khung và rãnh xoay cùng hình. Kiểm tra lề và hướng rãnh sau khi xuất."
+  ],
+  "The color preview shows the frame and notches. W1 covers only artwork areas that need white ink; frame lines, notches and added blank areas receive none.": [
+    "ภาพตัวอย่างสีแสดงกรอบและรอยบาก W1 ครอบคลุมเฉพาะส่วนภาพที่ต้องใช้หมึกขาว เส้นกรอบ รอยบาก และพื้นที่ว่างที่เพิ่มเข้ามาไม่มีหมึกขาว",
+    "カラープレビューに枠とノッチが表示されます。W1 は白インクが必要な図柄の部分だけを覆い、枠線・ノッチ・追加余白には含まれません。",
+    "컬러 미리보기에는 프레임과 노치가 표시됩니다. W1은 흰색 잉크가 필요한 도안 영역만 덮으며 프레임 선, 노치 및 추가 여백에는 생성되지 않습니다.",
+    "Pratonton warna menunjukkan bingkai dan takuk. W1 hanya meliputi kawasan reka bentuk yang memerlukan dakwat putih; garisan bingkai, takuk dan ruang kosong tambahan tidak menerimanya.",
+    "Pratinjau warna menampilkan bingkai dan takik. W1 hanya menutupi bagian desain yang membutuhkan tinta putih; garis bingkai, takik, dan area kosong tambahan tidak menerimanya.",
+    "Bản xem trước màu hiển thị khung và rãnh. W1 chỉ phủ phần hình cần mực trắng; đường khung, rãnh và vùng trống thêm vào không có mực trắng."
+  ],
+  "Top and bottom switches match the alignment needs": [
+    "สวิตช์บนและล่างตรงกับความต้องการจัดแนว",
+    "上下スイッチが位置合わせの要件に合っている",
+    "위아래 스위치가 위치 맞춤 요구에 맞습니다",
+    "Suis atas dan bawah sesuai keperluan penjajaran",
+    "Sakelar atas dan bawah sesuai kebutuhan penyelarasan",
+    "Công tắc trên và dưới phù hợp nhu cầu định vị"
+  ],
+  "Spacing, depth and line width are confirmed": [
+    "ตรวจสอบระยะ ความลึก และความหนาเส้นแล้ว",
+    "距離・深さ・線幅を確認済み",
+    "간격, 깊이와 선 너비를 확인했습니다",
+    "Jarak, kedalaman dan lebar garisan disahkan",
+    "Jarak, kedalaman, dan lebar garis sudah diperiksa",
+    "Đã xác nhận khoảng cách, độ sâu và độ rộng đường"
+  ],
+  "Frame lines and blank areas contain no W1": [
+    "เส้นกรอบและพื้นที่ว่างไม่มี W1",
+    "枠線と余白に W1 が含まれていない",
+    "프레임 선과 여백에 W1이 없습니다",
+    "Garisan bingkai dan ruang kosong tiada W1",
+    "Garis bingkai dan area kosong tidak memiliki W1",
+    "Đường khung và vùng trống không có W1"
+  ],
+  "White ink for multiple fabric colors": [
+    "หมึกขาวสำหรับผ้าหลายสี",
+    "さまざまな生地色の白インク制御",
+    "다양한 원단 색상에 맞춘 흰색 잉크",
+    "Dakwat putih untuk pelbagai warna fabrik",
+    "Tinta putih untuk berbagai warna kain",
+    "Mực trắng cho nhiều màu vải"
+  ],
+  "Change the fabric color. Adjust the white ink with it.": [
+    "เปลี่ยนสีผ้า ปรับหมึกขาวให้เหมาะกัน",
+    "生地の色に合わせて、白インクも調整。",
+    "원단 색상이 바뀌면 흰색 잉크도 조정합니다.",
+    "Tukar warna fabrik. Laraskan dakwat putih bersamanya.",
+    "Ganti warna kain. Sesuaikan tinta putihnya.",
+    "Đổi màu vải. Điều chỉnh mực trắng theo đó."
+  ],
+  "Set white ink separately for fabric-matching areas and the rest of the artwork. Compare red and green fabric settings with the same design.": [
+    "ตั้งค่าหมึกขาวแยกระหว่างส่วนที่สีใกล้เคียงผ้าและส่วนอื่นของภาพ เปรียบเทียบการตั้งค่าผ้าสีแดงและสีเขียวด้วยภาพเดียวกัน",
+    "生地色に近い部分と、それ以外の図柄で白インク量を個別に設定。同じ図柄で赤と緑の生地設定を比較できます。",
+    "원단 색상과 비슷한 영역과 나머지 도안 영역의 흰색 잉크를 따로 설정합니다. 같은 디자인으로 빨간색과 초록색 원단 설정을 비교합니다.",
+    "Tetapkan dakwat putih secara berasingan untuk kawasan sepadan warna fabrik dan bahagian lain reka bentuk. Bandingkan fabrik merah dan hijau menggunakan reka bentuk yang sama.",
+    "Atur tinta putih secara terpisah untuk area yang mendekati warna kain dan bagian desain lainnya. Bandingkan pengaturan kain merah dan hijau dengan desain yang sama.",
+    "Đặt riêng lượng mực trắng cho vùng gần màu vải và phần còn lại của hình. So sánh cài đặt vải đỏ và xanh lá với cùng một mẫu."
+  ],
+  "Choose the fabric color. Set white ink separately.": [
+    "เลือกสีผ้า ตั้งค่าหมึกขาวแยกแต่ละส่วน",
+    "生地色を選び、白インクを個別に設定。",
+    "원단 색상을 고르고 흰색 잉크를 따로 설정합니다.",
+    "Pilih warna fabrik. Tetapkan dakwat putih berasingan.",
+    "Pilih warna kain. Atur tinta putih secara terpisah.",
+    "Chọn màu vải. Đặt lượng mực trắng riêng."
+  ],
+  "Choose one of 10 fabric presets, enter a custom color, or pick a color from the artwork. The color artwork remains intact; fabric color guides the white-ink calculation.": [
+    "เลือกสีผ้าที่ตั้งไว้ 10 สี กำหนดสีเอง หรือเลือกสีจากภาพ ภาพสียังคงเดิม โดยใช้สีผ้าเป็นเกณฑ์คำนวณหมึกขาว",
+    "10 種類の生地色プリセットから選ぶほか、色の指定や図柄からの色取得も可能です。カラーの図柄を保ったまま、生地色を基準に白インク量を計算します。",
+    "10가지 원단 색상 프리셋에서 선택하거나 색상을 직접 지정하거나 도안에서 색을 선택하세요. 컬러 도안은 유지되며 원단 색상을 기준으로 흰색 잉크를 계산합니다.",
+    "Pilih satu daripada 10 warna fabrik pratetap, masukkan warna tersuai atau ambil warna daripada reka bentuk. Warna reka bentuk dikekalkan; warna fabrik menjadi asas pengiraan dakwat putih.",
+    "Pilih salah satu dari 10 warna kain prasetel, tentukan warna sendiri, atau ambil warna dari desain. Warna desain tetap utuh; warna kain menjadi dasar perhitungan tinta putih.",
+    "Chọn một trong 10 màu vải có sẵn, nhập màu tùy chỉnh hoặc lấy màu từ hình. Hình màu được giữ nguyên; màu vải làm cơ sở tính mực trắng."
+  ],
+  "Control white ink separately for fabric-matching areas and the rest of the artwork. The demonstration uses 5% and 50%; white-ink quantity is separate from color-image opacity.": [
+    "ควบคุมหมึกขาวแยกระหว่างส่วนที่สีใกล้เคียงผ้าและส่วนอื่นของภาพ ตัวอย่างใช้ 5% และ 50% ปริมาณหมึกขาวแยกจากความทึบของภาพสี",
+    "生地色に近い部分と、それ以外の図柄の白インク量を別々に制御します。デモでは 5% と 50% を使用。白インク量とカラー画像の不透明度は別の設定です。",
+    "원단 색상과 비슷한 영역과 나머지 도안의 흰색 잉크를 별도로 제어합니다. 데모에서는 5%와 50%를 사용하며 흰색 잉크 양은 컬러 이미지 불투명도와 별개입니다.",
+    "Kawal dakwat putih untuk kawasan sepadan fabrik dan kawasan lain secara berasingan. Demonstrasi menggunakan 5% dan 50%; kuantiti dakwat putih berbeza daripada kelegapan imej warna.",
+    "Atur tinta putih untuk area yang mendekati warna kain dan area lainnya secara terpisah. Demonstrasi menggunakan 5% dan 50%; jumlah tinta putih berbeda dari opasitas gambar warna.",
+    "Điều khiển riêng mực trắng cho vùng gần màu vải và phần hình còn lại. Video dùng 5% và 50%; lượng mực trắng không phải độ đục của hình màu."
+  ],
+  "Compare the output. Continue to DTG placement.": [
+    "เปรียบเทียบผล แล้วไปต่อที่การจัดตำแหน่ง DTG",
+    "出力を比較して、DTG の位置合わせへ。",
+    "출력을 비교하고 DTG 위치 맞춤으로 이어갑니다.",
+    "Bandingkan output. Teruskan ke penempatan DTG.",
+    "Bandingkan hasil. Lanjutkan ke penempatan DTG.",
+    "So sánh đầu ra. Tiếp tục định vị DTG."
+  ],
+  "Generate DTG Artwork uses Photoshop to save TIFF with W1. Inspect color and white ink separately, then compare coverage using red and green fabric settings.": [
+    "การสร้างภาพ DTG ใช้ Photoshop บันทึก TIFF ที่มี W1 ตรวจสอบสีและหมึกขาวแยกกัน แล้วเปรียบเทียบการคลุมของหมึกด้วยการตั้งค่าผ้าสีแดงและสีเขียว",
+    "DTG 図柄生成では Photoshop を使い、W1 を含む TIFF を保存します。カラーと白インクを個別に確認し、赤と緑の生地設定で白インクの被覆を比較します。",
+    "DTG 도안 생성은 Photoshop을 사용해 W1이 포함된 TIFF를 저장합니다. 컬러와 흰색 잉크를 각각 확인하고 빨간색과 초록색 원단 설정의 도포 범위를 비교하세요.",
+    "Jana Reka Bentuk DTG menggunakan Photoshop untuk menyimpan TIFF bersama W1. Semak warna dan dakwat putih berasingan, kemudian bandingkan liputan bagi fabrik merah dan hijau.",
+    "Pembuatan Desain DTG menggunakan Photoshop untuk menyimpan TIFF dengan W1. Periksa warna dan tinta putih secara terpisah, lalu bandingkan cakupan untuk kain merah dan hijau.",
+    "Tạo hình DTG dùng Photoshop để lưu TIFF có W1. Kiểm tra riêng màu và mực trắng, rồi so sánh độ phủ với cài đặt vải đỏ và xanh lá."
+  ],
+  "After changing the fabric color, generate again. Artwork colors remain while white ink is recalculated. Once checked, send the result directly to DTG platen placement.": [
+    "เมื่อเปลี่ยนสีผ้า ให้สร้างใหม่ สีของภาพยังคงเดิมและคำนวณหมึกขาวใหม่ หลังตรวจสอบแล้วส่งผลไปจัดตำแหน่งบนแท่น DTG ได้โดยตรง",
+    "生地色を変更したら再生成します。図柄の色は維持し、白インクを再計算。確認後、そのまま DTG プラテンの位置合わせに送れます。",
+    "원단 색상을 바꾸면 다시 생성하세요. 도안 색상은 유지되고 흰색 잉크가 다시 계산됩니다. 확인한 결과를 DTG 플래튼 위치 맞춤으로 바로 보낼 수 있습니다.",
+    "Selepas menukar warna fabrik, jana semula. Warna reka bentuk dikekalkan sementara dakwat putih dikira semula. Selepas disemak, hantar terus ke penempatan platen DTG.",
+    "Setelah mengganti warna kain, buat ulang. Warna desain tetap dipertahankan sementara tinta putih dihitung ulang. Setelah diperiksa, kirim langsung ke penempatan platen DTG.",
+    "Sau khi đổi màu vải, hãy tạo lại. Màu hình được giữ nguyên trong khi mực trắng được tính lại. Sau khi kiểm tra, chuyển thẳng sang định vị bàn in DTG."
+  ],
+  "The fabric color matches the order": [
+    "สีผ้าตรงกับคำสั่งงาน",
+    "生地色が注文と一致している",
+    "원단 색상이 주문과 일치합니다",
+    "Warna fabrik sepadan dengan pesanan",
+    "Warna kain sesuai pesanan",
+    "Màu vải khớp với đơn hàng"
+  ],
+  "Both white-ink amounts are confirmed": [
+    "ตรวจสอบปริมาณหมึกขาวทั้งสองส่วนแล้ว",
+    "両領域の白インク量を確認済み",
+    "두 영역의 흰색 잉크 양을 확인했습니다",
+    "Kedua-dua jumlah dakwat putih disahkan",
+    "Kedua jumlah tinta putih sudah diperiksa",
+    "Đã xác nhận cả hai lượng mực trắng"
+  ],
+  "W1 coverage is inspected before placement": [
+    "ตรวจสอบการคลุมของ W1 ก่อนจัดตำแหน่ง",
+    "位置合わせ前に W1 の被覆を確認済み",
+    "위치 맞춤 전에 W1 도포 범위를 확인했습니다",
+    "Liputan W1 disemak sebelum penempatan",
+    "Cakupan W1 diperiksa sebelum penempatan",
+    "Đã kiểm tra độ phủ W1 trước khi định vị"
+  ],
+  "DTG platen placement": [
+    "การจัดตำแหน่งบนแท่น DTG",
+    "DTG プラテン位置合わせ",
+    "DTG 플래튼 위치 맞춤",
+    "Penempatan platen DTG",
+    "Penempatan platen DTG",
+    "Định vị bàn in DTG"
+  ],
+  "Set the size. Put the artwork in the right place.": [
+    "กำหนดขนาด วางภาพให้ตรงตำแหน่ง",
+    "サイズを決めて、図柄を正しい位置へ。",
+    "크기를 정하고 도안을 올바른 위치에 놓습니다.",
+    "Tetapkan saiz. Letakkan reka bentuk di tempat yang betul.",
+    "Tentukan ukuran. Letakkan desain di posisi yang tepat.",
+    "Đặt kích thước. Đưa hình vào đúng vị trí."
+  ],
+  "Set the platen size, then drag, center, or enter a precise position. Export both color artwork and W1 on the platen canvas.": [
+    "กำหนดขนาดแท่น แล้วลาก จัดกึ่งกลาง หรือป้อนตำแหน่งที่แม่นยำ ส่งออกภาพสีและ W1 บนพื้นที่แท่นพิมพ์พร้อมกัน",
+    "プラテンのサイズを設定し、ドラッグ・中央配置・位置入力で調整。プラテンのキャンバスにカラー図柄と W1 をまとめて書き出します。",
+    "플래튼 크기를 설정하고 드래그, 중앙 정렬 또는 정확한 위치 입력으로 조정합니다. 플래튼 캔버스에 컬러 도안과 W1을 함께 내보냅니다.",
+    "Tetapkan saiz platen, kemudian seret, tengahkan atau masukkan kedudukan tepat. Eksport reka bentuk warna dan W1 pada kanvas platen.",
+    "Tentukan ukuran platen, lalu seret, pusatkan, atau masukkan posisi tepat. Ekspor desain warna dan W1 pada kanvas platen.",
+    "Đặt kích thước bàn in, rồi kéo, căn giữa hoặc nhập vị trí chính xác. Xuất cả hình màu và W1 trên khung bàn in."
+  ],
+  "Real platen dimensions. Precise artwork placement.": [
+    "ขนาดแท่นจริง จัดตำแหน่งภาพอย่างแม่นยำ",
+    "実寸のプラテンに、正確に位置合わせ。",
+    "실제 플래튼 크기로 도안을 정확히 배치합니다.",
+    "Dimensi platen sebenar. Penempatan reka bentuk tepat.",
+    "Dimensi platen nyata. Penempatan desain yang tepat.",
+    "Kích thước bàn in thực. Định vị hình chính xác."
+  ],
+  "After preparing white ink, open DTG Placement and set platen width and height. Position the artwork at real dimensions while preserving its print size.": [
+    "หลังเตรียมหมึกขาว เปิดการจัดตำแหน่ง DTG แล้วกำหนดความกว้างและสูงของแท่น จัดภาพตามขนาดจริงโดยคงขนาดพิมพ์เดิม",
+    "白インクの準備後に DTG 位置合わせを開き、プラテンの幅と高さを設定します。図柄の印刷サイズを保ち、実寸で配置します。",
+    "흰색 잉크를 준비한 후 DTG 위치 맞춤을 열어 플래튼 너비와 높이를 설정합니다. 도안의 인쇄 크기를 유지하며 실제 치수로 배치합니다.",
+    "Selepas menyediakan dakwat putih, buka Penempatan DTG dan tetapkan lebar serta tinggi platen. Letakkan reka bentuk pada dimensi sebenar sambil mengekalkan saiz cetakannya.",
+    "Setelah menyiapkan tinta putih, buka Penempatan DTG dan tentukan lebar serta tinggi platen. Tempatkan desain pada dimensi nyata sambil mempertahankan ukuran cetaknya.",
+    "Sau khi chuẩn bị mực trắng, mở Định vị DTG và đặt chiều rộng, chiều cao bàn in. Định vị theo kích thước thực, giữ nguyên kích thước in của hình."
+  ],
+  "Drag in the left preview to update position values, enter horizontal and vertical offsets, use center guides, or fine-tune with arrow keys. Hold Shift for a larger step.": [
+    "ลากในภาพตัวอย่างด้านซ้ายเพื่ออัปเดตค่าตำแหน่ง ป้อนระยะแนวนอนและแนวตั้ง ใช้เส้นกึ่งกลาง หรือปรับละเอียดด้วยปุ่มลูกศร กด Shift ค้างเพื่อขยับครั้งละมากขึ้น",
+    "左のプレビューでドラッグすると位置の数値も更新されます。水平・垂直位置の入力、中央ガイド、方向キーによる微調整も可能。Shift を押すと大きい刻みで移動します。",
+    "왼쪽 미리보기에서 드래그하면 위치 값이 갱신됩니다. 수평·수직 오프셋 입력, 중앙 가이드 또는 방향키 미세 조정을 사용할 수 있습니다. Shift를 누르면 더 큰 간격으로 이동합니다.",
+    "Seret dalam pratonton kiri untuk mengemas kini kedudukan, masukkan ofset mendatar dan menegak, gunakan panduan tengah atau laras halus dengan kekunci anak panah. Tahan Shift untuk langkah lebih besar.",
+    "Seret pada pratinjau kiri untuk memperbarui posisi, masukkan offset horizontal dan vertikal, gunakan panduan tengah, atau sesuaikan dengan tombol panah. Tahan Shift untuk langkah lebih besar.",
+    "Kéo trong bản xem trước bên trái để cập nhật vị trí, nhập độ lệch ngang và dọc, dùng đường tâm hoặc chỉnh nhỏ bằng phím mũi tên. Giữ Shift để di chuyển bước lớn hơn."
+  ],
+  "Confirm the position. Export color and white ink together.": [
+    "ยืนยันตำแหน่ง ส่งออกสีและหมึกขาวพร้อมกัน",
+    "位置を確認し、カラーと白インクを一緒に出力。",
+    "위치를 확인하고 컬러와 흰색 잉크를 함께 내보냅니다.",
+    "Sahkan kedudukan. Eksport warna dan dakwat putih bersama.",
+    "Pastikan posisi. Ekspor warna dan tinta putih bersama.",
+    "Xác nhận vị trí. Xuất màu và mực trắng cùng nhau."
+  ],
+  "The demonstration uses a 20 × 25 cm platen, with offsets of 20 mm from the left and 30 mm from the top. Export the placement TIFF and save the placement record.": [
+    "ตัวอย่างใช้แท่น 20 × 25 cm โดยห่างจากซ้าย 20 mm และจากบน 30 mm ส่งออก TIFF การจัดตำแหน่งและบันทึกข้อมูลตำแหน่ง",
+    "デモでは 20 × 25 cm のプラテンに、左から 20 mm、上から 30 mm の位置へ配置します。位置合わせ TIFF を書き出し、配置記録も保存します。",
+    "데모는 20 × 25 cm 플래튼을 사용하며 왼쪽에서 20 mm, 위에서 30 mm 떨어진 곳에 배치합니다. 위치 맞춤 TIFF를 내보내고 배치 기록을 저장합니다.",
+    "Demonstrasi menggunakan platen 20 × 25 cm, dengan ofset 20 mm dari kiri dan 30 mm dari atas. Eksport TIFF penempatan dan simpan rekod kedudukan.",
+    "Demonstrasi menggunakan platen 20 × 25 cm dengan offset 20 mm dari kiri dan 30 mm dari atas. Ekspor TIFF penempatan dan simpan catatan posisi.",
+    "Video dùng bàn in 20 × 25 cm, cách mép trái 20 mm và mép trên 30 mm. Xuất TIFF định vị và lưu bản ghi vị trí."
+  ],
+  "Inspect the color artwork and W1 on the platen canvas. The platen and garment illustrations are alignment references and are not printed into the artwork.": [
+    "ตรวจสอบภาพสีและ W1 บนพื้นที่แท่นพิมพ์ ภาพแท่นและเสื้อใช้เป็นแนวอ้างอิงเท่านั้น ไม่ถูกพิมพ์รวมในภาพ",
+    "プラテンのキャンバス上でカラー図柄と W1 を確認します。プラテンや衣服のイラストは位置合わせの目安で、図柄には印刷されません。",
+    "플래튼 캔버스의 컬러 도안과 W1을 확인하세요. 플래튼과 의류 그림은 위치 맞춤 참고용이며 도안에 인쇄되지 않습니다.",
+    "Semak reka bentuk warna dan W1 pada kanvas platen. Ilustrasi platen dan pakaian ialah rujukan penjajaran dan tidak dicetak dalam reka bentuk.",
+    "Periksa desain warna dan W1 pada kanvas platen. Ilustrasi platen dan pakaian hanya menjadi referensi penyelarasan dan tidak dicetak pada desain.",
+    "Kiểm tra hình màu và W1 trên khung bàn in. Hình minh họa bàn in và áo chỉ là tham chiếu căn chỉnh, không được in vào hình."
+  ],
+  "Platen dimensions match the equipment": [
+    "ขนาดแท่นตรงกับอุปกรณ์",
+    "プラテン寸法が機器と一致している",
+    "플래튼 크기가 장비와 일치합니다",
+    "Dimensi platen sepadan dengan peralatan",
+    "Dimensi platen sesuai peralatan",
+    "Kích thước bàn in khớp với thiết bị"
+  ],
+  "Artwork position and print size are confirmed": [
+    "ตรวจสอบตำแหน่งและขนาดพิมพ์แล้ว",
+    "図柄の位置と印刷サイズを確認済み",
+    "도안 위치와 인쇄 크기를 확인했습니다",
+    "Kedudukan dan saiz cetakan disahkan",
+    "Posisi dan ukuran cetak sudah diperiksa",
+    "Đã xác nhận vị trí và kích thước in"
+  ],
+  "Color and W1 align with complete boundaries": [
+    "ภาพสีและ W1 ตรงกันและขอบครบถ้วน",
+    "カラーと W1 が一致し、外周が完全に保たれている",
+    "컬러와 W1이 정렬되고 경계가 온전합니다",
+    "Warna dan W1 sejajar dengan sempadan lengkap",
+    "Warna dan W1 selaras dengan batas utuh",
+    "Màu và W1 khớp nhau, biên hình đầy đủ"
+  ],
+  "New capabilities": [
+    "ความสามารถใหม่",
+    "新しい機能",
+    "새로운 기능",
+    "Keupayaan baharu",
+    "Kemampuan baru",
+    "Tính năng mới"
+  ],
+  "Inspect color and white ink separately.": [
+    "ตรวจสอบสีและหมึกขาวแยกกัน",
+    "カラーと白インクを個別に確認。",
+    "컬러와 흰색 잉크를 따로 확인하세요.",
+    "Semak warna dan dakwat putih berasingan.",
+    "Periksa warna dan tinta putih secara terpisah.",
+    "Kiểm tra riêng màu và mực trắng."
+  ],
+  "Explore all views and settings": [
+    "ดูทุกหน้าจอและการตั้งค่า",
+    "すべての画面と設定を見る",
+    "모든 화면과 설정 보기",
+    "Lihat semua paparan dan tetapan",
+    "Lihat semua tampilan dan pengaturan",
+    "Xem tất cả giao diện và cài đặt"
+  ],
+  "Import artwork": [
+    "นำเข้าภาพ",
+    "図柄を読み込む",
+    "도안 불러오기",
+    "Import reka bentuk",
+    "Impor desain",
+    "Nhập hình"
+  ],
+  "Recognized dimensions and quantities": [
+    "ขนาดและจำนวนที่อ่านได้",
+    "認識したサイズと数量",
+    "인식된 크기와 수량",
+    "Saiz dan kuantiti yang dikenal pasti",
+    "Ukuran dan jumlah yang dikenali",
+    "Kích thước và số lượng đã nhận dạng"
+  ],
+  "Color output": [
+    "ผลภาพสี",
+    "カラー出力",
+    "컬러 출력",
+    "Output warna",
+    "Hasil warna",
+    "Đầu ra màu"
+  ],
+  "W1 white-ink output": [
+    "ผลหมึกขาว W1",
+    "W1 白インク出力",
+    "W1 흰색 잉크 출력",
+    "Output dakwat putih W1",
+    "Hasil tinta putih W1",
+    "Đầu ra mực trắng W1"
+  ],
+  "Top and bottom notches": [
+    "รอยบากบนและล่าง",
+    "上下のノッチ",
+    "위아래 노치",
+    "Takuk atas dan bawah",
+    "Takik atas dan bawah",
+    "Rãnh trên và dưới"
+  ],
+  "Top notch only": [
+    "รอยบากด้านบนเท่านั้น",
+    "上ノッチのみ",
+    "위쪽 노치만",
+    "Takuk atas sahaja",
+    "Hanya takik atas",
+    "Chỉ rãnh trên"
+  ],
+  "Bottom notch only": [
+    "รอยบากด้านล่างเท่านั้น",
+    "下ノッチのみ",
+    "아래쪽 노치만",
+    "Takuk bawah sahaja",
+    "Hanya takik bawah",
+    "Chỉ rãnh dưới"
+  ],
+  "Plain rectangular frame": [
+    "กรอบสี่เหลี่ยมไม่มีรอยบาก",
+    "ノッチなしの長方形枠",
+    "노치 없는 직사각형 프레임",
+    "Bingkai segi empat biasa",
+    "Bingkai persegi panjang biasa",
+    "Khung chữ nhật không có rãnh"
+  ],
+  "Notch depth: 7 mm": [
+    "ความลึกรอยบาก: 7 mm",
+    "ノッチの深さ：7 mm",
+    "노치 깊이: 7 mm",
+    "Kedalaman takuk: 7 mm",
+    "Kedalaman takik: 7 mm",
+    "Độ sâu rãnh: 7 mm"
+  ],
+  "Red fabric settings": [
+    "การตั้งค่าผ้าสีแดง",
+    "赤い生地の設定",
+    "빨간색 원단 설정",
+    "Tetapan fabrik merah",
+    "Pengaturan kain merah",
+    "Cài đặt vải đỏ"
+  ],
+  "Green fabric settings": [
+    "การตั้งค่าผ้าสีเขียว",
+    "緑の生地の設定",
+    "초록색 원단 설정",
+    "Tetapan fabrik hijau",
+    "Pengaturan kain hijau",
+    "Cài đặt vải xanh lá"
+  ],
+  "Red fabric: color output": [
+    "ผ้าสีแดง: ผลภาพสี",
+    "赤い生地：カラー出力",
+    "빨간색 원단: 컬러 출력",
+    "Fabrik merah: output warna",
+    "Kain merah: hasil warna",
+    "Vải đỏ: đầu ra màu"
+  ],
+  "Green fabric: color output": [
+    "ผ้าสีเขียว: ผลภาพสี",
+    "緑の生地：カラー出力",
+    "초록색 원단: 컬러 출력",
+    "Fabrik hijau: output warna",
+    "Kain hijau: hasil warna",
+    "Vải xanh lá: đầu ra màu"
+  ],
+  "Red fabric: W1 white ink": [
+    "ผ้าสีแดง: หมึกขาว W1",
+    "赤い生地：W1 白インク",
+    "빨간색 원단: W1 흰색 잉크",
+    "Fabrik merah: dakwat putih W1",
+    "Kain merah: tinta putih W1",
+    "Vải đỏ: mực trắng W1"
+  ],
+  "Green fabric: W1 white ink": [
+    "ผ้าสีเขียว: หมึกขาว W1",
+    "緑の生地：W1 白インク",
+    "초록색 원단: W1 흰색 잉크",
+    "Fabrik hijau: dakwat putih W1",
+    "Kain hijau: tinta putih W1",
+    "Vải xanh lá: mực trắng W1"
+  ],
+  "Centered placement": [
+    "จัดวางกึ่งกลาง",
+    "中央に配置",
+    "중앙 배치",
+    "Penempatan di tengah",
+    "Penempatan di tengah",
+    "Đặt hình vào giữa"
+  ],
+  "Drag artwork into position": [
+    "ลากภาพไปยังตำแหน่ง",
+    "図柄をドラッグして配置",
+    "도안을 드래그하여 배치",
+    "Seret reka bentuk ke kedudukan",
+    "Seret desain ke posisi",
+    "Kéo hình vào vị trí"
+  ],
+  "Platen size and artwork position": [
+    "ขนาดแท่นและตำแหน่งภาพ",
+    "プラテンサイズと図柄位置",
+    "플래튼 크기와 도안 위치",
+    "Saiz platen dan kedudukan reka bentuk",
+    "Ukuran platen dan posisi desain",
+    "Kích thước bàn in và vị trí hình"
+  ],
+  "Detailed settings": [
+    "ค่าตั้งค่าโดยละเอียด",
+    "詳細設定",
+    "상세 설정",
+    "Tetapan terperinci",
+    "Pengaturan terperinci",
+    "Cài đặt chi tiết"
+  ],
+  "Red fabric": [
+    "ผ้าสีแดง",
+    "赤い生地",
+    "빨간색 원단",
+    "Fabrik merah",
+    "Kain merah",
+    "Vải đỏ"
+  ],
+  "Green fabric": [
+    "ผ้าสีเขียว",
+    "緑の生地",
+    "초록색 원단",
+    "Fabrik hijau",
+    "Kain hijau",
+    "Vải xanh lá"
+  ],
+  "Choose a fabric preset, a custom color or a color from the artwork. Control white ink for fabric-matching areas and other regions separately, then review dimensions and channels before continuing to platen placement.": [
+    "เลือกสีผ้าที่ตั้งไว้ กำหนดสีเอง หรือเลือกสีจากภาพ ควบคุมหมึกขาวแยกระหว่างส่วนที่สีใกล้เคียงผ้าและส่วนอื่น แล้วตรวจสอบขนาดและช่องสี ก่อนจัดตำแหน่งบนแท่น",
+    "生地色のプリセット、色の指定、図柄からの色取得を選択。生地色に近い部分と他の部分の白インク量を個別に調整し、サイズとチャンネルを確認してプラテン位置合わせに進みます。",
+    "원단 색상 프리셋, 직접 지정한 색상 또는 도안에서 선택한 색상을 사용합니다. 원단 색상과 비슷한 영역과 다른 영역의 흰색 잉크를 따로 제어하고 크기와 채널을 확인한 후 플래튼 위치 맞춤으로 진행합니다.",
+    "Pilih warna fabrik pratetap, warna tersuai atau warna daripada reka bentuk. Kawal dakwat putih bagi kawasan sepadan fabrik dan kawasan lain secara berasingan, kemudian semak dimensi dan saluran sebelum penempatan platen.",
+    "Pilih warna kain prasetel, warna khusus, atau warna dari desain. Atur tinta putih untuk area yang mendekati warna kain dan area lain secara terpisah, lalu periksa dimensi dan kanal sebelum penempatan platen.",
+    "Chọn màu vải có sẵn, màu tùy chỉnh hoặc màu lấy từ hình. Điều khiển riêng mực trắng cho vùng gần màu vải và vùng khác, rồi kiểm tra kích thước và các kênh trước khi định vị bàn in."
+  ],
+  "Open artwork and choose the fabric color": [
+    "เปิดภาพและเลือกสีผ้า",
+    "図柄を開き、生地色を選ぶ",
+    "도안을 열고 원단 색상을 선택합니다",
+    "Buka reka bentuk dan pilih warna fabrik",
+    "Buka desain dan pilih warna kain",
+    "Mở hình và chọn màu vải"
+  ],
+  "Set white ink for fabric-matching and other regions": [
+    "ตั้งค่าหมึกขาวสำหรับส่วนสีใกล้เคียงผ้าและส่วนอื่น",
+    "生地色に近い部分と他の部分の白インク量を設定",
+    "원단 색상과 비슷한 영역 및 다른 영역의 흰색 잉크 설정",
+    "Tetapkan dakwat putih bagi kawasan sepadan fabrik dan kawasan lain",
+    "Atur tinta putih untuk area yang mendekati warna kain dan area lainnya",
+    "Đặt mực trắng cho vùng gần màu vải và vùng khác"
+  ],
+  "White-ink quantity controls the underbase, not the opacity of the color artwork.": [
+    "ปริมาณหมึกขาวควบคุมชั้นรอง แยกจากความทึบของภาพสี",
+    "白インク量は下地を制御する設定で、カラー図柄の不透明度とは異なります。",
+    "흰색 잉크 양은 밑바탕 도포량을 제어하며 컬러 도안의 불투명도와 다릅니다.",
+    "Kuantiti dakwat putih mengawal lapisan asas, bukan kelegapan reka bentuk warna.",
+    "Jumlah tinta putih mengatur lapisan dasar, bukan opasitas desain warna.",
+    "Lượng mực trắng điều khiển lớp lót, không phải độ đục của hình màu."
+  ],
+  "Multi-image layout can now read print dimensions and quantities directly from filenames.": [
+    "การจัดวางหลายภาพสามารถอ่านขนาดพิมพ์และจำนวนจากชื่อไฟล์ได้โดยตรง",
+    "複数画像の配置で、ファイル名から印刷サイズと数量を直接読み取れます。",
+    "여러 이미지 배치에서 파일명으로 인쇄 크기와 수량을 직접 읽을 수 있습니다.",
+    "Susun atur berbilang imej kini boleh membaca saiz cetakan dan kuantiti terus daripada nama fail.",
+    "Penataan banyak gambar kini dapat membaca ukuran cetak dan jumlah langsung dari nama file.",
+    "Dàn nhiều hình nay có thể đọc trực tiếp kích thước in và số lượng từ tên tệp."
+  ],
+  "Chinese, English, and mixed filenames can be used in the same batch.": [
+    "ใช้ชื่อไฟล์ภาษาจีน ภาษาอังกฤษ และชื่อที่ผสมสองภาษาในงานชุดเดียวกันได้",
+    "中国語・英語・両言語が混在したファイル名を、同じバッチで使用できます。",
+    "중국어, 영어 및 혼합 파일명을 같은 배치에서 사용할 수 있습니다.",
+    "Nama fail bahasa Cina, Inggeris dan campuran boleh digunakan dalam kelompok yang sama.",
+    "Nama file Mandarin, Inggris, dan campuran dapat digunakan dalam kelompok yang sama.",
+    "Tên tệp tiếng Trung, tiếng Anh và kết hợp hai ngôn ngữ có thể dùng trong cùng một lô."
+  ],
+  "This batch uses three original designs.": [
+    "งานชุดนี้ใช้แบบต้นฉบับสามแบบ",
+    "このバッチには、3 種類のオリジナル図柄を使用します。",
+    "이 배치에는 원본 디자인 세 가지를 사용합니다.",
+    "Kelompok ini menggunakan tiga reka bentuk asal.",
+    "Kelompok ini menggunakan tiga desain asli.",
+    "Lô này dùng ba mẫu thiết kế gốc."
+  ],
+  "Artwork numbers remain identifiers, rather than being mistaken for a print size or quantity.": [
+    "หมายเลขแบบยังคงเป็นรหัส ไม่ถูกเข้าใจผิดเป็นขนาดพิมพ์หรือจำนวน",
+    "図柄の番号は識別子として扱い、印刷サイズや数量と誤認しません。",
+    "도안 번호는 식별자로 유지되며 인쇄 크기나 수량으로 잘못 해석되지 않습니다.",
+    "Nombor reka bentuk kekal sebagai pengecam dan tidak disalah anggap sebagai saiz cetakan atau kuantiti.",
+    "Nomor desain tetap menjadi pengenal dan tidak disalahartikan sebagai ukuran cetak atau jumlah.",
+    "Số hiệu mẫu vẫn là mã nhận dạng, không bị nhầm thành kích thước in hay số lượng."
+  ],
+  "Open the recognition settings and results to review each item.": [
+    "เปิดการตั้งค่าและผลการอ่านชื่อไฟล์เพื่อตรวจสอบแต่ละรายการ",
+    "認識設定と結果を開き、各項目を確認します。",
+    "인식 설정과 결과를 열어 항목별로 확인합니다.",
+    "Buka tetapan dan hasil pengecaman untuk menyemak setiap item.",
+    "Buka pengaturan dan hasil pengenalan untuk memeriksa setiap item.",
+    "Mở cài đặt và kết quả nhận dạng để kiểm tra từng mục."
+  ],
+  "W eight centimeters and P two mean an eight-centimeter width and two copies, with the original aspect": [
+    "W 8 เซนติเมตร และ P 2 หมายถึงกว้าง 8 เซนติเมตร จำนวน 2 ชิ้น โดยคง",
+    "W 8 センチメートル、P 2 は、幅 8 センチメートルで 2 部を意味し、元の",
+    "W 8센티미터와 P 2는 너비 8센티미터와 2장을 뜻하며 원래의",
+    "W lapan sentimeter dan P dua bermaksud lebar lapan sentimeter dan dua salinan, dengan nisbah aspek asal",
+    "W delapan sentimeter dan P dua berarti lebar delapan sentimeter dan dua salinan, dengan rasio aspek asli",
+    "W tám xentimét và P hai nghĩa là rộng tám xentimét và hai bản, với tỷ lệ gốc"
+  ],
+  "ratio preserved.": [
+    "สัดส่วนเดิมไว้",
+    "縦横比を維持します。",
+    "비율을 유지합니다.",
+    "dikekalkan.",
+    "dipertahankan.",
+    "được giữ nguyên."
+  ],
+  "The English filename specifies a six-centimeter width and three copies.": [
+    "ชื่อไฟล์ภาษาอังกฤษระบุความกว้างหกเซนติเมตรและจำนวนสามชิ้น",
+    "英語のファイル名は、幅 6 センチメートル、数量 3 部を指定しています。",
+    "영어 파일명은 너비 6센티미터와 3장을 지정합니다.",
+    "Nama fail bahasa Inggeris menetapkan lebar enam sentimeter dan tiga salinan.",
+    "Nama file bahasa Inggris menetapkan lebar enam sentimeter dan tiga salinan.",
+    "Tên tệp tiếng Anh quy định chiều rộng sáu xentimét và ba bản."
+  ],
+  "The Chinese filename specifies seven centimeters and one copy.": [
+    "ชื่อไฟล์ภาษาจีนระบุเจ็ดเซนติเมตรและจำนวนหนึ่งชิ้น",
+    "中国語のファイル名は、7 センチメートル、数量 1 部を指定しています。",
+    "중국어 파일명은 7센티미터와 1장을 지정합니다.",
+    "Nama fail bahasa Cina menetapkan tujuh sentimeter dan satu salinan.",
+    "Nama file bahasa Mandarin menetapkan tujuh sentimeter dan satu salinan.",
+    "Tên tệp tiếng Trung quy định bảy xentimét và một bản."
+  ],
+  "The single-dimension direction and default unit are also configurable.": [
+    "ตั้งค่าทิศทางของขนาดเดี่ยวและหน่วยเริ่มต้นได้เช่นกัน",
+    "寸法が一つの場合の方向と、既定単位も設定できます。",
+    "단일 치수 방향과 기본 단위도 설정할 수 있습니다.",
+    "Arah dimensi tunggal dan unit lalai juga boleh ditetapkan.",
+    "Arah dimensi tunggal dan satuan bawaan juga dapat diatur.",
+    "Cũng có thể cấu hình hướng khi chỉ có một kích thước và đơn vị mặc định."
+  ],
+  "Once the values are checked, start the layout and export a TIFF.": [
+    "เมื่อตรวจสอบค่าแล้ว เริ่มจัดวางและส่งออก TIFF",
+    "数値を確認したら、配置を開始して TIFF を書き出します。",
+    "값을 확인한 후 배치를 시작하고 TIFF를 내보냅니다.",
+    "Selepas nilai disemak, mulakan susun atur dan eksport TIFF.",
+    "Setelah nilai diperiksa, mulai penataan dan ekspor TIFF.",
+    "Sau khi kiểm tra các giá trị, bắt đầu dàn bố cục và xuất TIFF."
+  ],
+  "This batch contains six copies across three designs, each using its own recognized print size.": [
+    "งานชุดนี้มีสามแบบรวมเป็นหกชิ้น แต่ละแบบใช้ขนาดพิมพ์ที่อ่านได้ของตนเอง",
+    "3 種類の図柄を合計 6 部配置し、それぞれ認識された印刷サイズを使います。",
+    "세 가지 디자인에서 총 6장을 만들며 각 디자인에 인식된 개별 인쇄 크기를 적용합니다.",
+    "Kelompok ini mengandungi enam salinan bagi tiga reka bentuk, setiap satunya menggunakan saiz cetakan yang dikenal pasti.",
+    "Kelompok ini berisi enam salinan dari tiga desain, masing-masing memakai ukuran cetak yang dikenali sendiri.",
+    "Lô này gồm sáu bản của ba mẫu, mỗi mẫu dùng kích thước in riêng đã được nhận dạng."
+  ],
+  "After generation, the color preview shows the actual layout output.": [
+    "หลังสร้างเสร็จ ภาพตัวอย่างสีแสดงผลการจัดวางที่ได้จริง",
+    "生成後のカラープレビューで、配置の出力結果を確認できます。",
+    "생성이 끝나면 컬러 미리보기에서 실제 배치 결과를 볼 수 있습니다.",
+    "Selepas penjanaan, pratonton warna menunjukkan hasil susun atur sebenar.",
+    "Setelah dibuat, pratinjau warna menampilkan hasil penataan yang sebenarnya.",
+    "Sau khi tạo, bản xem trước màu hiển thị đầu ra bố cục thực tế."
+  ],
+  "Print dimensions refer to the artwork itself, excluding added frames and blank margins.": [
+    "ขนาดพิมพ์หมายถึงตัวภาพ ไม่รวมกรอบและขอบว่างที่เพิ่มเข้ามา",
+    "印刷サイズは図柄自体を指し、追加した枠や余白は含みません。",
+    "인쇄 크기는 도안 자체를 뜻하며 추가된 프레임과 여백은 포함하지 않습니다.",
+    "Saiz cetakan merujuk kepada reka bentuk itu sendiri, tanpa bingkai dan margin kosong tambahan.",
+    "Ukuran cetak mengacu pada desain itu sendiri, tanpa bingkai dan margin kosong tambahan.",
+    "Kích thước in là của hình, không bao gồm khung và lề trống được thêm vào."
+  ],
+  "Switch to the white-ink preview to inspect the actual W1 channel.": [
+    "สลับไปภาพตัวอย่างหมึกขาวเพื่อตรวจสอบช่อง W1 ที่ได้จริง",
+    "白インクのプレビューに切り替え、W1 チャンネルを確認します。",
+    "흰색 잉크 미리보기로 전환해 실제 W1 채널을 확인합니다.",
+    "Tukar ke pratonton dakwat putih untuk menyemak saluran W1 sebenar.",
+    "Beralih ke pratinjau tinta putih untuk memeriksa kanal W1 yang sebenarnya.",
+    "Chuyển sang bản xem trước mực trắng để kiểm tra kênh W1 thực tế."
+  ],
+  "Both the color artwork and white ink can be checked before production.": [
+    "ตรวจสอบทั้งภาพสีและหมึกขาวได้ก่อนผลิต",
+    "生産前に、カラー図柄と白インクの両方を確認できます。",
+    "생산 전에 컬러 도안과 흰색 잉크를 모두 확인할 수 있습니다.",
+    "Reka bentuk warna dan dakwat putih boleh disemak sebelum pengeluaran.",
+    "Desain warna dan tinta putih dapat diperiksa sebelum produksi.",
+    "Có thể kiểm tra cả hình màu và mực trắng trước khi sản xuất."
+  ],
+  "The cutting frame is an independent option in the DTF workflow.": [
+    "กรอบตัดเป็นตัวเลือกแยกอิสระในงาน DTF",
+    "カット枠は DTF ワークフローの独立したオプションです。",
+    "재단 프레임은 DTF 작업 흐름의 독립 옵션입니다.",
+    "Bingkai potong ialah pilihan bebas dalam aliran kerja DTF.",
+    "Bingkai potong adalah opsi independen dalam alur DTF.",
+    "Khung cắt là tùy chọn độc lập trong quy trình DTF."
+  ],
+  "It adds a cutting and alignment frame while keeping the artwork dimensions separate from the frame.": [
+    "เพิ่มกรอบสำหรับตัดและจัดแนว โดยแยกขนาดภาพออกจากขนาดกรอบ",
+    "図柄のサイズと枠のサイズを分けたまま、カットと位置合わせ用の枠を追加します。",
+    "도안 크기와 프레임 크기를 구분하면서 재단 및 위치 맞춤용 프레임을 추가합니다.",
+    "Ia menambah bingkai pemotongan dan penjajaran sambil memisahkan saiz reka bentuk daripada bingkai.",
+    "Opsi ini menambahkan bingkai potong dan penyelarasan sambil memisahkan ukuran desain dari bingkai.",
+    "Tính năng thêm khung cắt và định vị, đồng thời tách riêng kích thước hình với kích thước khung."
+  ],
+  "Click Cutting Frame to open its dedicated settings.": [
+    "คลิกกรอบตัดเพื่อเปิดการตั้งค่าเฉพาะ",
+    "カット枠をクリックして、専用設定を開きます。",
+    "재단 프레임을 클릭해 전용 설정을 엽니다.",
+    "Klik Bingkai Potong untuk membuka tetapannya.",
+    "Klik Bingkai Potong untuk membuka pengaturan khususnya.",
+    "Nhấp Khung cắt để mở cài đặt riêng."
+  ],
+  "Adjust the artwork-to-frame distance, notch depth, and frame line width here.": [
+    "ปรับระยะจากภาพถึงกรอบ ความลึกรอยบาก และความหนาเส้นกรอบที่นี่",
+    "ここで図柄から枠までの距離、ノッチの深さ、枠の線幅を調整します。",
+    "여기서 도안과 프레임 사이 거리, 노치 깊이 및 프레임 선 너비를 조정합니다.",
+    "Laraskan jarak reka bentuk ke bingkai, kedalaman takuk dan lebar garisan bingkai di sini.",
+    "Sesuaikan jarak desain ke bingkai, kedalaman takik, dan lebar garis bingkai di sini.",
+    "Chỉnh khoảng cách từ hình đến khung, độ sâu rãnh và độ rộng đường khung tại đây."
+  ],
+  "The centered top and bottom notches have separate switches.": [
+    "รอยบากกึ่งกลางด้านบนและล่างมีสวิตช์แยกกัน",
+    "中央にある上・下のノッチには、個別のスイッチがあります。",
+    "중앙의 위쪽·아래쪽 노치에는 각각 스위치가 있습니다.",
+    "Takuk tengah di atas dan bawah mempunyai suis berasingan.",
+    "Takik tengah di atas dan bawah memiliki sakelar terpisah.",
+    "Rãnh giữa phía trên và dưới có công tắc riêng."
+  ],
+  "Keep both off for a plain cutting frame, or enable the notches needed for alignment.": [
+    "ปิดทั้งสองสวิตช์เพื่อใช้กรอบตัดธรรมดา หรือเปิดรอยบากตามที่ต้องการจัดแนว",
+    "両方をオフにすると通常のカット枠になり、位置合わせに必要なノッチだけをオンにできます。",
+    "둘 다 끄면 일반 재단 프레임이 되며 위치 맞춤에 필요한 노치만 켤 수 있습니다.",
+    "Matikan kedua-duanya untuk bingkai biasa, atau aktifkan takuk yang diperlukan bagi penjajaran.",
+    "Matikan keduanya untuk bingkai biasa, atau aktifkan takik yang diperlukan untuk penyelarasan.",
+    "Tắt cả hai để dùng khung cắt thường, hoặc bật rãnh cần thiết cho định vị."
+  ],
+  "The diagram updates immediately when a switch or value changes.": [
+    "แผนภาพอัปเดตทันทีเมื่อเปลี่ยนสวิตช์หรือค่า",
+    "スイッチや数値を変更すると、図がすぐ更新されます。",
+    "스위치나 값을 바꾸면 도식이 즉시 갱신됩니다.",
+    "Rajah dikemas kini serta-merta apabila suis atau nilai berubah.",
+    "Diagram langsung diperbarui saat sakelar atau nilai berubah.",
+    "Sơ đồ cập nhật ngay khi công tắc hoặc giá trị thay đổi."
+  ],
+  "Both notches share the same dimension settings, making the setup easy to understand.": [
+    "รอยบากทั้งสองด้านใช้ค่าขนาดร่วมกัน ทำให้ตั้งค่าเข้าใจง่าย",
+    "上下のノッチは寸法設定を共有するため、設定内容を把握しやすくなっています。",
+    "양쪽 노치는 같은 치수 설정을 공유하므로 설정을 쉽게 이해할 수 있습니다.",
+    "Kedua-dua takuk berkongsi tetapan dimensi yang sama, menjadikan persediaan mudah difahami.",
+    "Kedua takik memakai pengaturan dimensi yang sama sehingga mudah dipahami.",
+    "Hai rãnh dùng chung cài đặt kích thước, giúp việc thiết lập dễ hiểu."
+  ],
+  "Apply the settings and generate the actual TIFF artwork.": [
+    "ใช้การตั้งค่าแล้วสร้างภาพ TIFF",
+    "設定を適用し、TIFF 図柄を生成します。",
+    "설정을 적용하고 실제 TIFF 도안을 생성합니다.",
+    "Gunakan tetapan dan jana reka bentuk TIFF sebenar.",
+    "Terapkan pengaturan dan buat desain TIFF yang sebenarnya.",
+    "Áp dụng cài đặt và tạo hình TIFF thực tế."
+  ],
+  "The color output shows the frame and alignment notches.": [
+    "ผลภาพสีแสดงกรอบและรอยบากจัดแนว",
+    "カラー出力に枠と位置合わせノッチが表示されます。",
+    "컬러 출력에 프레임과 위치 맞춤 노치가 표시됩니다.",
+    "Output warna menunjukkan bingkai dan takuk penjajaran.",
+    "Hasil warna menampilkan bingkai dan takik penyelarasan.",
+    "Đầu ra màu hiển thị khung và rãnh định vị."
+  ],
+  "When rotation is enabled, they rotate with the artwork.": [
+    "เมื่อเปิดการหมุน กรอบและรอยบากจะหมุนตามภาพ",
+    "回転を有効にすると、図柄と一緒に回転します。",
+    "회전을 켜면 도안과 함께 회전합니다.",
+    "Apabila putaran diaktifkan, ia berputar bersama reka bentuk.",
+    "Saat rotasi aktif, bingkai dan takik ikut berputar bersama desain.",
+    "Khi bật xoay, chúng xoay cùng hình."
+  ],
+  "Now switch to the white-ink preview.": [
+    "จากนั้นสลับไปภาพตัวอย่างหมึกขาว",
+    "白インクのプレビューに切り替えます。",
+    "이제 흰색 잉크 미리보기로 전환합니다.",
+    "Sekarang tukar ke pratonton dakwat putih.",
+    "Sekarang beralih ke pratinjau tinta putih.",
+    "Bây giờ chuyển sang bản xem trước mực trắng."
+  ],
+  "Frame lines, notches, and added blank areas receive no white ink.": [
+    "เส้นกรอบ รอยบาก และพื้นที่ว่างที่เพิ่มเข้ามาไม่มีหมึกขาว",
+    "枠線・ノッチ・追加した余白には白インクを生成しません。",
+    "프레임 선, 노치 및 추가 여백에는 흰색 잉크가 생성되지 않습니다.",
+    "Garisan bingkai, takuk dan ruang kosong tambahan tidak menerima dakwat putih.",
+    "Garis bingkai, takik, dan area kosong tambahan tidak diberi tinta putih.",
+    "Đường khung, rãnh và vùng trống thêm vào không có mực trắng."
+  ],
+  "W1 covers only the artwork areas that require it.": [
+    "W1 ครอบคลุมเฉพาะส่วนภาพที่ต้องการหมึกขาว",
+    "W1 は白インクが必要な図柄の部分だけを覆います。",
+    "W1은 흰색 잉크가 필요한 도안 영역만 덮습니다.",
+    "W1 hanya meliputi kawasan reka bentuk yang memerlukannya.",
+    "W1 hanya menutupi area desain yang memerlukannya.",
+    "W1 chỉ phủ phần hình cần mực trắng."
+  ],
+  "This combines cutting alignment and color artwork in one output, while preserving a separate white-ink": [
+    "รวมการจัดแนวตัดและภาพสีในไฟล์เดียว โดยเก็บหมึกขาวเป็น",
+    "カット位置合わせとカラー図柄を一つの出力にまとめながら、白インクは独立した",
+    "재단 위치 맞춤과 컬러 도안을 하나의 출력으로 묶으면서 흰색 잉크는 별도의",
+    "Ini menggabungkan penjajaran potong dan reka bentuk warna dalam satu output, sambil mengekalkan dakwat putih dalam",
+    "Ini menggabungkan penyelarasan potong dan desain warna dalam satu hasil, sambil mempertahankan tinta putih dalam",
+    "Tính năng kết hợp định vị cắt và hình màu trong một đầu ra, đồng thời giữ mực trắng trong"
+  ],
+  "channel that can be inspected.": [
+    "ช่องแยกที่ตรวจสอบได้",
+    "確認可能なチャンネルとして保持します。",
+    "확인 가능한 채널로 유지합니다.",
+    "saluran berasingan yang boleh disemak.",
+    "kanal terpisah yang dapat diperiksa.",
+    "một kênh riêng có thể kiểm tra."
+  ],
+  "DTG white-ink control supports multiple fabric colors.": [
+    "การควบคุมหมึกขาว DTG รองรับผ้าหลายสี",
+    "DTG の白インク制御は、さまざまな生地色に対応します。",
+    "DTG 흰색 잉크 제어는 다양한 원단 색상을 지원합니다.",
+    "Kawalan dakwat putih DTG menyokong pelbagai warna fabrik.",
+    "Pengaturan tinta putih DTG mendukung berbagai warna kain.",
+    "Điều khiển mực trắng DTG hỗ trợ nhiều màu vải."
+  ],
+  "Here we use the same color artwork to demonstrate white-ink settings for different garments.": [
+    "ใช้ภาพสีเดียวกันเพื่อแสดงการตั้งค่าหมึกขาวสำหรับเสื้อผ้าสีต่างกัน",
+    "同じカラー図柄を使い、異なる衣服に合わせた白インク設定を紹介します。",
+    "같은 컬러 도안으로 서로 다른 의류에 맞춘 흰색 잉크 설정을 보여줍니다.",
+    "Reka bentuk warna yang sama digunakan untuk menunjukkan tetapan dakwat putih bagi pakaian berbeza.",
+    "Desain warna yang sama digunakan untuk menunjukkan pengaturan tinta putih bagi pakaian berbeda.",
+    "Dùng cùng một hình màu để minh họa cài đặt mực trắng cho các màu áo khác nhau."
+  ],
+  "The panel provides ten preset colors, plus a custom color option and color picking from the artwork.": [
+    "แผงมีสีสำเร็จสิบสี พร้อมกำหนดสีเองและเลือกสีจากภาพ",
+    "パネルには 10 種類のプリセット色に加え、色の指定と図柄からの色取得があります。",
+    "패널은 10가지 프리셋 색상과 직접 색상 지정 및 도안에서 색 선택을 제공합니다.",
+    "Panel menyediakan sepuluh warna pratetap, pilihan warna tersuai dan pengambilan warna daripada reka bentuk.",
+    "Panel menyediakan sepuluh warna prasetel, pilihan warna khusus, dan pengambilan warna dari desain.",
+    "Bảng có mười màu có sẵn, tùy chọn màu tùy chỉnh và lấy màu từ hình."
+  ],
+  "First choose red fabric.": [
+    "เริ่มจากเลือกผ้าสีแดง",
+    "まず赤い生地を選びます。",
+    "먼저 빨간색 원단을 선택합니다.",
+    "Mula-mula pilih fabrik merah.",
+    "Pertama pilih kain merah.",
+    "Trước tiên chọn vải đỏ."
+  ],
+  "The color artwork is retained.": [
+    "ภาพสียังคงเดิม",
+    "カラー図柄は維持されます。",
+    "컬러 도안은 유지됩니다.",
+    "Warna reka bentuk dikekalkan.",
+    "Warna desain dipertahankan.",
+    "Hình màu được giữ nguyên."
+  ],
+  "White-ink amounts are controlled separately for areas close to the fabric color and for the rest of the": [
+    "ควบคุมหมึกขาวแยกระหว่างส่วนที่สีใกล้เคียงผ้าและส่วนอื่นของ",
+    "白インク量は、生地色に近い部分と、それ以外の",
+    "흰색 잉크 양은 원단 색과 비슷한 영역과 나머지",
+    "Jumlah dakwat putih dikawal berasingan bagi kawasan hampir warna fabrik dan bahagian lain",
+    "Jumlah tinta putih diatur terpisah untuk area yang mendekati warna kain dan bagian lain",
+    "Lượng mực trắng được điều khiển riêng cho vùng gần màu vải và phần còn lại của"
+  ],
+  "artwork.": [
+    "ภาพ",
+    "図柄で、別々に制御します。",
+    "도안에 대해 따로 제어합니다.",
+    "reka bentuk.",
+    "desain.",
+    "hình."
+  ],
+  "Here they are set to five and fifty percent.": [
+    "ตัวอย่างตั้งไว้ห้าและห้าสิบเปอร์เซ็นต์",
+    "ここでは 5% と 50% に設定しています。",
+    "여기서는 5%와 50%로 설정합니다.",
+    "Di sini, nilainya lima dan lima puluh peratus.",
+    "Di sini nilainya lima dan lima puluh persen.",
+    "Ở đây các giá trị là năm và năm mươi phần trăm."
+  ],
+  "Click Generate DTG Artwork.": [
+    "คลิกสร้างภาพ DTG",
+    "DTG 図柄生成をクリックします。",
+    "DTG 도안 생성을 클릭합니다.",
+    "Klik Jana Reka Bentuk DTG.",
+    "Klik Buat Desain DTG.",
+    "Nhấp Tạo hình DTG."
+  ],
+  "The software performs the actual processing through Photoshop and saves a TIFF with the W1 channel.": [
+    "ซอฟต์แวร์ประมวลผลผ่าน Photoshop และบันทึก TIFF พร้อมช่อง W1",
+    "Photoshop を通じて処理を実行し、W1 チャンネルを含む TIFF を保存します。",
+    "소프트웨어가 Photoshop을 통해 실제 처리를 수행하고 W1 채널이 포함된 TIFF를 저장합니다.",
+    "Perisian menjalankan pemprosesan melalui Photoshop dan menyimpan TIFF bersama saluran W1.",
+    "Perangkat lunak memproses melalui Photoshop dan menyimpan TIFF dengan kanal W1.",
+    "Phần mềm thực hiện xử lý qua Photoshop và lưu TIFF có kênh W1."
+  ],
+  "Use the actual color output to inspect the print, and the white-ink preview to inspect coverage.": [
+    "ใช้ผลภาพสีเพื่อตรวจสอบลายพิมพ์ และภาพตัวอย่างหมึกขาวเพื่อตรวจสอบการคลุม",
+    "カラー出力で図柄を確認し、白インクのプレビューで被覆を確認します。",
+    "실제 컬러 출력으로 도안을 확인하고 흰색 잉크 미리보기로 도포 범위를 확인합니다.",
+    "Gunakan output warna untuk menyemak cetakan dan pratonton dakwat putih untuk menyemak liputan.",
+    "Gunakan hasil warna untuk memeriksa cetakan dan pratinjau tinta putih untuk memeriksa cakupan.",
+    "Dùng đầu ra màu để kiểm tra hình in và bản xem trước mực trắng để kiểm tra độ phủ."
+  ],
+  "The red matching areas and the other colors can be compared separately.": [
+    "เปรียบเทียบส่วนที่สีตรงกับสีแดงและส่วนสีอื่นได้แยกกัน",
+    "赤に近い部分と、それ以外の色の部分を個別に比較できます。",
+    "빨간색과 비슷한 영역과 다른 색상 영역을 따로 비교할 수 있습니다.",
+    "Kawasan sepadan merah dan warna lain boleh dibandingkan berasingan.",
+    "Area yang mendekati merah dan warna lainnya dapat dibandingkan terpisah.",
+    "Có thể so sánh riêng vùng gần màu đỏ và các màu khác."
+  ],
+  "Change the fabric to green and generate again.": [
+    "เปลี่ยนผ้าเป็นสีเขียวแล้วสร้างใหม่",
+    "生地を緑に変更して、もう一度生成します。",
+    "원단을 초록색으로 바꾸고 다시 생성합니다.",
+    "Tukar fabrik kepada hijau dan jana semula.",
+    "Ganti kain menjadi hijau dan buat ulang.",
+    "Đổi vải sang xanh lá và tạo lại."
+  ],
+  "The artwork colors remain, while white ink is recalculated for the new fabric color.": [
+    "สีของภาพยังคงเดิม และคำนวณหมึกขาวใหม่ตามสีผ้า",
+    "図柄の色は維持され、新しい生地色に合わせて白インクを再計算します。",
+    "도안 색상은 유지되고 새 원단 색상에 맞춰 흰색 잉크를 다시 계산합니다.",
+    "Warna reka bentuk dikekalkan, sementara dakwat putih dikira semula bagi warna fabrik baharu.",
+    "Warna desain tetap dipertahankan, sementara tinta putih dihitung ulang untuk warna kain baru.",
+    "Màu hình vẫn giữ nguyên, còn mực trắng được tính lại theo màu vải mới."
+  ],
+  "Review the output for the selected fabric and production needs, then send the finished artwork directly": [
+    "ตรวจสอบผลให้เหมาะกับผ้าที่เลือกและงานผลิต แล้วส่งภาพที่เสร็จแล้วโดยตรง",
+    "選択した生地と生産要件に合わせて出力を確認し、完成した図柄をそのまま",
+    "선택한 원단과 생산 요구에 맞게 결과를 확인한 다음 완성된 도안을 바로",
+    "Semak output mengikut fabrik dan keperluan pengeluaran, kemudian hantar reka bentuk siap terus",
+    "Periksa hasil sesuai kain yang dipilih dan kebutuhan produksi, lalu kirim desain selesai langsung",
+    "Kiểm tra đầu ra theo màu vải đã chọn và nhu cầu sản xuất, rồi chuyển hình hoàn thiện trực tiếp"
+  ],
+  "to DTG placement.": [
+    "ไปจัดตำแหน่ง DTG",
+    "DTG の位置合わせに送ります。",
+    "DTG 위치 맞춤으로 보냅니다.",
+    "ke penempatan DTG.",
+    "ke penempatan DTG.",
+    "sang định vị DTG."
+  ],
+  "After preparing the white-ink artwork, open DTG Placement to position the actual output on a selected": [
+    "หลังเตรียมภาพหมึกขาว เปิดการจัดตำแหน่ง DTG เพื่อวางผลภาพบน",
+    "白インク図柄の準備後に DTG 位置合わせを開き、出力を選択した",
+    "흰색 잉크 도안을 준비한 후 DTG 위치 맞춤을 열어 실제 출력을 선택한",
+    "Selepas menyediakan reka bentuk dakwat putih, buka Penempatan DTG untuk meletakkan output sebenar pada",
+    "Setelah menyiapkan desain tinta putih, buka Penempatan DTG untuk menempatkan hasil pada",
+    "Sau khi chuẩn bị hình mực trắng, mở Định vị DTG để đặt đầu ra thực tế lên"
+  ],
+  "platen.": [
+    "แท่นที่เลือก",
+    "プラテンに配置します。",
+    "플래튼에 배치합니다.",
+    "platen yang dipilih.",
+    "platen yang dipilih.",
+    "bàn in đã chọn."
+  ],
+  "First set the platen width and height.": [
+    "เริ่มจากกำหนดความกว้างและสูงของแท่น",
+    "まずプラテンの幅と高さを設定します。",
+    "먼저 플래튼 너비와 높이를 설정합니다.",
+    "Mula-mula tetapkan lebar dan tinggi platen.",
+    "Pertama tentukan lebar dan tinggi platen.",
+    "Trước tiên đặt chiều rộng và chiều cao bàn in."
+  ],
+  "Placement uses real dimensions and preserves the artwork's print size.": [
+    "จัดตำแหน่งตามขนาดจริงและคงขนาดพิมพ์ของภาพ",
+    "位置合わせには実寸を使い、図柄の印刷サイズを維持します。",
+    "위치 맞춤은 실제 치수를 사용하며 도안의 인쇄 크기를 유지합니다.",
+    "Penempatan menggunakan dimensi sebenar dan mengekalkan saiz cetakan reka bentuk.",
+    "Penempatan memakai dimensi nyata dan mempertahankan ukuran cetak desain.",
+    "Định vị dùng kích thước thực và giữ nguyên kích thước in của hình."
+  ],
+  "Drag the artwork in the left preview and the position values update with it.": [
+    "ลากภาพในตัวอย่างด้านซ้าย แล้วค่าตำแหน่งจะเปลี่ยนตาม",
+    "左のプレビューで図柄をドラッグすると、位置の数値も更新されます。",
+    "왼쪽 미리보기에서 도안을 드래그하면 위치 값도 갱신됩니다.",
+    "Seret reka bentuk dalam pratonton kiri dan nilai kedudukan turut dikemas kini.",
+    "Seret desain pada pratinjau kiri dan nilai posisi ikut diperbarui.",
+    "Kéo hình trong bản xem trước bên trái, các giá trị vị trí sẽ cập nhật theo."
+  ],
+  "You can also enter horizontal and vertical positions for precise adjustment.": [
+    "ป้อนตำแหน่งแนวนอนและแนวตั้งเพื่อปรับอย่างแม่นยำได้เช่นกัน",
+    "水平・垂直位置を入力して、正確に調整することもできます。",
+    "수평 및 수직 위치를 입력해 정확하게 조정할 수도 있습니다.",
+    "Anda juga boleh memasukkan kedudukan mendatar dan menegak untuk pelarasan tepat.",
+    "Anda juga dapat memasukkan posisi horizontal dan vertikal untuk penyesuaian tepat.",
+    "Cũng có thể nhập vị trí ngang và dọc để điều chỉnh chính xác."
+  ],
+  "Center guides help confirm alignment.": [
+    "เส้นกึ่งกลางช่วยยืนยันการจัดแนว",
+    "中央ガイドで位置合わせを確認できます。",
+    "중앙 가이드로 정렬 상태를 확인합니다.",
+    "Panduan tengah membantu menyemak penjajaran.",
+    "Panduan tengah membantu memastikan penyelarasan.",
+    "Đường tâm giúp xác nhận căn chỉnh."
+  ],
+  "Arrow keys allow fine adjustments, while Shift uses a larger step.": [
+    "ปุ่มลูกศรช่วยปรับละเอียด และ Shift ใช้ขยับครั้งละมากขึ้น",
+    "方向キーで微調整でき、Shift を押すと大きい刻みで移動します。",
+    "방향키로 미세 조정할 수 있으며 Shift를 누르면 더 큰 간격으로 이동합니다.",
+    "Kekunci anak panah membolehkan pelarasan halus, manakala Shift menggunakan langkah lebih besar.",
+    "Tombol panah memungkinkan penyesuaian kecil, sedangkan Shift memakai langkah lebih besar.",
+    "Phím mũi tên cho phép chỉnh nhỏ, còn Shift dùng bước di chuyển lớn hơn."
+  ],
+  "Once the position is confirmed, export the placement TIFF.": [
+    "เมื่อยืนยันตำแหน่งแล้ว ส่งออก TIFF การจัดตำแหน่ง",
+    "位置を確認したら、位置合わせ TIFF を書き出します。",
+    "위치를 확인한 후 위치 맞춤 TIFF를 내보냅니다.",
+    "Selepas kedudukan disahkan, eksport TIFF penempatan.",
+    "Setelah posisi dipastikan, ekspor TIFF penempatan.",
+    "Sau khi xác nhận vị trí, xuất TIFF định vị."
+  ],
+  "The software saves color artwork and W1 on the actual platen canvas, together with a placement record.": [
+    "ซอฟต์แวร์บันทึกภาพสีและ W1 บนพื้นที่แท่นจริง พร้อมข้อมูลการจัดตำแหน่ง",
+    "カラー図柄と W1 を実寸のプラテンキャンバスに保存し、配置記録も残します。",
+    "소프트웨어가 실제 플래튼 캔버스에 컬러 도안과 W1을 저장하고 배치 기록도 함께 남깁니다.",
+    "Perisian menyimpan reka bentuk warna dan W1 pada kanvas platen sebenar bersama rekod penempatan.",
+    "Perangkat lunak menyimpan desain warna dan W1 pada kanvas platen nyata beserta catatan penempatan.",
+    "Phần mềm lưu hình màu và W1 trên khung bàn in thực, cùng với bản ghi vị trí."
+  ],
+  "Inspect color and white ink in the actual output.": [
+    "ตรวจสอบสีและหมึกขาวในผลภาพที่ได้",
+    "出力結果のカラーと白インクを確認します。",
+    "실제 출력에서 컬러와 흰색 잉크를 확인합니다.",
+    "Semak warna dan dakwat putih dalam output sebenar.",
+    "Periksa warna dan tinta putih pada hasil sebenarnya.",
+    "Kiểm tra màu và mực trắng trong đầu ra thực tế."
+  ],
+  "The platen and garment illustrations are alignment references and are not printed into the artwork.": [
+    "ภาพแท่นและเสื้อเป็นแนวอ้างอิงตำแหน่ง ไม่ถูกพิมพ์รวมในภาพ",
+    "プラテンと衣服のイラストは位置合わせの目安で、図柄には印刷されません。",
+    "플래튼과 의류 그림은 위치 맞춤 참고용이며 도안에 인쇄되지 않습니다.",
+    "Ilustrasi platen dan pakaian ialah rujukan penjajaran dan tidak dicetak dalam reka bentuk.",
+    "Ilustrasi platen dan pakaian hanya menjadi referensi penyelarasan dan tidak dicetak pada desain.",
+    "Hình minh họa bàn in và áo chỉ là tham chiếu căn chỉnh, không được in vào hình."
+  ],
+  "From white-ink control to platen placement, the workflow keeps processing, positioning, and output": [
+    "จากการควบคุมหมึกขาวถึงการจัดตำแหน่งบนแท่น เชื่อมการประมวลผล การวางตำแหน่ง และการส่งออก",
+    "白インク制御からプラテン位置合わせまで、処理・配置・出力確認を",
+    "흰색 잉크 제어부터 플래튼 위치 맞춤까지 처리, 배치 및 출력",
+    "Daripada kawalan dakwat putih hingga penempatan platen, aliran ini memastikan pemprosesan, kedudukan dan pemeriksaan output",
+    "Dari pengaturan tinta putih hingga penempatan platen, alur ini menjaga pemrosesan, posisi, dan pemeriksaan hasil",
+    "Từ điều khiển mực trắng đến định vị bàn in, quy trình giữ cho việc xử lý, bố trí và kiểm tra đầu ra"
+  ],
+  "inspection connected.": [
+    "และการตรวจสอบไว้ต่อเนื่องกัน",
+    "一つの流れでつなぎます。",
+    "검사를 하나의 흐름으로 연결합니다.",
+    "saling terhubung.",
+    "tetap terhubung.",
+    "được kết nối liên tục."
+  ]
+}

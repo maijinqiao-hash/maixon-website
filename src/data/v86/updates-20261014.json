@@ -1,0 +1,234 @@
+[
+  {
+    "feature": "dtf",
+    "id": "filename-recognition",
+    "poster": "update-filename-recognition",
+    "video": "update-filename-recognition",
+    "updateMedia": "filename-recognition",
+    "displayVersion": "V8.5",
+    "title": "文件名识别尺寸与数量",
+    "lead": "尺寸与份数，从文件名里读出来。",
+    "summary": "中文、英文和混合命名可放进同一批任务；在排版前查看尺寸与本次数量。",
+    "chapters": [
+      {
+        "title": "混合命名，一起识别。",
+        "body": [
+          "把中文、英文及中英混合命名的图稿放进同一文件夹，在多图排版中导入。图稿编号继续作为标识，不会直接当成尺寸或数量。",
+          "W8cm P2 表示图案宽 8 cm、本次 2 份，并保留原比例。打开识别设置与结果，逐项检查尺寸、数量、单尺寸方向和默认单位。"
+        ]
+      },
+      {
+        "title": "确认参数，再排成一整版。",
+        "body": [
+          "演示中的三张图分别为宽 8 / 6 / 7 cm、数量 2 / 3 / 1，共排出 6 份。每张图采用各自识别的尺寸。",
+          "生成 TIFF 后，切换彩色与 W1 白墨预览。尺寸指图案本身，不包含另外添加的切割框与空白边距。"
+        ]
+      }
+    ],
+    "checks": [
+      "识别尺寸与订单一致",
+      "本次数量逐项确认",
+      "彩色与 W1 输出分别检查"
+    ],
+    "en": {
+      "title": "Filename size and quantity recognition",
+      "lead": "Read the size and quantity from the filename.",
+      "summary": "Read print dimensions and quantities from Chinese, English, or mixed filenames, then review the values before layout.",
+      "chapters": [
+        {
+          "title": "Mixed filenames. One batch.",
+          "body": [
+            "Import Chinese, English and mixed filenames together for multiple-image layout. Artwork numbers remain identifiers, rather than becoming a print size or quantity.",
+            "W8cm P2 means an 8 cm artwork width and 2 copies, with the original aspect ratio preserved. Review dimensions, quantities, the single-dimension direction and default unit in the recognition settings and results."
+          ]
+        },
+        {
+          "title": "Review the values. Then build the layout.",
+          "body": [
+            "The demonstration uses artwork widths of 8 / 6 / 7 cm and quantities of 2 / 3 / 1, producing 6 copies in total. Each design uses its own recognized size.",
+            "After exporting TIFF, inspect the color and W1 previews separately. Dimensions refer to the artwork itself, excluding added cutting frames and blank margins."
+          ]
+        }
+      ],
+      "checks": [
+        "Recognized dimensions match the order",
+        "Quantities are confirmed for each artwork",
+        "Color and W1 outputs are inspected separately"
+      ]
+    }
+  },
+  {
+    "feature": "dtf",
+    "id": "cut-frame",
+    "poster": "update-cut-frame",
+    "video": "update-cut-frame",
+    "updateMedia": "cut-frame",
+    "displayVersion": "V8.5",
+    "title": "切割框与独立定位缺口",
+    "lead": "上、下缺口。按需要各自开启。",
+    "summary": "上下缺口独立开启，示意图随参数实时变化；框线、缺口和新增空白不生成 W1 白墨。",
+    "chapters": [
+      {
+        "title": "框线、距离与缺口，分别设置。",
+        "body": [
+          "在 DTF 工作流程中打开切割框设置，调整图案到框线的距离、缺口深度与框线宽度。图案尺寸与切割框尺寸分开理解。",
+          "顶部和底部缺口各有一个开关：矩形框、仅上缺口、仅下缺口或上下同时开启，都可按定位需要选择。改变开关或数值，示意图立即更新。"
+        ]
+      },
+      {
+        "title": "对齐更清楚，白墨保持独立。",
+        "body": [
+          "点击应用，生成 TIFF。开启旋转时，框线和缺口随图案一起旋转；输出后检查边距与缺口方向。",
+          "彩色预览显示框线和缺口。W1 白墨只覆盖需要喷白墨的图案区域，框线、缺口及新增空白不喷白墨。"
+        ]
+      }
+    ],
+    "checks": [
+      "上下开关符合定位需要",
+      "距离、深度与线宽已确认",
+      "框线与空白区域没有 W1"
+    ],
+    "en": {
+      "title": "Cutting frames and independent notches",
+      "lead": "Top and bottom notches. Switch each one as needed.",
+      "summary": "Control top and bottom notches independently, with a live settings diagram. Frame lines, notches and added blank areas receive no W1 white ink.",
+      "chapters": [
+        {
+          "title": "Set the frame, spacing and notches.",
+          "body": [
+            "Open Cutting Frame in the DTF workflow to adjust artwork-to-frame spacing, notch depth and line width. Keep artwork dimensions separate from frame dimensions.",
+            "Separate switches let you choose a plain rectangle, a top notch, a bottom notch, or both. The diagram updates immediately when a switch or value changes."
+          ]
+        },
+        {
+          "title": "Clear alignment. Separate white ink.",
+          "body": [
+            "Apply the settings and generate TIFF. With rotation enabled, frames and notches rotate with the artwork. Inspect margins and notch direction after export.",
+            "The color preview shows the frame and notches. W1 covers only artwork areas that need white ink; frame lines, notches and added blank areas receive none."
+          ]
+        }
+      ],
+      "checks": [
+        "Top and bottom switches match the alignment needs",
+        "Spacing, depth and line width are confirmed",
+        "Frame lines and blank areas contain no W1"
+      ]
+    }
+  },
+  {
+    "feature": "dtg",
+    "id": "fabric-colors",
+    "poster": "update-fabric-colors",
+    "video": "update-fabric-colors",
+    "updateMedia": "fabric-colors",
+    "displayVersion": "V8.5",
+    "title": "多色面料白墨控制",
+    "lead": "换一种面料颜色。白墨也跟着调整。",
+    "summary": "按面料相近区域和其他图案区域分别控制白墨；同一图稿演示红色、绿色面料输出。",
+    "chapters": [
+      {
+        "title": "选择面料颜色，分别设置白墨。",
+        "body": [
+          "选择 10 种预设面料颜色之一，也可以自定义颜色或从图稿取色。彩色图稿保留，面料颜色用于白墨计算。",
+          "接近面料颜色的区域与其他图案区域分别控制白墨。演示设置为 5% 与 50%；白墨量不等于彩色图像的透明度。"
+        ]
+      },
+      {
+        "title": "比较输出，接着做台板套位。",
+        "body": [
+          "点击生成 DTG 图稿，通过 Photoshop 保存带有 W1 的 TIFF。分别查看彩色与白墨预览，再切换红色、绿色面料比较白墨覆盖。",
+          "换面料颜色后重新生成，图稿颜色保留，白墨按新面料重新计算。确认结果后，可直接送入 DTG 台板套位。"
+        ]
+      }
+    ],
+    "checks": [
+      "面料颜色与本次订单一致",
+      "两类区域的白墨量分别确认",
+      "W1 覆盖检查后再进入套位"
+    ],
+    "en": {
+      "title": "White ink for multiple fabric colors",
+      "lead": "Change the fabric color. Adjust the white ink with it.",
+      "summary": "Set white ink separately for fabric-matching areas and the rest of the artwork. Compare red and green fabric settings with the same design.",
+      "chapters": [
+        {
+          "title": "Choose the fabric color. Set white ink separately.",
+          "body": [
+            "Choose one of 10 fabric presets, enter a custom color, or pick a color from the artwork. The color artwork remains intact; fabric color guides the white-ink calculation.",
+            "Control white ink separately for fabric-matching areas and the rest of the artwork. The demonstration uses 5% and 50%; white-ink quantity is separate from color-image opacity."
+          ]
+        },
+        {
+          "title": "Compare the output. Continue to DTG placement.",
+          "body": [
+            "Generate DTG Artwork uses Photoshop to save TIFF with W1. Inspect color and white ink separately, then compare coverage using red and green fabric settings.",
+            "After changing the fabric color, generate again. Artwork colors remain while white ink is recalculated. Once checked, send the result directly to DTG platen placement."
+          ]
+        }
+      ],
+      "checks": [
+        "The fabric color matches the order",
+        "Both white-ink amounts are confirmed",
+        "W1 coverage is inspected before placement"
+      ]
+    }
+  },
+  {
+    "feature": "dtg",
+    "id": "platen-placement",
+    "poster": "update-platen-placement",
+    "video": "update-platen-placement",
+    "updateMedia": "platen-placement",
+    "displayVersion": "V8.5",
+    "title": "DTG 台板套位",
+    "lead": "尺寸定好。图稿放到正确的位置。",
+    "summary": "设置台板尺寸，拖动、居中或输入位置；彩色与 W1 一起保存到套位 TIFF。",
+    "chapters": [
+      {
+        "title": "真实台板尺寸，精确放置图稿。",
+        "body": [
+          "完成白墨制图后进入 DTG 套位，设置台板宽度与高度。按实际尺寸定位，保留图案原来的打印大小。",
+          "拖动左侧预览，位置数值随之更新；也可以输入水平与垂直位置、使用居中辅助线，或用方向键微调。按住 Shift 使用较大的移动步进。"
+        ]
+      },
+      {
+        "title": "确认位置，把彩色与白墨一起输出。",
+        "body": [
+          "演示采用 20 × 25 cm 台板，距左 20 mm、距顶 30 mm。确认位置后导出套位 TIFF，同时保存套位记录。",
+          "检查彩色图稿与 W1 在台板画布上的位置。台板与衣服示意只用于对齐，不会打印进图稿。"
+        ]
+      }
+    ],
+    "checks": [
+      "台板宽高与设备一致",
+      "图稿位置及实际尺寸已确认",
+      "彩色与 W1 对齐且边界完整"
+    ],
+    "en": {
+      "title": "DTG platen placement",
+      "lead": "Set the size. Put the artwork in the right place.",
+      "summary": "Set the platen size, then drag, center, or enter a precise position. Export both color artwork and W1 on the platen canvas.",
+      "chapters": [
+        {
+          "title": "Real platen dimensions. Precise artwork placement.",
+          "body": [
+            "After preparing white ink, open DTG Placement and set platen width and height. Position the artwork at real dimensions while preserving its print size.",
+            "Drag in the left preview to update position values, enter horizontal and vertical offsets, use center guides, or fine-tune with arrow keys. Hold Shift for a larger step."
+          ]
+        },
+        {
+          "title": "Confirm the position. Export color and white ink together.",
+          "body": [
+            "The demonstration uses a 20 × 25 cm platen, with offsets of 20 mm from the left and 30 mm from the top. Export the placement TIFF and save the placement record.",
+            "Inspect the color artwork and W1 on the platen canvas. The platen and garment illustrations are alignment references and are not printed into the artwork."
+          ]
+        }
+      ],
+      "checks": [
+        "Platen dimensions match the equipment",
+        "Artwork position and print size are confirmed",
+        "Color and W1 align with complete boundaries"
+      ]
+    }
+  }
+]

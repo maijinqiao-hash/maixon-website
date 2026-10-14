@@ -1,0 +1,66 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:07.067
+After preparing the white-ink artwork, open DTG Placement to
+position the actual output on a selected
+
+2
+00:00:07.067 --> 00:00:07.548
+platen.
+
+3
+00:00:09.053 --> 00:00:11.688
+First set the platen width and height.
+
+4
+00:00:11.688 --> 00:00:16.542
+Placement uses real dimensions and preserves
+the artwork's print size.
+
+5
+00:00:18.487 --> 00:00:23.263
+Drag the artwork in the left preview and the
+position values update with it.
+
+6
+00:00:23.263 --> 00:00:28.039
+You can also enter horizontal and vertical
+positions for precise adjustment.
+
+7
+00:00:29.653 --> 00:00:32.521
+Center guides help confirm alignment.
+
+8
+00:00:32.521 --> 00:00:37.637
+Arrow keys allow fine adjustments, while
+Shift uses a larger step.
+
+9
+00:00:39.387 --> 00:00:43.620
+Once the position is confirmed, export
+the placement TIFF.
+
+10
+00:00:43.620 --> 00:00:51.064
+The software saves color artwork and W1 on the actual platen
+canvas, together with a placement record.
+
+11
+00:00:51.387 --> 00:00:54.440
+Inspect color and white ink in the actual output.
+
+12
+00:00:54.440 --> 00:01:00.609
+The platen and garment illustrations are alignment
+references and are not printed into the artwork.
+
+13
+00:01:02.353 --> 00:01:08.833
+From white-ink control to platen placement, the workflow
+keeps processing, positioning, and output
+
+14
+00:01:08.833 --> 00:01:10.221
+inspection connected.

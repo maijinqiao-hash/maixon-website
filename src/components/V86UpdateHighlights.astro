@@ -1,0 +1,20 @@
+---
+import updates from '@/data/v86/updates-20261014.json';
+import {assetUrl} from '@/data/asset-delivery';
+interface Props {feature:string;locale:'zh-CN'|'en'}
+const {feature,locale}=Astro.props;
+const items=updates.filter(item=>item.feature===feature);
+---
+{items.length>0&&<section class="v86-update-highlights" aria-label={locale==='zh-CN'?'新增功能':'New capabilities'}>
+ <p class="v86-eyebrow">{locale==='zh-CN'?'新增功能':'NEW CAPABILITIES'}</p>
+ <div class="v86-detail-grid">
+  {items.map(item=>{const text=locale==='zh-CN'?item:item.en;return <a class="v86-detail-card" href={`/${locale}/features/${feature}/${item.id}/`}>
+   <div class="v86-detail-card__image"><img src={assetUrl(`/media/v86/screenshots/light/${item.poster}.webp`)} alt="" width="1920" height="1080" loading="lazy" decoding="async"/></div>
+   <div class="v86-detail-card__body"><h3>{text.title}</h3><p>{text.summary}</p><span class="v86-detail-card__arrow" aria-hidden="true">↗</span></div>
+  </a>})}
+ </div>
+</section>}
+<style>
+ .v86-update-highlights{margin:48px 0 28px}.v86-update-highlights>.v86-eyebrow{font-size:18px;letter-spacing:.07em;margin-bottom:20px}.v86-update-highlights .v86-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v86-update-highlights .v86-detail-card__image img{object-fit:contain}.v86-update-highlights .v86-detail-card h3{font-size:24px}
+ @media(max-width:640px){.v86-update-highlights .v86-detail-grid{grid-template-columns:1fr}.v86-update-highlights .v86-detail-card h3{font-size:20px}}
+</style>

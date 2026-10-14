@@ -179,7 +179,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       img.src=assetUrl(`/media/v86/screenshots/${theme}/${frame.dataset.poster}.webp`);
       if(video)video.poster=img.src;
       const caption=frame.querySelector('.v86-media__source')?.textContent?.trim()||frame.dataset.poster;
-      img.alt=`MAIXON TOOL V8.6 ${caption} · ${theme==='light'?t.light:t.dark}`;
+      img.alt=`MAIXON TOOL ${frame.dataset.displayVersion||'V8.6'} ${caption} · ${theme==='light'?t.light:t.dark}`;
       frame.querySelectorAll('[data-v86-theme]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       if(!reduce.matches&&event.detail>0)img.animate([{opacity:.65},{opacity:1}],{duration:240,easing:'ease-out'});
     }));

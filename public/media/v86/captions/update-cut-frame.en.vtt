@@ -1,0 +1,77 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:03.938
+The cutting frame is an independent option
+in the DTF workflow.
+
+2
+00:00:03.938 --> 00:00:09.938
+It adds a cutting and alignment frame while keeping the
+artwork dimensions separate from the frame.
+
+3
+00:00:12.120 --> 00:00:15.584
+Click Cutting Frame to open its dedicated settings.
+
+4
+00:00:15.584 --> 00:00:20.813
+Adjust the artwork-to-frame distance, notch
+depth, and frame line width here.
+
+5
+00:00:23.720 --> 00:00:27.521
+The centered top and bottom notches have
+separate switches.
+
+6
+00:00:27.521 --> 00:00:32.933
+Keep both off for a plain cutting frame, or enable
+the notches needed for alignment.
+
+7
+00:00:37.987 --> 00:00:42.310
+The diagram updates immediately when a
+switch or value changes.
+
+8
+00:00:42.310 --> 00:00:48.074
+Both notches share the same dimension settings,
+making the setup easy to understand.
+
+9
+00:00:49.820 --> 00:00:53.729
+Apply the settings and generate the
+actual TIFF artwork.
+
+10
+00:00:53.729 --> 00:00:57.568
+The color output shows the frame and
+alignment notches.
+
+11
+00:00:57.568 --> 00:01:01.408
+When rotation is enabled, they rotate
+with the artwork.
+
+12
+00:01:02.920 --> 00:01:05.831
+Now switch to the white-ink preview.
+
+13
+00:01:05.831 --> 00:01:11.086
+Frame lines, notches, and added blank areas
+receive no white ink.
+
+14
+00:01:11.086 --> 00:01:15.047
+W1 covers only the artwork areas that require it.
+
+15
+00:01:15.387 --> 00:01:21.462
+This combines cutting alignment and color artwork in one
+output, while preserving a separate white-ink
+
+16
+00:01:21.462 --> 00:01:23.249
+channel that can be inspected.

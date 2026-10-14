@@ -73,7 +73,12 @@ for(const name of await fs.readdir('public/media/v86/captions')){
  const timing=text=>text.split('\n').filter(line=>line.includes('-->'));
  const originalText=await fs.readFile(`public/media/v86/captions/${name}`,'utf8');
  const base=timing(originalText);
- const cueText=text=>text.split('\n').filter(line=>line.trim()&&line.trim()!=='WEBVTT'&&!line.includes('-->')).map(normalized);
+ // A WebVTT cue may have an identifier and several text lines. Compare its
+ // complete text, excluding identifiers, against the native caption catalog.
+ const cueText=text=>text.trim().split(/\n\s*\n/).flatMap(block=>{
+  const lines=block.split('\n'),at=lines.findIndex(line=>line.includes('-->'));
+  return at<0?[]:[normalized(lines.slice(at+1).join(' '))];
+ });
  const originalCues=cueText(originalText);
  for(const locale of localizedLanguages){
   const localizedText=await fs.readFile(`dist/media/v86/captions/${name.replace('.en.vtt',`.${locale}.vtt`)}`,'utf8');

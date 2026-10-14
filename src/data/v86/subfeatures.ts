@@ -1,10 +1,12 @@
 import english from './subfeatures-en.json';
+import updates from './updates-20261014.json';
 import {demos, demoText} from './demos';
 import type {V86Locale} from './content';
 
 export type DetailCopy = {title:string;lead:string;summary:string;chapters:{title:string;body:string[]}[];checks:string[]};
-export type Subfeature = DetailCopy & {id:string;feature:string;poster:string;video?:string;demo?:string;relatedDemo?:string;secondPoster?:string};
+export type Subfeature = DetailCopy & {id:string;feature:string;poster:string;video?:string;demo?:string;relatedDemo?:string;secondPoster?:string;updateMedia?:string;displayVersion?:string};
 export const subfeatures:Subfeature[] = [
+ ...updates.map(({en,...item})=>item),
  {feature:'voice',id:'speak',title:'语音输入',lead:'说清要做什么。把要求交给工作台。',summary:'选择图稿后，说出任务、尺寸和单位。识别出的文字可以核对，再继续解析为具体的制图参数。',poster:'voice',secondPoster:'voice-user-input',chapters:[
   {title:'先选图，再表达要求。',body:['拖入图稿，或通过“选择文件”“选择文件夹”指定输入。确认当前任务对应的图稿，再点击“语音作图”。','把功能名称与尺寸一起说清，例如白墨直喷、宽30厘米。涉及分辨率、白墨收缩或扩边时，也把数值和单位说明白。']},
   {title:'识别完成，先看文字。',body:['检查识别结果中的数字、宽高方向和单位。需要更正时，可以直接修改文字，再点击“解析指令”。','嘈杂环境或不方便说话时，使用同一页面的文字输入。解析后仍需检查任务卡片并确认执行。']}
@@ -129,6 +131,8 @@ export const subfeatures:Subfeature[] = [
 
 export function subfeatureCopy(item:Subfeature,locale:V86Locale):DetailCopy {
  if(locale==='zh-CN')return item;
+ const update=updates.find(update=>update.feature===item.feature&&update.id===item.id);
+ if(update)return update.en;
  const copy=(english as Record<string,DetailCopy>)[`${item.feature}/${item.id}`];
  if(!copy)throw new Error(`Missing English detail: ${item.feature}/${item.id}`);
  return copy;

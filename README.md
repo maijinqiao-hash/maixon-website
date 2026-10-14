@@ -1,6 +1,6 @@
 # MAIXON TOOL V8.6 website content release
 
-Astro static website refresh based on commit ff7e7ff7f71933059491f4da3f7b14f576176c7a. The owner authorized direct publication on 2026-10-04 after the local preview work. Production installers remain V8.3; website content is V8.6.
+Astro static website refresh based on commit ff7e7ff7f71933059491f4da3f7b14f576176c7a. The owner authorized direct publication on 2026-10-04 after the local preview work. Production installers are V8.5; website content is V8.6.
 
 Use Node.js 22.12 or newer (verified with 22.23.2).
 
@@ -19,3 +19,7 @@ The source entry is `src/pages/`. The root-level legacy `index.html`, `assets/`,
 Deploy using the checked-in `wrangler.json`, not a bare static-directory upload. Its small streaming Worker handles byte ranges only for `/media/v86/*.mp4`; other pages and assets retain direct static hosting. The handler supports mobile video probes and seeking without buffering full videos. `npm run test:video-ranges` checks byte ranges, suffixes, bounds, validators, HEAD and normal asset passthrough. The hosting implementation follows Cloudflare's [asset routing](https://developers.cloudflare.com/workers/static-assets/binding/) and [FixedLengthStream](https://developers.cloudflare.com/workers/runtime-apis/response/) documentation.
 
 Hardware, support contacts, prices, payment codes and auxiliary download URLs are preserved. Access rules explain global email registration, the 72-hour base trial, five independent AI uses, free tools and module-scoped voice execution. The owner's publication approval covers these website changes. Installer changes require the corresponding release packages; the verified 20261013_21 packages are published as V8.5, with internal installation order 8.6.2.9. Download labels and public/version.json identify V8.5; website_marketing_version and the existing website content remain V8.6.
+
+The 2026-10-14 feature supplement adds DTF filename recognition and cutting frames, plus DTG fabric-color white ink and platen placement. Each has a dedicated page, linked from its feature overview and the homepage, with supplied Chinese/English videos, paired theme screenshots, complete interface galleries and color/W1 output comparisons. The supplied V8.5 interface labels are retained accurately. Videos preserve the complete narration and screen content; full-length H.264/AAC mobile variants and fast-start MP4s support playback. Thai, Japanese, Korean, Malay, Indonesian and Vietnamese pages use the English narration with native captions. All eight locales share the same feature coverage. Existing sublimation content awaits the separately recorded supplement.
+
+The supplement is bound to ZIP SHA256 `331f538f0d26f6d8b7911e5d493db040c4ae64fed2fe73ad2160aa5bdb09d1f7` in `src/data/v86/media-manifest.json`. Source paths and checksums remain in that inventory; only the selected customer-facing media is published. Native captions preserve each source cue's timing and support standard numbered, multiline WebVTT cues. The owner authorized immediate use and publication of these four demonstrations on 2026-10-14.
