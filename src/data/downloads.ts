@@ -26,18 +26,18 @@ export const windows7Installer: DownloadInstaller = {
   displayName: "MAIXON TOOL V8.5 for Windows 7",
   version: "8.5.0.0",
   installerFilename: "MAIXON_TOOL_V8.5_Windows7_SP1_x64_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.5_Windows7_SP1_x64_Setup.exe",
-  fileSize: 194_851_742,
-  sha256: "A21971821FE4FD3CB209DE8E75D38FF4B77F6A4246EC0D1C19B7A6ED6AE3C407"
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.5_Windows7_SP1_x64_Setup.exe?build=8.6.2.15",
+  fileSize: 194_932_364,
+  sha256: "BC1BE990D75F2D8B87385F16B29BFA645EA101DB82311C1138C5338FCDC97F30"
 };
 
 export const windows1011Installer: DownloadInstaller = {
   displayName: "MAIXON TOOL V8.5 for Windows 10 / 11",
   version: "8.5.0.0",
   installerFilename: "MAIXON_TOOL_V8.5_Windows10_11_x64_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.5_Windows10_11_x64_Setup.exe",
-  fileSize: 251_826_927,
-  sha256: "BDD207568BD5865C10F3FA4791C01BC3D5A2D776130B172A781D653070ABA01B"
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V8.5_Windows10_11_x64_Setup.exe?build=8.6.2.15",
+  fileSize: 252_043_934,
+  sha256: "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A"
 };
 
 export const downloadPlatforms: readonly DownloadPlatform[] = [
