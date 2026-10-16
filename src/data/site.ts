@@ -3,9 +3,9 @@ import { windows1011Installer, windows7Installer } from "./downloads";
 
 export const installer = {
   version: windows1011Installer.version,
-  displayVersion: "V8.5",
+  displayVersion: "V9.1",
   os: "Windows 10/11",
-  size: "240.2 MB",
+  size: "206.6 MB",
   sha256: windows1011Installer.sha256,
   url: windows1011Installer.downloadUrl
 };
@@ -130,14 +130,14 @@ export const copy: Record<Locale, SiteCopy> = {
       description: "MAIXON TOOL V9.1：从找图、语音指令、AI 图像处理到白墨和排版输出，一起完成打印之前的准备工作。"
     },
     header: {
-      download: "下载 V8.5",
+      download: "下载 V9.1",
       menu: "打开导航"
     },
     hero: {
       title: "MAIXON TOOL",
       lead: "从图稿到可生产文件。",
       descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V9.1",
-      primary: "下载 V8.5",
+      primary: "下载 V9.1",
       secondary: "查看产品演示",
       mediaId: "software-zh-home-overview",
       videoId: "software-zh-videos-demo-overall-zh-v59",
@@ -350,7 +350,7 @@ export const copy: Record<Locale, SiteCopy> = {
     },
     download: {
       label: "下载",
-      title: "MAIXON TOOL V8.5",
+      title: "MAIXON TOOL V9.1",
       body: "支持多种操作系统，请选择适合你的软件版本。",
       button: "下载软件",
       integrity: "查看文件校验"
@@ -375,14 +375,14 @@ export const copy: Record<Locale, SiteCopy> = {
       description: "MAIXON TOOL V9.1 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace."
     },
     header: {
-      download: "Download V8.5",
+      download: "Download V9.1",
       menu: "Open navigation"
     },
     hero: {
       title: "MAIXON TOOL",
       lead: "From artwork to production-ready output.",
       descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V9.1",
-      primary: "Download V8.5",
+      primary: "Download V9.1",
       secondary: "Watch the product demo",
       mediaId: "software-en-home",
       videoId: "software-zh-videos-demo-overall-zh-v59",
@@ -541,7 +541,7 @@ export const copy: Record<Locale, SiteCopy> = {
     },
     download: {
       label: "Download",
-      title: "MAIXON TOOL V8.5",
+      title: "MAIXON TOOL V9.1",
       body: "Available for multiple operating systems. Choose the software version that fits your computer.",
       button: "Download software",
       integrity: "View file integrity"
