@@ -6,7 +6,7 @@ const files=new Set();
 for(const asset of manifest.assets){
   const p=path.join('public/media/v86',asset.path);
   const data=await fs.readFile(p);
-  if(data.length!==asset.bytes||crypto.createHash('sha256').update(data).digest('hex')!==asset.sha256)throw new Error(`V8.6 media changed without review: ${p}`);
+  if(data.length!==asset.bytes||crypto.createHash('sha256').update(data).digest('hex')!==asset.sha256)throw new Error(`V9.1 media changed without review: ${p}`);
   files.add(asset.path);
   if(asset.path.endsWith('.mp4')&&!asset.full_decode_passed)throw new Error(`Missing full decode verification: ${p}`);
   if(asset.path.endsWith('.mp4')&&!(asset.audio_peak_db>-65))throw new Error(`Missing audible audio: ${p}`);
@@ -30,4 +30,4 @@ for(const asset of ownerVideos){
   if(!new RegExp(`id:\\s*['"]${id}['"]`).test(demosSource))throw new Error(`Owner video missing from page catalog: ${id}`);
   if(!files.has(`owner/${id}.webp`))throw new Error(`Missing owner video poster: ${id}`);
 }
-console.log(`V8.6 media validation passed: ${files.size} verified assets, paired themes and bilingual narration/captions.`);
+console.log(`V9.1 media validation passed: ${files.size} verified assets, paired themes and bilingual narration/captions.`);

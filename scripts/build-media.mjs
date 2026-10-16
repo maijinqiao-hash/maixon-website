@@ -149,10 +149,10 @@ const altText = {
   "hardware/dtf608.webp": { "zh-CN": "MAIXON DTF608 打印系统", en: "MAIXON DTF608 printing system" },
   "hardware/oven604.webp": { "zh-CN": "MAIXON OVEN604 撒粉烘干系统", en: "MAIXON OVEN604 powder and curing system" },
   "hardware/wf7610.webp": { "zh-CN": "Epson WF7610 喷头", en: "Epson WF7610 printhead" },
-  "software/en/home.png": { "zh-CN": "MAIXON V8.3 英文生产概览", en: "MAIXON V8.3 Production Overview" },
-  "software/en/dtf.png": { "zh-CN": "MAIXON V8.3 英文 DTF 工作区", en: "MAIXON V8.3 DTF workspace" },
-  "software/en/sublimation.png": { "zh-CN": "MAIXON V8.3 英文热升华工作区", en: "MAIXON V8.3 Sublimation workspace" },
-  "software/en/ai.png": { "zh-CN": "MAIXON V8.3 英文 AI 工作区", en: "MAIXON V8.3 AI workspace" },
+  "software/en/home.png": { "zh-CN": "MAIXON V9.1 英文生产概览", en: "MAIXON V9.1 Production Overview" },
+  "software/en/dtf.png": { "zh-CN": "MAIXON V9.1 英文 DTF 工作区", en: "MAIXON V9.1 DTF workspace" },
+  "software/en/sublimation.png": { "zh-CN": "MAIXON V9.1 英文热升华工作区", en: "MAIXON V9.1 Sublimation workspace" },
+  "software/en/ai.png": { "zh-CN": "MAIXON V9.1 英文 AI 工作区", en: "MAIXON V9.1 AI workspace" },
   "software/zh/runtime-update/dtf/multi-layout.mp4": { "zh-CN": "DTF 多图自动排版演示" },
   "software/zh/runtime-update/dtf/one-meter-layout.mp4": { "zh-CN": "DTF 一米长度自动排版演示" },
   "software/zh/runtime-update/dtf/parameter-tour.mp4": { "zh-CN": "DTF 参数设置界面" },
@@ -360,7 +360,7 @@ const records = [];
 
 for (const absolutePath of inputFiles) {
   const relativePath = path.relative(inputRoot, absolutePath).split(path.sep).join("/");
-  // V8.6 captures are already optimized and have a dedicated provenance manifest.
+  // V9.1 captures are already optimized and have a dedicated provenance manifest.
   if (relativePath.startsWith("v86/")) continue;
   const extension = path.extname(relativePath).toLowerCase();
   const fileStat = await stat(absolutePath);

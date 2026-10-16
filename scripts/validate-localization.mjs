@@ -10,7 +10,7 @@ const values=document=>{const result=[];walkContent(document,(node,kind,value)=>
 const allNodes=document=>{const result=[];function visit(node){if(node.tagName)result.push(node);for(const child of node.childNodes||[])visit(child);}visit(document);return result;};
 const technical=value=>!value.replace(/\b(?:MAIXON(?: TOOL)?|MainTop|DTF\d*|DFG\d*|DTG|AI|WORKBENCH|HALFTONE|Windows|SP1|x64|macOS|Photoshop|CNY|V\d+(?:\.\d+)*|SHA256|[A-F0-9]{64}|ICC|RGB|CMYK|PDF|PSD|PSB|PNG|TIFF|JPG|JPEG|EPS|USB|QR|WhatsApp|mm|cm|m|ml|kW|W|V|h)\b/g,'').replace(/°C/g,'').replace(/[^A-Za-z]/g,'');
 // These loanwords, product names and technical units are correct as written.
-const sharedTerms={ms:new Set(['Halftone','Menu','Model','Epson WF-7610','Ethernet / LAN','WeChat Pay','SUBLIMATION · MAIXON TOOL V8.6','OVEN604','kg','m³']),id:new Set(['Halftone','Menu','Model','Epson WF-7610','Ethernet / LAN','WeChat Pay','OVEN604','kg','m³']),vi:new Set(['Epson WF-7610','Ethernet / LAN','WeChat Pay','OVEN604','kg','m³'])};
+const sharedTerms={ms:new Set(['Halftone','Menu','Model','Epson WF-7610','Ethernet / LAN','WeChat Pay','SUBLIMATION · MAIXON TOOL V9.1','OVEN604','kg','m³']),id:new Set(['Halftone','Menu','Model','Epson WF-7610','Ethernet / LAN','WeChat Pay','OVEN604','kg','m³']),vi:new Set(['Epson WF-7610','Ethernet / LAN','WeChat Pay','OVEN604','kg','m³'])};
 const protectedPrintTerms=/\b(?:MAIXON|MainTop|Photoshop|Windows|macOS|DTF|DTG|AI|PDF|PSD|PSB|PNG|TIFF|JPG|JPEG|EPS|SVG|RGB|CMYK|ICC|DPI|LPI|PPI|W1|W2|W3|W5)\b/g;
 for(const locale of localizedLanguages){
  const catalog=catalogs[locale];

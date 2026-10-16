@@ -7,13 +7,13 @@
   "equipment_guide_url": "https://maixon.vip/zh-CN/support/",
   "printer_url": "https://maixon.vip/zh-CN/hardware/",
   "oven_url": "https://maixon.vip/zh-CN/hardware/oven604/",
-  "website_revision": "8.6-content-r2-hotfix1",
+  "website_revision": "9.1-labels-20261016",
   "release_date": "2026-10-15",
   "file_size_bytes": 252043934,
   "sha256": "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A",
   "operating_system": "Windows 10/11",
   "marketing_version": "V8.5",
-  "website_marketing_version": "V8.6",
-  "website_release_date": "2026-10-04",
+  "website_marketing_version": "V9.1",
+  "website_release_date": "2026-10-16",
   "internal_build": "8.6.2.15"
 }
