@@ -184,10 +184,10 @@
     "Perbesar antarmuka",
     "Phóng to giao diện"
   ],
-  "MAIXON V8.6 interface": [
-    "Antara muka MAIXON V8.6",
-    "Antarmuka MAIXON V8.6",
-    "Giao diện MAIXON V8.6"
+  "MAIXON V9.1 interface": [
+    "Antara muka MAIXON V9.1",
+    "Antarmuka MAIXON V9.1",
+    "Giao diện MAIXON V9.1"
   ],
   "Production overview": [
     "Gambaran Pengeluaran",
@@ -224,10 +224,10 @@
     "Integrasi MainTop otomatis",
     "Tự động kết nối MainTop"
   ],
-  "Automatic MainTop integration · MAIXON TOOL V8.6": [
-    "Integrasi MainTop automatik · MAIXON TOOL V8.6",
-    "Integrasi MainTop otomatis · MAIXON TOOL V8.6",
-    "Tự động kết nối MainTop · MAIXON TOOL V8.6"
+  "Automatic MainTop integration · MAIXON TOOL V9.1": [
+    "Integrasi MainTop automatik · MAIXON TOOL V9.1",
+    "Integrasi MainTop otomatis · MAIXON TOOL V9.1",
+    "Tự động kết nối MainTop · MAIXON TOOL V9.1"
   ],
   "Automatic MainTop integration. Keep prepress moving.": [
     "Integrasi MainTop automatik. Teruskan aliran pracetak.",
@@ -519,10 +519,10 @@
     "Hubungi dukungan",
     "Liên hệ hỗ trợ"
   ],
-  "V8.6 guides": [
-    "Panduan V8.6",
-    "Panduan V8.6",
-    "Hướng dẫn V8.6"
+  "V9.1 guides": [
+    "Panduan V9.1",
+    "Panduan V9.1",
+    "Hướng dẫn V9.1"
   ],
   "AI tools": [
     "Alat AI",
@@ -1004,15 +1004,15 @@
     "Potongan PSD / PSB",
     "Mảnh PSD / PSB"
   ],
-  "MAIXON TOOL V8.6 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace.": [
-    "MAIXON TOOL V8.6 menyatukan carian imej, arahan suara, pemprosesan AI, dakwat putih dan susun atur dalam satu ruang kerja pracetak.",
-    "MAIXON TOOL V8.6 menyatukan pencarian gambar, perintah suara, pemrosesan AI, tinta putih dan tata letak dalam satu ruang kerja pracetak.",
-    "MAIXON TOOL V8.6 tập hợp tìm ảnh, lệnh giọng nói, xử lý AI, mực trắng và dàn trang trong một không gian làm việc trước in."
+  "MAIXON TOOL V9.1 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace.": [
+    "MAIXON TOOL V9.1 menyatukan carian imej, arahan suara, pemprosesan AI, dakwat putih dan susun atur dalam satu ruang kerja pracetak.",
+    "MAIXON TOOL V9.1 menyatukan pencarian gambar, perintah suara, pemrosesan AI, tinta putih dan tata letak dalam satu ruang kerja pracetak.",
+    "MAIXON TOOL V9.1 tập hợp tìm ảnh, lệnh giọng nói, xử lý AI, mực trắng và dàn trang trong một không gian làm việc trước in."
   ],
-  "MAIXON TOOL V8.6 · Before you print": [
-    "MAIXON TOOL V8.6 · Sebelum anda mencetak",
-    "MAIXON TOOL V8.6 · Sebelum Anda mencetak",
-    "MAIXON TOOL V8.6 · Trước khi in"
+  "MAIXON TOOL V9.1 · Before you print": [
+    "MAIXON TOOL V9.1 · Sebelum anda mencetak",
+    "MAIXON TOOL V9.1 · Sebelum Anda mencetak",
+    "MAIXON TOOL V9.1 · Trước khi in"
   ],
   "MAIXON connects preparation before the printer software’s Print button: image processing, white ink, layouts, file output and the handoff to MainTop. Fewer repeated steps. A more continuous preparation workflow.": [
     "MAIXON menyambungkan persediaan sebelum butang Cetak pada perisian pencetak: pemprosesan imej, dakwat putih, susun atur, eksport fail dan penghantaran ke MainTop. Kurangkan langkah berulang dan lancarkan aliran kerja.",

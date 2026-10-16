@@ -126,8 +126,8 @@ export type SiteCopy = {
 export const copy: Record<Locale, SiteCopy> = {
   "zh-CN": {
     meta: {
-      title: "MAIXON TOOL V8.6｜印花生产套件",
-      description: "MAIXON TOOL V8.6：从找图、语音指令、AI 图像处理到白墨和排版输出，一起完成打印之前的准备工作。"
+      title: "MAIXON TOOL V9.1｜印花生产套件",
+      description: "MAIXON TOOL V9.1：从找图、语音指令、AI 图像处理到白墨和排版输出，一起完成打印之前的准备工作。"
     },
     header: {
       download: "下载 V8.5",
@@ -136,7 +136,7 @@ export const copy: Record<Locale, SiteCopy> = {
     hero: {
       title: "MAIXON TOOL",
       lead: "从图稿到可生产文件。",
-      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V8.3",
+      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V9.1",
       primary: "下载 V8.5",
       secondary: "查看产品演示",
       mediaId: "software-zh-home-overview",
@@ -365,14 +365,14 @@ export const copy: Record<Locale, SiteCopy> = {
       authorization: "获取授权"
     },
     footer: {
-      statement: "MAIXON · PRINT PRODUCTION SUITE · V8.6",
+      statement: "MAIXON · PRINT PRODUCTION SUITE · V9.1",
       legal: "产品规格与功能可能随版本更新而调整，详情请联系我们。"
     }
   },
   en: {
     meta: {
-      title: "MAIXON TOOL V8.6 | Print Production Suite",
-      description: "MAIXON TOOL V8.6 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace."
+      title: "MAIXON TOOL V9.1 | Print Production Suite",
+      description: "MAIXON TOOL V9.1 brings image finding, voice commands, AI preparation, white ink and layouts into one prepress workspace."
     },
     header: {
       download: "Download V8.5",
@@ -381,7 +381,7 @@ export const copy: Record<Locale, SiteCopy> = {
     hero: {
       title: "MAIXON TOOL",
       lead: "From artwork to production-ready output.",
-      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V8.3",
+      descriptor: "PRINT PRODUCTION SUITE · PROFESSIONAL V9.1",
       primary: "Download V8.5",
       secondary: "Watch the product demo",
       mediaId: "software-en-home",
@@ -555,7 +555,7 @@ export const copy: Record<Locale, SiteCopy> = {
       authorization: "Get a license"
     },
     footer: {
-      statement: "MAIXON · PRINT PRODUCTION SUITE · V8.6",
+      statement: "MAIXON · PRINT PRODUCTION SUITE · V9.1",
       legal: "Product specifications and features may change with version updates. Contact us for current details."
     }
   }

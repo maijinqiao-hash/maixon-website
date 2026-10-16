@@ -2,7 +2,7 @@
 import '../styles/v86.css';
 const isChinese=!Astro.url.pathname.startsWith('/en/');
 ---
-<dialog class="v86-lightbox" data-v86-lightbox aria-label={isChinese?'MAIXON V8.6 功能界面':'MAIXON V8.6 interface'}><button class="v86-lightbox__close" type="button" data-v86-close aria-label={isChinese?'关闭':'Close'}>✕</button><img width="2592" height="1618" alt=""/><p></p></dialog>
+<dialog class="v86-lightbox" data-v86-lightbox aria-label={isChinese?'MAIXON V9.1 功能界面':'MAIXON V9.1 interface'}><button class="v86-lightbox__close" type="button" data-v86-close aria-label={isChinese?'关闭':'Close'}>✕</button><img width="2592" height="1618" alt=""/><p></p></dialog>
 <script>
   import {assetUrl} from '@/data/asset-delivery';
   import {getPlayerCopy} from '@/data/i18n/player';
@@ -179,7 +179,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       img.src=assetUrl(`/media/v86/screenshots/${theme}/${frame.dataset.poster}.webp`);
       if(video)video.poster=img.src;
       const caption=frame.querySelector('.v86-media__source')?.textContent?.trim()||frame.dataset.poster;
-      img.alt=`MAIXON TOOL ${frame.dataset.displayVersion||'V8.6'} ${caption} · ${theme==='light'?t.light:t.dark}`;
+      img.alt=`MAIXON TOOL ${frame.dataset.displayVersion||'V9.1'} ${caption} · ${theme==='light'?t.light:t.dark}`;
       frame.querySelectorAll('[data-v86-theme]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       if(!reduce.matches&&event.detail>0)img.animate([{opacity:.65},{opacity:1}],{duration:240,easing:'ease-out'});
     }));
@@ -240,7 +240,7 @@ const isChinese=!Astro.url.pathname.startsWith('/en/');
       const img=frame.querySelector('img')!;
       frame.dataset.poster=`ai-sample-${button.dataset.aiSample}`;
       img.src=assetUrl(`/media/v86/screenshots/${frame.dataset.theme}/${frame.dataset.poster}.webp`);
-      img.alt=`MAIXON TOOL V8.6 · ${button.textContent} · ${frame.dataset.theme==='dark'?t.dark:t.light}`;
+      img.alt=`MAIXON TOOL V9.1 · ${button.textContent} · ${frame.dataset.theme==='dark'?t.dark:t.light}`;
       const label=frame.querySelector('.v86-media__source')!;
       label.lastChild!.textContent=button.textContent;
       section.querySelector('[data-ai-title]')!.textContent=button.dataset.title!;

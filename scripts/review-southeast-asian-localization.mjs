@@ -45,7 +45,7 @@ for(const [index,locale] of locales.entries()){
   const screen=key.match(/^MAIXON TOOL V8\.6 (.+) — (light|dark) interface$/);
   if(screen){
    const topic=catalog[screen[1]]||({themes:{ms:'Tema',id:'Tema',vi:'Giao diện'}}[screen[1]]?.[locale]);
-   if(topic)result=`MAIXON TOOL V8.6 · ${topic} · ${screen[2]==='light'?reviewed.Light[index]:reviewed.Dark[index]}`;
+   if(topic)result=`MAIXON TOOL V9.1 · ${topic} · ${screen[2]==='light'?reviewed.Light[index]:reviewed.Dark[index]}`;
   }
   catalog[key]=result.replace(/\s+/g,' ').trim();
  }
