@@ -1512,9 +1512,6 @@
   "Your account connects software licensing, AI credits and current access status.": "アカウントは、ソフトウェア ライセンス、AI ポイント、および現在のアクセス ステータスを結び付けます。",
   "Your prepress workflow, in one workspace.": "印刷前の作業を、ひとつのワークスペースで。",
   "Your software registration email is required so the license or credits are added to the correct account.": "ライセンスまたはクレジットを正しいアカウントに追加するには、ソフトウェア登録電子メールが必要です。",
-  "MAIXON TOOL V8.5 | MAIXON": "MAIXON TOOL V8.5 |MAIXON",
-  "V8.5": "V8.5",
-  "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A": "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A",
   "Filename size and quantity recognition": "ファイル名からサイズと数量を認識",
   "Read the size and quantity from the filename.": "ファイル名からサイズと数量を読み取る。",
   "Read print dimensions and quantities from Chinese, English, or mixed filenames, then review the values before layout.": "中国語・英語・両言語が混在したファイル名から印刷サイズと数量を読み取り、配置前に確認します。",
@@ -1675,5 +1672,7 @@
   "Bottom notch only · Detailed settings": "下ノッチのみ · 詳細設定",
   "Notch depth: 7 mm · Detailed settings": "ノッチの深さ：7 mm · 詳細設定",
   "Plain rectangular frame · Detailed settings": "ノッチなしの長方形枠 · 詳細設定",
-  "Top notch only · Detailed settings": "上ノッチのみ · 詳細設定"
+  "Top notch only · Detailed settings": "上ノッチのみ · 詳細設定",
+  "MAIXON TOOL V9.1 | MAIXON": "MAIXON TOOL V9.1 |MAIXON",
+  "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0": "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0"
 }

@@ -1512,9 +1512,6 @@
   "Your account connects software licensing, AI credits and current access status.": "บัญชีของคุณเชื่อมต่อกับลิขสิทธิ์ซอฟต์แวร์ เครดิต AI และสถานะการเข้าถึงปัจจุบัน",
   "Your prepress workflow, in one workspace.": "รวมงานเตรียมพิมพ์ไว้ในเวิร์กสเปซเดียว",
   "Your software registration email is required so the license or credits are added to the correct account.": "จำเป็นต้องมีอีเมลลงทะเบียนซอฟต์แวร์ของคุณ เพื่อเพิ่มใบอนุญาตหรือเครดิตลงในบัญชีที่ถูกต้อง",
-  "MAIXON TOOL V8.5 | MAIXON": "เครื่องมือ MAIXON V8.5 | MAIXON",
-  "V8.5": "V8.5",
-  "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A": "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A",
   "Filename size and quantity recognition": "การอ่านขนาดและจำนวนจากชื่อไฟล์",
   "Read the size and quantity from the filename.": "อ่านขนาดและจำนวนจากชื่อไฟล์",
   "Read print dimensions and quantities from Chinese, English, or mixed filenames, then review the values before layout.": "อ่านขนาดพิมพ์และจำนวนจากชื่อไฟล์ภาษาจีน ภาษาอังกฤษ หรือชื่อที่ใช้สองภาษาร่วมกัน แล้วตรวจสอบค่าก่อนจัดวาง",
@@ -1675,5 +1672,7 @@
   "Bottom notch only · Detailed settings": "รอยบากด้านล่างเท่านั้น · ค่าตั้งค่าโดยละเอียด",
   "Notch depth: 7 mm · Detailed settings": "ความลึกรอยบาก: 7 mm · ค่าตั้งค่าโดยละเอียด",
   "Plain rectangular frame · Detailed settings": "กรอบสี่เหลี่ยมไม่มีรอยบาก · ค่าตั้งค่าโดยละเอียด",
-  "Top notch only · Detailed settings": "รอยบากด้านบนเท่านั้น · ค่าตั้งค่าโดยละเอียด"
+  "Top notch only · Detailed settings": "รอยบากด้านบนเท่านั้น · ค่าตั้งค่าโดยละเอียด",
+  "MAIXON TOOL V9.1 | MAIXON": "เครื่องมือ MAIXON V9.1 | MAIXON",
+  "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0": "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0"
 }

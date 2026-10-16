@@ -205,7 +205,6 @@
   "Backup is enabled as intended": 1,
   "Bags and tote bags": 1,
   "Banners and ceremonial products": 1,
-  "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A": 1,
   "Before export, check line completeness, visibility and the required gap between neighboring pieces.": 1,
   "Before payment, confirm that you are scanning a payment QR code, not a contact QR code.": 1,
   "Before Print.": 1,
@@ -910,7 +909,6 @@
   "MAIXON Image Finder is free, with no separate feature purchase.": 8,
   "MAIXON IMAGE FINDER workflow": 2,
   "MAIXON TOOL is available to users worldwide. Register with your email address, then sign in to review trials, licenses and AI credits.": 4,
-  "MAIXON TOOL V8.5 | MAIXON": 2,
   "MAIXON TOOL V8.5 Cutting frames and independent notches — light interface": 1,
   "MAIXON TOOL V8.5 DTG platen placement — light interface": 1,
   "MAIXON TOOL V8.5 Filename size and quantity recognition — light interface": 1,
@@ -1570,8 +1568,7 @@
   "Use these quick answers first, then contact support with the required details if the issue remains.": 3,
   "Use typed instructions when speaking is inconvenient. After parsing, review the task card before confirming execution.": 1,
   "Use what is finished without waiting for the full roll.": 1,
-  "V8.5": 229,
-  "V9.1": 9,
+  "V9.1": 238,
   "V9.1 features and walkthroughs · MAIXON": 2,
   "V9.1 guides": 1,
   "V9.1 interface gallery and walkthroughs →": 1,
@@ -1662,5 +1659,7 @@
   "You can also enter horizontal and vertical positions for precise adjustment.": 1,
   "Your account connects software licensing, AI credits and current access status.": 3,
   "Your prepress workflow, in one workspace.": 1,
-  "Your software registration email is required so the license or credits are added to the correct account.": 1
+  "Your software registration email is required so the license or credits are added to the correct account.": 1,
+  "MAIXON TOOL V9.1 | MAIXON": 2,
+  "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0": 1
 }

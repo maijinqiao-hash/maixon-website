@@ -1518,9 +1518,6 @@
   "Your account connects software licensing, AI credits and current access status.": "Tài khoản của bạn kết nối cấp phép phần mềm, điểm AI và trạng thái truy cập hiện tại.",
   "Your prepress workflow, in one workspace.": "Quy trình trước in, trong một không gian làm việc.",
   "Your software registration email is required so the license or credits are added to the correct account.": "Email đăng ký phần mềm của bạn là bắt buộc để giấy phép hoặc điểm được thêm vào đúng tài khoản.",
-  "MAIXON TOOL V8.5 | MAIXON": "CÔNG CỤ MAIXON V8.5 | MAIXON",
-  "V8.5": "V8.5",
-  "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A": "B3420CAD88DC46AAF62A45F22201889CD34AA80253AB25AA014C483BBAA2E45A",
   "Filename size and quantity recognition": "Nhận dạng kích thước và số lượng từ tên tệp",
   "Read the size and quantity from the filename.": "Đọc kích thước và số lượng từ tên tệp.",
   "Read print dimensions and quantities from Chinese, English, or mixed filenames, then review the values before layout.": "Đọc kích thước in và số lượng từ tên tệp tiếng Trung, tiếng Anh hoặc kết hợp cả hai, rồi kiểm tra trước khi dàn bố cục.",
@@ -1681,5 +1678,7 @@
   "Bottom notch only · Detailed settings": "Chỉ rãnh dưới · Cài đặt chi tiết",
   "Notch depth: 7 mm · Detailed settings": "Độ sâu rãnh: 7 mm · Cài đặt chi tiết",
   "Plain rectangular frame · Detailed settings": "Khung chữ nhật không có rãnh · Cài đặt chi tiết",
-  "Top notch only · Detailed settings": "Chỉ rãnh trên · Cài đặt chi tiết"
+  "Top notch only · Detailed settings": "Chỉ rãnh trên · Cài đặt chi tiết",
+  "MAIXON TOOL V9.1 | MAIXON": "CÔNG CỤ MAIXON V9.1 | MAIXON",
+  "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0": "D3702697CBB12FE37CBD25F38AA40AB936F753EFA9C0F637DD84E9A405E900E0"
 }
