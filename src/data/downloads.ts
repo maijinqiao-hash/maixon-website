@@ -23,12 +23,12 @@ export type DownloadPlatform = Readonly<{
 }>;
 
 export const windows7Installer: DownloadInstaller = {
-  displayName: "MAIXON TOOL V9.1 for Windows 7",
-  version: "9.1.0.4",
-  installerFilename: "MAIXON_TOOL_V9.1_Windows7_SP1_x64_Setup.exe",
-  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V9.1_Windows7_SP1_x64_Setup.exe?build=9.1.0.4",
-  fileSize: 164_028_523,
-  sha256: "D6EC25DF0410F1DC82410B20461D569094A22DACEB76E3557218AE4C0DE6A4D3"
+  displayName: "MAIXON TOOL V9.2 for Windows 7",
+  version: "9.2.0.5",
+  installerFilename: "MAIXON_TOOL_V9.2_Windows7_SP1_x64_Setup.exe",
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V9.2_Windows7_SP1_x64_Setup.exe?build=9.2.0.5",
+  fileSize: 255_670_910,
+  sha256: "ED145A9ED82DCF8C9278CEE4E9AF2095F31963796AC7C6D9AA599B31D31BE8A0"
 };
 
 export const windows1011Installer: DownloadInstaller = {
@@ -124,7 +124,7 @@ export const downloadSelectorCopy: Record<Locale, {
     download: "下载",
     assistance: "下载辅助软件",
     platforms: {
-      windows7: { status: "V9.1", action: "下载" },
+      windows7: { status: "V9.2", action: "下载" },
       windows10: { status: "V9.1", action: "下载" },
       windows11: { status: "V9.1", action: "下载" },
       macos: { status: "开发中", action: "开发中" }
@@ -137,7 +137,7 @@ export const downloadSelectorCopy: Record<Locale, {
     download: "Download",
     assistance: "Download auxiliary software",
     platforms: {
-      windows7: { status: "V9.1", action: "Download" },
+      windows7: { status: "V9.2", action: "Download" },
       windows10: { status: "V9.1", action: "Download" },
       windows11: { status: "V9.1", action: "Download" },
       macos: { status: "Coming Soon", action: "Coming Soon" }
