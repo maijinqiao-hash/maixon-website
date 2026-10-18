@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {validateManualV92} from './validate-manual-v92.mjs';
 import {parse,attrs,walkContent,normalized,invariant,htmlFiles,languages,localizedLanguages,countries,nativeNames} from './localization-core.mjs';
 const failures=[];
 const source=JSON.parse(await fs.readFile('src/data/i18n/source.json','utf8'));
@@ -29,8 +30,9 @@ for(const locale of localizedLanguages){
   const relative=path.relative('dist/en',enFile),file=path.join('dist',locale,relative);
   const document=parse(await fs.readFile(file,'utf8')),base=parse(await fs.readFile(enFile,'utf8'));
   const baseValues=values(base),localizedValues=values(document);
-  if(baseValues.length!==localizedValues.length)failures.push(`${file}: changed content structure`);
-  else for(let i=0;i<baseValues.length;i++){
+  const manual=allNodes(base).some(node=>node.tagName==='body'&&'data-manual-v92'in attrs(node));
+  if(!manual&&baseValues.length!==localizedValues.length)failures.push(`${file}: changed content structure`);
+  else if(!manual)for(let i=0;i<baseValues.length;i++){
    const item=baseValues[i],expected=normalized(invariant(item.text)?item.text:catalog[item.text]);
    if(expected!==localizedValues[i].text)failures.push(`${file}: incomplete ${item.kind} translation: ${item.text}`);
   }
@@ -95,5 +97,7 @@ for(const flag of flags.files){const data=await fs.readFile(`public/media/flags/
 const sitemap=await fs.readFile('dist/sitemap-0.xml','utf8');
 const total=(await htmlFiles('dist')).length;
 if((sitemap.match(/<url>/g)||[]).length!==total)failures.push('Sitemap does not cover all published routes');
+const manual=await validateManualV92();failures.push(...manual.failures);
 if(failures.length)throw new Error(`Localization validation failed (${failures.length}):\n${failures.slice(0,80).join('\n')}`);
+console.log(`Manual PASS: ${manual.pages} routes, ${manual.languages} languages, ${manual.stringsPerLocale} complete strings per language, one shared DOM/CSS/JS, all legacy chapters and assets.`);
 console.log(`PASS: ${total} pages, ${english.length} routes per language, ${Object.keys(source).length} phrases per new language, ${captionCount} aligned caption files, preserved downloads, original films and ${scenes.length} exact real-screen sources.`);
