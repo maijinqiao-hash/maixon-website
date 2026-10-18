@@ -82,7 +82,11 @@ for (const check of localeChecks) {
     if (!html.includes(`<html lang="${check.pageLocale}">`)) {
       violations.push(`${path.relative(projectRoot, file)} has incorrect html lang`);
     }
-    if (!html.includes('hreflang="zh-CN"') || !html.includes('hreflang="en"')) {
+    const chineseManual = check.pageLocale === "zh-CN" && html.includes("data-manual-v92");
+    if (chineseManual && (!html.includes('hreflang="zh-CN"') || !html.includes('hreflang="x-default"'))) {
+      violations.push(`${file}: missing Chinese manual language metadata`);
+    }
+    if (!chineseManual && (!html.includes('hreflang="zh-CN"') || !html.includes('hreflang="en"'))) {
       violations.push(`${path.relative(projectRoot, file)} is missing bilingual hreflang links`);
     }
   }

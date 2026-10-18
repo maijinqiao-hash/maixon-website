@@ -1,0 +1,7 @@
+---
+import {renderManual} from '@/data/manual-v92/render';
+interface Props {locale:string;initialSection?:string}
+const {locale,initialSection=''}=Astro.props;
+const document=renderManual(locale,initialSection);
+---
+<Fragment set:html={document}/>
