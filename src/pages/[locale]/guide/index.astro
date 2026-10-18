@@ -5,7 +5,7 @@ import { guideCopy } from "@/data/support-content";
 import type { Locale } from "@/data/media";
 
 export function getStaticPaths() {
-  return [{ params: { locale: "zh-CN" } }, { params: { locale: "en" } }];
+  return [{ params: { locale: "en" } }];
 }
 
 const locale = Astro.params.locale as Locale;

@@ -7,7 +7,7 @@ import { guideCopy, type GuideTopic } from "@/data/support-content";
 import type { Locale } from "@/data/media";
 
 export function getStaticPaths() {
-  return (["zh-CN", "en"] as Locale[]).flatMap((locale) =>
+  return (["en"] as Locale[]).flatMap((locale) =>
     guideCopy[locale].topics.map((topic) => ({
       params: { locale, topic: topic.slug },
       props: { topic }

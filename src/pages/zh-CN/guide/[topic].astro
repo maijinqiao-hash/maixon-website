@@ -1,0 +1,7 @@
+---
+import ManualDocument from '@/components/ManualDocument.astro';
+import {legacySections} from '@/data/manual-v92/render';
+export function getStaticPaths(){return Object.keys(legacySections).map(topic=>({params:{topic}}));}
+const initialSection=legacySections[Astro.params.topic!]||'';
+---
+<ManualDocument locale="zh-CN" initialSection={initialSection}/>
