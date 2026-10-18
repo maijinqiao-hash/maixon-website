@@ -47,6 +47,14 @@ export async function buildLocalizedPages({dir,site='https://guojindigital.com',
   const catalogs={};for(const locale of localizedLanguages)catalogs[locale]=JSON.parse(await fs.readFile(`src/data/i18n/${locale}.json`,'utf8'));
   for(const file of foundation){
     const source=await fs.readFile(file,'utf8'),relative=path.relative(path.join(dist,'en'),file);
+    // The manual is rendered from its own complete eight-language catalog.
+    if(source.includes('data-manual-v92')){
+      for(const locale of localizedLanguages){
+        const manual=await fs.readFile(path.join(dist,locale,relative),'utf8');
+        if(!manual.includes('data-manual-v92')||!manual.includes(`<html lang="${locale}">`))throw new Error(`Missing localized manual ${locale}/${relative}`);
+      }
+      continue;
+    }
     for(const locale of localizedLanguages){
       const output=path.join(dist,locale,relative);await fs.mkdir(path.dirname(output),{recursive:true});
       await fs.writeFile(output,serialize(localize(parse(source),locale,catalogs[locale])));

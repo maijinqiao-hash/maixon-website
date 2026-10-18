@@ -2,9 +2,7 @@
   "_meta": {
     "source_language": "zh-CN",
     "available_languages": [
-      "zh-CN"
-    ],
-    "pending_languages": [
+      "zh-CN",
       "en",
       "th",
       "ja",
@@ -13,12 +11,14 @@
       "id",
       "vi"
     ],
+    "pending_languages": [],
     "sections": "s0-s19",
     "screenshots": "shared, unchanged",
     "route": "/{locale}/guide/",
     "supported_systems": "Windows 10 / 11",
-    "delivery": "DeepSeek original 915 IDs or supplemented text.0001 IDs; shared media and fixed chapter anchors",
-    "missing_translation_policy": "build error; never silently publish untranslated text"
+    "delivery": "DeepSeek eight-language source; supplemented text.0001 IDs; one DOM/CSS/JS and shared unchanged images",
+    "missing_translation_policy": "build error; never silently publish untranslated text",
+    "source_zip_sha256": "86dedc1bdcaa8de9aa24602a2ca842bf7747b72226db743820c3d85fe5cf2534"
   },
   "strings": {
     "text.0001": "MAIXON TOOL V9.2 使用说明书",
