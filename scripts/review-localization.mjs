@@ -55,7 +55,7 @@ const reviewed={
  '5 separate free uses, then AI credits. Software module licenses do not include AI credits.':['ทดลอง AI แยกต่างหากฟรี 5 ครั้ง จากนั้นใช้เครดิต AI ไลเซนส์โมดูลซอฟต์แวร์ไม่รวมเครดิต AI','AI は別途 5 回無料で試用でき、その後は AI ポイントを使用します。ソフトウェアのモジュールライセンスに AI ポイントは含まれません。','AI는 별도로 5회 무료 체험할 수 있으며 이후에는 AI 포인트를 사용합니다. 소프트웨어 모듈 라이선스에는 AI 포인트가 포함되지 않습니다.'],
  'WhatsApp':['WhatsApp','WhatsApp','WhatsApp'],
  'Vectorize · AI WORKBENCH · MAIXON':['แปลงเป็นเวกเตอร์ · เวิร์กสเปซ AI · MAIXON','ベクター化 · AI ワークスペース · MAIXON','벡터화 · AI 작업실 · MAIXON'],
- 'HALFTONE · MAIXON TOOL V9.1':['ฮาล์ฟโทน · MAIXON TOOL V9.1','ハーフトーン · MAIXON TOOL V9.1','하프톤 · MAIXON TOOL V9.1'],
+ 'HALFTONE · MAIXON TOOL V9.2':['ฮาล์ฟโทน · MAIXON TOOL V9.2','ハーフトーン · MAIXON TOOL V9.2','하프톤 · MAIXON TOOL V9.2'],
  'MainTop 6.1':['MainTop 6.1','MainTop 6.1','MainTop 6.1'],
  '← MainTop':['← MainTop','← MainTop','← MainTop'],
  'Connect MainTop':['เชื่อมต่อ MainTop','MainTop へ接続','MainTop 연결'],
