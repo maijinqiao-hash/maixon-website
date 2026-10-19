@@ -17,7 +17,7 @@ const labels:Record<string,string[]>={
 voice:['语音作图入口','导入图稿与文字要求','解析后的参数确认'],finder:['找图工作台','局部找图结果','图库目录','图库管理','存储位置'],ai:['提取印花','印花抠图','AI 变清晰','用指令改图','AI 扩图','印花裁切','转矢量'],halftone:['半色调工作台','更多参数'],dtf:['单图制图','单图排版','多图排版','指定画布','更多参数'],dtg:['深色面料','浅色面料'],sublimation:['PDF 排版','PSD / PSB 裁片','更多参数']};
 const labelsEn:Record<string,string[]>={voice:['Voice-command workspace','Artwork and typed requirements','Review interpreted parameters'],finder:['Image-finder workspace','Print-region search result','Library folders','Library management','Storage location'],ai:['Extract prints','Remove backgrounds','Enhance detail','Edit with instructions','Expand images','Crop prints','Vectorize'],halftone:['Halftone workspace','Additional settings'],dtf:['Single artwork','Repeated layout','Multiple-image layout','Custom canvas','Additional settings'],dtg:['Dark fabric','Light fabric'],sublimation:['PDF layout','PSD / PSB pieces','Additional settings']};
 ---
-<SiteLayout locale={locale} title={`${f.tag} · MAIXON TOOL V9.1`} description={f.detail} downloadLabel={zh?'下载':'Download'} menuLabel={zh?'菜单':'Menu'}>
+<SiteLayout locale={locale} title={`${f.tag} · MAIXON TOOL V9.2`} description={f.detail} downloadLabel={zh?'下载':'Download'} menuLabel={zh?'菜单':'Menu'}>
 <div class="v86-root" data-v86-page>
 
 <header class="v86-section v86-guide-head"><nav class="v86-breadcrumb"><a href={`/${locale}/`}>MAIXON</a><span>/</span><a href={`/${locale}/tour/`}>{zh?'全部功能':'All features'}</a><span>/</span><span>{f.tag}</span></nav><p class="v86-eyebrow">{f.tag}</p><h1>{f.title.split('\n').map((l,i)=><>{i>0&&<br/>}{l}</>)}</h1><p class="v86-lead">{f.detail}</p></header>
