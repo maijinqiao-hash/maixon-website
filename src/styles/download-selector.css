@@ -192,6 +192,42 @@ html.download-selector-open {
   width: 100%;
 }
 
+.download-selector--versions {
+  width: min(calc(100% - 2rem), 47rem);
+}
+
+#download-version-description span + span::before {
+  content: " · ";
+}
+
+.download-selector__identity .download-selector__version-badge {
+  color: #886d37;
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.download-selector__identity .download-selector__version-note {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.download-selector__back {
+  margin-top: 1.5rem;
+  padding: 0.65rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.download-selector__back:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .download-selector__close:hover {
     border-color: var(--ink);
@@ -204,7 +240,8 @@ html.download-selector-open {
 }
 
 @media (max-width: 58rem) {
-  .download-selector {
+  .download-selector,
+  .download-selector--versions {
     width: 100%;
     max-width: none;
     max-height: min(47rem, calc(100svh - 0.75rem));

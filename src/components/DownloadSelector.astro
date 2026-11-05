@@ -1,6 +1,6 @@
 ---
 import type { Locale } from "@/data/media";
-import { downloadAssistanceResources, downloadPlatforms, downloadResources, downloadSelectorCopy } from "@/data/downloads";
+import { downloadAssistanceResources, downloadPlatforms, downloadResources, downloadSelectorCopy, windows1011Installer, windows1011BeginnerInstaller } from "@/data/downloads";
 import "@/styles/download-selector.css";
 
 interface Props {
@@ -34,6 +34,7 @@ const content = downloadSelectorCopy[locale];
       {downloadPlatforms.map((platform, index) => {
         const platformCopy = content.platforms[platform.id];
         const isAvailable = platform.enabled && platform.installer?.downloadUrl;
+        const hasVersionChoice = platform.id === "windows10" || platform.id === "windows11";
         return (
           <li class:list={["download-selector__platform", { "is-disabled": !isAvailable }]}>
             <span class="download-selector__number">{String(index + 1).padStart(2, "0")}</span>
@@ -47,6 +48,9 @@ const content = downloadSelectorCopy[locale];
                 href={platform.installer!.downloadUrl}
                 aria-label={`${content.download} ${platform.label}`}
                 data-download-action={platform.id}
+                data-version-choice={hasVersionChoice ? platform.label : undefined}
+                aria-haspopup={hasVersionChoice ? "dialog" : undefined}
+                aria-controls={hasVersionChoice ? "download-version-selector" : undefined}
               >
                 {platformCopy.action}
               </a>
@@ -95,13 +99,56 @@ const content = downloadSelectorCopy[locale];
   </div>
 </dialog>
 
+<dialog
+  class="download-selector download-selector--versions"
+  id="download-version-selector"
+  aria-labelledby="download-version-title"
+  aria-describedby="download-version-description"
+>
+  <div class="download-selector__surface">
+    <header class="download-selector__header">
+      <div>
+        <h2 id="download-version-title">{content.chooseVersion}</h2>
+        <p id="download-version-description"><span data-version-platform>Windows 10 / 11</span><span>{content.versionDescription}</span></p>
+      </div>
+      <button class="download-selector__close" type="button" data-version-close aria-label={content.closeVersion}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25"></path>
+        </svg>
+      </button>
+    </header>
+
+    <ol class="download-selector__platforms download-selector__versions">
+      <li class="download-selector__platform">
+        <span class="download-selector__number">01</span>
+        <div class="download-selector__identity"><h3>V9.2</h3></div>
+        <a class="download-selector__action" href={windows1011Installer.downloadUrl}
+          aria-label={`${content.download} V9.2`} data-version-download="9.2">{content.download}</a>
+      </li>
+      <li class="download-selector__platform">
+        <span class="download-selector__number">02</span>
+        <div class="download-selector__identity">
+          <h3>V9.2.1</h3>
+          <p class="download-selector__version-badge">{content.beginnerTutorial}</p>
+          <p class="download-selector__version-note">{content.voiceNote}</p>
+        </div>
+        <a class="download-selector__action" href={windows1011BeginnerInstaller.downloadUrl}
+          aria-label={`${content.download} V9.2.1`} data-version-download="9.2.1">{content.download}</a>
+      </li>
+    </ol>
+    <button class="download-selector__back" type="button" data-version-back>← <span>{content.back}</span></button>
+  </div>
+</dialog>
+
 <script>
   const dialog = document.querySelector("#download-selector");
+  const versionDialog = document.querySelector("#download-version-selector");
 
   if (dialog instanceof HTMLDialogElement) {
     const openers = Array.from(document.querySelectorAll("[data-download-selector-open]"));
     const closeButton = dialog.querySelector("[data-download-selector-close]");
     let returnFocus: HTMLElement | null = null;
+    let returnVersionFocus: HTMLElement | null = null;
 
     const openSelector = (event: Event) => {
       event.preventDefault();
@@ -116,8 +163,30 @@ const content = downloadSelectorCopy[locale];
     };
 
     const closeSelector = () => {
+      if (versionDialog instanceof HTMLDialogElement && versionDialog.open) versionDialog.close();
       if (dialog.open) dialog.close();
     };
+
+    if (versionDialog instanceof HTMLDialogElement) {
+      dialog.querySelectorAll("[data-version-choice]").forEach((opener) => {
+        opener.addEventListener("click", (event) => {
+          event.preventDefault();
+          if (versionDialog.open || !(event.currentTarget instanceof HTMLElement)) return;
+          returnVersionFocus = event.currentTarget;
+          const platformLabel = versionDialog.querySelector("[data-version-platform]");
+          if (platformLabel) platformLabel.textContent = returnVersionFocus.dataset.versionChoice || "Windows 10 / 11";
+          versionDialog.showModal();
+        });
+      });
+      const closeVersion = () => { if (versionDialog.open) versionDialog.close(); };
+      versionDialog.querySelector("[data-version-close]")?.addEventListener("click", closeVersion);
+      versionDialog.querySelector("[data-version-back]")?.addEventListener("click", closeVersion);
+      versionDialog.addEventListener("cancel", (event) => { event.preventDefault(); closeVersion(); });
+      versionDialog.addEventListener("click", (event) => { if (event.target === versionDialog) closeVersion(); });
+      versionDialog.addEventListener("close", () => {
+        if (dialog.open) requestAnimationFrame(() => returnVersionFocus?.focus());
+      });
+    }
 
     openers.forEach((opener) => opener.addEventListener("click", openSelector));
     closeButton?.addEventListener("click", closeSelector);
@@ -128,7 +197,11 @@ const content = downloadSelectorCopy[locale];
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && dialog.open) closeSelector();
+      if (event.key !== "Escape") return;
+      if (versionDialog instanceof HTMLDialogElement && versionDialog.open) {
+        event.preventDefault();
+        versionDialog.close();
+      } else if (dialog.open) closeSelector();
     });
 
     dialog.addEventListener("click", (event) => {
