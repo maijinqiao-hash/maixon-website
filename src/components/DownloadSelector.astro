@@ -1,6 +1,6 @@
 ---
 import type { Locale } from "@/data/media";
-import { downloadAssistanceResources, downloadPlatforms, downloadResources, downloadSelectorCopy, windows1011Installer, windows1011BeginnerInstaller } from "@/data/downloads";
+import { downloadAssistanceResources, downloadPlatforms, downloadResources, downloadSelectorCopy, windows7BeginnerInstaller, windows1011Installer, windows1011BeginnerInstaller } from "@/data/downloads";
 import "@/styles/download-selector.css";
 
 interface Props {
@@ -34,7 +34,7 @@ const content = downloadSelectorCopy[locale];
       {downloadPlatforms.map((platform, index) => {
         const platformCopy = content.platforms[platform.id];
         const isAvailable = platform.enabled && platform.installer?.downloadUrl;
-        const hasVersionChoice = platform.id === "windows10" || platform.id === "windows11";
+        const hasVersionChoice = platform.platform === "windows" && isAvailable;
         return (
           <li class:list={["download-selector__platform", { "is-disabled": !isAvailable }]}>
             <span class="download-selector__number">{String(index + 1).padStart(2, "0")}</span>
@@ -49,6 +49,8 @@ const content = downloadSelectorCopy[locale];
                 aria-label={`${content.download} ${platform.label}`}
                 data-download-action={platform.id}
                 data-version-choice={hasVersionChoice ? platform.label : undefined}
+                data-version-old={hasVersionChoice ? platform.installer!.downloadUrl : undefined}
+                data-version-new={hasVersionChoice ? (platform.id === "windows7" ? windows7BeginnerInstaller.downloadUrl : windows1011BeginnerInstaller.downloadUrl) : undefined}
                 aria-haspopup={hasVersionChoice ? "dialog" : undefined}
                 aria-controls={hasVersionChoice ? "download-version-selector" : undefined}
               >
@@ -170,8 +172,15 @@ const content = downloadSelectorCopy[locale];
     if (versionDialog instanceof HTMLDialogElement) {
       dialog.querySelectorAll("[data-version-choice]").forEach((opener) => {
         opener.addEventListener("click", (event) => {
-          event.preventDefault();
           if (versionDialog.open || !(event.currentTarget instanceof HTMLElement)) return;
+          const oldUrl = event.currentTarget.dataset.versionOld;
+          const newUrl = event.currentTarget.dataset.versionNew;
+          const oldLink = versionDialog.querySelector('[data-version-download="9.2"]');
+          const newLink = versionDialog.querySelector('[data-version-download="9.2.1"]');
+          if (!oldUrl || !newUrl || !(oldLink instanceof HTMLAnchorElement) || !(newLink instanceof HTMLAnchorElement)) return;
+          event.preventDefault();
+          oldLink.href = oldUrl;
+          newLink.href = newUrl;
           returnVersionFocus = event.currentTarget;
           const platformLabel = versionDialog.querySelector("[data-version-platform]");
           if (platformLabel) platformLabel.textContent = returnVersionFocus.dataset.versionChoice || "Windows 10 / 11";
