@@ -40,6 +40,15 @@ export const windows1011Installer: DownloadInstaller = {
   sha256: "D686BBC00DBA207F9B2CBCEF44A70F530F09C480659069FD1BE7FBFC4AB5BFFB"
 };
 
+export const windows1011BeginnerInstaller: DownloadInstaller = {
+  displayName: "MAIXON TOOL V9.2.1 for Windows 10 / 11",
+  version: "9.2.1.0",
+  installerFilename: "MAIXON_TOOL_V9.2.1_Windows10_11_x64_Setup.exe",
+  downloadUrl: "https://maixon-download.oss-cn-hongkong.aliyuncs.com/downloads/MAIXON_TOOL_V9.2.1_Windows10_11_x64_Setup.exe?build=9.2.1.0",
+  fileSize: 517_964_276,
+  sha256: "734DA5DC749E715118248FAD90D645FE883920DA753B43D4DB8B4BCA1E67C1AE"
+};
+
 export const downloadPlatforms: readonly DownloadPlatform[] = [
   {
     id: "windows7",
@@ -115,6 +124,12 @@ export const downloadSelectorCopy: Record<Locale, {
   close: string;
   download: string;
   assistance: string;
+  chooseVersion: string;
+  versionDescription: string;
+  beginnerTutorial: string;
+  voiceNote: string;
+  back: string;
+  closeVersion: string;
   platforms: PlatformCopy;
 }> = {
   "zh-CN": {
@@ -123,10 +138,16 @@ export const downloadSelectorCopy: Record<Locale, {
     close: "关闭操作系统选择器",
     download: "下载",
     assistance: "下载辅助软件",
+    chooseVersion: "选择版本",
+    versionDescription: "请选择适合您的版本。",
+    beginnerTutorial: "新手专用 · 搜索教学视频、动画与说明",
+    voiceNote: "此版本暂不包含语音作图。",
+    back: "返回系统选择",
+    closeVersion: "关闭版本选择器",
     platforms: {
       windows7: { status: "V9.2", action: "下载" },
-      windows10: { status: "V9.2", action: "下载" },
-      windows11: { status: "V9.2", action: "下载" },
+      windows10: { status: "V9.2 / V9.2.1", action: "下载" },
+      windows11: { status: "V9.2 / V9.2.1", action: "下载" },
       macos: { status: "开发中", action: "开发中" }
     }
   },
@@ -136,10 +157,16 @@ export const downloadSelectorCopy: Record<Locale, {
     close: "Close operating system selector",
     download: "Download",
     assistance: "Download auxiliary software",
+    chooseVersion: "Choose a version",
+    versionDescription: "Choose the version that suits you.",
+    beginnerTutorial: "For beginners · searchable video tutorials, animations and guides",
+    voiceNote: "Voice drawing is unavailable in this version.",
+    back: "Back to operating systems",
+    closeVersion: "Close version selector",
     platforms: {
       windows7: { status: "V9.2", action: "Download" },
-      windows10: { status: "V9.2", action: "Download" },
-      windows11: { status: "V9.2", action: "Download" },
+      windows10: { status: "V9.2 / V9.2.1", action: "Download" },
+      windows11: { status: "V9.2 / V9.2.1", action: "Download" },
       macos: { status: "Coming Soon", action: "Coming Soon" }
     }
   }
